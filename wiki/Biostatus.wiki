@@ -1,9 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Biostatus data structure
 
-= Introduction =
-
-Biostatus data structure
-
-
-= Details =
+= Diagram =
 
