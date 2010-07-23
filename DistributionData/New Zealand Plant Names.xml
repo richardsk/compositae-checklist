@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Biostatus>
+		<Occurrence>Wild</Occurrence>
+		<Origin>Non-endemic</Origin>
+		<Region>New Zealand</Region>
+		<RegionSchema>Political Region</RegionSchema>
+		<AddedDate>3/12/2002 2:46:31 p.m.</AddedDate>
+		<UpdatedDate>3/12/2002 2:46:31 p.m.</UpdatedDate>
+	</Biostatus>
+	<Biostatus>
+		<Occurrence>Wild</Occurrence>
+		<Origin>Endemic</Origin>
+		<ReferenceID>{BFDBDC8E-22FD-47EA-AD55-F965A3C128F2}</ReferenceID>
+		<ReferenceCitation>Everett, J.; Thompson, J. 1992: New alpine and subalpine species in &lt;i&gt;Craspedia&lt;/i&gt; sen. strict. (Asteraceae: Gnaphalieae). Telopea 5(1): 45-51.</ReferenceCitation>
+		<Region>Australia</Region>
+		<RegionSchema>Political Region</RegionSchema>
+		<AddedDate>1/06/2006 11:54:08 a.m.</AddedDate>
+		<UpdatedDate>1/06/2006 11:54:08 a.m.</UpdatedDate>
+	</Biostatus>
+</root>

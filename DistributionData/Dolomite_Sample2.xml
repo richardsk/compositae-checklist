@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<Region>Alpujarrean-Gadorensean</Region>
+<Region>Guadician-Bacensean</Region>
+<Region>Malacitan-Almijarensean</Region>
+<Region>Rondean</Region>
+<Region>Subbaetic</Region>-->
+<Distributions>
+	<Distribution>
+		<Schema>Mota et al. 2008</Schema>
+		<Region>Alpujarrean-Gadorensean</Region>
+	</Distribution>
+	<Distribution>
+		<Schema>Mota et al. 2008</Schema>
+		<Region>Guadician-Bacensean</Region>
+	</Distribution>
+	<Distribution>
+		<Schema>Mota et al. 2008</Schema>
+		<Region>Malacitan-Almijarensean</Region>
+	</Distribution>
+	<Distribution>
+		<Schema>Mota et al. 2008</Schema>
+		<Region>Rondean</Region>
+	</Distribution>
+	<Distribution>
+		<Schema>Mota et al. 2008</Schema>
+		<Region>Subbaetic</Region>
+	</Distribution>
+</Distributions>

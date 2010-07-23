@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSet>
+	<Biostat schema="African Flowering Plants Database" region="Southern Africa" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>13</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat schema="African Flowering Plants Database" region="Tropical Africa" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>13</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat schema="SANBI Regions" region="BOT-OO" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat schema="SANBI Regions" region="FSA-OO" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat schema="SANBI Regions" region="LES-OO" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat schema="SANBI Regions" region="SAF-EC" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat schema="SANBI Regions" region="SAF-FS" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat schema="SANBI Regions" region="SAF-GA" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat schema="SANBI Regions" region="SAF-KN" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat schema="SANBI Regions" region="SAF-LP" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat schema="SANBI Regions" region="SAF-MP" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat schema="SANBI Regions" region="SAF-NW" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat schema="SANBI Regions" region="SAF-OO" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat schema="SANBI Regions" region="SAF-WC" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat schema="SANBI Regions" region="SWZ-OO" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat schema="unknown" region="AM" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>12</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat schema="unknown" region="BO" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>12</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat schema="unknown" region="FG" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>12</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat schema="unknown" region="GU" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>12</Provider>
+		</Providers>
+	</Biostat>
+</DataSet>

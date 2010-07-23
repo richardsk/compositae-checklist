@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Distributions>
+  <Distribution region="la">No</Distribution>
+  <Distribution region="ja">No</Distribution>
+  <Distribution region="cu">No</Distribution>
+  <Distribution region="ci">native</Distribution>
+  <Distribution region="hi">North and South native</Distribution>
+  <Distribution region="pr">No</Distribution>
+  <Distribution region="vi">native</Distribution>
+  <Distribution region="ba">native</Distribution>
+  <Distribution region="ma">native</Distribution>
+  <Distribution region="mex">no</Distribution>
+  <Distribution region="ca">No</Distribution>
+  <Distribution region="sa">No</Distribution>
+  <Distribution region="wi">native</Distribution>
+  <Distribution region="ow">No</Distribution>
+</Distributions>

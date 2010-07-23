@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+****Done & SENT*****
+12	Biological Diversity of the Guiana Shield	6	distribution
+13	African Flowering Plants Database	9	Distribution
+15	SANBI	10	Distribution
+16	New Zealand Plant Name Database	11	Biostatus
+23	Cuban Endemic Asteraceae	44	Biostatus
+24	Panama Checklist	47	Distribution
+25	MesoAmericana	46	Distribution
+29	Colombia	51	Distribution
+30	Abu Dhabi Emirate	53	Distribution
+32	Dolomite	54	Distribution
+34	Flora of Tasmania Online	55	Biostatus
+38	Northern Territory Checklist	57	Biostatus
+39	Vietnam Flora	58	Distribution  
+40	Australian Capital Territory	60	Biostatus
+41	New South Wales Flora Online	62	Biostatus
+42	Queensland Census	61	Biostatus
+42	Queensland Census	61	Distribution
+43	Victoria Census	65	Biostatus
+44	Western Australia Census	63	Biostatus
+
+*****TO SEND
+***Schema done, need to convert the regions to TDWG  by Christina
+
+26	Flora of China Checklist	48	Distribution  [DONE]
+				*  FloraOfChinea_TDWG2 - DONE
+
+33	Paramo	56	Distribution
+22	Govaerts World Compositae Checklist A-G	17	Biostatus
+46	PLANTS North America	66	Distribution	NULL	NULL
+45	Electronic Flora of South Australia	64	Biostatus
+		* need to convert the status values
+
+** do not do - no real data**
+19	IPNI	29	Distribution
+19	IPNI	40	Distribution
+
+***Not Done****
+
+47	Southern Cone	67	Distribution	NULL	NULL
+-->
+<blah></blah>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Distributions>
+	<Distribution>
+		<Occurrence>Absent</Occurrence>
+		<Region>Tasmania</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Extinct</Occurrence>
+		<Origin>Endemic</Origin>
+		<Region>Tasmania</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Extinct</Occurrence>
+		<Origin>Exotic</Origin>
+		<Region>Tasmania</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Extinct</Occurrence>
+		<Region>Tasmania</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Present in wild</Occurrence>
+		<Origin>Exotic</Origin>
+		<Region>Tasmania</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Present in wild</Occurrence>
+		<Origin>Exotic</Origin>
+		<Region>Tasmania</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Absent</Occurrence>
+		<Region>Queensland</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Absent</Occurrence>
+		<Region>Victoria</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Absent</Occurrence>
+		<Region>South Australia</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Absent</Occurrence>
+		<Region>Western Australia</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Absent</Occurrence>
+		<Region>Northern Territory</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Absent</Occurrence>
+		<Region>Australian Capital Territory</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Absent</Occurrence>
+		<Region>New South Wales</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Present</Occurrence>
+		<Origin>Endemic</Origin>
+		<Region>Tasmania</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Present</Occurrence>
+		<Origin>Indigenous</Origin>
+		<Region>Australia</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Present</Occurrence>
+		<Origin>Non-endemic</Origin>
+		<Region>Tasmania</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Present</Occurrence>
+		<Region>Tasmania</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Absent</Occurrence>
+		<Region>Queensland</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Absent</Occurrence>
+		<Region>Victoria</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Absent</Occurrence>
+		<Region>South Australia</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Absent</Occurrence>
+		<Region>Western Australia</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Absent</Occurrence>
+		<Region>Northern Territory</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Absent</Occurrence>
+		<Region>Australian Capital Territory</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Absent</Occurrence>
+		<Region>New South Wales</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Recorded in Error</Occurrence>
+		<Region>Tasmania</Region>
+	</Distribution>
+	<Distribution>
+		<Occurrence>Sparingly present in wild</Occurrence>
+		<Origin>Exotic</Origin>
+		<Region>Tasmania</Region>
+	</Distribution>
+</Distributions>

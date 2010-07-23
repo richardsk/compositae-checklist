@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Distributions>
+	<Distribution>FSA-OO</Distribution>
+	<Distribution>SAF-OO</Distribution>
+	<Distribution>SAF-WC</Distribution>
+	<Distribution>BOT-OO</Distribution>
+	<Distribution>LES-OO</Distribution>
+	<Distribution>SAF-EC</Distribution>
+	<Distribution>SAF-FS</Distribution>
+	<Distribution>SAF-GA</Distribution>
+	<Distribution>SAF-KN</Distribution>
+	<Distribution>SAF-LP</Distribution>
+	<Distribution>SAF-MP</Distribution>
+	<Distribution>SAF-NW</Distribution>
+	<Distribution>SWZ-OO</Distribution>
+</Distributions>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Distribution>
+	<Regions>
+		<Region>Antioquia</Region>
+		<Region>Caldas</Region>
+		<Region>Cauca</Region>
+		<Region>Cundinamarca</Region>
+		<Region>Magdalena</Region>
+		<Region>Nariño</Region>
+		<Region>Quindío</Region>
+		<Region>Tolima</Region>
+	</Regions>
+	<Elevation>
+		<Minimum>1680</Minimum>
+		<Maximum>4100</Maximum>
+	</Elevation>
+</Distribution>

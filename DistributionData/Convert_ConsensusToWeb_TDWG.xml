@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSet>
+	<Biostat L1="2 - Africa" L2="22 - West Tropical Africa" L3="" L4="" region="22" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>13</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat L1="2 - Africa" L2="23 - West-Central Tropical Africa" L3="" L4="" region="23" Occurrence="Present" Origin="Endemic">
+		<Providers>
+			<Provider>13</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat L1="2 - Africa" L2="24 - Northeast Tropical Africa" L3="" L4="" region="24" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>13</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat L1="2 - Africa" L2="25 - East Tropical Africa" L3="" L4="" region="25" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>13</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat L1="2 - Africa" L2="26 - South Tropical Africa" L3="" L4="" region="26" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>13</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat L1="2 - Africa" L2="27 - Southern Africa" L3="" L4="" region="27" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>13</Provider>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat L1="2 - Africa" L2="27 - Southern Africa" L3="Botswana (BOT)" L4="Botswana (BOT-OO)" region="BOT-OO" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat L1="2 - Africa" L2="27 - Southern Africa" L3="Cape Provinces (CPP)" L4="Eastern Cape Province (CPP-EC)" region="CPP-EC" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat L1="2 - Africa" L2="27 - Southern Africa" L3="Cape Provinces (CPP)" L4="Western Cape Province (CPP-WC)" region="CPP-WC" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat L1="8 - Southern America" L2="82 - Northern South America" L3="French Guiana (FRG)" L4="French Guiana (FRG-OO)" region="FRG-OO" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>12</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat L1="8 - Southern America" L2="82 - Northern South America" L3="Guyana (GUY)" L4="Guyana (GUY-OO)" region="GUY-OO" Occurrence="Sometimes present" Origin="Exotic">
+		<Providers>
+			<Provider>12</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat L1="2 - Africa" L2="27 - Southern Africa" L3="Lesotho (LES)" L4="Lesotho (LES-OO)" region="LES-OO" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat L1="2 - Africa" L2="27 - Southern Africa" L3="KwaZulu-Natal (NAT)" L4="KwaZulu-Natal (NAT-OO)" region="NAT-OO" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat L1="2 - Africa" L2="27 - Southern Africa" L3="Free State (OFS)" L4="Free State (OFS-OO)" region="OFS-OO" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat L1="2 - Africa" L2="27 - Southern Africa" L3="Swaziland (SWZ)" L4="Swaziland (SWZ-OO)" region="SWZ-OO" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat L1="2 - Africa" L2="27 - Southern Africa" L3="Northern Provinces (TVL)" L4="Gauteng (TVL-GA)" region="TVL-GA" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat L1="2 - Africa" L2="27 - Southern Africa" L3="Northern Provinces (TVL)" L4="Mpumalanga (TVL-MP)" region="TVL-MP" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat L1="2 - Africa" L2="27 - Southern Africa" L3="Northern Provinces (TVL)" L4="Northern Province (TVL-NP)" region="TVL-NP" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat L1="2 - Africa" L2="27 - Southern Africa" L3="Northern Provinces (TVL)" L4="North-West Province (TVL-NW)" region="TVL-NW" Occurrence="Present" Origin="">
+		<Providers>
+			<Provider>15</Provider>
+		</Providers>
+	</Biostat>
+	<Biostat L1="8 - Southern America" L2="82 - Northern South America" L3="Venezuela (VEN)" L4="Venezuela (VEN-OO)" region="VEN-OO" Occurrence="Present" Origin="Exotic">
+		<Providers>
+			<Provider>12</Provider>
+		</Providers>
+	</Biostat>
+</DataSet>

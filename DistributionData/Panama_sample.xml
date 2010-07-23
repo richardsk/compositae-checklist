@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BiostatusValues>
+  <Biostatus>
+    <Schema>Regions of Panama</Schema>
+    <Region>Bocas del Toro</Region>
+    <Occurrence>Present</Occurrence>
+  </Biostatus>
+  <Biostatus>
+    <Schema>Regions of Panama</Schema>
+    <Region>Coclé</Region>
+    <Occurrence>Present</Occurrence>
+  </Biostatus>
+  <Biostatus>
+    <Schema>Regions of Panama</Schema>
+    <Region>Chiriquí</Region>
+    <Occurrence>Present</Occurrence>
+  </Biostatus>
+</BiostatusValues>

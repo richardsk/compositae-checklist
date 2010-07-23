@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSet>
+	<Provider id='15'>
+		<Distributions>
+			<Distribution schema="TDWG Level 2" region="27" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="TDWG Level 2" region="27" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="TDWG Level 4" region="CPP-WC" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="TDWG Level 4" region="BOT-OO" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="TDWG Level 4" region="LES-OO" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="TDWG Level 4" region="CPP-EC" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="TDWG Level 4" region="OFS-OO" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="TDWG Level 4" region="TVL-GA" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="TDWG Level 4" region="NAT-OO" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="TDWG Level 4" region="TVL-NP" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="TDWG Level 4" region="TVL-MP" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="TDWG Level 4" region="TVL-NW" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="TDWG Level 4" region="SWZ-OO" occurrence="Present" origin="" isOriginal="false"/>
+		</Distributions>
+	</Provider>
+	<Provider id='12'>
+		<Distributions>
+			<Distribution schema="TDWG Level 4" occurrence="Present" origin="" region="VEN-OO" isOriginal="false"/>
+			<Distribution schema="TDWG Level 4" occurrence="Present" origin="" region="GUY-OO" isOriginal="false"/>
+			<Distribution schema="TDWG Level 4" occurrence="Present" origin="" region="FRG-OO" isOriginal="false"/>
+			<Distribution schema="TDWG Level 4" occurrence="Present" origin="" region="VEN-OO" isOriginal="false"/>
+		</Distributions>
+	</Provider>
+	<Provider id='13'>
+		<Distributions>
+			<Distribution schema="TDWG Level 2" region="27" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="TDWG Level 2" region="22" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="TDWG Level 2" region="23" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="TDWG Level 2" region="24" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="TDWG Level 2" region="25" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="TDWG Level 2" region="26" occurrence="Present" origin="" isOriginal="false"/>
+		</Distributions>
+	</Provider>
+</DataSet>
