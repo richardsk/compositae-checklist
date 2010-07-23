@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSpy v2008 rel. 2 sp1 (http://www.altova.com) by Adrienne Phillips (Landcare Research) -->
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by Adrienne Phillips (Landcare Research) -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="Distributions">
 		<xs:annotation>
@@ -27,7 +27,7 @@
 								<xs:restriction base="xs:string">
 									<xs:enumeration value="Present"/>
 									<xs:enumeration value="Present in wild"/>
-									<xs:enumeration value="Present in captivity only"/>
+									<xs:enumeration value="Present in cultivation"/>
 									<xs:enumeration value="Absent"/>
 									<xs:enumeration value="Eradicated"/>
 									<xs:enumeration value="Extinct"/>

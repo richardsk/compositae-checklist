@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Distributions>
+  <Distribution>
+    <Schema>TDWG</Schema>
+    <Region>BLR</Region>
+    <Region>UKR</Region>
+    <Region>UKR-MO</Region>
+    <Region>NCS</Region>
+    <Region>TCS</Region>
+    <Region>AUT-AU</Region>
+    <Region>AUT-LI</Region>
+    <Region>BGM-BE</Region>
+    <Region>BGM-LU</Region>
+    <Region>CZE-CZ</Region>
+    <Region>CZE-SL</Region>
+    <Region>GER</Region>
+    <Region>HUN</Region>
+    <Region>NET</Region>
+    <Region>POL</Region>
+    <Region>SWI</Region>
+    <Region>1</Region>
+    <Region>51</Region>
+    <Origin>Unknown</Origin>
+    <Occurrence>Present</Occurrence>
+  </Distribution>
+  
+  
+  
+<!--ALT
+ AUT-AU
+ BLT
+ Dzhungaria-Kashgaria
+ IRN
+ IRQ
+ KAZ
+ KGZ
+ LBS
+ PRM
+ RUN
+ UKR
+ UKR-MO
+ UKR-UK
+?ASK
+?BLR
+?IRN
+?KRY
+?PRM
+AFG
+ALG
+All Europe (but north)
+All Europe (except far north)
+All Europe excluding northern Scandinavia and England
+All Europe(except Arctic)
+All Europe,NA
+Almost all Europe and Asia.
+Almost all over the world
+almost all?
+Almost throughout the world (excluding South africa and South America)
+Almost whole Europe
+Almost whole of Western Europe
+ALU
+ALU)
+America
+America (North and Central)
+AP
+ARCTIC
+Arctic America
+Armenia and Kurdistan
+ARTIC
+ASK
+ATL
+Atlantic europe
+AUT
+AUT-LI
+BAH
+BAL
+Balkans-Asia minor
+BEN
+BER
+BGM-LU
+BLR
+BLR,
+BLRS
+BLT. RUW
+BLT-KA
+BLZ
+BUL)
+BZ
+CAF
+CAUCAUSUS
+Central and South America
+CH
+CHA
+CHC
+CHI
+China (former Girinsk Province). Endemic
+China.
+CHM-HJ
+CHN. CHM
+CHO
+CHX
+CHX,
+CHX,MAG
+CLC
+CNY
+CRY
+Cultivated
+Cultivated in Bohemia and Thuringia (GER).
+CYP
+CZE
+CZE-SK
+DJT
+EAI
+eastern and western Mediterranean
+EASTERN SIBERA
+EASTERN SIBERIA SOVIET CENTRAL ASIA
+EASTERN SIBERIA.
+EHM
+endemic
+Endemic (?)
+Endemic. Possibly in AFG and IRN
+Enemic
+ERI
+EUPOREAN PART
+Europe (southern and weestern districts)
+Europe (west and south)
+Exotic
+FAR EAST
+Far East (all or almost all regions); Soviet Central Asia (rarely)
+FAR EAST,
+FIN
+FIN. NOR
+FOR
+FRA
+GGN
+GHA
+GNL
+GNL,DEN
+GNL,MAG
+GRBWestern  Mediterranean
+GRC
+GUA
+HON
+HUN
+ID
+IKR
+India.
+Indo-Himalayas
+introduced
+Introduced at BER
+Introduced plant
+IRE
+IRE-IR
+IRN (?)
+IRN?
+ITA
+IVO
+JA[
+JAP
+JAP?
+KAZ),EHM
+KAZ,
+KAZ. MON
+KAZL
+KEN
+KHA,
+KOR
+KPR
+KRA,
+KRY
+LBS
+LBS-SY.
+LBS-SY. Endemic
+MDG
+MDR
+Mediterranean
+MO
+MON
+MTN
+MX
+MXN)
+MYA
+NA
+NA (ASK
+NA (ASK)
+NA (introduced)
+NA and SA. Introduced.
+NCS  (alpine region)
+NCS-DA
+NCS-DDA
+NCS-KB
+NCSTCS
+NEP
+NLA-BO
+NLA-CU
+No infromation
+North America (introduced)
+North America from ASK to CAL
+North america. Introduced in Europe
+North and Central America (TEX
+northern Africa
+northern Mongolia.
+Not found in the USSR
+Not yet found in SSSR
+NTC
+NWT
+ORE
+Originates from Mexico.
+PAL-JO
+PAN
+PHI
+POL
+POR
+POR. South America.
+Possible found in Mongolia
+Possible found in USSR
+PRM
+Probably in  ALT
+Probably in  TCS-AR
+Probably in AFG
+Probably occurrs in the USSR
+ROM
+RUC,RUW
+RUCM
+RUE
+RUN
+RUS
+RUW
+SAK
+SCI
+SER
+SER,ALB
+SOM
+South an North America
+South Asia.
+SOVIET CENTRAL ASIA
+SOVIET CENTRAL ASIA,
+Subtropics and tropics of the Orient
+Sudeten
+SUP
+SVA
+SWE,
+SWE,FOR
+SWE. Endemic
+SWI(Carpathians)
+SWI,ALB
+SWI,SPA
+SWI,TCS-AR
+TCS (BUL?)
+TCS?
+TCS-AD
+TCS-AZ
+TCS-GR
+TCS-TA
+TCS-ZA
+TKM
+TTCS-AR
+TUE
+TUN
+TUR LBS
+TUR. Endemic
+TURIRN
+TUW
+TVA
+TZK
+TZK,
+UKR
+UKR-UK
+UZB,
+UZB.
+UZK
+VIE
+WBS
+Western and Easter Sibera
+western and eastern Mediterranean
+Western Sibera
+WESTERN SIBERI
+Western Siberia and Central Soviet
+WHM
+WHM-JK
+WSB,
+WYO
+YAK
+YAK,
+YAK. CTA
+ZIM
+ ALB
+ DEN
+ EHM
+ RUS
+ SPA
+ TCS-AR
+ TKM
+ TUR
+ UZB
+?BLT
+?CHX
+?CTA
+?DEN
+?EHM
+?KAZ
+?MON
+?NCS
+?RUS
+AFGEHM
+Africa
+ALB
+All Europe
+All Europe (except Arctic)
+All Europe (except Karelia-Lapland)
+All Europe (except north)
+Alps
+ALT
+ALT (?)
+AMU
+AMU. PRM
+Anadyr
+ANG
+ASIA
+Australia
+AUT-AU
+BGM-BE
+BLR. UKR
+BLT
+BLT,UKR
+BLT-ES
+BLT-LA
+BLT-LI
+BRL
+BRY
+BUL
+BUR
+CA
+CAB
+Canada
+Carpathians
+CAUCASUS
+CAUCAUSAS WESTERN SIBERIA
+Central America
+Central and Atlantic Europe
+CENTRAL ASIA
+CENTRAL SIBERIA
+CHC-SC
+CHM
+CHM-JL
+CHM-LN
+CHN
+CHN-GS
+CHQ
+CHS
+CHS-SH
+CHT
+CHT (?)
+CHT. Introduced: AUT-AU
+CHX.
+CLN
+CLS
+CNS
+COL
+CON
+COR
+COS
+CPI
+CPP
+CTA
+Cultivated all over the worl: originating from Mexico
+cultivated in all parts of the world.
+Cultivated in gardens all over the world.
+Cultivated mostly in Mediterranen countries
+CZE-CZ
+CZE-SL
+DEN
+EASTERN SIBERI
+EASTERN SIBERIA
+EGY
+ELS
+Endemic (?). IRN
+Endemic to the mountains of Krasnopolyans Region
+Endemic. ALB
+Endemic. KOR
+ETH
+Europe (all regions)
+Europe (except extreme north)
+EUROPE AND WESTERN SIBERIA
+EUROPEAN PART
+EUROPEAN PART,
+EUROPEAN PART.
+FAR EATS
+FART EAST
+FIN. Endemic
+GAB
+GBR
+GEO
+GER
+GNL,AUT-AU
+GRB
+GRB,TUR
+GRC.
+GST
+ICE
+IDA
+IND
+Introduced plant.
+Iran
+IRE-NI
+IRK
+IRK,
+IRK,KGZ
+IRK.
+IRN
+IRQ
+Japan
+JAP-HK
+JAP-HN
+JAW
+JCHT
+JMK
+KAH
+KAM
+KAM SAK
+KAM,
+KAR
+KAZ
+KAZ (KITAKH-SAIRAM MOUNTAINS)
+KAZ,ALT
+KGZ
+KHA
+KRA
+KSAZ
+KTRY
+KUR
+KYR
+KZG
+LBS-SY
+LBS-SY (?)
+LBS-SY,
+LBY
+MAG
+Mediterranean region
+Mediterranean region.
+Meditterranean region,
+MLW
+MLY-PM
+MNT
+MON (?)
+MON.
+Mongolia
+MOR
+MOZ
+MXE
+NCA
+NCS
+NCS,TCS
+NCS?
+NET
+NGR
+NIC
+No information
+No information. Probably occurs in other parts of China
+No informtion
+No reliable collection from outside of USSR.
+NOR
+NOR,AUT-AU
+North America
+North and Central America
+North and South America
+Not yet found in USSR
+NSC
+NTA. NZ
+NUN
+NWC
+Pacific coast of North America
+PAK
+PAL
+POL,TCS
+Probably in IRN
+Probably in MON
+Reported from Balkans (ROM
+RIN
+RUC
+RUW (Urals)
+RUW,BLR
+RWA
+SAK.
+SER,AUT-AU
+SIC-SI
+SIE
+SIN
+South America
+Soviet Central
+Soviet Central and Caucasus
+SOVIET CENTRAL ASI
+SOVIETIC CENTRAL ASIA
+SPA
+SUM
+SWE
+SWI
+SWI)
+SWI. Endemic
+SWI. Endemic.
+SWIAUT-AU
+TAI
+TAN
+TCCS
+TCS
+TCS (?)
+TCS (except TCS-AZ)
+TCS,
+TCS.
+TCS-AR
+Tibet
+TKM KAZ
+TKM KGZ
+TKM,
+TOG
+Tropicas and subtropicas around the world.
+TSC
+TUR
+TUR (Pontic Mountains)
+TUR.
+UGA
+UKR (Carpathians)
+UKR,
+UKR0UK
+UKR-MO
+UL
+URK
+UZB
+UZB,TKM
+VNA
+WAS
+western mediterranean
+WESTERN SIBERIA
+WESTERN SIBERIA AND SOVIET CENTRAL ASIA
+WHM,IRQ
+WSA
+WSB
+WSB (Arctic Urals)
+YUG
+YUG-BH
+YUG-CR
+YUG-KO
+YUG-MA
+YUG-MN
+YUG-SE
+YUK
+ZAI
+ZAM-->	  
+  
+  
+</Distributions>

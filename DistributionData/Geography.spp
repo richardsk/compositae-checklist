@@ -16,6 +16,7 @@
 		<File FilePath="Dolomite_sample.xml" HomeFolder="Yes"/>
 		<File FilePath="Dolomite_Sample2.xml" HomeFolder="Yes"/>
 		<File FilePath="Electronic Flora of South Australia_Sample.xml" HomeFolder="Yes"/>
+		<File FilePath="EuroMed_Sample.xml" HomeFolder="Yes"/>
 		<File FilePath="FloraOfChina_Sample.xml" HomeFolder="Yes"/>
 		<File FilePath="FloraOfChina_Sample2.xml" HomeFolder="Yes"/>
 		<File FilePath="GuianaShield_sample.xml" HomeFolder="Yes"/>
@@ -27,7 +28,9 @@
 		<File FilePath="Panama_sample.xml" HomeFolder="Yes"/>
 		<File FilePath="Paramo_sample.xml" HomeFolder="Yes"/>
 		<File FilePath="QueenslandCensus.xml" HomeFolder="Yes"/>
+		<File FilePath="Russia.xml" HomeFolder="Yes"/>
 		<File FilePath="SANBI_sample.xml" HomeFolder="Yes"/>
+		<File FilePath="SouthernCone_Sample.xml" HomeFolder="Yes"/>
 		<File FilePath="Tasmania.xml" HomeFolder="Yes"/>
 		<File FilePath="VietnamFlora_Sample.xml" HomeFolder="Yes"/>
 		<File FilePath="WesternAustralia.xml" HomeFolder="Yes"/>
@@ -56,6 +59,8 @@
 		<File FilePath="Dolomite_.xslt" HomeFolder="Yes"/>
 		<File FilePath="Dolomite_Provider.xslt" HomeFolder="Yes"/>
 		<File FilePath="Dolomite_TDWG.xslt" HomeFolder="Yes"/>
+		<File FilePath="EuroMed_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="EuroMed_TDWG.xslt" HomeFolder="Yes"/>
 		<File FilePath="FloraOfChina_Provider.xslt" HomeFolder="Yes"/>
 		<File FilePath="FloraOfChina_TDWG.xslt" HomeFolder="Yes"/>
 		<File FilePath="FloraOfChina_TDWG2.xslt" HomeFolder="Yes"/>
@@ -71,8 +76,11 @@
 		<File FilePath="Panama_TDWG.xslt" HomeFolder="Yes"/>
 		<File FilePath="QueenslandCensus_Provider.xslt" HomeFolder="Yes"/>
 		<File FilePath="QueenslandCensus_TDWG.xslt" HomeFolder="Yes"/>
+		<File FilePath="Russia_Both.xslt" HomeFolder="Yes"/>
 		<File FilePath="SANBI_Provider.xslt" HomeFolder="Yes"/>
 		<File FilePath="SANBI_Tdwg.xslt" HomeFolder="Yes"/>
+		<File FilePath="SouthernCone_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="SouthernCone_TDWG.xslt" HomeFolder="Yes"/>
 		<File FilePath="Tasmania_Provider.xslt" HomeFolder="Yes"/>
 		<File FilePath="Tasmania_TDWG.xslt" HomeFolder="Yes"/>
 		<File FilePath="VietnamFlora_Provider.xslt" HomeFolder="Yes"/>

@@ -18,8 +18,9 @@ order by p.ProviderName
 */
 select POtherDataData, POtherDataXML 
 	from tblProviderOtherData po
-where po.POtherDataType = 'Distribution' and
-	 po.POtherDataProviderImportFk = 46
+where po.POtherDataType = 'Biostatus' and
+	 po.POtherDataProviderImportFk = 69
+	 
 	 
 select POtherDataType, COUNT(*) from 
 	tblProviderOtherData where POtherDataProviderImportFk = 46
@@ -78,14 +79,25 @@ select distinct cast(#adw.valuexml.query('node()') as nvarchar(500))
 where POtherDataProviderImportFk = 56
 
 
-select distinct cast(#adw.valuexml.query('text()') as nvarchar(50))
+select distinct cast(#adw.valuexml.query('text()') as nvarchar(150))
 	from tblProviderOtherData 
-	cross apply POtherDataXML.nodes('//Distribution') as #adw(valuexml)
-where POtherDataProviderImportFk = 56
+	cross apply POtherDataXML.nodes('//Region') as #adw(valuexml)
+where POtherDataProviderImportFk = 69
 
 -- get the values for an xslt to convert the element.
 select distinct '<xsl:when test="$pProv=''' +
-	cast(#adw.valuexml.query('text()') as nvarchar(50)) + '''"></xsl:when>'
+	cast(#adw.valuexml.query('text()') as nvarchar(150)) + '''"></xsl:when>'
 	from tblProviderOtherData 
-	cross apply POtherDataXML.nodes('//Distribution') as #adw(valuexml)
-where POtherDataProviderImportFk = 56
+	cross apply POtherDataXML.nodes('//Region') as #adw(valuexml)
+where POtherDataProviderImportFk = 69
+
+
+/*
+Ecuador
+
+select distinct cast(#adw.valuexml.query('text()') as nvarchar(50))
+	from tblProviderOtherData 
+	cross apply POtherDataXML.nodes('//Region') as #adw(valuexml)
+where POtherDataProviderImportFk = 78
+
+*/

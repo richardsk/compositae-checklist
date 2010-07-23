@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<ConceptId>280629</ConceptId>
+	<Occurrences>
+		<Occurrence id="770642" taxonId="280629" calculated="1">
+			<AreaCode>Br</AreaCode>
+			<SummaryStatus>270</SummaryStatus>
+			<Status>introduced: I(A)</Status>
+		</Occurrence>
+		<Occurrence id="770643" taxonId="280629" calculated="1">
+			<AreaCode>Su</AreaCode>
+			<SummaryStatus>270</SummaryStatus>
+			<Status>introduced: I(A)</Status>
+		</Occurrence>
+		<Occurrence id="770644" taxonId="280629" calculated="1">
+			<AreaCode>Be</AreaCode>
+			<SummaryStatus>270</SummaryStatus>
+			<Status>introduced: I(A)</Status>
+		</Occurrence>
+		<Occurrence id="770645" taxonId="280629" calculated="1">
+			<AreaCode>Bl</AreaCode>
+			<SummaryStatus>250</SummaryStatus>
+			<Status>introduced: I</Status>
+		</Occurrence>
+		<Occurrence id="770646" taxonId="280629" calculated="1">
+			<AreaCode>Bt</AreaCode>
+			<SummaryStatus>280</SummaryStatus>
+			<Status>introduced: I(N)</Status>
+		</Occurrence>
+		<Occurrence id="770647" taxonId="280629" calculated="1">
+			<AreaCode>Lu</AreaCode>
+			<SummaryStatus>280</SummaryStatus>
+			<Status>introduced: I(N)</Status>
+		</Occurrence>
+		<Occurrence id="770648" taxonId="280629" calculated="1">
+			<AreaCode>Hs</AreaCode>
+			<SummaryStatus>280</SummaryStatus>
+			<Status>introduced: I(N)</Status>
+		</Occurrence>
+		<Occurrence id="770649" taxonId="280629" calculated="1">
+			<AreaCode>Cr</AreaCode>
+			<SummaryStatus>270</SummaryStatus>
+			<Status>introduced: I(A)</Status>
+		</Occurrence>
+		<Occurrence id="770650" taxonId="280629" calculated="1">
+			<AreaCode>Si(S)</AreaCode>
+			<SummaryStatus>270</SummaryStatus>
+			<Status>introduced: I(A)</Status>
+		</Occurrence>
+		<Occurrence id="770651" taxonId="280629" calculated="1">
+			<AreaCode>Ma</AreaCode>
+			<SummaryStatus>280</SummaryStatus>
+			<Status>introduced: I(N)</Status>
+		</Occurrence>
+		<Occurrence id="770652" taxonId="280629" calculated="1">
+			<AreaCode>Az(S)</AreaCode>
+			<SummaryStatus>280</SummaryStatus>
+			<Status>introduced: I(N)</Status>
+		</Occurrence>
+		<Occurrence id="770653" taxonId="280629" calculated="1">
+			<AreaCode>Az(T)</AreaCode>
+			<SummaryStatus>280</SummaryStatus>
+			<Status>introduced: I(N)</Status>
+		</Occurrence>
+		<Occurrence id="770654" taxonId="280629" calculated="1">
+			<AreaCode>Bl(M)</AreaCode>
+			<SummaryStatus>280</SummaryStatus>
+			<Status>introduced: I(N)</Status>
+		</Occurrence>
+		<Occurrence id="770655" taxonId="280629" calculated="1">
+			<AreaCode>Cs</AreaCode>
+			<SummaryStatus>270</SummaryStatus>
+			<Status>introduced: I(A)</Status>
+		</Occurrence>
+		<Occurrence id="770656" taxonId="280629" calculated="1">
+			<AreaCode>Hs(G)</AreaCode>
+			<SummaryStatus>250</SummaryStatus>
+			<Status>introduced: I</Status>
+		</Occurrence>
+		<Occurrence id="770657" taxonId="280629" calculated="1">
+			<AreaCode>Hs(S)</AreaCode>
+			<SummaryStatus>280</SummaryStatus>
+			<Status>introduced: I(N)</Status>
+		</Occurrence>
+	</Occurrences>
+</root>
