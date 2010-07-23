@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Alpujarrean-Gadorensean
+Guadician-Bacensean
+Malacitan-Almijarensean
+Rondean
+Subbaetic-->
+<Distributions>
+	<Distribution>
+		<Schema>Mota et al. 2008</Schema>
+		<Region>Rondean</Region>
+	</Distribution>
+	<Distribution>
+		<Schema>Mota et al. 2008</Schema>
+		<Region>Subbaetic</Region>
+	</Distribution>
+</Distributions>

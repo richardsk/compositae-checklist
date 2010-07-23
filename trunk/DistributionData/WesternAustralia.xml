@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BiostatusValues>
+	<Biostatus original="False">
+		<Region>Australia</Region>
+		<Schema>Country</Schema>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus original="False">
+		<Region>Western Australia</Region>
+		<Schema>Austalian States</Schema>
+		<Occurrence>Exotic</Occurrence>
+	</Biostatus>
+	<Biostatus original="False">
+		<Region>Australia</Region>
+		<Schema>Country</Schema>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus original="False">
+		<Region>Western Australia</Region>
+		<Schema>Austalian States</Schema>
+		<Occurrence>Indigenous</Occurrence>
+	</Biostatus>
+</BiostatusValues>

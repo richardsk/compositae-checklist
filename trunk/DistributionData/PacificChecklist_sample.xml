@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BiostatusValues conceptId="798">
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Marshall Islands</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Ralik Chain</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Namu</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Ratak Chain</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Arno</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Majuro</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Ralik Chain</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Ailinglaplap</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Ratak Chain</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Ralik Chain</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Lae</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Caroline Islands</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Kosrae</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Pohnpei</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Pohnpei</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Kapingamarangi</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Mortlock</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Satawan</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Marshall Islands</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Ralik Chain</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Jaluit</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Caroline Islands</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Namoluk</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Gilbert Islands</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Marshall Islands</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Ebon</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Caroline Islands</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Nama</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Satawal</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Ifalik</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Woleai</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Belau</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Ngcheangel</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Ulithi</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Yap Islands</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Yap</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Belau</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Beliliou</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Oreor</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Mortlock</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Lukunor</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Mariana Islands</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Guam</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Northern Mariana Islands</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Saipan</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Rota</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Caroline Islands</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Belau</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Babeldaob</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Mariana Islands</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Islands of Pacific</Schema>
+		<Region>Northern Mariana Islands</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus>
+		<Schema>Unknown</Schema>
+		<Region>Tinian</Region>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+</BiostatusValues>

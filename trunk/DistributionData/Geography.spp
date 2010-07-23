@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+	<Folder FolderName="XML Files" ExtStr="xml;cml;math;mtx;rdf;smil;svg;wml">
+		<File FilePath="AbuDhabi_Sample.xml" HomeFolder="Yes"/>
+		<File FilePath="AfricaFlowering_sample.xml" HomeFolder="Yes"/>
+		<File FilePath="Australian Capitol Territory.xml" HomeFolder="Yes"/>
+		<File FilePath="Caribean_Sample.xml" HomeFolder="Yes"/>
+		<File FilePath="Colombia_Sample.xml" HomeFolder="Yes"/>
+		<File FilePath="Conabio_Sample.xml" HomeFolder="Yes"/>
+		<File FilePath="Convert_ConsensusToWeb_Provider.xml" HomeFolder="Yes"/>
+		<File FilePath="Convert_ConsensusToWeb_TDWG.xml" HomeFolder="Yes"/>
+		<File FilePath="Convert_StandardToConsensus_Provider.xml" HomeFolder="Yes"/>
+		<File FilePath="Convert_StandardToConsensus_TDWG.xml" HomeFolder="Yes"/>
+		<File FilePath="Cuba_Sample.xml" HomeFolder="Yes"/>
+		<File FilePath="DataSetStatus.xml" HomeFolder="Yes"/>
+		<File FilePath="Dolomite_sample.xml" HomeFolder="Yes"/>
+		<File FilePath="Dolomite_Sample2.xml" HomeFolder="Yes"/>
+		<File FilePath="Electronic Flora of South Australia_Sample.xml" HomeFolder="Yes"/>
+		<File FilePath="FloraOfChina_Sample.xml" HomeFolder="Yes"/>
+		<File FilePath="FloraOfChina_Sample2.xml" HomeFolder="Yes"/>
+		<File FilePath="GuianaShield_sample.xml" HomeFolder="Yes"/>
+		<File FilePath="MesoAmericana_sample.xml" HomeFolder="Yes"/>
+		<File FilePath="New South Wales Flora Online.xml" HomeFolder="Yes"/>
+		<File FilePath="New Zealand Plant Names.xml" HomeFolder="Yes"/>
+		<File FilePath="NorthernTerritory_Sample.xml" HomeFolder="Yes"/>
+		<File FilePath="PacificChecklist_sample.xml" HomeFolder="Yes"/>
+		<File FilePath="Panama_sample.xml" HomeFolder="Yes"/>
+		<File FilePath="Paramo_sample.xml" HomeFolder="Yes"/>
+		<File FilePath="QueenslandCensus.xml" HomeFolder="Yes"/>
+		<File FilePath="SANBI_sample.xml" HomeFolder="Yes"/>
+		<File FilePath="Tasmania.xml" HomeFolder="Yes"/>
+		<File FilePath="VietnamFlora_Sample.xml" HomeFolder="Yes"/>
+		<File FilePath="WesternAustralia.xml" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="XSL Files" ExtStr="xsl;xslt">
+		<File FilePath="AbuDhabi_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="AbuDhabi_TDWG.xslt" HomeFolder="Yes"/>
+		<File FilePath="AfricaFlowering_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="AfricaFlowering_TDWG.xslt" HomeFolder="Yes"/>
+		<File FilePath="AustralianCapitolTerritory_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="AustralianCapitolTerritory_TDWG.xslt" HomeFolder="Yes"/>
+		<File FilePath="AustralianStateLists_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="AustralianStateLists_TDWG.xslt" HomeFolder="Yes"/>
+		<File FilePath="Caribbean_TDWG.xslt" HomeFolder="Yes"/>
+		<File FilePath="Caribean_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="Colombia_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="Colombia_TDWG.xslt" HomeFolder="Yes"/>
+		<File FilePath="Conabio_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="Conabio_TDWG.xslt" HomeFolder="Yes"/>
+		<File FilePath="Convert_ConsensusToWeb_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="Convert_ConsensusToWeb_TDWG.xslt" HomeFolder="Yes"/>
+		<File FilePath="Convert_StandardToConsensus_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="Convert_StandardToConsensus_TDWG.xslt" HomeFolder="Yes"/>
+		<File FilePath="Cuba_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="Cuba_TDWG.xslt" HomeFolder="Yes"/>
+		<File FilePath="Dolomite_.xslt" HomeFolder="Yes"/>
+		<File FilePath="Dolomite_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="Dolomite_TDWG.xslt" HomeFolder="Yes"/>
+		<File FilePath="FloraOfChina_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="FloraOfChina_TDWG.xslt" HomeFolder="Yes"/>
+		<File FilePath="FloraOfChina_TDWG2.xslt" HomeFolder="Yes"/>
+		<File FilePath="GuianaShield_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="GuianaShield_TDWG.xslt" HomeFolder="Yes"/>
+		<File FilePath="MesoAmericana_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="MesoAmericana_TDWG.xslt" HomeFolder="Yes"/>
+		<File FilePath="NewSouthWales_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="NewSouthWales_TDWG.xslt" HomeFolder="Yes"/>
+		<File FilePath="NewZealandPlantNames_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="NewZealandPlantNames_TDWG.xslt" HomeFolder="Yes"/>
+		<File FilePath="Panama_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="Panama_TDWG.xslt" HomeFolder="Yes"/>
+		<File FilePath="QueenslandCensus_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="QueenslandCensus_TDWG.xslt" HomeFolder="Yes"/>
+		<File FilePath="SANBI_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="SANBI_Tdwg.xslt" HomeFolder="Yes"/>
+		<File FilePath="Tasmania_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="Tasmania_TDWG.xslt" HomeFolder="Yes"/>
+		<File FilePath="VietnamFlora_Provider.xslt" HomeFolder="Yes"/>
+		<File FilePath="VietnamFlora_TDWG.xslt" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="XQuery Files" ExtStr="xq;xql;xquery"/>
+	<Folder FolderName="HTML Files" ExtStr="html;htm;xhtml;asp"/>
+	<Folder FolderName="DTD/Schemas" ExtStr="dtd;dcd;xdr;biz;xsd">
+		<File FilePath="Geography.xsd" HomeFolder="Yes"/>
+		<File FilePath="Geography2.xsd" HomeFolder="Yes"/>
+	</Folder>
+	<Folder FolderName="Entities" ExtStr="ent"/>
+</Project>

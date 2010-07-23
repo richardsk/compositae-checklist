@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSet>
+	<Provider id="12">
+		<Distributions>
+			<Distribution schema="unknown" occurrence="Present" origin="" region="BO" isOriginal="true"/>
+			<Distribution schema="unknown" occurrence="Present" origin="" region="GU" isOriginal="true"/>
+			<Distribution schema="unknown" occurrence="Present" origin="" region="FG" isOriginal="true"/>
+			<Distribution schema="unknown" occurrence="Present" origin="" region="AM" isOriginal="true"/>
+		</Distributions>
+	</Provider>
+	<Provider id="15">
+		<Distributions>
+			<Distribution schema="SANBI Regions" region="FSA-OO" occurrence="Present" origin="" isOriginal="true"/>
+			<Distribution schema="SANBI Regions" region="SAF-OO" occurrence="Present" origin="" isOriginal="true"/>
+			<Distribution schema="SANBI Regions" region="SAF-WC" occurrence="Present" origin="" isOriginal="true"/>
+			<Distribution schema="SANBI Regions" region="BOT-OO" occurrence="Present" origin="" isOriginal="true"/>
+			<Distribution schema="SANBI Regions" region="LES-OO" occurrence="Present" origin="" isOriginal="true"/>
+			<Distribution schema="SANBI Regions" region="SAF-EC" occurrence="Present" origin="" isOriginal="true"/>
+			<Distribution schema="SANBI Regions" region="SAF-FS" occurrence="Present" origin="" isOriginal="true"/>
+			<Distribution schema="SANBI Regions" region="SAF-GA" occurrence="Present" origin="" isOriginal="true"/>
+			<Distribution schema="SANBI Regions" region="SAF-KN" occurrence="Present" origin="" isOriginal="true"/>
+			<Distribution schema="SANBI Regions" region="SAF-LP" occurrence="Present" origin="" isOriginal="true"/>
+			<Distribution schema="SANBI Regions" region="SAF-MP" occurrence="Present" origin="" isOriginal="true"/>
+			<Distribution schema="SANBI Regions" region="SAF-NW" occurrence="Present" origin="" isOriginal="true"/>
+			<Distribution schema="SANBI Regions" region="SWZ-OO" occurrence="Present" origin="" isOriginal="true"/>
+		</Distributions>
+	</Provider>
+	<Provider id="13">
+		<Distributions>
+			<Distribution schema="African Flowering Plants Database" region="Southern Africa" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="African Flowering Plants Database" region="Tropical Africa" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="African Flowering Plants Database" region="Southern Africa" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="African Flowering Plants Database" region="Tropical Africa" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="African Flowering Plants Database" region="Southern Africa" occurrence="Present" origin="" isOriginal="false"/>
+		</Distributions>
+	</Provider>
+</DataSet>
