@@ -1,0 +1,473 @@
+body
+{
+   /*left: 0px;
+   margin: 0px;
+   bottom: 0px;*/
+   font-family: AUC, Arial, Tohoma, Verdana, Sans-Serif;
+   font-size:medium;
+   /*position: absolute;
+   top: 0px;*/
+   background-color: White;
+   /*SCROLLBAR-ARROW-COLOR: blue;
+   SCROLLBAR-TRACK-COLOR: #ddeeff;
+   SCROLLBAR-BASE-COLOR: #ddeeff;
+   SCROLLBAR-FACE-COLOR: #ddeeff;*/
+}
+
+p, .CollectionDetails, .ParentLabel
+{
+   line-height: 130%;
+}
+
+.nameLabel
+{
+	font-weight:bold;
+}
+
+.canonicalLabel
+{
+	font-style:italic;
+}
+
+.authorsLabel
+{
+}
+
+
+.bannerText
+{
+	color:Black;
+}
+
+.menu
+{
+	font-size:medium;
+	
+}
+
+.SearchResults, A.SearchResults
+{
+   font-size:.7em;
+   line-height: 11px;
+   text-decoration:none;
+}
+
+A.SearchResults:hover
+{
+   text-decoration:underline;
+}
+
+.SubList
+{
+   font-size:.7em;
+   line-height: 11px;
+   margin-left: 80px;
+}
+
+
+td { margin-right: auto; margin-left: auto;}
+
+
+UL, OL
+{
+   line-height: 160%;
+   padding:0px 0px 0px 0px;
+}
+
+UL li, UL li li, UL li li li,
+OL li, OL li li, OL li li li
+{
+   margin:0px 0px 0px 0px;
+   padding:0px 0px 0px 0px;
+}
+
+.PageHeading,h1,h2,h3,h4,h5,h6
+{
+   color: Black; margin : 0.2em 0em 0.1em 0em; padding : 0px 0px 0px 0px; 	text-align:left;
+}
+
+.PageHeading
+{
+   font-weight: bold;
+   letter-spacing: 2px;
+}
+
+.BlockHeader
+{
+	padding-left:4px;
+	color:white;
+	background-color:#DBBC57;
+	width:100%;
+	height:24px;
+	border: solid 1px Black;
+}
+
+.NameDetailsMenu
+{
+	color:Black;
+	background-color:#DBBC57;
+	text-align:center;
+	border: solid 1px Black;
+	height:26px;
+}
+
+h1 { font-size: 1.5em; font-weight: bold; line-height: 1.5em;}
+                      
+h2 { font-size: 1.4em; font-weight: bold; line-height: 1.4em;}
+                      
+h3 { font-size: 1.2em; font-weight: bold; line-height: 1.3em;} 
+
+h4 { font-size: 1.1em; font-weight: bold;}
+
+h5 { font-size: 1.1em;  font-weight: normal;  }
+
+h6 { font-size: .9em;  font-weight: normal; }
+
+
+/* tree hyperlink properties */
+A.nodes
+{
+	color: black;
+	font-weight: normal;
+	vertical-align: baseline;
+	text-align: left;
+	text-decoration: none;
+	line-height:100%;
+	padding-bottom:0px;
+	padding-top:0px;
+	padding-left:5px;
+	padding-right:5px;
+	margin-bottom: 0px;
+	margin-top:0px;
+}
+
+A.nodes:link
+{
+	color: black;
+}
+
+A.nodes:visited
+{
+	color: black;
+}
+
+A.nodes:vlink
+{
+	color: black;
+}
+
+A.nodes:hover
+{
+	color: blue;
+	text-decoration: underline;
+}
+/********************************/
+
+A.select
+{
+	color: Black;
+	background-color:yellow;
+}
+
+A
+{
+	color: black;
+	text-decoration: underline;
+}
+
+A:hover
+{
+	color:black;
+	text-decoration: none;
+}
+
+
+.sort
+{
+	color:white;
+	font-weight:bold;
+}
+
+a.sort
+{
+	color:yellow;
+	font-weight:bold;
+	text-decoration:underline;
+}
+
+a.sort:visited
+{
+	color:white;
+}
+
+a.sort:active
+{
+	color:yellow;
+}
+
+a.sort:hover
+{
+	color:white;
+	text-decoration:none;
+}
+
+.NameDetails
+{
+	color:Black;
+}
+
+.DetailAttributes_Selected, .DetailAttributes, .DetailAttributes_NoData
+{
+	font-weight: normal;
+	vertical-align: text-bottom;
+	text-align: left;
+	line-height:10pt;
+	padding: 8px 0px 8px 0px;
+	margin:0px 0px 0px 0px;
+}
+
+.DetailAttributes_Selected
+{
+   background-color: #ffff99;
+}
+
+A.DetailAttributes
+{
+	text-decoration:none;
+}
+
+A.DetailAttributes:hover
+{
+	text-decoration:underline;
+}
+
+A.DetailAttributes:visited
+{
+	color: white;
+}
+
+.date
+{
+	font-size: 10px; text-align:center; color: Gray; line-height: 11px;
+}
+
+.PageLink
+{
+	color:Black;
+}
+
+.PageLink:hover
+{
+	color:Black;
+}
+
+.MenuLink
+{
+	font-family:Arial; 
+	text-decoration:none; 
+	color:White;
+	font-size:smaller;
+}
+
+.MenuLink:hover
+{
+	font-family:Arial; 
+	text-decoration:none; 
+	color:Black;
+	font-size:smaller;
+}
+
+.DetailAttributes_NoData
+{
+	color:Gray;
+}
+
+.tabs
+{
+	font-size: 9pt;
+	color: black;
+	text-decoration:none
+}
+
+a.tabs
+{
+	color: black;
+	text-decoration:none
+}
+
+.tab_select
+{
+	color: white;
+	text-decoration:none
+}
+
+.smaller, .smaller_bold, .smaller_selected, .smaller_bold_selected,.smaller_noData
+{
+	font-size:smaller;
+	line-height: 130%;
+	font-style:normal;
+	color:Black;
+}
+
+.smaller_bold, .smaller_bold_selected
+  {font-weight:bold;}
+
+.smaller_selected, .smaller_bold_selected
+  {background-color:Yellow;}
+
+TD.sort
+  {background-color:Black; }
+
+INPUT, SELECT, TEXTAREA
+  {background-color:#F5F5DC;} /* ddeeff;}*/
+
+TEXTAREA
+  {   SCROLLBAR-ARROW-COLOR: #DDE4C0;
+   SCROLLBAR-TRACK-COLOR: #DDE4C0;
+   SCROLLBAR-BASE-COLOR: #08622C;
+   SCROLLBAR-FACE-COLOR: #08622C;}
+  
+.hiHeight
+  {line-height:45px;}
+
+.loHeight
+  {line-height:15px;}
+
+BLOCKQUOTE.list
+  {margin-top:0;   margin-bottom:0;}
+
+.normal_bold
+  {line-height: 130%;   font-weight:bold;}
+
+.normal
+  {line-height: 130%;}
+
+.normal_bold_selected
+  {line-height: 130%; font-weight:bold;	background-color:Yellow;}
+
+.normal_selected
+  {line-height: 130%;background-color: Yellow;}
+
+TABLE.nodeTable
+  {padding-left:8px;}
+
+.menuStyle
+{
+	color:Black;
+	background-color:#dbbc57;
+	border:solid 1 black;
+	text-align:center;
+	padding-top:2;
+	padding-bottom:2;
+	padding-right:5;
+	padding-left:5;	
+}
+
+.menuStyleSelected
+{
+	color:Black;
+	background-color:#dbbc57;
+	border:solid 2 black;
+	text-align:center;
+	padding-top:2;
+	padding-bottom:2;
+	padding-right:5;
+	padding-left:5;	
+}
+
+SUP
+  {font-size:smaller;}
+
+HR
+  {border: 1px inset;}
+
+.FrameLeftBorder
+  {border-left: #dbbc57 3px solid; table-layout: fixed; cursor: e-resize; border-collapse: collapse; }
+
+.TileBg
+  {background-image: url(../Images/NZFloraNAVBarTile.gif);}
+
+table.searchBox
+  {border-right: darkgreen 1px solid; border-top: darkgreen 1px solid;  border-left: darkgreen 1px solid; border-bottom: darkgreen 1px solid; margin-left: 15px; }
+
+input.FormButtons
+  {FONT-WEIGHT: bold; FONT-SIZE: 13px; WIDTH: 133px; HEIGHT: 30px}
+
+/*.OrSearchBox
+  {background-color: #ffff99; }
+*/
+
+.bgNoTab
+  {background-image: url(../Images/NZFloraNAVBarTile.gif);}
+
+.copyright
+{
+	font-size: 10px; text-align:center; color: white; line-height: 11px;
+}
+.copyright:a:hover
+{
+	color:Black;
+}	
+
+
+
+/*****************************/
+/*       paging control      */
+/*****************************/
+.PagingControl
+{
+    font-size: 10px;
+    color: #000099; /*	background-color: lime;*/
+}
+
+.PagingControlDisplayingRecords
+{
+    font-size: 10px;
+    color: #000000; /*	background-color: white; */
+}
+
+.PagingControlTable
+{
+    /*	background-color: Silver;*/
+}
+
+.PagingControlDisplayingRecordsRange
+{
+    font-size: 10px;
+    color: blue;
+}
+
+.PagingControlFirst, .PagingControlPrev, .PagingControlBeforeCurrent, .PagingControAfterCurrent, .PagingControlNext, .PagingControlLast
+{
+    font-size: 10px;
+    color: black;
+}
+
+.PagingControlCurrent
+{
+    font-size: 10px;
+    color: red;
+}
+
+.KeyText
+{
+	padding-right:15px;
+	padding-bottom:8px;
+	padding-top:8px;
+}
+
+.KeyPrefix
+{
+	padding-bottom:8px;
+	padding-top:8px;
+}
+
+.KeyResult
+{
+	padding-bottom:8px;
+	padding-top:8px;
+}
+
+/*****************************/
+/*****************************/
+/*****************************/
