@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-16"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Table">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PNPk" type="xs:int" minOccurs="0" />
+              <xs:element name="PNProviderUpdatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PNProviderAddedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PNNameId" type="xs:string" minOccurs="0" />
+              <xs:element name="PNNameFull" type="xs:string" minOccurs="0" />
+              <xs:element name="PNNameRank" type="xs:string" minOccurs="0" />
+              <xs:element name="PNNameCanonical" type="xs:string" minOccurs="0" />
+              <xs:element name="PNNameAuthors" type="xs:string" minOccurs="0" />
+              <xs:element name="PNBasionymAuthors" type="xs:string" minOccurs="0" />
+              <xs:element name="PNCombinationAuthors" type="xs:string" minOccurs="0" />
+              <xs:element name="PNPublishedIn" type="xs:string" minOccurs="0" />
+              <xs:element name="PNReferenceId" type="xs:string" minOccurs="0" />
+              <xs:element name="PNYear" type="xs:string" minOccurs="0" />
+              <xs:element name="PNMicroReference" type="xs:string" minOccurs="0" />
+              <xs:element name="PNTypeVoucher" type="xs:string" minOccurs="0" />
+              <xs:element name="PNTypeName" type="xs:string" minOccurs="0" />
+              <xs:element name="PNTypeNameId" type="xs:string" minOccurs="0" />
+              <xs:element name="PNOrthography" type="xs:string" minOccurs="0" />
+              <xs:element name="PNBasionym" type="xs:string" minOccurs="0" />
+              <xs:element name="PNBasionymId" type="xs:string" minOccurs="0" />
+              <xs:element name="PNBasedOn" type="xs:string" minOccurs="0" />
+              <xs:element name="PNBasedOnId" type="xs:string" minOccurs="0" />
+              <xs:element name="PNConservedAgainst" type="xs:string" minOccurs="0" />
+              <xs:element name="PNConservedAgainstId" type="xs:string" minOccurs="0" />
+              <xs:element name="PNHomonymOf" type="xs:string" minOccurs="0" />
+              <xs:element name="PNHomonymOfId" type="xs:string" minOccurs="0" />
+              <xs:element name="PNReplacementFor" type="xs:string" minOccurs="0" />
+              <xs:element name="PNReplacementForId" type="xs:string" minOccurs="0" />
+              <xs:element name="PNInvalid" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PNIllegitimate" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PNMisapplied" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PNProParte" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PNPreferredConceptId" type="xs:string" minOccurs="0" />
+              <xs:element name="PNPreferredName" type="xs:string" minOccurs="0" />
+              <xs:element name="PNPreferredNameId" type="xs:string" minOccurs="0" />
+              <xs:element name="PNPreferredAccordingTo" type="xs:string" minOccurs="0" />
+              <xs:element name="PNPreferredAccordingToId" type="xs:string" minOccurs="0" />
+              <xs:element name="PNParentConceptId" type="xs:string" minOccurs="0" />
+              <xs:element name="PNParentName" type="xs:string" minOccurs="0" />
+              <xs:element name="PNParentNameId" type="xs:string" minOccurs="0" />
+              <xs:element name="PNParentAccordingTo" type="xs:string" minOccurs="0" />
+              <xs:element name="PNParentAccordingToId" type="xs:string" minOccurs="0" />
+              <xs:element name="PNHybridP1ConceptId" type="xs:string" minOccurs="0" />
+              <xs:element name="PNHybridP1Name" type="xs:string" minOccurs="0" />
+              <xs:element name="PNHybridP1NameId" type="xs:string" minOccurs="0" />
+              <xs:element name="PNHybridP1AccordingTo" type="xs:string" minOccurs="0" />
+              <xs:element name="PNHybridP1AccordingToId" type="xs:string" minOccurs="0" />
+              <xs:element name="PNHybridP2ConceptId" type="xs:string" minOccurs="0" />
+              <xs:element name="PNHybridP2Name" type="xs:string" minOccurs="0" />
+              <xs:element name="PNHybridP2NameId" type="xs:string" minOccurs="0" />
+              <xs:element name="PNHybridP2AccordingTo" type="xs:string" minOccurs="0" />
+              <xs:element name="PNHybridP2AccordingToId" type="xs:string" minOccurs="0" />
+              <xs:element name="PNOtherConceptsXml" type="xs:string" minOccurs="0" />
+              <xs:element name="PNVernacularsXml" type="xs:string" minOccurs="0" />
+              <xs:element name="PNGeographyText" type="xs:string" minOccurs="0" />
+              <xs:element name="PNGeographyCodes" type="xs:string" minOccurs="0" />
+              <xs:element name="PNClimate" type="xs:string" minOccurs="0" />
+              <xs:element name="PNLifeform" type="xs:string" minOccurs="0" />
+              <xs:element name="PNIUCN" type="xs:string" minOccurs="0" />
+              <xs:element name="PNNotes" type="xs:string" minOccurs="0" />
+              <xs:element name="PNHierarchyXml" type="xs:string" minOccurs="0" />
+              <xs:element name="PNStatusNotes" type="xs:string" minOccurs="0" />
+              <xs:element name="PNNonNotes" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
