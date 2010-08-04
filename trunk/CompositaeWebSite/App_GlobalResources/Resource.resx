@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Based_On" xml:space="preserve">
+    <value>Based on:</value>
+  </data>
+  <data name="Concept_According_To" xml:space="preserve">
+    <value>According to</value>
+  </data>
+  <data name="Concept_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Concept_Providers" xml:space="preserve">
+    <value>Data Provider</value>
+  </data>
+  <data name="Concept_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Conflicting_Field_Data" xml:space="preserve">
+    <value>Data only shown for conflicting fields</value>
+  </data>
+  <data name="Consensus_Data" xml:space="preserve">
+    <value>Name Summary</value>
+  </data>
+  <data name="Conserved_Against" xml:space="preserve">
+    <value>Conserved against:</value>
+  </data>
+  <data name="Did_You_Mean" xml:space="preserve">
+    <value>Did you mean:</value>
+  </data>
+  <data name="Feedback_Done" xml:space="preserve">
+    <value>&lt;strong&gt;Thank you for your feedback.&lt;/strong&gt;</value>
+  </data>
+  <data name="Feedback_Email_Confirm" xml:space="preserve">
+    <value>Thank you for your feedback.  We will review your comments and update the database and website.</value>
+  </data>
+  <data name="Feedback_Email_Error" xml:space="preserve">
+    <value>The email addresses you entered do not match.</value>
+  </data>
+  <data name="Feedback_Email_Subject" xml:space="preserve">
+    <value>Compositae Checklist Feedback</value>
+  </data>
+  <data name="Feedback_Error" xml:space="preserve">
+    <value>Error sending email!  Check your email address was entered correctly</value>
+  </data>
+  <data name="Full_Name" xml:space="preserve">
+    <value>Full name:</value>
+  </data>
+  <data name="Full_Ref" xml:space="preserve">
+    <value>Full publication:</value>
+  </data>
+  <data name="Homonym_Of" xml:space="preserve">
+    <value>Homonym of:</value>
+  </data>
+  <data name="ICBN_Notes" xml:space="preserve">
+    <value>Nomenclatural status:</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="Name_Authors" xml:space="preserve">
+    <value>Authors:</value>
+  </data>
+  <data name="Name_Basionym" xml:space="preserve">
+    <value>Basionym:</value>
+  </data>
+  <data name="Name_Orthography" xml:space="preserve">
+    <value>Orthographic variant:</value>
+  </data>
+  <data name="Name_Type" xml:space="preserve">
+    <value>Type:</value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Notes:</value>
+  </data>
+  <data name="Original_Data" xml:space="preserve">
+    <value>Contributed Data</value>
+  </data>
+  <data name="Other_Data" xml:space="preserve">
+    <value>Distribution</value>
+  </data>
+  <data name="Other_Data_Type" xml:space="preserve">
+    <value>Other Data Type :</value>
+  </data>
+  <data name="Prov_Contact_Email" xml:space="preserve">
+    <value>Contact email:</value>
+  </data>
+  <data name="Prov_Contact_Name" xml:space="preserve">
+    <value>Contact name:</value>
+  </data>
+  <data name="Prov_Full_Name" xml:space="preserve">
+    <value>Full name:</value>
+  </data>
+  <data name="Prov_Id" xml:space="preserve">
+    <value>Id:</value>
+  </data>
+  <data name="Prov_Name" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="Prov_Project_Web" xml:space="preserve">
+    <value>Project website:</value>
+  </data>
+  <data name="Prov_Statement" xml:space="preserve">
+    <value>Metadata statement:</value>
+  </data>
+  <data name="Prov_Website" xml:space="preserve">
+    <value>Website:</value>
+  </data>
+  <data name="Published" xml:space="preserve">
+    <value>Published:</value>
+  </data>
+  <data name="PublishedNonStandard" xml:space="preserve">
+    <value>Published*:</value>
+  </data>
+  <data name="Replacement_For" xml:space="preserve">
+    <value>Replacement for:</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Outputs</value>
+  </data>
+  <data name="Result_Full_Name" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+  <data name="Result_Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Search_Results" xml:space="preserve">
+    <value>records found</value>
+  </data>
+  <data name="Show_All_Synonyms" xml:space="preserve">
+    <value>Show all synonyms</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status:</value>
+  </data>
+  <data name="Synonyms" xml:space="preserve">
+    <value>Synonyms:</value>
+  </data>
+  <data name="Taxonomic_Concepts" xml:space="preserve">
+    <value>Taxonomic Concepts</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+</root>
