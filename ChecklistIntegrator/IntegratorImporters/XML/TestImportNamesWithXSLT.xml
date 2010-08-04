@@ -1,0 +1,25 @@
+<TestNames>
+  <Name>
+    <Id>TEST001</Id>
+    <Name>Test name1</Name>
+    <Rank>Genus</Rank>
+    <Added>2/5/05</Added>
+    <Updated>22/12/05</Updated>
+    <Canonical>name1</Canonical>
+    <Authors>testAuthor</Authors>
+    <Year>1955</Year>
+    <CurrentNameId>TEST002</CurrentNameId>
+    <Notes>Some notes</Notes>
+  </Name> 
+  <Name>
+    <Id>TEST002</Id>
+    <Name>Test name current</Name>
+    <Rank>Genus</Rank>
+    <Added>2/5/05</Added>
+    <Updated>22/12/05</Updated>
+    <Canonical>current1</Canonical>
+    <Authors>cur Author</Authors>
+    <Year>1958</Year>
+    <Notes>This is the current name</Notes>
+  </Name> 
+</TestNames>

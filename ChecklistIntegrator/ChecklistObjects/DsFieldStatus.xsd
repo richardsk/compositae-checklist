@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsFieldStatus" targetNamespace="http://tempuri.org/DsFieldStatus.xsd" xmlns:mstns="http://tempuri.org/DsFieldStatus.xsd" xmlns="http://tempuri.org/DsFieldStatus.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="ExcludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsFieldStatus" msdata:IsDataSet="true" msdata:Locale="en-US" msprop:Generator_UserDSName="DsFieldStatus" msprop:Generator_DataSetName="DsFieldStatus">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblFieldStatus" msprop:Generator_UserTableName="tblFieldStatus" msprop:Generator_RowDeletedName="tblFieldStatusRowDeleted" msprop:Generator_TableClassName="tblFieldStatusDataTable" msprop:Generator_RowChangedName="tblFieldStatusRowChanged" msprop:Generator_RowClassName="tblFieldStatusRow" msprop:Generator_RowChangingName="tblFieldStatusRowChanging" msprop:Generator_RowEvArgName="tblFieldStatusRowChangeEvent" msprop:Generator_RowEvHandlerName="tblFieldStatusRowChangeEventHandler" msprop:Generator_TablePropName="tblFieldStatus" msprop:Generator_TableVarName="tabletblFieldStatus" msprop:Generator_RowDeletingName="tblFieldStatusRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FieldStatusCounterPK" msprop:Generator_UserColumnName="FieldStatusCounterPK" msprop:Generator_ColumnPropNameInRow="FieldStatusCounterPK" msprop:Generator_ColumnVarNameInTable="columnFieldStatusCounterPK" msprop:Generator_ColumnPropNameInTable="FieldStatusCounterPKColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="FieldStatusIdentifierFK" msprop:Generator_UserColumnName="FieldStatusIdentifierFK" msprop:Generator_ColumnPropNameInRow="FieldStatusIdentifierFK" msprop:Generator_ColumnVarNameInTable="columnFieldStatusIdentifierFK" msprop:Generator_ColumnPropNameInTable="FieldStatusIdentifierFKColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="FieldStatusRecordFK" msprop:Generator_UserColumnName="FieldStatusRecordFK" msprop:Generator_ColumnPropNameInRow="FieldStatusRecordFK" msprop:Generator_ColumnVarNameInTable="columnFieldStatusRecordFK" msprop:Generator_ColumnPropNameInTable="FieldStatusRecordFKColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FieldStatusLevelFK" msprop:Generator_UserColumnName="FieldStatusLevelFK" msprop:Generator_ColumnPropNameInRow="FieldStatusLevelFK" msprop:Generator_ColumnVarNameInTable="columnFieldStatusLevelFK" msprop:Generator_ColumnPropNameInTable="FieldStatusLevelFKColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="FieldStatusComment" msprop:Generator_UserColumnName="FieldStatusComment" msprop:Generator_ColumnPropNameInRow="FieldStatusComment" msprop:Generator_ColumnVarNameInTable="columnFieldStatusComment" msprop:Generator_ColumnPropNameInTable="FieldStatusCommentColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FieldStatusAddedByFK" msprop:Generator_UserColumnName="FieldStatusAddedByFK" msprop:Generator_ColumnPropNameInRow="FieldStatusAddedByFK" msprop:Generator_ColumnVarNameInTable="columnFieldStatusAddedByFK" msprop:Generator_ColumnPropNameInTable="FieldStatusAddedByFKColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="FieldStatusAddedDate" msprop:Generator_UserColumnName="FieldStatusAddedDate" msprop:Generator_ColumnPropNameInRow="FieldStatusAddedDate" msprop:Generator_ColumnVarNameInTable="columnFieldStatusAddedDate" msprop:Generator_ColumnPropNameInTable="FieldStatusAddedDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FieldStatusUpdatedByFK" msprop:Generator_UserColumnName="FieldStatusUpdatedByFK" msprop:Generator_ColumnPropNameInRow="FieldStatusUpdatedByFK" msprop:Generator_ColumnVarNameInTable="columnFieldStatusUpdatedByFK" msprop:Generator_ColumnPropNameInTable="FieldStatusUpdatedByFKColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="FieldStatussUpdatedDate" msprop:Generator_UserColumnName="FieldStatussUpdatedDate" msprop:Generator_ColumnPropNameInRow="FieldStatussUpdatedDate" msprop:Generator_ColumnVarNameInTable="columnFieldStatussUpdatedDate" msprop:Generator_ColumnPropNameInTable="FieldStatussUpdatedDateColumn" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblFieldStatusIdentifier" msprop:Generator_UserTableName="tblFieldStatusIdentifier" msprop:Generator_RowDeletedName="tblFieldStatusIdentifierRowDeleted" msprop:Generator_TableClassName="tblFieldStatusIdentifierDataTable" msprop:Generator_RowChangedName="tblFieldStatusIdentifierRowChanged" msprop:Generator_RowClassName="tblFieldStatusIdentifierRow" msprop:Generator_RowChangingName="tblFieldStatusIdentifierRowChanging" msprop:Generator_RowEvArgName="tblFieldStatusIdentifierRowChangeEvent" msprop:Generator_RowEvHandlerName="tblFieldStatusIdentifierRowChangeEventHandler" msprop:Generator_TablePropName="tblFieldStatusIdentifier" msprop:Generator_TableVarName="tabletblFieldStatusIdentifier" msprop:Generator_RowDeletingName="tblFieldStatusIdentifierRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FieldStatusIdentifierCounterPK" msprop:Generator_UserColumnName="FieldStatusIdentifierCounterPK" msprop:Generator_ColumnPropNameInRow="FieldStatusIdentifierCounterPK" msprop:Generator_ColumnVarNameInTable="columnFieldStatusIdentifierCounterPK" msprop:Generator_ColumnPropNameInTable="FieldStatusIdentifierCounterPKColumn" type="xs:int" />
+              <xs:element name="FieldStatusIdentifierTableName" msprop:Generator_UserColumnName="FieldStatusIdentifierTableName" msprop:Generator_ColumnPropNameInRow="FieldStatusIdentifierTableName" msprop:Generator_ColumnVarNameInTable="columnFieldStatusIdentifierTableName" msprop:Generator_ColumnPropNameInTable="FieldStatusIdentifierTableNameColumn" type="xs:string" />
+              <xs:element name="FieldStatusIdentifierPKFieldName" msprop:Generator_UserColumnName="FieldStatusIdentifierPKFieldName" msprop:Generator_ColumnPropNameInRow="FieldStatusIdentifierPKFieldName" msprop:Generator_ColumnVarNameInTable="columnFieldStatusIdentifierPKFieldName" msprop:Generator_ColumnPropNameInTable="FieldStatusIdentifierPKFieldNameColumn" type="xs:string" />
+              <xs:element name="FieldStatusIdentifierFieldName" msprop:Generator_UserColumnName="FieldStatusIdentifierFieldName" msprop:Generator_ColumnPropNameInRow="FieldStatusIdentifierFieldName" msprop:Generator_ColumnVarNameInTable="columnFieldStatusIdentifierFieldName" msprop:Generator_ColumnPropNameInTable="FieldStatusIdentifierFieldNameColumn" type="xs:string" />
+              <xs:element name="FieldStatusIdentifierGroup" msprop:Generator_UserColumnName="FieldStatusIdentifierGroup" msprop:Generator_ColumnPropNameInRow="FieldStatusIdentifierGroup" msprop:Generator_ColumnVarNameInTable="columnFieldStatusIdentifierGroup" msprop:Generator_ColumnPropNameInTable="FieldStatusIdentifierGroupColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FieldStatusIdentifierGroupLevel" msprop:Generator_UserColumnName="FieldStatusIdentifierGroupLevel" msprop:Generator_ColumnPropNameInRow="FieldStatusIdentifierGroupLevel" msprop:Generator_ColumnVarNameInTable="columnFieldStatusIdentifierGroupLevel" msprop:Generator_ColumnPropNameInTable="FieldStatusIdentifierGroupLevelColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblFieldStatusLevel" msprop:Generator_UserTableName="tblFieldStatusLevel" msprop:Generator_RowDeletedName="tblFieldStatusLevelRowDeleted" msprop:Generator_TableClassName="tblFieldStatusLevelDataTable" msprop:Generator_RowChangedName="tblFieldStatusLevelRowChanged" msprop:Generator_RowClassName="tblFieldStatusLevelRow" msprop:Generator_RowChangingName="tblFieldStatusLevelRowChanging" msprop:Generator_RowEvArgName="tblFieldStatusLevelRowChangeEvent" msprop:Generator_RowEvHandlerName="tblFieldStatusLevelRowChangeEventHandler" msprop:Generator_TablePropName="tblFieldStatusLevel" msprop:Generator_TableVarName="tabletblFieldStatusLevel" msprop:Generator_RowDeletingName="tblFieldStatusLevelRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FieldStatusLevelCounterPK" msprop:Generator_UserColumnName="FieldStatusLevelCounterPK" msprop:Generator_ColumnPropNameInRow="FieldStatusLevelCounterPK" msprop:Generator_ColumnVarNameInTable="columnFieldStatusLevelCounterPK" msprop:Generator_ColumnPropNameInTable="FieldStatusLevelCounterPKColumn" type="xs:int" />
+              <xs:element name="FieldStatusLevelText" msprop:Generator_UserColumnName="FieldStatusLevelText" msprop:Generator_ColumnPropNameInRow="FieldStatusLevelText" msprop:Generator_ColumnVarNameInTable="columnFieldStatusLevelText" msprop:Generator_ColumnPropNameInTable="FieldStatusLevelTextColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="DsFieldStatusKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblFieldStatusIdentifier" />
+      <xs:field xpath="mstns:FieldStatusIdentifierCounterPK" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

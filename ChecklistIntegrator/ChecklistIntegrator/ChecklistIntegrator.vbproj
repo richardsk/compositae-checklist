@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C6550CDB-A2CB-4566-A965-508366972D92}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ChecklistIntegrator.My.MyApplication</StartupObject>
+    <RootNamespace>ChecklistIntegrator</RootNamespace>
+    <AssemblyName>ChecklistIntegrator</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ChecklistIntegrator.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ChecklistIntegrator.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.Win.C1FlexGrid.2, Version=2.5.20053.230, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files\ComponentOne Studio.NET 2.0\bin\C1.Win.C1FlexGrid.2.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1TrueDBGrid.2, Version=2.0.20062.60510, Culture=neutral, PublicKeyToken=75ae3fb0e2b1e0da, processorArchitecture=MSIL" />
+    <Reference Include="SandDock, Version=1.0.6.1, Culture=neutral, PublicKeyToken=75b7ec17dd7c14c3">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Include\SandDock.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutForm.Designer.vb">
+      <DependentUpon>AboutForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnnotationResultsForm.Designer.vb">
+      <DependentUpon>AnnotationResultsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AnnotationResultsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthorSearch.Designer.vb">
+      <DependentUpon>AuthorSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AuthorSearch.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AuthorSearchForm.Designer.vb">
+      <DependentUpon>AuthorSearchForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AuthorSearchForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthorsForm.Designer.vb">
+      <DependentUpon>AuthorsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AuthorsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportAnnotationForm.Designer.vb">
+      <DependentUpon>ImportAnnotationForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImportAnnotationForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportMergeForm.Designer.vb">
+      <DependentUpon>ImportMergeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImportMergeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoveDiffParentsForm.Designer.vb">
+      <DependentUpon>MoveDiffParentsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MoveDiffParentsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MergeUnknownsForm.Designer.vb">
+      <DependentUpon>MergeUnknownsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MergeUnknownsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DefParentsForm.Designer.vb">
+      <DependentUpon>DefParentsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DefParentsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportAuthorsForm.Designer.vb">
+      <DependentUpon>ImportAuthorsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImportAuthorsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NameDetailsForm.Designer.vb">
+      <DependentUpon>NameDetailsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NameDetailsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeduplicationForm.Designer.vb">
+      <DependentUpon>DeduplicationForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DeduplicationForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportDBForm.Designer.vb">
+      <DependentUpon>ExportDBForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ExportDBForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MergeSelForm.Designer.vb">
+      <DependentUpon>MergeSelForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MergeSelForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NameRecordsForm.Designer.vb">
+      <DependentUpon>NameRecordsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NameRecordsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewNameForm.Designer.vb">
+      <DependentUpon>NewNameForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NewNameForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReferenceCleanupForm.Designer.vb">
+      <DependentUpon>ReferenceCleanupForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReferenceCleanupForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RefreshNamesForm.Designer.vb">
+      <DependentUpon>RefreshNamesForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RefreshNamesForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectMergeNameForm.Designer.vb">
+      <DependentUpon>SelectMergeNameForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SelectMergeNameForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MergeForm.Designer.vb">
+      <DependentUpon>MergeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MergeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProviderNameForm.Designer.vb">
+      <DependentUpon>ProviderNameForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderNameForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProviderReferenceForm.Designer.vb">
+      <DependentUpon>ProviderReferenceForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderReferenceForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProviderRefRecordsForm.Designer.vb">
+      <DependentUpon>ProviderRefRecordsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderRefRecordsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportForm.Designer.vb">
+      <DependentUpon>ImportForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImportForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntegratorForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntegratorForm.Designer.vb">
+      <DependentUpon>IntegratorForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogonForm.Designer.vb">
+      <DependentUpon>LogonForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LogonForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ProviderForm.Designer.vb">
+      <DependentUpon>ProviderForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProviderNameRecordsForm.Designer.vb">
+      <DependentUpon>ProviderNameRecordsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProviderNameRecordsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectReferenceForm.Designer.vb">
+      <DependentUpon>SelectReferenceForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SelectReferenceForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectUserForm.Designer.vb">
+      <DependentUpon>SelectUserForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SelectUserForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplitForm.Designer.vb">
+      <DependentUpon>SplitForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplitForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewXmlForm.Designer.vb">
+      <DependentUpon>ViewXmlForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ViewXmlForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AboutForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnnotationResultsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AnnotationResultsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthorSearch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AuthorSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthorSearchForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AuthorSearchForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthorsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AuthorsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportAnnotationForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImportAnnotationForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportMergeForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImportMergeForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoveDiffParentsForm.resx">
+      <DependentUpon>MoveDiffParentsForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MergeUnknownsForm.resx">
+      <DependentUpon>MergeUnknownsForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DefParentsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DefParentsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportAuthorsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImportAuthorsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NameDetailsForm.resx">
+      <DependentUpon>NameDetailsForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeduplicationForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DeduplicationForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExportDBForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ExportDBForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MergeSelForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MergeSelForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NameRecordsForm.resx">
+      <DependentUpon>NameRecordsForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewNameForm.resx">
+      <DependentUpon>NewNameForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReferenceCleanupForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ReferenceCleanupForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RefreshNamesForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RefreshNamesForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectMergeNameForm.resx">
+      <DependentUpon>SelectMergeNameForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MergeForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MergeForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProviderNameForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProviderNameForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProviderReferenceForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProviderReferenceForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProviderRefRecordsForm.resx">
+      <DependentUpon>ProviderRefRecordsForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImportForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntegratorForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>IntegratorForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogonForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LogonForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProviderForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProviderForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProviderNameRecordsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProviderNameRecordsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectReferenceForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SelectReferenceForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectUserForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SelectUserForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplitForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SplitForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewXmlForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ViewXmlForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Reports\ConflictingAuthorsReport.xslt" />
+    <Content Include="Reports\ConflictingReport.xslt" />
+    <Content Include="Reports\PhantomNamesReport.xslt" />
+    <Content Include="Reports\UnknownParentReport.xslt" />
+    <Content Include="Reports\LowMatchReport.xslt" />
+    <Content Include="Reports\MultipleReport.xslt" />
+    <Content Include="Reports\NoParentReport.xslt" />
+    <Content Include="Reports\ProgressReport.xslt" />
+    <Content Include="Reports\SimilarNamesReport.xslt" />
+    <Content Include="Reports\UnlinkedReport.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChecklistBusinessRules\ChecklistBusinessRules.vbproj">
+      <Project>{38900EDD-1412-426C-8B5F-5A93A74E6031}</Project>
+      <Name>ChecklistBusinessRules</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChecklistDataAccess\ChecklistDataAccess.vbproj">
+      <Project>{D36E2162-3509-4256-A438-6DEDDB2D4B2A}</Project>
+      <Name>ChecklistDataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChecklistObjects\ChecklistObjects.vbproj">
+      <Project>{96E26526-683E-4891-A472-0478183E0C04}</Project>
+      <Name>ChecklistObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegrationProcessor\IntegrationProcessor.vbproj">
+      <Project>{3DA9A396-A8AE-4D0A-B8EC-4D845235A7FC}</Project>
+      <Name>IntegrationProcessor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegratorControls\IntegratorControls.vbproj">
+      <Project>{46B21E46-DDA9-42AA-BE51-AF3F933EEAF7}</Project>
+      <Name>IntegratorControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IntegratorImporters\IntegratorImporters.vbproj">
+      <Project>{B34693BB-BAB6-4609-BB70-C9B241807837}</Project>
+      <Name>IntegratorImporters</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,105 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ChecklistIntegrator", "ChecklistIntegrator\ChecklistIntegrator.vbproj", "{C6550CDB-A2CB-4566-A965-508366972D92}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "IntegratorImporters", "IntegratorImporters\IntegratorImporters.vbproj", "{B34693BB-BAB6-4609-BB70-C9B241807837}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "IntegratorControls", "IntegratorControls\IntegratorControls.vbproj", "{46B21E46-DDA9-42AA-BE51-AF3F933EEAF7}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "IntegrationProcessor", "IntegrationProcessor\IntegrationProcessor.vbproj", "{3DA9A396-A8AE-4D0A-B8EC-4D845235A7FC}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ChecklistBusinessRules", "ChecklistBusinessRules\ChecklistBusinessRules.vbproj", "{38900EDD-1412-426C-8B5F-5A93A74E6031}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ChecklistObjects", "ChecklistObjects\ChecklistObjects.vbproj", "{96E26526-683E-4891-A472-0478183E0C04}"
+EndProject
+Project("{4F174C21-8C12-11D0-8340-0000F80270F8}") = "ChecklistDatabase", "ChecklistDatabase\ChecklistDatabase.dbp", "{D99E31D7-6DC0-4D2E-AFD0-36BA6F43509F}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ChecklistDataAccess", "ChecklistDataAccess\ChecklistDataAccess.vbproj", "{D36E2162-3509-4256-A438-6DEDDB2D4B2A}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DataTransferServer", "DataTransferServer\DataTransferServer.vbproj", "{5ED276FD-E5CD-4BCC-A72A-C19BFB98E20E}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 10
+		SccLocalPath0 = .
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = ChecklistIntegrator\\ChecklistIntegrator.vbproj
+		SccProjectName1 = $/Compositae/ChecklistIntegrator/ChecklistIntegrator
+		SccLocalPath1 = ChecklistIntegrator
+		CanCheckoutShared = false
+		SccProjectUniqueName2 = IntegratorImporters\\IntegratorImporters.vbproj
+		SccProjectName2 = $/Compositae/ChecklistIntegrator/IntegratorImporters
+		SccLocalPath2 = IntegratorImporters
+		CanCheckoutShared = false
+		SccProjectUniqueName3 = IntegratorControls\\IntegratorControls.vbproj
+		SccProjectName3 = $/Compositae/ChecklistIntegrator/IntegratorControls
+		SccLocalPath3 = IntegratorControls
+		CanCheckoutShared = false
+		SccProjectUniqueName4 = IntegrationProcessor\\IntegrationProcessor.vbproj
+		SccProjectName4 = $/Compositae/ChecklistIntegrator/IntegrationProcessor
+		SccLocalPath4 = IntegrationProcessor
+		CanCheckoutShared = false
+		SccProjectUniqueName5 = ChecklistBusinessRules\\ChecklistBusinessRules.vbproj
+		SccProjectName5 = $/Compositae/ChecklistIntegrator/ChecklistBusinessRules
+		SccLocalPath5 = ChecklistBusinessRules
+		CanCheckoutShared = false
+		SccProjectUniqueName6 = ChecklistObjects\\ChecklistObjects.vbproj
+		SccProjectName6 = $/Compositae/ChecklistIntegrator/ChecklistObjects
+		SccLocalPath6 = ChecklistObjects
+		CanCheckoutShared = false
+		SccProjectUniqueName7 = ChecklistDatabase\\ChecklistDatabase.dbp
+		SccProjectName7 = $/Compositae/ChecklistIntegrator/ChecklistDatabase
+		SccLocalPath7 = ChecklistDatabase
+		CanCheckoutShared = false
+		SccProjectUniqueName8 = ChecklistDataAccess\\ChecklistDataAccess.vbproj
+		SccProjectName8 = $/Compositae/ChecklistIntegrator/ChecklistDataAccess
+		SccLocalPath8 = ChecklistDataAccess
+		CanCheckoutShared = false
+		SccProjectUniqueName9 = DataTransferServer\\DataTransferServer.vbproj
+		SccProjectName9 = $/Compositae/ChecklistIntegrator/DataTransferServer
+		SccLocalPath9 = DataTransferServer
+		CanCheckoutShared = false
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6550CDB-A2CB-4566-A965-508366972D92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6550CDB-A2CB-4566-A965-508366972D92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6550CDB-A2CB-4566-A965-508366972D92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6550CDB-A2CB-4566-A965-508366972D92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B34693BB-BAB6-4609-BB70-C9B241807837}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B34693BB-BAB6-4609-BB70-C9B241807837}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B34693BB-BAB6-4609-BB70-C9B241807837}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B34693BB-BAB6-4609-BB70-C9B241807837}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46B21E46-DDA9-42AA-BE51-AF3F933EEAF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B21E46-DDA9-42AA-BE51-AF3F933EEAF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B21E46-DDA9-42AA-BE51-AF3F933EEAF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B21E46-DDA9-42AA-BE51-AF3F933EEAF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DA9A396-A8AE-4D0A-B8EC-4D845235A7FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DA9A396-A8AE-4D0A-B8EC-4D845235A7FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DA9A396-A8AE-4D0A-B8EC-4D845235A7FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DA9A396-A8AE-4D0A-B8EC-4D845235A7FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38900EDD-1412-426C-8B5F-5A93A74E6031}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38900EDD-1412-426C-8B5F-5A93A74E6031}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38900EDD-1412-426C-8B5F-5A93A74E6031}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38900EDD-1412-426C-8B5F-5A93A74E6031}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96E26526-683E-4891-A472-0478183E0C04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96E26526-683E-4891-A472-0478183E0C04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96E26526-683E-4891-A472-0478183E0C04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96E26526-683E-4891-A472-0478183E0C04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D36E2162-3509-4256-A438-6DEDDB2D4B2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D36E2162-3509-4256-A438-6DEDDB2D4B2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D36E2162-3509-4256-A438-6DEDDB2D4B2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D36E2162-3509-4256-A438-6DEDDB2D4B2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ED276FD-E5CD-4BCC-A72A-C19BFB98E20E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ED276FD-E5CD-4BCC-A72A-C19BFB98E20E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ED276FD-E5CD-4BCC-A72A-C19BFB98E20E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ED276FD-E5CD-4BCC-A72A-C19BFB98E20E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

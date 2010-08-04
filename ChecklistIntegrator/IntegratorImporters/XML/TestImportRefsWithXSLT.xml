@@ -1,0 +1,18 @@
+<TestRefs>
+	<Reference>
+		<RefId>REF 001</RefId>
+		<Citation>Jones A., Test reference</Citation>
+		<Author>Jones, A.</Author>
+		<Title>Test reference</Title>
+		<StartPage>3</StartPage>
+		<EndPage>5</EndPage>
+	</Reference>
+	<Reference>
+		<RefId>REF 002</RefId>
+		<Citation>Smith B., Test reference 2</Citation>
+		<Author>Smith, B.</Author>
+		<Title>Test reference 2</Title>
+		<StartPage>322</StartPage>
+		<EndPage>324</EndPage>
+	</Reference>
+</TestRefs>
