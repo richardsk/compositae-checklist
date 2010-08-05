@@ -34,7 +34,7 @@ Public Class TICAChecklistService
             wr.Close()
 
             Dim xslfile As String = System.Configuration.ConfigurationManager.AppSettings.Get("TCSXSLTFile")
-            Dim xslLoc = AppDomain.CurrentDomain.BaseDirectory + "XSLT\" + xslfile
+            Dim xslLoc As String = AppDomain.CurrentDomain.BaseDirectory + "XSLT\" + xslfile
             Dim transform As New XslCompiledTransform()
 
             transform.Load(xslLoc)
@@ -80,7 +80,7 @@ Public Class TICAChecklistService
             wr.Close()
 
             Dim xslfile As String = System.Configuration.ConfigurationManager.AppSettings.Get("ProviderNameXSLTFile")
-            Dim xslLoc = AppDomain.CurrentDomain.BaseDirectory + "XSLT\" + xslfile
+            Dim xslLoc As String = AppDomain.CurrentDomain.BaseDirectory + "XSLT\" + xslfile
             Dim transform As New XslCompiledTransform()
 
             transform.Load(xslLoc)
@@ -231,7 +231,7 @@ Public Class TICAChecklistService
             doc.LoadXml(ds.GetXml())
 
             Dim xslfile As String = System.Configuration.ConfigurationManager.AppSettings.Get("ProvidersXSLTFile")
-            Dim xslLoc = AppDomain.CurrentDomain.BaseDirectory + "XSLT\" + xslfile
+            Dim xslLoc As String = AppDomain.CurrentDomain.BaseDirectory + "XSLT\" + xslfile
             Dim transform As New XslCompiledTransform()
 
             transform.Load(xslLoc)

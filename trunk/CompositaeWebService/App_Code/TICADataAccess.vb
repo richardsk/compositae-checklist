@@ -130,12 +130,12 @@ Public Class TICADataAccess
         If row(field) IsNot DBNull.Value Then
             Dim refId As String = row(field).ToString()
 
-            Dim ref As DataRow()
+            Dim ref As DataRow() = Nothing
             If ds.Tables.Contains("Reference") Then
                 ref = ds.Tables("Reference").Select("ReferenceGuid = '" + refId + "'")
             End If
             If ref Is Nothing OrElse ref.Length = 0 Then
-                Dim refDs = ReferenceData.GetReferenceDs(refId)
+                Dim refDs As DataSet = ReferenceData.GetReferenceDs(refId)
                 refDs.Tables(0).TableName = "Reference"
                 ds.Merge(refDs)
                 refDs = ReferenceData.GetReferenceRISByReferenceDs(refId)
@@ -195,7 +195,7 @@ Public Class TICADataAccess
         End If
         For Each row As DataRow In ticaDs.Tables("ProviderConcept").Rows
             If row("PCAccordingToId") IsNot DBNull.Value Then
-                Dim ref As DataRow()
+                Dim ref As DataRow() = Nothing
                 If ticaDs.Tables.Contains("ProviderReference") Then
                     ref = ticaDs.Tables("ProviderReference").Select("PRReferenceId = '" + row("PCAccordingToId").ToString + "'")
                 End If
