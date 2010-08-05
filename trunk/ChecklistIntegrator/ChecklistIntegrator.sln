@@ -20,47 +20,6 @@ EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DataTransferServer", "DataTransferServer\DataTransferServer.vbproj", "{5ED276FD-E5CD-4BCC-A72A-C19BFB98E20E}"
 EndProject
 Global
-	GlobalSection(SourceCodeControl) = preSolution
-		SccNumberOfProjects = 10
-		SccLocalPath0 = .
-		CanCheckoutShared = false
-		SccProjectUniqueName1 = ChecklistIntegrator\\ChecklistIntegrator.vbproj
-		SccProjectName1 = $/Compositae/ChecklistIntegrator/ChecklistIntegrator
-		SccLocalPath1 = ChecklistIntegrator
-		CanCheckoutShared = false
-		SccProjectUniqueName2 = IntegratorImporters\\IntegratorImporters.vbproj
-		SccProjectName2 = $/Compositae/ChecklistIntegrator/IntegratorImporters
-		SccLocalPath2 = IntegratorImporters
-		CanCheckoutShared = false
-		SccProjectUniqueName3 = IntegratorControls\\IntegratorControls.vbproj
-		SccProjectName3 = $/Compositae/ChecklistIntegrator/IntegratorControls
-		SccLocalPath3 = IntegratorControls
-		CanCheckoutShared = false
-		SccProjectUniqueName4 = IntegrationProcessor\\IntegrationProcessor.vbproj
-		SccProjectName4 = $/Compositae/ChecklistIntegrator/IntegrationProcessor
-		SccLocalPath4 = IntegrationProcessor
-		CanCheckoutShared = false
-		SccProjectUniqueName5 = ChecklistBusinessRules\\ChecklistBusinessRules.vbproj
-		SccProjectName5 = $/Compositae/ChecklistIntegrator/ChecklistBusinessRules
-		SccLocalPath5 = ChecklistBusinessRules
-		CanCheckoutShared = false
-		SccProjectUniqueName6 = ChecklistObjects\\ChecklistObjects.vbproj
-		SccProjectName6 = $/Compositae/ChecklistIntegrator/ChecklistObjects
-		SccLocalPath6 = ChecklistObjects
-		CanCheckoutShared = false
-		SccProjectUniqueName7 = ChecklistDatabase\\ChecklistDatabase.dbp
-		SccProjectName7 = $/Compositae/ChecklistIntegrator/ChecklistDatabase
-		SccLocalPath7 = ChecklistDatabase
-		CanCheckoutShared = false
-		SccProjectUniqueName8 = ChecklistDataAccess\\ChecklistDataAccess.vbproj
-		SccProjectName8 = $/Compositae/ChecklistIntegrator/ChecklistDataAccess
-		SccLocalPath8 = ChecklistDataAccess
-		CanCheckoutShared = false
-		SccProjectUniqueName9 = DataTransferServer\\DataTransferServer.vbproj
-		SccProjectName9 = $/Compositae/ChecklistIntegrator/DataTransferServer
-		SccLocalPath9 = DataTransferServer
-		CanCheckoutShared = false
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
