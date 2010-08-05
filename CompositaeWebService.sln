@@ -5,10 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositaeLSID", "Composita
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "C:\...\CompositaeWebService\", "CompositaeWebService", "{AD89C9DA-5DF9-4D92-B926-7D7989FBC390}"
 	ProjectSection(WebsiteProperties) = preProject
-		SccProjectName = "$/Compositae/CompositaeWebService"
+		SccProjectName = ""
 		SccAuxPath = ""
-		SccLocalPath = "."
-		SccProvider = "MSSCCI:SourceGear Vault Classic Client"
+		SccLocalPath = ""
+		SccProvider = ""
 		Debug.AspNetCompiler.VirtualPath = "/CompositaeWebService"
 		Debug.AspNetCompiler.PhysicalPath = "CompositaeWebService\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\CompositaeWebService\"
@@ -27,16 +27,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "C:\...\CompositaeWebService
 	EndProjectSection
 EndProject
 Global
-	GlobalSection(SourceCodeControl) = preSolution
-		SccNumberOfProjects = 1
-		SccWebProject0 = true
-		SccProjectUniqueName0 = CompositaeWebService
-		SccProjectName0 = $/Compositae/CompositaeWebService
-		SccLocalPath0 = CompositaeWebService
-		SccProvider0 = MSSCCI:SourceGear\u0020Vault\u0020Classic\u0020Client
-		CanCheckoutShared = false
-		SccProjectEnlistmentChoice0 = 2
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|.NET = Debug|.NET
 		Debug|Any CPU = Debug|Any CPU

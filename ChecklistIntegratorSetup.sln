@@ -4,14 +4,6 @@ Microsoft Visual Studio Solution File, Format Version 9.00
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ChecklistIntegratorSetup", "ChecklistIntegratorSetup.vdproj", "{A654AEBE-A45E-46A1-B1D1-B29F275FC0D7}"
 EndProject
 Global
-	GlobalSection(SourceCodeControl) = preSolution
-		SccNumberOfProjects = 2
-		SccLocalPath0 = .
-		CanCheckoutShared = false
-		SccProjectUniqueName1 = ChecklistIntegratorSetup.vdproj
-		SccLocalPath1 = .
-		CanCheckoutShared = false
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Default = Debug|Default
 		Release|Default = Release|Default
