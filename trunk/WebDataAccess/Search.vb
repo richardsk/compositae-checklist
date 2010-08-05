@@ -331,6 +331,7 @@ Public Class Search
         'for "did you mean" results section
         'search for names using levenshtein
 
+        Return Nothing
     End Function
 
     Public Shared Function LiteratureSearch(ByVal ss As List(Of SearchSetting)) As DataSet

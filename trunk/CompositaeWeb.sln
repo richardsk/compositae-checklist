@@ -3,10 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "C:\...\CompositaeWebSite\", "CompositaeWebSite", "{2177CEEA-DDC9-450F-8149-8630E7DA1BEB}"
 	ProjectSection(WebsiteProperties) = preProject
-		SccProjectName = "$/Compositae/CompositaeWebSite"
+		SccProjectName = ""
 		SccAuxPath = ""
-		SccLocalPath = "."
-		SccProvider = "MSSCCI:SourceGear Vault Classic Client"
+		SccLocalPath = ""
+		SccProvider = ""
 		ProjectReferences = "{AACE685C-4CD0-4708-BF8C-C961E091E391}|DataAccess.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/CompositaeWebSite"
 		Debug.AspNetCompiler.PhysicalPath = "..\CompositaeWebSite\"
@@ -29,21 +29,6 @@ EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WebDataAccess", "WebDataAccess\WebDataAccess.vbproj", "{AACE685C-4CD0-4708-BF8C-C961E091E391}"
 EndProject
 Global
-	GlobalSection(SourceCodeControl) = preSolution
-		SccNumberOfProjects = 3
-		SccWebProject0 = true
-		SccProjectUniqueName0 = CompositaeWebSite
-		SccProjectName0 = $/Compositae/CompositaeWebSite
-		SccLocalPath0 = CompositaeWebSite
-		CanCheckoutShared = false
-		SccProjectEnlistmentChoice0 = 2
-		SccProjectUniqueName1 = WebDataAccess\\WebDataAccess.vbproj
-		SccProjectName1 = $/Compositae/WebDataAccess
-		SccLocalPath1 = WebDataAccess
-		CanCheckoutShared = false
-		SccLocalPath2 = .
-		CanCheckoutShared = false
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|.NET = Debug|.NET
 		Debug|Any CPU = Debug|Any CPU
