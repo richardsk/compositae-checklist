@@ -1,0 +1,3 @@
+
+    <add key="ConnectionString" value="data source=spidey.landcareresearch.co.nz;initial catalog=app_con;password=dbi_user;persist security info=True;user id=dbi_user" />
+    <add key="LSIDProxyUrl" value="http://compositae.org/lsid/"/>
