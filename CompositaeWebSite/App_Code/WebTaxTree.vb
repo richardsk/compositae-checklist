@@ -33,7 +33,6 @@ Public Class WebTaxTree
     Private mSession As Long
     Private mXmlOut As String
     Private XSL_Filename As String
-    Private Output_Filename As String
 
 
 #End Region
@@ -46,12 +45,8 @@ Public Class WebTaxTree
         mDaTrees = New DaTrees()
         mDaTrees.DaInitialise(ConfigurationManager.AppSettings.Get("ConnectionString"))
 
-        'TODO create instance of DANameDetails
-        '"C:\Documents and Settings\wilsonm\My Documents\Visual Studio Projects\DBITN\BusinessRules\Nodes.xsl"
-        'Dim config As Configuration.ConfigurationSettings = New Configuration.ConfigurationSettings()
-        XSL_Filename = ConfigurationManager.AppSettings.Get("XSL_FilePath")
+        XSL_Filename = IO.Path.Combine(HttpContext.Current.Request.PhysicalApplicationPath, "Nodes.xsl")
 
-        Output_Filename = ConfigurationManager.AppSettings.Get("HTML_FilePath")
     End Sub
 
 #Region "Properties"
@@ -80,7 +75,7 @@ Public Class WebTaxTree
         SetStateId(0) 'do not know new StateId until identity has create new int 
         Dim NewStateId As Long = SaveTreeToDb()
         SetStateId(NewStateId)
-        Transform(Output_Filename)
+        Transform()
     End Sub
 
     Public Sub AddMissingChildren()
@@ -96,13 +91,13 @@ Public Class WebTaxTree
         SetStateId(0) 'do not know new StateId until identity has create new int 
         Dim NewStateId As Long = SaveTreeToDb()
         SetStateId(NewStateId)
-        Transform(Output_Filename)
+        Transform()
     End Sub
 
     Public Sub RemoveNodeChildren(ByVal NodeUniqueId As String, ByVal StateId As Long)
         PopulateTree(StateId)
 
-        Dim Node As XmlElement
+        Dim Node As XmlElement = Nothing
         FindNode(Node, NodeUniqueId)
         If Node IsNot Nothing Then
             SetState(Node, PLUS_TAG)
@@ -112,14 +107,14 @@ Public Class WebTaxTree
         SetStateId(0) 'do not know new StateId until identity has create new int 
         Dim NewStateID As Long = SaveTreeToDb()
         SetStateId(NewStateID)
-        Transform(Output_Filename)
+        Transform()
     End Sub
 
 
     Public Sub GetTreeState(ByVal StateId As Long)
         PopulateTree(StateId)
         SetStateId(StateId)
-        Transform(Output_Filename)
+        Transform()
     End Sub
 
 #End Region
@@ -160,7 +155,7 @@ Public Class WebTaxTree
         Return ConfigurationManager.AppSettings.Get("StartingNode")
     End Function
 
-    Private Sub Transform(ByVal Filename As String)
+    Private Sub Transform()
         Dim XmlNodesTransform As Xsl.XslCompiledTransform = New Xsl.XslCompiledTransform()
 
         XmlNodesTransform.Load(XSL_Filename)
@@ -198,7 +193,7 @@ Public Class WebTaxTree
             Return 0
         End If
 
-        Dim count = 0
+        Dim count As Integer = 0
         For Each node In NodesNode.ChildNodes
             If node.NodeType = XmlNodeType.Element Then
                 count += 1
@@ -212,7 +207,7 @@ Public Class WebTaxTree
 
         'Start from the root
         Dim ParentNode As XmlElement = FindRoot()
-        Dim CurrentNode As XmlElement
+        Dim CurrentNode As XmlElement = Nothing
 
         'get list of nodes, root to selected node
         Dim ds As DsNodeToRoot = mDaTrees.GetNodeToRoot(NodeUniqueId, 0)
@@ -253,7 +248,7 @@ Public Class WebTaxTree
 
     'looks at tblname in DB to find the children of a given node, adds them showing '+' or ' ' whether they have children or not
     Private Sub AddChildrenFromNamesTable(ByVal NodeUniqueId As String, ByVal requiredNameId As String)
-        Dim Node As XmlElement
+        Dim Node As XmlElement = Nothing
 
         'find node in XML Document
         FindNode(Node, NodeUniqueId)

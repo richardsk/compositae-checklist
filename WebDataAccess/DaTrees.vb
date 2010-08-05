@@ -184,7 +184,7 @@ Public Class DaTrees
         Dim strXml As String = SqlComGetTreeState.ExecuteScalar()
         SqlComGetTreeState.Connection.Close()
 
-        Dim SessionId As Long
+        Dim SessionId As Long = 0
         'If SqlComGetTreeState.Parameters("@intTreeStateSession").Value Then
         'SessionId = 0
         'Else
@@ -196,14 +196,14 @@ Public Class DaTrees
         Return strXml
     End Function
 
-    Public Function DeleteTaxTreeState(ByVal TaxTreeStateKey As Long)
+    Public Sub DeleteTaxTreeState(ByVal TaxTreeStateKey As Long)
 
         SqlComDeleteTreeState.Parameters("@intTreeStatePk").Value = TaxTreeStateKey
 
         SqlComDeleteTreeState.Connection.Open()
         SqlComDeleteTreeState.ExecuteScalar()
         SqlComDeleteTreeState.Connection.Close()
-    End Function
+    End Sub
 
 #End Region
 

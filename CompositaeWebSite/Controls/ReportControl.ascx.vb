@@ -1,6 +1,5 @@
 Imports ChecklistDataAccess
 Imports ChecklistObjects
-Imports ChecklistBusinessRules
 
 Imports System.Data
 Imports CrystalDecisions.Shared
