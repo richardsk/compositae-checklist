@@ -43,14 +43,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\ChecklistIntegrator\Include\AMS.Profile.dll</HintPath>
     </Reference>
-    <Reference Include="ChecklistDataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ChecklistIntegrator\ChecklistDataAccess\bin\Release\ChecklistDataAccess.dll</HintPath>
-    </Reference>
-    <Reference Include="ChecklistObjects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\ChecklistIntegrator\ChecklistObjects\bin\Release\ChecklistObjects.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
@@ -103,6 +95,16 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChecklistIntegrator\ChecklistDataAccess\ChecklistDataAccess.vbproj">
+      <Project>{D36E2162-3509-4256-A438-6DEDDB2D4B2A}</Project>
+      <Name>ChecklistDataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChecklistIntegrator\ChecklistObjects\ChecklistObjects.vbproj">
+      <Project>{96E26526-683E-4891-A472-0478183E0C04}</Project>
+      <Name>ChecklistObjects</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
