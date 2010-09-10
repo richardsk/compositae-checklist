@@ -1,0 +1,4 @@
+<!-- under ConncectionStrings-->
+    <add name="compositae" connectionString="data source=devserver04\sql2005;database=compositae;user id=compositae_user;password=compositae_user"/>
+<!-- under AppSettings-->
+    <add key="LSIDProxyUrl" value="http://compositae.org/lsid/"/>
