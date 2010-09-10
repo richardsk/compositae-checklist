@@ -1,0 +1,35 @@
+<deployment-descriptor xmlns="http://www.ibm.com/LSID/Standard/rsdl">
+  <maps>
+    <map name="GCCMap">
+      <pattern auth="compositae.org" ns="names" />
+      <pattern auth="compositae.org" ns="concepts" />
+      <pattern auth="compositae.org" ns="references" />
+    </map>
+    <!--map name="ReferencesMap">
+      <pattern auth="landcareresearch.co.nz" ns="references" />
+    </map-->
+  </maps>
+  <services>
+    <service name="GCCLSID">
+      <components>
+        <!-- todo authentication map="NamesMap" type="class" assemblyname="LandcareLSIDAuthority.dll">LandcareLSIDAuthority.?</authentication-->
+
+        <auth map="GCCMap" type="class" assemblyname="CompositaeLSID.dll">CompositaeLSID.CompositaeLSIDAuthority</auth>
+        <meta map="GCCMap" type="class" assemblyname="CompositaeLSID.dll">CompositaeLSID.CompositaeLSIDAuthority</meta>
+        <data map="GCCMap" type="class" assemblyname="CompositaeLSID.dll">CompositaeLSID.CompositaeLSIDAuthority</data>
+
+      </components>
+    </service>
+
+    <!--service name="LandcareReferences">
+      <components>
+
+        <auth map="ReferencesMap" type="class" assemblyname="LCR.SemanticWeb.LandcareLSIDAuthority.dll">LCR.SemanticWeb.LSID.LandcareLiteratureAuthority</auth>
+        <meta map="ReferencesMap" type="class" assemblyname="LCR.SemanticWeb.LandcareLSIDAuthority.dll">LCR.SemanticWeb.LSID.LandcareLiteratureAuthority</meta>
+        <data map="ReferencesMap" type="class" assemblyname="LCR.SemanticWeb.LandcareLSIDAuthority.dll">LCR.SemanticWeb.LSID.LandcareLiteratureAuthority</data>
+
+      </components>
+    </service-->
+    
+  </services>
+</deployment-descriptor>
