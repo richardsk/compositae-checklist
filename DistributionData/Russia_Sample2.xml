@@ -1,0 +1,16 @@
+<Distributions>
+  <Distribution>
+    <Schema>TDWG</Schema>
+    <Region>KRY-OO</Region>
+    <Region>BLR-OO</Region>
+    <Region>BLT</Region>
+    <Region>RUC-OO</Region>
+    <Region>RUS-OO</Region>
+    <Region>RUW-OO</Region>
+    <Region>UKR</Region>
+    <Region>KAZ-OO</Region>
+    <Region>ALT-OO</Region>
+    <Origin>Endemic</Origin>
+    <Occurrence>Present</Occurrence>
+  </Distribution>
+</Distributions>

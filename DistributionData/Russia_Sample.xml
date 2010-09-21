@@ -1,0 +1,9 @@
+<Distributions>
+  <Distribution>
+    <Schema>TDWG</Schema>
+    <Region>33</Region>
+    <Region>NCS</Region>
+    <Origin>Endemic</Origin>
+    <Occurrence>Present</Occurrence>
+  </Distribution>
+</Distributions>
