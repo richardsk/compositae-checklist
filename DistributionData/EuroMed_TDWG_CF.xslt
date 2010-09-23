@@ -69,18 +69,18 @@
 	<xsl:template name="conBiostatus">
 		<xsl:param name="pProv"/>
 		<xsl:choose>
-			<xsl:when test="$pProv='cultivated: C'">Present in cultivation;</xsl:when>
+			<xsl:when test="$pProv='cultivated: C'">Present;Cultivated</xsl:when>
 			<xsl:when test="$pProv='introduced: F'">Recorded in error;Exotic</xsl:when>
 			<xsl:when test="$pProv='introduced: I(A)'">Sometimes present;Exotic</xsl:when>
-			<xsl:when test="$pProv='native: D'">Present in wild;</xsl:when>
-			<xsl:when test="$pProv='native: E'"/>
-			<xsl:when test="$pProv='introduced: D'"/>
+			<xsl:when test="$pProv='native: D'">Uncertain;Indigenous</xsl:when>
+			<xsl:when test="$pProv='native: E'">Extinct;Indigenous</xsl:when>
+			<xsl:when test="$pProv='introduced: D'">Uncertain;Exotic</xsl:when>
 			<xsl:when test="$pProv='introduced: I'">Present;Exotic</xsl:when>
 			<xsl:when test="$pProv='introduced: I(N)'">Present in wild;Exotic</xsl:when>
-			<xsl:when test="$pProv='introduced: Q'"/>
-			<xsl:when test="$pProv='native: F'"/>
-			<xsl:when test="$pProv='native: N'"/>
-			<xsl:when test="$pProv='native: Q'"/>
+			<xsl:when test="$pProv='introduced: Q'">Uncertain;Exotic</xsl:when>
+			<xsl:when test="$pProv='native: F'">Recorded in error;Indigenous</xsl:when>
+			<xsl:when test="$pProv='native: N'">Present in wild;Indigenous</xsl:when>
+			<xsl:when test="$pProv='native: Q'">Uncertain;Exotic</xsl:when>
 		</xsl:choose>
 	</xsl:template>
 	<xsl:template name="conRegion">
