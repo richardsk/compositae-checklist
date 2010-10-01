@@ -1,0 +1,15 @@
+<Distributions>
+	<Distribution>
+		<Schema>Brazilian States</Schema>
+		<Region>MG</Region>
+		<Region>PA</Region>
+		<Region>PE</Region>
+		<Region>PR</Region>
+		<Region>RJ</Region>
+		<Region>RS</Region>
+		<Region>SC</Region>
+		<Region>SP</Region>
+		<Occurrence>Present</Occurrence>
+		<Origin>Indigenous</Origin>
+	</Distribution>
+</Distributions>
