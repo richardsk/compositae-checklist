@@ -67,18 +67,18 @@
 <xsl:template name="conBiostatus">
 	<xsl:param name="pProv"/>
 	<xsl:choose>
-		<xsl:when test="$pProv='cultivated: C'">cultivated (outdoor on large scale, i.e. in fields, street or forest trees; but not in gardens, parks, greenhouses, nurseries)</xsl:when>
-		<xsl:when test="$pProv='introduced: F'">absent but reported in error as introduced</xsl:when>
-		<xsl:when test="$pProv='introduced: I(A)'">introduced (adventitious = casual alien)</xsl:when>
-		<xsl:when test="$pProv='native: D'">doubtfully introduced (perhaps only cultivated)</xsl:when>
-		<xsl:when test="$pProv='native: E'">formerly native, presumably extinct</xsl:when>
-		<xsl:when test="$pProv='introduced: D'">doubtfully introduced (perhaps only cultivated)</xsl:when>
-		<xsl:when test="$pProv='introduced: I'">introduced (not further specified)</xsl:when>
-		<xsl:when test="$pProv='introduced: I(N)'">introduced (naturalized)</xsl:when>
-		<xsl:when test="$pProv='introduced: Q'">introduced, presence questionable</xsl:when>
-		<xsl:when test="$pProv='native: F'">absent but reported in error as native</xsl:when>
-		<xsl:when test="$pProv='native: N'">native (incl. archeophytes, i.e. introduced before 1500 a.d.)</xsl:when>
-		<xsl:when test="$pProv='native: Q'">native, presence questionable</xsl:when>
+		<xsl:when test="$pProv='cultivated: C'">Present;cultivated (outdoor on large scale, i.e. in fields, street or forest trees; but not in gardens, parks, greenhouses, nurseries)</xsl:when>
+		<xsl:when test="$pProv='introduced: F'">Recorded in error;absent but reported in error as introduced</xsl:when>
+		<xsl:when test="$pProv='introduced: I(A)'">Sometimes present;introduced (adventitious = casual alien)</xsl:when>
+		<xsl:when test="$pProv='native: D'">Uncertain;doubtfully introduced (perhaps only cultivated)</xsl:when>
+		<xsl:when test="$pProv='native: E'">Extinct;formerly native, presumably extinct</xsl:when>
+		<xsl:when test="$pProv='introduced: D'">Uncertain;doubtfully introduced (perhaps only cultivated)</xsl:when>
+		<xsl:when test="$pProv='introduced: I'">Present;introduced (not further specified)</xsl:when>
+		<xsl:when test="$pProv='introduced: I(N)'">Present in wild;introduced (naturalized)</xsl:when>
+		<xsl:when test="$pProv='introduced: Q'">Uncertain;introduced, presence questionable</xsl:when>
+		<xsl:when test="$pProv='native: F'">Recorded in error;absent but reported in error as native</xsl:when>
+		<xsl:when test="$pProv='native: N'">Present in wild;native (incl. archeophytes, i.e. introduced before 1500 a.d.)</xsl:when>
+		<xsl:when test="$pProv='native: Q'">Uncertain;native, presence questionable</xsl:when>
 	</xsl:choose>
 </xsl:template>
 	<xsl:template name="conRegion">

@@ -133,7 +133,7 @@
 			<xsl:when test="$pProv='MAL'">Departments of Uruguay;Maldonado</xsl:when>
 			<xsl:when test="$pProv='MON'">Departments of Uruguay;Montevideo</xsl:when>
 			<xsl:when test="$pProv='PAY'">Departments of Uruguay;Paysandú</xsl:when>
-			<xsl:when test="$pProv='RIV'">Departments of Uruguay;Rivera </xsl:when>
+			<xsl:when test="$pProv='RIV'">Departments of Uruguay;Rivera</xsl:when>
 			<xsl:when test="$pProv='RNO'">Departments of Uruguay;Rio Negro</xsl:when>
 			<xsl:when test="$pProv='ROC'">Departments of Uruguay;Rocha</xsl:when>
 			<xsl:when test="$pProv='SAO'">Departments of Uruguay;Salto</xsl:when>
