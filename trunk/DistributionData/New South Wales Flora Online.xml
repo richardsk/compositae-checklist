@@ -10,14 +10,4 @@
 		<Schema>Austalian States</Schema>
 		<Occurrence>Exotic</Occurrence>
 	</Biostatus>
-	<Biostatus original="False">
-		<Region>Australia</Region>
-		<Schema>Country</Schema>
-		<Occurrence>Present</Occurrence>
-	</Biostatus>
-	<Biostatus original="False">
-		<Region>New South Wales</Region>
-		<Schema>Austalian States</Schema>
-		<Occurrence>Indigenous</Occurrence>
-	</Biostatus>
 </BiostatusValues>
