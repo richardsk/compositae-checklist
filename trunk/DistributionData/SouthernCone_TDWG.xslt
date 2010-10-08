@@ -42,6 +42,8 @@
 		</xsl:choose>
 	</xsl:template>
 	
+
+	
 	<xsl:template name="writeValue">
 		<xsl:param name="pRegion"/>
 		<xsl:param name="pBiostatus"/>
@@ -75,6 +77,7 @@
 	<xsl:template name="conRegion">
 		<xsl:param name="pProv"/>
 		<xsl:choose>
+			<xsl:when test="$pProv='ARG'">TDWG Level 2;85</xsl:when>
 			<xsl:when test="$pProv='BAI'">TDWG Level 4;AGE-BA</xsl:when>
 			<xsl:when test="$pProv='COR'">TDWG Level 4;AGE-CD</xsl:when>
 			<xsl:when test="$pProv='CHA'">TDWG Level 4;AGE-CH</xsl:when>
@@ -99,8 +102,10 @@
 			<xsl:when test="$pProv='SJU'">TDWG Level 4;AGW-SJ</xsl:when>
 			<xsl:when test="$pProv='SLU'">TDWG Level 4;AGW-SL</xsl:when>
 			<xsl:when test="$pProv='TUC'">TDWG Level 4;AGW-TU</xsl:when>
+			<xsl:when test="$pProv='BRA'">TDWG Level 2;84</xsl:when>
 			<xsl:when test="$pProv='PAR'">TDWG Level 4;BZS-PR</xsl:when>
 			<xsl:when test="$pProv='RGS'">TDWG Level 4;BZS-RS</xsl:when>
+			<xsl:when test="$pProv='CHL'">TDWG Level 2;85</xsl:when>
 			<xsl:when test="$pProv='SCA'">TDWG Level 4;BZS-SC</xsl:when>
 			<xsl:when test="$pProv='VIII'">TDWG Level 4;CLC-BI</xsl:when>
 			<xsl:when test="$pProv='IV'">TDWG Level 4;CLC-CO</xsl:when>
@@ -119,6 +124,43 @@
 			<xsl:when test="$pProv='IJF'">TDWG Level 4;JNF-OO</xsl:when>
 			<xsl:when test="$pProv='PRY'">TDWG Level 4;PAR-OO</xsl:when>
 			<xsl:when test="$pProv='URY'">TDWG Level 4;URU-OO</xsl:when>
+			<xsl:when test="$pProv='COL'">TDWG Level 4;URU-OO</xsl:when>
+			<xsl:when test="$pProv='ART'">TDWG Level 4;URU-OO</xsl:when>
+			<xsl:when test="$pProv='CAS'">TDWG Level 4;URU-OO</xsl:when>
+			<xsl:when test="$pProv='CLA'">TDWG Level 4;URU-OO</xsl:when>
+			<xsl:when test="$pProv='DUR'">TDWG Level 4;URU-OO</xsl:when>
+			<xsl:when test="$pProv='FLA'">TDWG Level 4;URU-OO</xsl:when>
+			<xsl:when test="$pProv='FLO'">TDWG Level 4;URU-OO</xsl:when>
+			<xsl:when test="$pProv='LAV'">TDWG Level 4;URU-OO</xsl:when>
+			<xsl:when test="$pProv='MAL'">TDWG Level 4;URU-OO</xsl:when>
+			<xsl:when test="$pProv='MON'">TDWG Level 4;URU-OO</xsl:when>
+			<xsl:when test="$pProv='PAY'">TDWG Level 4;URU-OO</xsl:when>
+			<xsl:when test="$pProv='RIV'">TDWG Level 4;URU-OO</xsl:when>
+			<xsl:when test="$pProv='RNO'">TDWG Level 4;URU-OO</xsl:when>
+			<xsl:when test="$pProv='ROC'">TDWG Level 4;URU-OO</xsl:when>
+			<xsl:when test="$pProv='SAO'">TDWG Level 4;URU-OO</xsl:when>
+			<xsl:when test="$pProv='SJO'">TDWG Level 4;URU-OO</xsl:when>
+			<xsl:when test="$pProv='SOR'">TDWG Level 4;URU-OO</xsl:when>
+			<xsl:when test="$pProv='TAC'">TDWG Level 4;URU-OO</xsl:when>
+			<xsl:when test="$pProv='TYT'">TDWG Level 4;URU-OO</xsl:when>
+			<xsl:when test="$pProv='APA'">TDWG Level 4;PAR-OO</xsl:when>
+			<xsl:when test="$pProv='AMA'">TDWG Level 4;PAR-OO</xsl:when>
+			<xsl:when test="$pProv='CAU'">TDWG Level 4;PAR-OO</xsl:when>
+			<xsl:when test="$pProv='CAA'">TDWG Level 4;PAR-OO</xsl:when>
+			<xsl:when test="$pProv='CAN'">TDWG Level 4;PAR-OO</xsl:when>
+			<xsl:when test="$pProv='CON'">TDWG Level 4;PAR-OO</xsl:when>
+			<xsl:when test="$pProv='COA'">TDWG Level 4;PAR-OO</xsl:when>
+			<xsl:when test="$pProv='MIE'">TDWG Level 4;PAR-OO</xsl:when>
+			<xsl:when test="$pProv='PAI'">TDWG Level 4;PAR-OO</xsl:when>
+			<xsl:when test="$pProv='SPE'">TDWG Level 4;PAR-OO</xsl:when>
+			<xsl:when test="$pProv='CEN'">TDWG Level 4;PAR-OO</xsl:when>
+			<xsl:when test="$pProv='GUA'">TDWG Level 4;PAR-OO</xsl:when>
+			<xsl:when test="$pProv='APY'">TDWG Level 4;PAR-OO</xsl:when>
+			<xsl:when test="$pProv='ITA'">TDWG Level 4;PAR-OO</xsl:when>
+			<xsl:when test="$pProv='NEE'">TDWG Level 4;PAR-OO</xsl:when>
+			<xsl:when test="$pProv='Desconocida'">TDWG Level 4;PAR-OO</xsl:when>
+		
+
 		</xsl:choose>
 	</xsl:template>
 	
