@@ -1,0 +1,38 @@
+<Distributions>
+	<Distribution isOriginal='True'>
+		<Schema>TDWG1</Schema>
+		<Region>00</Region>
+		<Occurrence>Present</Occurrence>
+		<Origin>Indigenous</Origin>
+	</Distribution>
+	<Distribution isOriginal='True'>
+		<Schema>TDWG3</Schema>
+		<Region>AFG</Region>
+		<Occurrence>Present</Occurrence>
+		<Origin>Indigenous</Origin>
+	</Distribution>
+	<Distribution isOriginal='True'>
+		<Schema>TDWG3</Schema>
+		<Region>CHT</Region>
+		<Occurrence>Present</Occurrence>
+		<Origin>Indigenous</Origin>
+	</Distribution>
+	<Distribution isOriginal='True'>
+		<Schema>TDWG3</Schema>
+		<Region>NEP</Region>
+		<Occurrence>Present</Occurrence>
+		<Origin>Indigenous</Origin>
+	</Distribution>
+	<Distribution isOriginal='True'>
+		<Schema>TDWG3</Schema>
+		<Region>PAK</Region>
+		<Occurrence>Present</Occurrence>
+		<Origin>Indigenous</Origin>
+	</Distribution>
+	<Distribution isOriginal='True'>
+		<Schema>TDWG3</Schema>
+		<Region>WHM</Region>
+		<Occurrence>Present</Occurrence>
+		<Origin>Indigenous</Origin>
+	</Distribution>
+</Distributions>

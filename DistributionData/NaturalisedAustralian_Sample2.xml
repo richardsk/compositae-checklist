@@ -1,0 +1,62 @@
+<Distributions>
+	<Distribution>
+		<Schema>Australian States</Schema>
+		<Region>Queensland</Region>
+		<Origin>Exotic</Origin>
+		<Occurrence>Present</Occurrence>
+	</Distribution>
+	<Distribution>
+		<Schema>Australian States</Schema>
+		<Region>New South Wales</Region>
+		<Origin>Exotic</Origin>
+		<Occurrence>Present</Occurrence>
+	</Distribution>
+	<Distribution>
+		<Schema>Australian States</Schema>
+		<Region>Victoria</Region>
+		<Origin>Exotic</Origin>
+		<Occurrence>Present</Occurrence>
+	</Distribution>
+	<Distribution>
+		<Schema>Australian States</Schema>
+		<Region>Western Australia</Region>
+		<Origin>Exotic</Origin>
+		<Occurrence>Present</Occurrence>
+	</Distribution>
+	<Distribution>
+		<Schema>Australian States</Schema>
+		<Region>Northern Territory</Region>
+		<Origin>Exotic</Origin>
+		<Occurrence>Present</Occurrence>
+	</Distribution>
+	<Distribution>
+		<Schema>Continent</Schema>
+		<Region>South America</Region>
+		<Origin>Native</Origin>
+		<Occurrence>Present</Occurrence>
+	</Distribution>
+	<Distribution>
+		<Schema>Continent</Schema>
+		<Region>North America</Region>
+		<Origin>Native</Origin>
+		<Occurrence>Present</Occurrence>
+	</Distribution>
+	<Distribution>
+		<Schema>ISO Country</Schema>
+		<Region>Argentina</Region>
+		<Origin>Native</Origin>
+		<Occurrence>Present</Occurrence>
+	</Distribution>
+	<Distribution>
+		<Schema>ISO Country</Schema>
+		<Region>Gualtemala</Region>
+		<Origin>Native</Origin>
+		<Occurrence>Present</Occurrence>
+	</Distribution>
+	<Distribution>
+		<Schema>Islands</Schema>
+		<Region>Caribbean</Region>
+		<Origin>Native</Origin>
+		<Occurrence>Present</Occurrence>
+	</Distribution>
+</Distributions>

@@ -1,7 +1,7 @@
 <Distributions>
   <Distribution isOriginal="True">
-    <Schema>TDWG2</Schema>
-    <Region>79</Region>
+    <Schema>TDWG3</Schema>
+    <Region>AG+</Region>
     <Occurrence>Present</Occurrence>
     <Origin>Indigenous</Origin>
   </Distribution>
