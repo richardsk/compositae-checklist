@@ -26,204 +26,434 @@
 		<xsl:param name="pRegion"/>
 		<xsl:choose>
 			<xsl:when test="$pRegion='1'">1</xsl:when>
-			<xsl:when test="$pRegion='12'">12</xsl:when>
 			<xsl:when test="$pRegion='2'">2</xsl:when>
+			<xsl:when test="$pRegion='3'">3</xsl:when>
+			<xsl:when test="$pRegion='4'">4</xsl:when>
+			<xsl:when test="$pRegion='7'">7</xsl:when>
+			<xsl:when test="$pRegion='8'">8</xsl:when>
+			<xsl:when test="$pRegion='10'">10</xsl:when>
+			<xsl:when test="$pRegion='11'">11</xsl:when>
+			<xsl:when test="$pRegion='12'">12</xsl:when>
+			<xsl:when test="$pRegion='13'">13</xsl:when>
+			<xsl:when test="$pRegion='14'">14</xsl:when>
+			<xsl:when test="$pRegion='20'">20</xsl:when>
+			<xsl:when test="$pRegion='21'">21</xsl:when>
+			<xsl:when test="$pRegion='22'">22</xsl:when>
+			<xsl:when test="$pRegion='23'">23</xsl:when>
+			<xsl:when test="$pRegion='24'">24</xsl:when>
+			<xsl:when test="$pRegion='25'">25</xsl:when>
 			<xsl:when test="$pRegion='26'">26</xsl:when>
 			<xsl:when test="$pRegion='27'">27</xsl:when>
+			<xsl:when test="$pRegion='28'">28</xsl:when>
 			<xsl:when test="$pRegion='29'">29</xsl:when>
-			<xsl:when test="$pRegion='3'">3</xsl:when>
+			<xsl:when test="$pRegion='30'">30</xsl:when>
+			<xsl:when test="$pRegion='31'">31</xsl:when>
+			<xsl:when test="$pRegion='32'">32</xsl:when>
 			<xsl:when test="$pRegion='33'">33</xsl:when>
 			<xsl:when test="$pRegion='34'">34</xsl:when>
 			<xsl:when test="$pRegion='35'">35</xsl:when>
 			<xsl:when test="$pRegion='36'">36</xsl:when>
+			<xsl:when test="$pRegion='37'">37</xsl:when>
+			<xsl:when test="$pRegion='38'">38</xsl:when>
+			<xsl:when test="$pRegion='39'">39</xsl:when>
 			<xsl:when test="$pRegion='40'">40</xsl:when>
+			<xsl:when test="$pRegion='41'">41</xsl:when>
 			<xsl:when test="$pRegion='42'">42</xsl:when>
+			<xsl:when test="$pRegion='43'">43</xsl:when>
+			<xsl:when test="$pRegion='50'">50</xsl:when>
 			<xsl:when test="$pRegion='51'">51</xsl:when>
+			<xsl:when test="$pRegion='60'">60</xsl:when>
+			<xsl:when test="$pRegion='61'">61</xsl:when>
+			<xsl:when test="$pRegion='62'">62</xsl:when>
+			<xsl:when test="$pRegion='63'">63</xsl:when>
+			<xsl:when test="$pRegion='70'">70</xsl:when>
 			<xsl:when test="$pRegion='71'">71</xsl:when>
+			<xsl:when test="$pRegion='72'">72</xsl:when>
 			<xsl:when test="$pRegion='73'">73</xsl:when>
+			<xsl:when test="$pRegion='74'">74</xsl:when>
+			<xsl:when test="$pRegion='75'">75</xsl:when>
+			<xsl:when test="$pRegion='76'">76</xsl:when>
+			<xsl:when test="$pRegion='77'">77</xsl:when>
 			<xsl:when test="$pRegion='78'">78</xsl:when>
 			<xsl:when test="$pRegion='79'">79</xsl:when>
+			<xsl:when test="$pRegion='80'">80</xsl:when>
 			<xsl:when test="$pRegion='81'">81</xsl:when>
+			<xsl:when test="$pRegion='82'">82</xsl:when>
+			<xsl:when test="$pRegion='83'">83</xsl:when>
 			<xsl:when test="$pRegion='84'">84</xsl:when>
+			<xsl:when test="$pRegion='85'">85</xsl:when>
+			<xsl:when test="$pRegion='90'">90</xsl:when>
+			<xsl:when test="$pRegion='31+'">31</xsl:when>
+			<xsl:when test="$pRegion='73+'">73</xsl:when>
+			<xsl:when test="$pRegion='78)'">78</xsl:when>
+			<xsl:when test="$pRegion='79+'">79</xsl:when>
+			<xsl:when test="$pRegion='ABT'">ABT</xsl:when>
+			<xsl:when test="$pRegion='AFG'">AFG</xsl:when>
 			<xsl:when test="$pRegion='AG'">AG</xsl:when>
-			<xsl:when test="$pRegion='AG+'">AG+</xsl:when>
 			<xsl:when test="$pRegion='AGE'">AGE</xsl:when>
+			<xsl:when test="$pRegion='AGR'">AGR</xsl:when>
 			<xsl:when test="$pRegion='AGS'">AGS</xsl:when>
+			<xsl:when test="$pRegion='AGW'">AGW</xsl:when>
+			<xsl:when test="$pRegion='ALA'">ALA</xsl:when>
 			<xsl:when test="$pRegion='ALB'">ALB</xsl:when>
+			<xsl:when test="$pRegion='ALF'">ALF</xsl:when>
+			<xsl:when test="$pRegion='ALG'">ALG</xsl:when>
+			<xsl:when test="$pRegion='ALL'">ALL</xsl:when>
+			<xsl:when test="$pRegion='ALT'">ALT</xsl:when>
+			<xsl:when test="$pRegion='ALU'">ALU</xsl:when>
+			<xsl:when test="$pRegion='AMU'">AMU</xsl:when>
+			<xsl:when test="$pRegion='AND'">AND</xsl:when>
+			<xsl:when test="$pRegion='ANG'">ANG</xsl:when>
 			<xsl:when test="$pRegion='ARI'">ARI</xsl:when>
+			<xsl:when test="$pRegion='ARK'">ARK</xsl:when>
+			<xsl:when test="$pRegion='ARL'">ARL</xsl:when>
+			<xsl:when test="$pRegion='ARU'">ARU</xsl:when>
+			<xsl:when test="$pRegion='ASK'">ASK</xsl:when>
+			<xsl:when test="$pRegion='ASS'">ASS</xsl:when>
+			<xsl:when test="$pRegion='ATP'">ATP</xsl:when>
 			<xsl:when test="$pRegion='AUT'">AUT</xsl:when>
+			<xsl:when test="$pRegion='AUT†'">AUT</xsl:when>
+			<xsl:when test="$pRegion='AZO'">AZO</xsl:when>
 			<xsl:when test="$pRegion='BAH'">BAH</xsl:when>
+			<xsl:when test="$pRegion='BAL'">BAL</xsl:when>
+			<xsl:when test="$pRegion='BAN'">BAN</xsl:when>
+			<xsl:when test="$pRegion='BEN'">BEN</xsl:when>
+			<xsl:when test="$pRegion='BER'">BER</xsl:when>
 			<xsl:when test="$pRegion='BGM'">BGM</xsl:when>
+			<xsl:when test="$pRegion='BIS'">BIS</xsl:when>
+			<xsl:when test="$pRegion='BKN'">BKN</xsl:when>
+			<xsl:when test="$pRegion='BLR'">BLR</xsl:when>
+			<xsl:when test="$pRegion='BLT'">BLT</xsl:when>
+			<xsl:when test="$pRegion='BLZ'">BLZ</xsl:when>
+			<xsl:when test="$pRegion='BOL'">BOL</xsl:when>
+			<xsl:when test="$pRegion='BOR'">BOR</xsl:when>
+			<xsl:when test="$pRegion='BOT'">BOT</xsl:when>
 			<xsl:when test="$pRegion='BRC'">BRC</xsl:when>
+			<xsl:when test="$pRegion='BRX'">BRX</xsl:when>
+			<xsl:when test="$pRegion='BRY'">BRY</xsl:when>
+			<xsl:when test="$pRegion='BUL'">BUL</xsl:when>
 			<xsl:when test="$pRegion='BUR'">BUR</xsl:when>
+			<xsl:when test="$pRegion='BZC'">BZC</xsl:when>
+			<xsl:when test="$pRegion='BZE'">BZE</xsl:when>
 			<xsl:when test="$pRegion='BZL'">BZL</xsl:when>
+			<xsl:when test="$pRegion='BZN'">BZN</xsl:when>
+			<xsl:when test="$pRegion='BZR'">BZR</xsl:when>
+			<xsl:when test="$pRegion='BZS'">BZS</xsl:when>
+			<xsl:when test="$pRegion='CAB'">CAB</xsl:when>
+			<xsl:when test="$pRegion='CAF'">CAF</xsl:when>
 			<xsl:when test="$pRegion='CAL'">CAL</xsl:when>
+			<xsl:when test="$pRegion='CAL†'">CAL</xsl:when>
+			<xsl:when test="$pRegion='CAY'">CAY</xsl:when>
+			<xsl:when test="$pRegion='CBD'">CBD</xsl:when>
+			<xsl:when test="$pRegion='CHA'">CHA</xsl:when>
+			<xsl:when test="$pRegion='CHC'">CHC</xsl:when>
+			<xsl:when test="$pRegion='CHH'">CHH</xsl:when>
+			<xsl:when test="$pRegion='CHI'">CHI</xsl:when>
 			<xsl:when test="$pRegion='CHM'">CHM</xsl:when>
-			<xsl:when test="$pRegion='CL+'">CL+</xsl:when>
+			<xsl:when test="$pRegion='CHN'">CHN</xsl:when>
+			<xsl:when test="$pRegion='CHQ'">CHQ</xsl:when>
+			<xsl:when test="$pRegion='CHS'">CHS</xsl:when>
+			<xsl:when test="$pRegion='CHT'">CHT</xsl:when>
+			<xsl:when test="$pRegion='CHX'">CHX</xsl:when>
+			<xsl:when test="$pRegion='CLC'">CLC</xsl:when>
 			<xsl:when test="$pRegion='CLM'">CLM</xsl:when>
+			<xsl:when test="$pRegion='CLN'">CLN</xsl:when>
 			<xsl:when test="$pRegion='CLS'">CLS</xsl:when>
 			<xsl:when test="$pRegion='CMN'">CMN</xsl:when>
+			<xsl:when test="$pRegion='CNT'">CNT</xsl:when>
+			<xsl:when test="$pRegion='CNY'">CNY</xsl:when>
+			<xsl:when test="$pRegion='COL'">COL</xsl:when>
+			<xsl:when test="$pRegion='COM'">COM</xsl:when>
+			<xsl:when test="$pRegion='CON'">CON</xsl:when>
+			<xsl:when test="$pRegion='COO'">COO</xsl:when>
 			<xsl:when test="$pRegion='COR'">COR</xsl:when>
+			<xsl:when test="$pRegion='COS'">COS</xsl:when>
+			<xsl:when test="$pRegion='CPI'">CPI</xsl:when>
+			<xsl:when test="$pRegion='CPP'">CPP</xsl:when>
+			<xsl:when test="$pRegion='CPV'">CPV</xsl:when>
+			<xsl:when test="$pRegion='CRL'">CRL</xsl:when>
+			<xsl:when test="$pRegion='CTA'">CTA</xsl:when>
+			<xsl:when test="$pRegion='CTM'">CTM</xsl:when>
 			<xsl:when test="$pRegion='CUB'">CUB</xsl:when>
+			<xsl:when test="$pRegion='CUL'">CUL</xsl:when>
+			<xsl:when test="$pRegion='CVI'">CVI</xsl:when>
+			<xsl:when test="$pRegion='CYP'">CYP</xsl:when>
+			<xsl:when test="$pRegion='CYP†'">CYP</xsl:when>
 			<xsl:when test="$pRegion='CZE'">CZE</xsl:when>
+			<xsl:when test="$pRegion='CZE†'">CZE</xsl:when>
+			<xsl:when test="$pRegion='DEL'">DEL</xsl:when>
+			<xsl:when test="$pRegion='DEN'">DEN</xsl:when>
+			<xsl:when test="$pRegion='DJI'">DJI</xsl:when>
+			<xsl:when test="$pRegion='DOM'">DOM</xsl:when>
+			<xsl:when test="$pRegion='DSV'">DSV</xsl:when>
 			<xsl:when test="$pRegion='EAI'">EAI</xsl:when>
+			<xsl:when test="$pRegion='EAI†'">EAI</xsl:when>
 			<xsl:when test="$pRegion='ECU'">ECU</xsl:when>
 			<xsl:when test="$pRegion='EGY'">EGY</xsl:when>
+			<xsl:when test="$pRegion='EHM'">EHM</xsl:when>
+			<xsl:when test="$pRegion='ELS'">ELS</xsl:when>
+			<xsl:when test="$pRegion='EQG'">EQG</xsl:when>
+			<xsl:when test="$pRegion='ERI'">ERI</xsl:when>
 			<xsl:when test="$pRegion='ETH'">ETH</xsl:when>
 			<xsl:when test="$pRegion='FAL'">FAL</xsl:when>
+			<xsl:when test="$pRegion='FIJ'">FIJ</xsl:when>
+			<xsl:when test="$pRegion='FIN'">FIN</xsl:when>
 			<xsl:when test="$pRegion='FLA'">FLA</xsl:when>
+			<xsl:when test="$pRegion='FLE'">FLE</xsl:when>
+			<xsl:when test="$pRegion='FOR'">FOR</xsl:when>
 			<xsl:when test="$pRegion='FRA'">FRA</xsl:when>
+			<xsl:when test="$pRegion='FRA†'">FRA</xsl:when>
+			<xsl:when test="$pRegion='FRG'">FRG</xsl:when>
+			<xsl:when test="$pRegion='GAB'">GAB</xsl:when>
+			<xsl:when test="$pRegion='GAL'">GAL</xsl:when>
+			<xsl:when test="$pRegion='GAM'">GAM</xsl:when>
+			<xsl:when test="$pRegion='GBR'">GBR</xsl:when>
+			<xsl:when test="$pRegion='GEO'">GEO</xsl:when>
+			<xsl:when test="$pRegion='GER'">GER</xsl:when>
+			<xsl:when test="$pRegion='GER†'">GER</xsl:when>
+			<xsl:when test="$pRegion='GGI'">GGI</xsl:when>
+			<xsl:when test="$pRegion='GHA'">GHA</xsl:when>
+			<xsl:when test="$pRegion='GII'">GII</xsl:when>
+			<xsl:when test="$pRegion='GNB'">GNB</xsl:when>
 			<xsl:when test="$pRegion='GNL'">GNL</xsl:when>
+			<xsl:when test="$pRegion='GRB'">GRB</xsl:when>
+			<xsl:when test="$pRegion='GRC'">GRC</xsl:when>
+			<xsl:when test="$pRegion='GST'">GST</xsl:when>
 			<xsl:when test="$pRegion='GUA'">GUA</xsl:when>
+			<xsl:when test="$pRegion='GUI'">GUI</xsl:when>
 			<xsl:when test="$pRegion='GUY'">GUY</xsl:when>
+			<xsl:when test="$pRegion='HAI'">HAI</xsl:when>
+			<xsl:when test="$pRegion='HAW'">HAW</xsl:when>
+			<xsl:when test="$pRegion='HON'">HON</xsl:when>
+			<xsl:when test="$pRegion='HUN'">HUN</xsl:when>
+			<xsl:when test="$pRegion='HUN†'">HUN</xsl:when>
+			<xsl:when test="$pRegion='ICE'">ICE</xsl:when>
+			<xsl:when test="$pRegion='IDA'">IDA</xsl:when>
 			<xsl:when test="$pRegion='ILL'">ILL</xsl:when>
+			<xsl:when test="$pRegion='IND'">IND</xsl:when>
+			<xsl:when test="$pRegion='INI'">INI</xsl:when>
+			<xsl:when test="$pRegion='IOW'">IOW</xsl:when>
+			<xsl:when test="$pRegion='IRE'">IRE</xsl:when>
+			<xsl:when test="$pRegion='IRK'">IRK</xsl:when>
 			<xsl:when test="$pRegion='IRN'">IRN</xsl:when>
+			<xsl:when test="$pRegion='IRQ'">IRQ</xsl:when>
 			<xsl:when test="$pRegion='ITA'">ITA</xsl:when>
+			<xsl:when test="$pRegion='IVO'">IVO</xsl:when>
+			<xsl:when test="$pRegion='JAM'">JAM</xsl:when>
 			<xsl:when test="$pRegion='JAP'">JAP</xsl:when>
+			<xsl:when test="$pRegion='JAW'">JAW</xsl:when>
 			<xsl:when test="$pRegion='JMK'">JMK</xsl:when>
+			<xsl:when test="$pRegion='JNF'">JNF</xsl:when>
+			<xsl:when test="$pRegion='KAM'">KAM</xsl:when>
+			<xsl:when test="$pRegion='KAN'">KAN</xsl:when>
 			<xsl:when test="$pRegion='KAZ'">KAZ</xsl:when>
+			<xsl:when test="$pRegion='KEN'">KEN</xsl:when>
+			<xsl:when test="$pRegion='KER'">KER</xsl:when>
+			<xsl:when test="$pRegion='KGZ'">KGZ</xsl:when>
+			<xsl:when test="$pRegion='KHA'">KHA</xsl:when>
+			<xsl:when test="$pRegion='KOR'">KOR</xsl:when>
+			<xsl:when test="$pRegion='KRA'">KRA</xsl:when>
 			<xsl:when test="$pRegion='KRI'">KRI</xsl:when>
+			<xsl:when test="$pRegion='KRY'">KRY</xsl:when>
+			<xsl:when test="$pRegion='KTY'">KTY</xsl:when>
+			<xsl:when test="$pRegion='KUR'">KUR</xsl:when>
+			<xsl:when test="$pRegion='KUW'">KUW</xsl:when>
+			<xsl:when test="$pRegion='KZG'">KZG</xsl:when>
+			<xsl:when test="$pRegion='KZN'">KZN</xsl:when>
+			<xsl:when test="$pRegion='LAB'">LAB</xsl:when>
+			<xsl:when test="$pRegion='LAO'">LAO</xsl:when>
+			<xsl:when test="$pRegion='LBR'">LBR</xsl:when>
+			<xsl:when test="$pRegion='LBS'">LBS</xsl:when>
 			<xsl:when test="$pRegion='LBY'">LBY</xsl:when>
+			<xsl:when test="$pRegion='LEE'">LEE</xsl:when>
+			<xsl:when test="$pRegion='LES'">LES</xsl:when>
+			<xsl:when test="$pRegion='LOU'">LOU</xsl:when>
+			<xsl:when test="$pRegion='LSI'">LSI</xsl:when>
+			<xsl:when test="$pRegion='MAG'">MAG</xsl:when>
+			<xsl:when test="$pRegion='MAI'">MAI</xsl:when>
+			<xsl:when test="$pRegion='MAN'">MAN</xsl:when>
+			<xsl:when test="$pRegion='MAS'">MAS</xsl:when>
 			<xsl:when test="$pRegion='MAU'">MAU</xsl:when>
+			<xsl:when test="$pRegion='MAU†'">MAU</xsl:when>
+			<xsl:when test="$pRegion='MCS'">MCS</xsl:when>
+			<xsl:when test="$pRegion='MDG'">MDG</xsl:when>
+			<xsl:when test="$pRegion='MDR'">MDR</xsl:when>
 			<xsl:when test="$pRegion='MIC'">MIC</xsl:when>
 			<xsl:when test="$pRegion='MIN'">MIN</xsl:when>
+			<xsl:when test="$pRegion='MIS'">MIS</xsl:when>
+			<xsl:when test="$pRegion='MLI'">MLI</xsl:when>
+			<xsl:when test="$pRegion='MLW'">MLW</xsl:when>
+			<xsl:when test="$pRegion='MLY'">MLY</xsl:when>
+			<xsl:when test="$pRegion='MNT'">MNT</xsl:when>
 			<xsl:when test="$pRegion='MOL'">MOL</xsl:when>
+			<xsl:when test="$pRegion='MON'">MON</xsl:when>
 			<xsl:when test="$pRegion='MOR'">MOR</xsl:when>
+			<xsl:when test="$pRegion='MOZ'">MOZ</xsl:when>
+			<xsl:when test="$pRegion='MRN'">MRN</xsl:when>
+			<xsl:when test="$pRegion='MRQ'">MRQ</xsl:when>
+			<xsl:when test="$pRegion='MRY'">MRY</xsl:when>
+			<xsl:when test="$pRegion='MSI'">MSI</xsl:when>
 			<xsl:when test="$pRegion='MSO'">MSO</xsl:when>
+			<xsl:when test="$pRegion='MTN'">MTN</xsl:when>
 			<xsl:when test="$pRegion='MXC'">MXC</xsl:when>
 			<xsl:when test="$pRegion='MXE'">MXE</xsl:when>
+			<xsl:when test="$pRegion='MXG'">MXG</xsl:when>
+			<xsl:when test="$pRegion='MXI'">MXI</xsl:when>
+			<xsl:when test="$pRegion='MXN'">MXN</xsl:when>
+			<xsl:when test="$pRegion='MXS'">MXS</xsl:when>
+			<xsl:when test="$pRegion='MXT'">MXT</xsl:when>
 			<xsl:when test="$pRegion='MYA'">MYA</xsl:when>
+			<xsl:when test="$pRegion='NAM'">NAM</xsl:when>
+			<xsl:when test="$pRegion='NAT'">NAT</xsl:when>
+			<xsl:when test="$pRegion='NBR'">NBR</xsl:when>
+			<xsl:when test="$pRegion='NCA'">NCA</xsl:when>
+			<xsl:when test="$pRegion='NCB'">NCB</xsl:when>
 			<xsl:when test="$pRegion='NCS'">NCS</xsl:when>
+			<xsl:when test="$pRegion='NDA'">NDA</xsl:when>
 			<xsl:when test="$pRegion='NEB'">NEB</xsl:when>
+			<xsl:when test="$pRegion='NEP'">NEP</xsl:when>
+			<xsl:when test="$pRegion='NET'">NET</xsl:when>
+			<xsl:when test="$pRegion='NEV'">NEV</xsl:when>
+			<xsl:when test="$pRegion='NFK'">NFK</xsl:when>
+			<xsl:when test="$pRegion='NFL'">NFL</xsl:when>
+			<xsl:when test="$pRegion='NGA'">NGA</xsl:when>
+			<xsl:when test="$pRegion='NGR'">NGR</xsl:when>
+			<xsl:when test="$pRegion='NIC'">NIC</xsl:when>
+			<xsl:when test="$pRegion='NLA'">NLA</xsl:when>
+			<xsl:when test="$pRegion='NNS'">NNS</xsl:when>
+			<xsl:when test="$pRegion='NOR'">NOR</xsl:when>
+			<xsl:when test="$pRegion='NSC'">NSC</xsl:when>
 			<xsl:when test="$pRegion='NSW'">NSW</xsl:when>
+			<xsl:when test="$pRegion='NTA'">NTA</xsl:when>
+			<xsl:when test="$pRegion='NUN'">NUN</xsl:when>
+			<xsl:when test="$pRegion='NWB'">NWB</xsl:when>
+			<xsl:when test="$pRegion='NWC'">NWC</xsl:when>
 			<xsl:when test="$pRegion='NWG'">NWG</xsl:when>
+			<xsl:when test="$pRegion='NWH'">NWH</xsl:when>
+			<xsl:when test="$pRegion='NWJ'">NWJ</xsl:when>
 			<xsl:when test="$pRegion='NWM'">NWM</xsl:when>
+			<xsl:when test="$pRegion='NWT'">NWT</xsl:when>
 			<xsl:when test="$pRegion='NWY'">NWY</xsl:when>
 			<xsl:when test="$pRegion='NZN'">NZN</xsl:when>
 			<xsl:when test="$pRegion='NZS'">NZS</xsl:when>
+			<xsl:when test="$pRegion='OFS'">OFS</xsl:when>
+			<xsl:when test="$pRegion='OGA'">OGA</xsl:when>
+			<xsl:when test="$pRegion='OHI'">OHI</xsl:when>
+			<xsl:when test="$pRegion='OKL'">OKL</xsl:when>
+			<xsl:when test="$pRegion='OMA'">OMA</xsl:when>
+			<xsl:when test="$pRegion='ONT'">ONT</xsl:when>
 			<xsl:when test="$pRegion='ORE'">ORE</xsl:when>
+			<xsl:when test="$pRegion='PAK'">PAK</xsl:when>
 			<xsl:when test="$pRegion='PAL'">PAL</xsl:when>
 			<xsl:when test="$pRegion='PAN'">PAN</xsl:when>
 			<xsl:when test="$pRegion='PAR'">PAR</xsl:when>
+			<xsl:when test="$pRegion='PEI'">PEI</xsl:when>
+			<xsl:when test="$pRegion='PEN'">PEN</xsl:when>
+			<xsl:when test="$pRegion='PER'">PER</xsl:when>
 			<xsl:when test="$pRegion='PHI'">PHI</xsl:when>
+			<xsl:when test="$pRegion='PIT'">PIT</xsl:when>
+			<xsl:when test="$pRegion='POL'">POL</xsl:when>
+			<xsl:when test="$pRegion='POR'">POR</xsl:when>
+			<xsl:when test="$pRegion='PRM'">PRM</xsl:when>
+			<xsl:when test="$pRegion='PUE'">PUE</xsl:when>
+			<xsl:when test="$pRegion='QLD'">QLD</xsl:when>
+			<xsl:when test="$pRegion='QUE'">QUE</xsl:when>
+			<xsl:when test="$pRegion='RAI'">RAI</xsl:when>
+			<xsl:when test="$pRegion='REU'">REU</xsl:when>
+			<xsl:when test="$pRegion='RHO'">RHO</xsl:when>
+			<xsl:when test="$pRegion='ROD†'">ROD</xsl:when>
 			<xsl:when test="$pRegion='ROM'">ROM</xsl:when>
+			<xsl:when test="$pRegion='RUC'">RUC</xsl:when>
+			<xsl:when test="$pRegion='RUE'">RUE</xsl:when>
+			<xsl:when test="$pRegion='RUN'">RUN</xsl:when>
+			<xsl:when test="$pRegion='RUS'">RUS</xsl:when>
+			<xsl:when test="$pRegion='RUW'">RUW</xsl:when>
+			<xsl:when test="$pRegion='RWA'">RWA</xsl:when>
+			<xsl:when test="$pRegion='SAK'">SAK</xsl:when>
+			<xsl:when test="$pRegion='SAM'">SAM</xsl:when>
 			<xsl:when test="$pRegion='SAR'">SAR</xsl:when>
 			<xsl:when test="$pRegion='SAS'">SAS</xsl:when>
+			<xsl:when test="$pRegion='SAU'">SAU</xsl:when>
+			<xsl:when test="$pRegion='SCA'">SCA</xsl:when>
+			<xsl:when test="$pRegion='SCI'">SCI</xsl:when>
+			<xsl:when test="$pRegion='SDA'">SDA</xsl:when>
+			<xsl:when test="$pRegion='SEI'">SEI</xsl:when>
+			<xsl:when test="$pRegion='SEL'">SEL</xsl:when>
+			<xsl:when test="$pRegion='SEN'">SEN</xsl:when>
+			<xsl:when test="$pRegion='SEY'">SEY</xsl:when>
+			<xsl:when test="$pRegion='SIC'">SIC</xsl:when>
+			<xsl:when test="$pRegion='SIE'">SIE</xsl:when>
+			<xsl:when test="$pRegion='SIN'">SIN</xsl:when>
+			<xsl:when test="$pRegion='SOA'">SOA</xsl:when>
+			<xsl:when test="$pRegion='SOC'">SOC</xsl:when>
+			<xsl:when test="$pRegion='SOL'">SOL</xsl:when>
+			<xsl:when test="$pRegion='SOM'">SOM</xsl:when>
+			<xsl:when test="$pRegion='SPA'">SPA</xsl:when>
+			<xsl:when test="$pRegion='SRL'">SRL</xsl:when>
+			<xsl:when test="$pRegion='STH'">STH</xsl:when>
+			<xsl:when test="$pRegion='STH†'">STH</xsl:when>
+			<xsl:when test="$pRegion='SUD'">SUD</xsl:when>
+			<xsl:when test="$pRegion='SUL'">SUL</xsl:when>
+			<xsl:when test="$pRegion='SUM'">SUM</xsl:when>
 			<xsl:when test="$pRegion='SUR'">SUR</xsl:when>
 			<xsl:when test="$pRegion='SVA'">SVA</xsl:when>
+			<xsl:when test="$pRegion='SWA'">SWA</xsl:when>
+			<xsl:when test="$pRegion='SWE'">SWE</xsl:when>
+			<xsl:when test="$pRegion='SWI'">SWI</xsl:when>
+			<xsl:when test="$pRegion='SWZ'">SWZ</xsl:when>
+			<xsl:when test="$pRegion='TAI'">TAI</xsl:when>
+			<xsl:when test="$pRegion='TAN'">TAN</xsl:when>
+			<xsl:when test="$pRegion='TAS'">TAS</xsl:when>
+			<xsl:when test="$pRegion='TCA'">TCA</xsl:when>
+			<xsl:when test="$pRegion='TCS'">TCS</xsl:when>
+			<xsl:when test="$pRegion='TDC'">TDC</xsl:when>
+			<xsl:when test="$pRegion='TEN'">TEN</xsl:when>
+			<xsl:when test="$pRegion='TEX'">TEX</xsl:when>
 			<xsl:when test="$pRegion='THA'">THA</xsl:when>
+			<xsl:when test="$pRegion='TKM'">TKM</xsl:when>
+			<xsl:when test="$pRegion='TOG'">TOG</xsl:when>
+			<xsl:when test="$pRegion='TON'">TON</xsl:when>
+			<xsl:when test="$pRegion='TRT'">TRT</xsl:when>
+			<xsl:when test="$pRegion='TUA'">TUA</xsl:when>
+			<xsl:when test="$pRegion='TUB'">TUB</xsl:when>
+			<xsl:when test="$pRegion='TUE'">TUE</xsl:when>
+			<xsl:when test="$pRegion='TUN'">TUN</xsl:when>
+			<xsl:when test="$pRegion='TUR'">TUR</xsl:when>
+			<xsl:when test="$pRegion='TVA'">TVA</xsl:when>
+			<xsl:when test="$pRegion='TVL'">TVL</xsl:when>
 			<xsl:when test="$pRegion='TZK'">TZK</xsl:when>
 			<xsl:when test="$pRegion='UGA'">UGA</xsl:when>
 			<xsl:when test="$pRegion='UKR'">UKR</xsl:when>
 			<xsl:when test="$pRegion='URU'">URU</xsl:when>
+			<xsl:when test="$pRegion='UTA'">UTA</xsl:when>
+			<xsl:when test="$pRegion='UZB'">UZB</xsl:when>
 			<xsl:when test="$pRegion='VAN'">VAN</xsl:when>
 			<xsl:when test="$pRegion='VEN'">VEN</xsl:when>
+			<xsl:when test="$pRegion='VER'">VER</xsl:when>
+			<xsl:when test="$pRegion='VIC'">VIC</xsl:when>
 			<xsl:when test="$pRegion='VIE'">VIE</xsl:when>
+			<xsl:when test="$pRegion='VNA'">VNA</xsl:when>
+			<xsl:when test="$pRegion='VRG'">VRG</xsl:when>
+			<xsl:when test="$pRegion='WAK'">WAK</xsl:when>
 			<xsl:when test="$pRegion='WAS'">WAS</xsl:when>
 			<xsl:when test="$pRegion='WAU'">WAU</xsl:when>
-			<xsl:when test="$pRegion='WSB'">WSB</xsl:when>
-			<xsl:when test="$pRegion='WYO'">WYO</xsl:when>
-			<xsl:when test="$pRegion='ZAI'">ZAI</xsl:when>
-			<xsl:when test="$pRegion='ZIM'">ZIM</xsl:when>
-			<xsl:when test="$pRegion='11'">11</xsl:when>
-			<xsl:when test="$pRegion='13'">13</xsl:when>
-			<xsl:when test="$pRegion='14'">14</xsl:when>
-			<xsl:when test="$pRegion='20'">20</xsl:when>
-			<xsl:when test="$pRegion='22'">22</xsl:when>
-			<xsl:when test="$pRegion='30'">30</xsl:when>
-			<xsl:when test="$pRegion='32'">32</xsl:when>
-			<xsl:when test="$pRegion='50'">50</xsl:when>
-			<xsl:when test="$pRegion='7'">7</xsl:when>
-			<xsl:when test="$pRegion='72'">72</xsl:when>
-			<xsl:when test="$pRegion='8'">8</xsl:when>
-			<xsl:when test="$pRegion='80'">80</xsl:when>
-			<xsl:when test="$pRegion='85'">85</xsl:when>
-			<xsl:when test="$pRegion='AFG'">AFG</xsl:when>
-			<xsl:when test="$pRegion='AGW'">AGW</xsl:when>
-			<xsl:when test="$pRegion='ALG'">ALG</xsl:when>
-			<xsl:when test="$pRegion='ALT'">ALT</xsl:when>
-			<xsl:when test="$pRegion='ANG'">ANG</xsl:when>
-			<xsl:when test="$pRegion='ASK'">ASK</xsl:when>
-			<xsl:when test="$pRegion='ASS'">ASS</xsl:when>
-			<xsl:when test="$pRegion='BAL'">BAL</xsl:when>
-			<xsl:when test="$pRegion='BOL'">BOL</xsl:when>
-			<xsl:when test="$pRegion='BUL'">BUL</xsl:when>
-			<xsl:when test="$pRegion='BZC'">BZC</xsl:when>
-			<xsl:when test="$pRegion='BZS'">BZS</xsl:when>
-			<xsl:when test="$pRegion='CHC'">CHC</xsl:when>
-			<xsl:when test="$pRegion='CHS'">CHS</xsl:when>
-			<xsl:when test="$pRegion='CHT'">CHT</xsl:when>
-			<xsl:when test="$pRegion='CLC'">CLC</xsl:when>
-			<xsl:when test="$pRegion='CLN'">CLN</xsl:when>
-			<xsl:when test="$pRegion='CNY'">CNY</xsl:when>
-			<xsl:when test="$pRegion='COL'">COL</xsl:when>
-			<xsl:when test="$pRegion='COS'">COS</xsl:when>
-			<xsl:when test="$pRegion='CPP'">CPP</xsl:when>
-			<xsl:when test="$pRegion='CVI'">CVI</xsl:when>
-			<xsl:when test="$pRegion='CYP'">CYP</xsl:when>
-			<xsl:when test="$pRegion='DOM'">DOM</xsl:when>
-			<xsl:when test="$pRegion='EHM'">EHM</xsl:when>
-			<xsl:when test="$pRegion='FRG'">FRG</xsl:when>
-			<xsl:when test="$pRegion='GER'">GER</xsl:when>
-			<xsl:when test="$pRegion='GGI'">GGI</xsl:when>
-			<xsl:when test="$pRegion='GRB'">GRB</xsl:when>
-			<xsl:when test="$pRegion='GRC'">GRC</xsl:when>
-			<xsl:when test="$pRegion='HAI'">HAI</xsl:when>
-			<xsl:when test="$pRegion='HAW'">HAW</xsl:when>
-			<xsl:when test="$pRegion='HUN'">HUN</xsl:when>
-			<xsl:when test="$pRegion='IDA'">IDA</xsl:when>
-			<xsl:when test="$pRegion='IND'">IND</xsl:when>
-			<xsl:when test="$pRegion='IOW'">IOW</xsl:when>
-			<xsl:when test="$pRegion='IRQ'">IRQ</xsl:when>
-			<xsl:when test="$pRegion='JAM'">JAM</xsl:when>
-			<xsl:when test="$pRegion='JAW'">JAW</xsl:when>
-			<xsl:when test="$pRegion='KAM'">KAM</xsl:when>
-			<xsl:when test="$pRegion='KEN'">KEN</xsl:when>
-			<xsl:when test="$pRegion='KOR'">KOR</xsl:when>
-			<xsl:when test="$pRegion='KRY'">KRY</xsl:when>
-			<xsl:when test="$pRegion='KTY'">KTY</xsl:when>
-			<xsl:when test="$pRegion='LBS'">LBS</xsl:when>
-			<xsl:when test="$pRegion='LEE'">LEE</xsl:when>
-			<xsl:when test="$pRegion='MAI'">MAI</xsl:when>
-			<xsl:when test="$pRegion='MDG'">MDG</xsl:when>
-			<xsl:when test="$pRegion='MDR'">MDR</xsl:when>
-			<xsl:when test="$pRegion='MLY'">MLY</xsl:when>
-			<xsl:when test="$pRegion='MNT'">MNT</xsl:when>
-			<xsl:when test="$pRegion='MON'">MON</xsl:when>
-			<xsl:when test="$pRegion='MOZ'">MOZ</xsl:when>
-			<xsl:when test="$pRegion='MRY'">MRY</xsl:when>
-			<xsl:when test="$pRegion='MXN'">MXN</xsl:when>
-			<xsl:when test="$pRegion='MXS'">MXS</xsl:when>
-			<xsl:when test="$pRegion='NAT'">NAT</xsl:when>
-			<xsl:when test="$pRegion='NCA'">NCA</xsl:when>
-			<xsl:when test="$pRegion='NDA'">NDA</xsl:when>
-			<xsl:when test="$pRegion='NEP'">NEP</xsl:when>
-			<xsl:when test="$pRegion='NEV'">NEV</xsl:when>
-			<xsl:when test="$pRegion='NOR'">NOR</xsl:when>
-			<xsl:when test="$pRegion='PER'">PER</xsl:when>
-			<xsl:when test="$pRegion='POL'">POL</xsl:when>
-			<xsl:when test="$pRegion='POR'">POR</xsl:when>
-			<xsl:when test="$pRegion='PRM'">PRM</xsl:when>
-			<xsl:when test="$pRegion='QUE'">QUE</xsl:when>
-			<xsl:when test="$pRegion='REU'">REU</xsl:when>
-			<xsl:when test="$pRegion='RUS'">RUS</xsl:when>
-			<xsl:when test="$pRegion='SAK'">SAK</xsl:when>
-			<xsl:when test="$pRegion='SDA'">SDA</xsl:when>
-			<xsl:when test="$pRegion='SIC'">SIC</xsl:when>
-			<xsl:when test="$pRegion='SPA'">SPA</xsl:when>
-			<xsl:when test="$pRegion='SWI'">SWI</xsl:when>
-			<xsl:when test="$pRegion='TAI'">TAI</xsl:when>
-			<xsl:when test="$pRegion='TCS'">TCS</xsl:when>
-			<xsl:when test="$pRegion='TEX'">TEX</xsl:when>
-			<xsl:when test="$pRegion='TUN'">TUN</xsl:when>
-			<xsl:when test="$pRegion='TUR'">TUR</xsl:when>
-			<xsl:when test="$pRegion='TVL'">TVL</xsl:when>
-			<xsl:when test="$pRegion='UTA'">UTA</xsl:when>
-			<xsl:when test="$pRegion='VRG'">VRG</xsl:when>
+			<xsl:when test="$pRegion='WDC'">WDC</xsl:when>
 			<xsl:when test="$pRegion='WHM'">WHM</xsl:when>
+			<xsl:when test="$pRegion='WIN'">WIN</xsl:when>
+			<xsl:when test="$pRegion='WIS'">WIS</xsl:when>
+			<xsl:when test="$pRegion='WSA'">WSA</xsl:when>
+			<xsl:when test="$pRegion='WSB'">WSB</xsl:when>
+			<xsl:when test="$pRegion='WVA'">WVA</xsl:when>
+			<xsl:when test="$pRegion='WYO'">WYO</xsl:when>
 			<xsl:when test="$pRegion='YAK'">YAK</xsl:when>
 			<xsl:when test="$pRegion='YEM'">YEM</xsl:when>
+			<xsl:when test="$pRegion='YEM'">YEM</xsl:when>
 			<xsl:when test="$pRegion='YUG'">YUG</xsl:when>
+			<xsl:when test="$pRegion='YUK'">YUK</xsl:when>
+			<xsl:when test="$pRegion='ZAI'">ZAI</xsl:when>
+			<xsl:when test="$pRegion='ZAM'">ZAM</xsl:when>
+			<xsl:when test="$pRegion='ZIM'">ZIM</xsl:when>
+			<xsl:when test="$pRegion='ZTH'">ZTH</xsl:when>
 		</xsl:choose>
 	</xsl:template>
 </xsl:stylesheet>
