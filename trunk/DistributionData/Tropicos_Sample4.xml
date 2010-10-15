@@ -1,0 +1,22 @@
+<Distribution>
+	<Schema>Departments</Schema>
+	<Department>Bocas Del Toro</Department>
+	<Department>Canal Area</Department>
+	<Department>Coclé</Department>
+	<Department>Chiriquí</Department>
+	<Department>Colón</Department>
+	<Department>Darién</Department>
+	<Department>Herrera</Department>
+	<Department>Los Santos</Department>
+	<Department>Panamá</Department>
+	<Department>Veraguas</Department>
+	<Department>Colombia</Department>
+	<Department>Costa Rica</Department>
+	<Department>Mexico</Department>
+	<Department>Peru</Department>
+	<Department>Puerto Rico</Department>
+	<Department>Venezuela</Department>
+	<Department>Cosmopolitan (worldwide)</Department>
+	<Origin>Unknown</Origin>
+	<Occurrence>Present</Occurrence>
+</Distribution>
