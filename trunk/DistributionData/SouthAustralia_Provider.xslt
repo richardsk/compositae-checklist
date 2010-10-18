@@ -52,6 +52,7 @@
 		<xsl:param name="pRegion"/>
 		<xsl:choose>
 			<xsl:when test="$pRegion='Australia'">ISO Countries;Australia</xsl:when>
+			<xsl:when test="$pRegion='South Australia'">Australian States;South Australia</xsl:when>
 			<xsl:when test="$pRegion='NSW'">ISO Countries;Australia</xsl:when>
 			<xsl:when test="$pRegion='NW'">South Australian Herbarium Regions;North-Western</xsl:when>
 			<xsl:when test="$pRegion='LE'">South Australian Herbarium Regions;Lake Eyre</xsl:when>
