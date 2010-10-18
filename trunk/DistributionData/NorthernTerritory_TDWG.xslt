@@ -4,7 +4,7 @@
 	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 	<xsl:template match="/">
 		<Distributions>
-			<xsl:for-each select="//Distribution">
+			<xsl:for-each select="//Biostatus">
 				<xsl:variable name="vRegion">
 					<xsl:call-template name="conRegion">
 						<xsl:with-param name="pRegion" select="Region"/>
@@ -46,14 +46,7 @@
 		<xsl:param name="pRegion"/>
 		<xsl:choose>
 			<xsl:when test="$pRegion='Australia'">TDWG Level 2;50</xsl:when>
-			<xsl:when test="$pRegion='Australian Capitol Territory'">TDWG Level 4;NSW-CT</xsl:when>
-			<xsl:when test="$pRegion='New South Wales'">TDWG Level 4;NSW-NS</xsl:when>
-			<xsl:when test="$pRegion='Queensland'">TDWG Level 4;QLD-QU</xsl:when>
-			<xsl:when test="$pRegion='Western Australia'">TDWG Level 4;WAU-WA</xsl:when>
 			<xsl:when test="$pRegion='Northern Territory'">TDWG Level 4;NTA-OO</xsl:when>
-			<xsl:when test="$pRegion='Victoria'">TDWG Level 4;VIC-OO</xsl:when>
-			<xsl:when test="$pRegion='South Australia'">TDWG Level 4;SOA-OO</xsl:when>
-			<xsl:when test="$pRegion='Tasmania'">TDWG Level 4;TAS-OO</xsl:when>
 		</xsl:choose>
 	</xsl:template>
 </xsl:stylesheet>

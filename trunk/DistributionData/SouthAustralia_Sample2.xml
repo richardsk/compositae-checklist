@@ -1,0 +1,39 @@
+<BiostatusValues nameId="6087">
+<Biostatus>
+<Region>Australia</Region>
+<Schema>Insert</Schema>
+<Status />
+<Occurrence>Present</Occurrence>
+</Biostatus>
+<Biostatus>
+<Region>South Australia</Region>
+<Schema>Insert</Schema>
+<Status />
+<Occurrence>Present</Occurrence>
+</Biostatus>
+<Biostatus>
+<Region>NW</Region>
+<Schema>SA Regions</Schema>
+<Status />
+</Biostatus>
+<Biostatus>
+<Region>LE</Region>
+<Schema>SA Regions</Schema>
+<Status />
+</Biostatus>
+<Biostatus>
+<Region>GT</Region>
+<Schema>SA Regions</Schema>
+<Status />
+</Biostatus>
+<Biostatus>
+<Region>FR</Region>
+<Schema>SA Regions</Schema>
+<Status />
+</Biostatus>
+<Biostatus>
+<Region>EA</Region>
+<Schema>SA Regions</Schema>
+<Status />
+</Biostatus><Biostatus><Region>EP</Region><Schema>SA Regions</Schema><Status /></Biostatus><Biostatus><Region>NL</Region><Schema>SA Regions</Schema><Status /></Biostatus><Biostatus><Region>MU</Region><Schema>SA Regions</Schema><Status /></Biostatus><Biostatus><Region>YP</Region><Schema>SA Regions</Schema><Status /></Biostatus><Biostatus><Region>SL</Region><Schema>SA Regions</Schema><Status /></Biostatus><Biostatus><Region>KI</Region><Schema>SA Regions</Schema><Status /></Biostatus>
+<Biostatus><Region>SE</Region><Schema>SA Regions</Schema><Status /></Biostatus></BiostatusValues>

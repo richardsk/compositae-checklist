@@ -3,6 +3,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 	<xsl:template match="/">
+		<Distributions>
 		<xsl:for-each select="//Distribution">
 			<xsl:variable name="vRegion">
 				<xsl:call-template name="conRegion">
@@ -32,6 +33,7 @@
 				<xsl:attribute name="occurrence"><xsl:value-of select="$vOccurrence"/></xsl:attribute>
 			</Distribution>
 		</xsl:for-each>
+		</Distributions>
 	</xsl:template>
 	<xsl:template name="conRegion">
 		<xsl:param name="pRegion"/>
