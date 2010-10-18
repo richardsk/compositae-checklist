@@ -29,7 +29,7 @@
 					<Distribution>
 						<xsl:attribute name="schema"><xsl:value-of select="substring-after($vCoun, ':')"/></xsl:attribute>
 						<xsl:attribute name="region"><xsl:value-of select="substring-before($vCoun, ':')"/></xsl:attribute>
-						<xsl:attribute name="occurrence">present</xsl:attribute>
+						<xsl:attribute name="occurrence">Present</xsl:attribute>
 						<xsl:attribute name="origin"/>
 					</Distribution>
 				</xsl:if>
@@ -44,7 +44,7 @@
 					<Distribution>
 						<xsl:attribute name="schema"><xsl:value-of select="substring-after($vRegion, ':')"/></xsl:attribute>
 						<xsl:attribute name="region"><xsl:value-of select="substring-before($vRegion, ':')"/></xsl:attribute>
-						<xsl:attribute name="occurrence">present</xsl:attribute>
+						<xsl:attribute name="occurrence">Present</xsl:attribute>
 						<xsl:attribute name="origin"/>
 					</Distribution>
 				</xsl:if>

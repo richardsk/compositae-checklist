@@ -1,0 +1,16 @@
+<BiostatusValues nameId='14212'>
+	<Biostatus>
+		<Region>Australia</Region>
+		<Schema>Country</Schema>
+		<Status>*</Status>
+	</Biostatus>
+	<Biostatus>
+		<Region>NL</Region>
+		<Schema>SA Regions</Schema>
+		<Status>*</Status>
+	</Biostatus><Biostatus>
+		<Region>SL</Region>
+		<Schema>SA Regions</Schema>
+		<Status>*</Status>
+	</Biostatus>
+</BiostatusValues>
