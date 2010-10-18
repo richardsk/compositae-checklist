@@ -52,6 +52,7 @@
 		<xsl:param name="pRegion"/>
 		<xsl:choose>
 			<xsl:when test="$pRegion='Australia'">TDWG Level 2;50</xsl:when>
+			<xsl:when test="$pRegion='South Australia'">TDWG Level 4;SOA-OO</xsl:when>
 			<xsl:when test="$pRegion='NSW'">TDWG Level 2;50</xsl:when>
 			<xsl:when test="$pRegion='NW'">TDWG Level 4;SOA-OO</xsl:when>
 			<xsl:when test="$pRegion='LE'">TDWG Level 4;SOA-OO</xsl:when>
