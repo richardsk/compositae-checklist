@@ -25,14 +25,14 @@
 		<xsl:param name="pRegion"/>
 		<xsl:choose>
 			<xsl:when test="$pRegion='Australia'">Country;Australia</xsl:when>
-			<xsl:when test="$pRegion='Australian Capital Territory'">Australian State;Australian Capital Territory</xsl:when>
-			<xsl:when test="$pRegion='New South Wales'">Australian State;New South Wales</xsl:when>
-			<xsl:when test="$pRegion='Queensland'">Australian State;Queensland</xsl:when>
-			<xsl:when test="$pRegion='Western Australia'">Australian State;Western Australia</xsl:when>
-			<xsl:when test="$pRegion='South Australia'">Australian State;South Australia</xsl:when>
-			<xsl:when test="$pRegion='Victoria'">Australian State;Victoria</xsl:when>
-			<xsl:when test="$pRegion='Northern Territory'">Australian State;Northern Territory</xsl:when>
-			<xsl:when test="$pRegion='Tasmania'">Australian State;Tasmania</xsl:when>
+			<xsl:when test="$pRegion='Australian Capital Territory'">Australian States;Australian Capital Territory</xsl:when>
+			<xsl:when test="$pRegion='New South Wales'">Australian States;New South Wales</xsl:when>
+			<xsl:when test="$pRegion='Queensland'">Australian States;Queensland</xsl:when>
+			<xsl:when test="$pRegion='Western Australia'">Australian States;Western Australia</xsl:when>
+			<xsl:when test="$pRegion='South Australia'">Australian States;South Australia</xsl:when>
+			<xsl:when test="$pRegion='Victoria'">Australian States;Victoria</xsl:when>
+			<xsl:when test="$pRegion='Northern Territory'">Australian States;Northern Territory</xsl:when>
+			<xsl:when test="$pRegion='Tasmania'">Australian States;Tasmania</xsl:when>
 		</xsl:choose>
 	</xsl:template>
 </xsl:stylesheet>

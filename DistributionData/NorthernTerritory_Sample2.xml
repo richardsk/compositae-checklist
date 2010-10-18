@@ -1,0 +1,13 @@
+<BiostatusValues>
+	<Biostatus original='False'>
+		<Region>Australia</Region>
+		<Schema>Country</Schema>
+		<Occurrence>Present</Occurrence>
+	</Biostatus>
+	<Biostatus original='False'>
+		<Region>Northern Territory</Region>
+		<Schema>Australian States</Schema>
+		<Occurrence>Present</Occurrence>
+		<Origin>Indigenous</Origin>
+	</Biostatus>
+</BiostatusValues>

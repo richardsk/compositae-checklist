@@ -23,11 +23,13 @@
 						<xsl:when test="Status='Extinct*'">Uncertain</xsl:when>
 						<xsl:when test="Status='Rare'">Indigenous</xsl:when>
 						<xsl:when test="Status='Vulnerable'">Indigenous</xsl:when>
+						<xsl:otherwise>Indigenous</xsl:otherwise>
 					</xsl:choose>
 				</xsl:variable>
 				<xsl:variable name="vOccurrence">
 					<xsl:choose>
 						<xsl:when test="Occurrence='Present'">Present</xsl:when>
+						<xsl:otherwise>Present</xsl:otherwise>
 					</xsl:choose>
 				</xsl:variable>
 
