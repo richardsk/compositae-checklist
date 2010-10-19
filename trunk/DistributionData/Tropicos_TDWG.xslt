@@ -95,7 +95,6 @@
 			<xsl:when test="$pDepartment='Coclé'">TDWG Level 4;PAN-OO</xsl:when>
 			<xsl:when test="$pDepartment='Colombia'">TDWG Level 4;CLM-OO</xsl:when>
 			<xsl:when test="$pDepartment='Colón'">TDWG Level 4;PAN-OO</xsl:when>
-			<xsl:when test="$pDepartment='Cosmopolitan (worldwide)'">;</xsl:when>
 			<xsl:when test="$pDepartment='Costa Rica'">TDWG Level 4;COS-OO</xsl:when>
 			<xsl:when test="$pDepartment='Cuba'">TDWG Level 4;CUB-OO</xsl:when>
 			<xsl:when test="$pDepartment='Darién'">TDWG Level 4;PAN-OO</xsl:when>
@@ -116,15 +115,9 @@
 			<xsl:when test="$pDepartment='Lesser Antilles (general)'">TDWG Level 2;81</xsl:when>
 			<xsl:when test="$pDepartment='Los Santos'">TDWG Level 4;PAN-OO</xsl:when>
 			<xsl:when test="$pDepartment='Mexico'">TDWG Level 2;79</xsl:when>
-			<xsl:when test="$pDepartment='New World (general)'">;</xsl:when>
-			<xsl:when test="$pDepartment='New World (tropical)'">;</xsl:when>
 			<xsl:when test="$pDepartment='Nicaragua'">TDWG Level 4;NIC-OO</xsl:when>
 			<xsl:when test="$pDepartment='North America'">TDWG Level 1;7</xsl:when>
-			<xsl:when test="$pDepartment='Oceania (incl. Australia)'">;</xsl:when>
-			<xsl:when test="$pDepartment='Old World (general)'">;</xsl:when>
-			<xsl:when test="$pDepartment='Old World (tropical)'">;</xsl:when>
 			<xsl:when test="$pDepartment='Panamá'">TDWG Level 4;PAN-OO</xsl:when>
-			<xsl:when test="$pDepartment='Pantropical'">;</xsl:when>
 			<xsl:when test="$pDepartment='Peru'">TDWG Level 4;PER-OO</xsl:when>
 			<xsl:when test="$pDepartment='Puerto Rico'">TDWG Level 4;PUE-OO</xsl:when>
 			<xsl:when test="$pDepartment='San Blas'">TDWG Level 4;PAN-OO</xsl:when>

@@ -35,7 +35,7 @@
 				<xsl:variable name="vDep" select="substring-after($vDepartment,';')"/>
 				<Distribution>
 					<xsl:attribute name="schema"><xsl:value-of select="$vSchema"/></xsl:attribute>
-					<xsl:attribute name="department"><xsl:value-of select="$vDep"/></xsl:attribute>
+					<xsl:attribute name="region"><xsl:value-of select="$vDep"/></xsl:attribute>
 					<xsl:attribute name="occurrence"><xsl:value-of select="../Occurrence"/></xsl:attribute>
 					<xsl:attribute name="origin"><xsl:value-of select="../Origin"/></xsl:attribute>
 				</Distribution>
@@ -94,7 +94,6 @@
 			<xsl:when test="$pDepartment='Coclé'">Province of Panama;Coclé</xsl:when>
 			<xsl:when test="$pDepartment='Colombia'">ISO Countries;Colombia</xsl:when>
 			<xsl:when test="$pDepartment='Colón'">Province of Panama;Colón</xsl:when>
-			<xsl:when test="$pDepartment='Cosmopolitan (worldwide)'">General;Cosmopolitan (worldwide)</xsl:when>
 			<xsl:when test="$pDepartment='Costa Rica'">ISO Countries;Costa Rica</xsl:when>
 			<xsl:when test="$pDepartment='Cuba'">ISO Countries;Cuba</xsl:when>
 			<xsl:when test="$pDepartment='Darién'">Province of Panama;Darién</xsl:when>
@@ -109,21 +108,14 @@
 			<xsl:when test="$pDepartment='Guianas'">Region;Guianas</xsl:when>
 			<xsl:when test="$pDepartment='Herrera'">Province of Panama;Herrera</xsl:when>
 			<xsl:when test="$pDepartment='Hispaniola'">ISO Countries;Hispaniola</xsl:when>
-			<xsl:when test="$pDepartment='Hispaniola'">ISO Countries;Hispaniola</xsl:when>
 			<xsl:when test="$pDepartment='Honduras'">ISO Countries;Honduras</xsl:when>
 			<xsl:when test="$pDepartment='Jamaica'">ISO Countries;Jamaica</xsl:when>
 			<xsl:when test="$pDepartment='Lesser Antilles (general)'">Region;Lesser Antilles (general)</xsl:when>
 			<xsl:when test="$pDepartment='Los Santos'">Province of Panama;Los Santos</xsl:when>
 			<xsl:when test="$pDepartment='Mexico'">ISO Countries;Mexico</xsl:when>
-			<xsl:when test="$pDepartment='New World (general)'">General;New World (general)</xsl:when>
-			<xsl:when test="$pDepartment='New World (tropical)'">General;New World (tropical)</xsl:when>
 			<xsl:when test="$pDepartment='Nicaragua'">ISO Countries;Nicaragua</xsl:when>
 			<xsl:when test="$pDepartment='North America'">Region;North America</xsl:when>
-			<xsl:when test="$pDepartment='Oceania (incl. Australia)'">General;Oceania (incl. Australia)</xsl:when>
-			<xsl:when test="$pDepartment='Old World (general)'">General;Old World (general)</xsl:when>
-			<xsl:when test="$pDepartment='Old World (tropical)'">General;Old World (tropical)</xsl:when>
 			<xsl:when test="$pDepartment='Panamá'">Province of Panama;Panamá</xsl:when>
-			<xsl:when test="$pDepartment='Pantropical'">General;Pantropical</xsl:when>
 			<xsl:when test="$pDepartment='Peru'">ISO Countries;Peru</xsl:when>
 			<xsl:when test="$pDepartment='Puerto Rico'">ISO Countries;Puerto Rico</xsl:when>
 			<xsl:when test="$pDepartment='San Blas'">Territory of Panama;San Blas</xsl:when>
