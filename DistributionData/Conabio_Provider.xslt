@@ -5,7 +5,7 @@
 	<xsl:template match="/">
 		<Distributions>
 			<xsl:for-each select="//Distribution">
-				<Distribution schema="Country" occurrence="Present" origin="" region="Mexico"/>
+				<Distribution schema="ISO Countries" occurrence="Present" origin="" region="Mexico"/>
 			</xsl:for-each>
 		</Distributions>
 	</xsl:template>
