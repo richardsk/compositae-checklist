@@ -4,7 +4,6 @@
 	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 	<xsl:template match="/">
 		<Distributions>
-			<Distribution schema='TDWG Level 4' region='Colombia' origin='' occurrence='Present'/>
 			<xsl:for-each select="//Region">
 				<xsl:variable name="vRegion">
 					<xsl:call-template name="conRegion">
@@ -33,7 +32,7 @@
 			<xsl:when test="$pRegion='Boyacá'">TDWG Level 4;CLM-OO</xsl:when>
 			<xsl:when test="$pRegion='Caldas'">TDWG Level 4;CLM-OO</xsl:when>
 			<xsl:when test="$pRegion='Caquetá'">TDWG Level 4;CLM-OO</xsl:when>
-			<xsl:when test="$pRegion='Casanare'">TDWG Level 4;CLM-OOA</xsl:when>
+			<xsl:when test="$pRegion='Casanare'">TDWG Level 4;CLM-OO</xsl:when>
 			<xsl:when test="$pRegion='Cauca'">TDWG Level 4;CLM-OO</xsl:when>
 			<xsl:when test="$pRegion='Cesar'">TDWG Level 4;CLM-OO</xsl:when>
 			<xsl:when test="$pRegion='Chocó'">TDWG Level 4;CLM-OO</xsl:when>
@@ -48,7 +47,7 @@
 			<xsl:when test="$pRegion='Nariño'">TDWG Level 4;CLM-OO</xsl:when>
 			<xsl:when test="$pRegion='Norte de Santander'">TDWG Level 4;CLM-OO</xsl:when>
 			<xsl:when test="$pRegion='Putumayo'">TDWG Level 4;CLM-OO</xsl:when>
-			<xsl:when test="$pRegion='Quindío'">TDWG Level 4;CLM-OOA</xsl:when>
+			<xsl:when test="$pRegion='Quindío'">TDWG Level 4;CLM-OO</xsl:when>
 			<xsl:when test="$pRegion='Risaralda'">TDWG Level 4;CLM-OO</xsl:when>
 			<xsl:when test="$pRegion='San Andrés y Providencia'">TDWG Level 4;CLM-OO</xsl:when>
 			<xsl:when test="$pRegion='Santander'">TDWG Level 4;CLM-OO</xsl:when>

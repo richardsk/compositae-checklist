@@ -4,7 +4,10 @@
 	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 	<xsl:template match="/">
 		<Distributions>
-			<xsl:for-each select="//Biostatus">
+			<xsl:for-each select="//Distribution">
+			
+			<xsl:for-each select="//Region">
+			
 				<xsl:variable name="vRegion">
 					<xsl:call-template name="conRegion">
 						<xsl:with-param name="pRegion" select="Region"/>
@@ -14,17 +17,14 @@
 				<xsl:variable name="vReg" select="substring-after($vRegion,';')"/>
 				<xsl:variable name="vOrigin">
 					<xsl:choose>
-						<xsl:when test="Origin='Exotic'">Exotic</xsl:when>
-						<xsl:when test="Origin='Indigenous'">Indigenous</xsl:when>
-						<xsl:otherwise>Uncertain</xsl:otherwise>
+						<xsl:when test="Origin='Alien'">Exotic</xsl:when>
+						<xsl:when test="Origin='Native'">Indigenous</xsl:when>
+						<xsl:when test="Origin='Endemic'">Endemic</xsl:when>
 					</xsl:choose>
 				</xsl:variable>
 				<xsl:variable name="vOccurrence">
 					<xsl:choose>
 						<xsl:when test="Occurrence='Present'">Present</xsl:when>
-						<xsl:when test="Occurrence='Exotic'">Present</xsl:when>
-						<xsl:when test="Occurrence='Indigenous'">Present</xsl:when>
-						<xsl:otherwise>Present</xsl:otherwise>
 					</xsl:choose>
 				</xsl:variable>
 				<Distribution>
@@ -40,21 +40,19 @@
 					<xsl:attribute name="occurrence"><xsl:value-of select="$vOccurrence"/></xsl:attribute>
 				</Distribution>
 			</xsl:for-each>
+			</xsl:for-each>
 		</Distributions>
 	</xsl:template>
 	
 	<xsl:template name="conRegion">
 		<xsl:param name="pRegion"/>
 		<xsl:choose>
-			<xsl:when test="$pRegion='Australia'">TDWG Level 2;50</xsl:when>
-			<xsl:when test="$pRegion='Australian Capitol Territory'">TDWG Level 4;NSW-CT</xsl:when>
-			<xsl:when test="$pRegion='New South Wales'">TDWG Level 4;NSW-NS</xsl:when>
-			<xsl:when test="$pRegion='Queensland'">TDWG Level 4;QLD-QU</xsl:when>
-			<xsl:when test="$pRegion='Western Australia'">TDWG Level 4;WAU-WA</xsl:when>
-			<xsl:when test="$pRegion='Northern Territory'">TDWG Level 4;NTA-OO</xsl:when>
-			<xsl:when test="$pRegion='Victoria'">TDWG Level 4;VIC-OO</xsl:when>
-			<xsl:when test="$pRegion='South Australia'">TDWG Level 4;SOA-OO</xsl:when>
-			<xsl:when test="$pRegion='Tasmania'">TDWG Level 4;TAS-OO</xsl:when>
+			<xsl:when test="$pRegion='Bonin Islands'">TDWG Level 4;OGA-OO</xsl:when>
+			<xsl:when test="$pRegion='Chichi-Jima'">TDWG Level 4;OGA-OO</xsl:when>
+			<xsl:when test="$pRegion='Haha-jima'">TDWG Level 4;OGA-OO</xsl:when>
+			<xsl:when test="$pRegion='Mukou-jima'">TDWG Level 4;OGA-OO</xsl:when>
+			<xsl:when test="$pRegion='Otouto-jima'">TDWG Level 4;OGA-OO</xsl:when>
+			<xsl:when test="$pRegion='Ani-jima'">TDWG Level 4;OGA-OO</xsl:when>
 		</xsl:choose>
 	</xsl:template>
 </xsl:stylesheet>

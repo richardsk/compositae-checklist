@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Distributions>
+<Distribution schema="TDWG Level 3" region="AFG" occurrence="Present" origin="Indigenous" />
+<Distribution schema="TDWG Level 3" region="CHT" occurrence="Present" origin="Indigenous" />
+<Distribution schema="TDWG Level 3" region="NEP" occurrence="Present" origin="Indigenous" />
+<Distribution schema="TDWG Level 3" region="PAK" occurrence="Present" origin="Indigenous" />
+<Distribution schema="TDWG Level 3" region="WHM" occurrence="Present" origin="Indigenous" />
+</Distributions>

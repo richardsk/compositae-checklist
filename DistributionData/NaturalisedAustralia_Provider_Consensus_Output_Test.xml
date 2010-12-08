@@ -1,0 +1,29 @@
+<DataSet>
+<Biostat schema="Australian States" region="Queensland" Occurrence="" Origin="Exotic">
+<Providers></Providers>
+</Biostat>
+<Biostat schema="Continents" region="Africa" Occurrence="Present" Origin="Indigenous">
+<Providers></Providers>
+</Biostat>
+<Biostat schema="Continents" region="Asia" Occurrence="Present" Origin="Indigenous">
+<Providers></Providers>
+</Biostat>
+<Biostat schema="Islands" region="Caribbean" Occurrence="Present" Origin="Indigenous">
+<Providers></Providers>
+</Biostat>
+<Biostat schema="ISO Countries" region="Bolivia" Occurrence="Present" Origin="Indigenous">
+<Providers></Providers>
+</Biostat>
+<Biostat schema="ISO Countries" region="Brazil" Occurrence="Present" Origin="Indigenous">
+<Providers></Providers>
+</Biostat>
+<Biostat schema="ISO Countries" region="Fiji" Occurrence="Present" Origin="Indigenous">
+<Providers></Providers>
+</Biostat>
+<Biostat schema="ISO Countries" region="Honduras" Occurrence="Present" Origin="Indigenous">
+<Providers></Providers>
+</Biostat>
+<Biostat schema="ISO Countries" region="Samoa" Occurrence="Present" Origin="Indigenous">
+<Providers></Providers>
+</Biostat>
+</DataSet>

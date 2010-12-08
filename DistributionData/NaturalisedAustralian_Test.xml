@@ -1,0 +1,55 @@
+<Distributions>
+	<Distribution>
+		<Schema>Australian States</Schema>
+		<Region>Queensland</Region>
+		<Origin>Exotic</Origin>
+		<Occurrence>Uncertain</Occurrence>
+	</Distribution>
+	<Distribution>
+		<Schema>Continent</Schema>
+		<Region>Africa</Region>
+		<Origin>Native</Origin>
+		<Occurrence>Present</Occurrence>
+	</Distribution>
+	<Distribution>
+		<Schema>Continent</Schema>
+		<Region>Asia</Region>
+		<Origin>Native</Origin>
+		<Occurrence>Present</Occurrence>
+	</Distribution>
+	<Distribution>
+		<Schema>ISO Country</Schema>
+		<Region>Honduras</Region>
+		<Origin>Native</Origin>
+		<Occurrence>Present</Occurrence>
+	</Distribution>
+	<Distribution>
+		<Schema>ISO Country</Schema>
+		<Region>Bolivia</Region>
+		<Origin>Native</Origin>
+		<Occurrence>Present</Occurrence>
+	</Distribution>
+	<Distribution>
+		<Schema>ISO Country</Schema>
+		<Region>Brazil</Region>
+		<Origin>Native</Origin>
+		<Occurrence>Present</Occurrence>
+	</Distribution><Distribution>
+		<Schema>ISO Country</Schema>
+		<Region>Fiji</Region>
+		<Origin>Native</Origin>
+		<Occurrence>Present</Occurrence>
+	</Distribution>
+	<Distribution>
+		<Schema>ISO Country</Schema>
+		<Region>Samoa</Region>
+		<Origin>Native</Origin>
+		<Occurrence>Present</Occurrence>
+	</Distribution>
+	<Distribution>
+		<Schema>Islands</Schema>
+		<Region>Caribbean</Region>
+		<Origin>Native</Origin>
+		<Occurrence>Present</Occurrence>
+	</Distribution>
+</Distributions>

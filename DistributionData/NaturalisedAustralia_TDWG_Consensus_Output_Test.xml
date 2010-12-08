@@ -1,0 +1,29 @@
+<DataSet>
+<Biostat L1="2 - Africa" L2="" L3="" L4="" region="2" Occurrence="Present" Origin="Indigenous">
+<Providers></Providers>
+</Biostat>
+<Biostat L1="3 - Asia-Temperate" L2="" L3="" L4="" region="3" Occurrence="Present" Origin="Indigenous">
+<Providers></Providers>
+</Biostat>
+<Biostat L1="8 - Southern America" L2="81 - Caribbean" L3="" L4="" region="81" Occurrence="Present" Origin="Indigenous">
+<Providers></Providers>
+</Biostat>
+<Biostat L1="8 - Southern America" L2="84 - Brazil" L3="" L4="" region="84" Occurrence="Present" Origin="Indigenous">
+<Providers></Providers>
+</Biostat>
+<Biostat L1="6 - Pacific" L2="60 - Southwestern Pacific" L3="Samoa (SAM)" L4="" region="SAM" Occurrence="Present" Origin="Indigenous">
+<Providers></Providers>
+</Biostat>
+<Biostat L1="8 - Southern America" L2="83 - Western South America" L3="Bolivia (BOL)" L4="Bolivia (BOL-OO)" region="BOL-OO" Occurrence="Present" Origin="Indigenous">
+<Providers></Providers>
+</Biostat>
+<Biostat L1="6 - Pacific" L2="60 - Southwestern Pacific" L3="Fiji (FIJ)" L4="Fiji (FIJ-OO)" region="FIJ-OO" Occurrence="Present" Origin="Indigenous">
+<Providers></Providers>
+</Biostat>
+<Biostat L1="8 - Southern America" L2="80 - Central America" L3="Honduras (HON)" L4="Honduras (HON-OO)" region="HON-OO" Occurrence="Present" Origin="Indigenous">
+<Providers></Providers>
+</Biostat>
+<Biostat L1="5 - Australasia" L2="50 - Australia" L3="Queensland (QLD)" L4="Queensland (QLD-QU)" region="QLD-QU" Occurrence="" Origin="Exotic">
+<Providers></Providers>
+</Biostat>
+</DataSet>
