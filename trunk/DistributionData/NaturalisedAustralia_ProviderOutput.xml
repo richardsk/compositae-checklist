@@ -1,0 +1,11 @@
+<Distributions>
+<Distribution schema="Australian States" region="Queensland" origin="Exotic" occurrence="" />
+<Distribution schema="Continents" region="Africa" origin="Indigenous" occurrence="Present" />
+<Distribution schema="Continents" region="Asia" origin="Indigenous" occurrence="Present" />
+<Distribution schema="ISO Countries" region="Honduras" origin="Indigenous" occurrence="Present" />
+<Distribution schema="ISO Countries" region="Bolivia" origin="Indigenous" occurrence="Present" />
+<Distribution schema="ISO Countries" region="Brazil" origin="Indigenous" occurrence="Present" />
+<Distribution schema="ISO Countries" region="Fiji" origin="Indigenous" occurrence="Present" />
+<Distribution schema="ISO Countries" region="Samoa" origin="Indigenous" occurrence="Present" />
+<Distribution schema="Islands" region="Caribbean" origin="Indigenous" occurrence="Present" />
+</Distributions>

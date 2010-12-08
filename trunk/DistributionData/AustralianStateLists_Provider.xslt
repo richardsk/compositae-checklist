@@ -10,6 +10,7 @@
 						<xsl:when test="Occurrence='Present'">Uncertain</xsl:when>
 						<xsl:when test="Occurrence='Exotic'">Exotic</xsl:when>
 						<xsl:when test="Occurrence='Indigenous'">Indigenous</xsl:when>
+						<xsl:when test="Occurrence='Uncertain'">Uncertain</xsl:when>
 					</xsl:choose>
 				</xsl:variable>
 				<xsl:variable name="vOccurrence">
@@ -17,6 +18,7 @@
 						<xsl:when test="Occurrence='Present'">Present</xsl:when>
 						<xsl:when test="Occurrence='Exotic'">Present</xsl:when>
 						<xsl:when test="Occurrence='Indigenous'">Present</xsl:when>
+						<xsl:when test="Occurrence='Uncertain'">Present</xsl:when>
 					</xsl:choose>
 				</xsl:variable>
 				<Distribution>

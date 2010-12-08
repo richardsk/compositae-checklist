@@ -1,0 +1,11 @@
+<Distributions>
+	<Distribution>
+		<Schema>Countries</Schema>
+		<Region>Oman</Region>
+		<Region>Saudi Arabia</Region>
+		<Region>UAE</Region>
+		<Region>Yemen </Region>
+		<Occurrence>Present</Occurrence>
+		<Origin>Indigenous</Origin>
+	</Distribution>
+</Distributions>

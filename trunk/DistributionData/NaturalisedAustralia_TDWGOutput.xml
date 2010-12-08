@@ -1,0 +1,11 @@
+<Distributions>
+<Distribution schema="TDWG Level 4" region="QLD-QU" origin="Exotic" occurrence="" />
+<Distribution schema="TDWG Level 1" region="2" origin="Indigenous" occurrence="Present" />
+<Distribution schema="TDWG Level 1" region="3" origin="Indigenous" occurrence="Present" />
+<Distribution schema="TDWG Level 4" region="HON-OO" origin="Indigenous" occurrence="Present" />
+<Distribution schema="TDWG Level 4" region="BOL-OO" origin="Indigenous" occurrence="Present" />
+<Distribution schema="TDWG Level 2" region="84" origin="Indigenous" occurrence="Present" />
+<Distribution schema="TDWG Level 4" region="FIJ-OO" origin="Indigenous" occurrence="Present" />
+<Distribution schema="TDWG Level 3" region="PHX" origin="Indigenous" occurrence="Present" />
+<Distribution schema="TDWG Level 2" region="81" origin="Indigenous" occurrence="Present" />
+</Distributions>

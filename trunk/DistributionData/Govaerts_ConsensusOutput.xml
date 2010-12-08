@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSet>
+<Biostat L1="3 - Asia-Temperate" L2="34 - Western Asia" L3="Afghanistan (AFG)" L4="Afghanistan (AFG-OO)" region="AFG" Occurrence="Present" Origin="Indigenous">
+<Providers></Providers>
+</Biostat>
+<Biostat L1="3 - Asia-Temperate" L2="36 - China" L3="Tibet (CHT)" L4="Tibet (CHT-OO)" region="CHT" Occurrence="Present" Origin="Indigenous">
+<Providers></Providers>
+</Biostat>
+<Biostat L1="4 - Asia-Tropical" L2="40 - Indian Subcontinent" L3="Nepal (NEP)" L4="Nepal (NEP-OO)" region="NEP" Occurrence="Present" Origin="Indigenous">
+<Providers></Providers>
+</Biostat>
+<Biostat L1="4 - Asia-Tropical" L2="40 - Indian Subcontinent" L3="Pakistan (PAK)" L4="Pakistan (PAK-OO)" region="PAK" Occurrence="Present" Origin="Indigenous">
+<Providers></Providers>
+</Biostat>
+<Biostat L1="4 - Asia-Tropical" L2="40 - Indian Subcontinent" L3="West Himalaya (WHM)" L4="" region="WHM" Occurrence="Present" Origin="Indigenous">
+<Providers></Providers>
+</Biostat>
+</DataSet>

@@ -1,0 +1,11 @@
+<Distributions>
+	<Distribution>
+		<Schema>Islands</Schema>
+		<Region>Bonin Islands</Region>
+		<Region>Chichi-Jima</Region>
+		<Region>Haha-jima</Region>
+		<Region>Mukou-jima</Region>
+		<Origin>Alien</Origin>
+		<Occurrence>Present</Occurrence>
+	</Distribution>
+</Distributions>
