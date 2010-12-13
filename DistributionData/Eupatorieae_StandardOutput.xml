@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Distributions>
+<Distribution schema="TDWG Level 4" region="WIN-MA" occurrence="Present" origin="" />
+<Distribution schema="TDWG Level 2" region="84" occurrence="Present" origin="" />
+<Distribution schema="TDWG Level 4" region="ECU-OO" occurrence="Present" origin="" />
+<Distribution schema="TDWG Level 4" region="PAR-OO" occurrence="Present" origin="" />
+</Distributions>

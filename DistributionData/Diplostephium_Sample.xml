@@ -1,0 +1,10 @@
+<Distributions>
+	<Distribution>
+		<Schema>ISO Countries</Schema>
+		<Region>Venezuela</Region>
+		<Region>Colombia</Region>
+		<Region>Chile</Region>
+		<Origin>Indigenous</Origin>
+		<Occurrence>Present</Occurrence>
+	</Distribution>
+</Distributions>

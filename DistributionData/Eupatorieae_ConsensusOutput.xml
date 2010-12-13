@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataSet>
+<Biostat L1="8 - Southern America" L2="84 - Brazil" L3="" L4="" region="84" Occurrence="Present" Origin="">
+<Providers></Providers>
+</Biostat>
+<Biostat L1="8 - Southern America" L2="83 - Western South America" L3="Ecuador (ECU)" L4="Ecuador (ECU-OO)" region="ECU-OO" Occurrence="Present" Origin="">
+<Providers></Providers>
+</Biostat>
+<Biostat L1="8 - Southern America" L2="85 - Southern South America" L3="Paraguay (PAR)" L4="Paraguay (PAR-OO)" region="PAR-OO" Occurrence="Present" Origin="">
+<Providers></Providers>
+</Biostat>
+<Biostat L1="8 - Southern America" L2="81 - Caribbean" L3="Windward Is. (WIN)" L4="Martinique (WIN-MA)" region="WIN-MA" Occurrence="Present" Origin="">
+<Providers></Providers>
+</Biostat>
+</DataSet>
