@@ -5,7 +5,7 @@
 		<DataSet>
 		
 			<!--xsl:attribute name="xsi:schemaLocation">http://www.compositae.org/schemas/TCS_Compositae D:\Documents\COMPOS~1\TICA\TCS_Compositae.xsd</xsl:attribute-->
-			<xsl:attribute name="xsl:schemaLocation">http://www.compositae.org/schemas/TCS_Compositae.xsd</xsl:attribute>
+			<xsl:attribute name="xsi:schemaLocation">http://www.compositae.org/schemas/TCS_Compositae http://compositae.landcareresearch.co.nz/schema/TCS_Compositae.xsd</xsl:attribute>
 			<MetaData>
 				<MetaDataDetailed>
 					<ExportDate><xsl:value-of select="NewDataSet/@exportDate"/></ExportDate>

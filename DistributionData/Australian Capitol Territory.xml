@@ -8,7 +8,7 @@
 		</Biostatus>
 		<Biostatus original="False">
 			<Region>Australian Capitol Territory</Region>
-			<Schema>Australian States</Schema>
+			<Schema>Austalian States</Schema>
 			<Occurrence>Exotic</Occurrence>
 		</Biostatus>
 		<Biostatus original="False">
@@ -18,7 +18,8 @@
 		</Biostatus>
 		<Biostatus original="False">
 			<Region>Australian Capitol Territory</Region>
-			<Schema>Australian States</Schema>
+			<Schema>Austalian States</Schema>
 			<Occurrence>Indigenous</Occurrence>
 		</Biostatus>
 	</BiostatusValues>
+

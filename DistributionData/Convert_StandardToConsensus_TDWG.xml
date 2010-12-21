@@ -4,7 +4,8 @@
 		<Distributions>
 			<Distribution schema="TDWG Level 2" region="27" occurrence="Present" origin="" isOriginal="false"/>
 			<Distribution schema="TDWG Level 2" region="27" occurrence="Present" origin="" isOriginal="false"/>
-			<Distribution schema="TDWG Level 3" region="BOT" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="TDWG Level 4" region="CPP-WC" occurrence="Present" origin="" isOriginal="false"/>
+			<Distribution schema="TDWG Level 4" region="BOT-OO" occurrence="Present" origin="" isOriginal="false"/>
 			<Distribution schema="TDWG Level 4" region="LES-OO" occurrence="Present" origin="" isOriginal="false"/>
 			<Distribution schema="TDWG Level 4" region="CPP-EC" occurrence="Present" origin="" isOriginal="false"/>
 			<Distribution schema="TDWG Level 4" region="OFS-OO" occurrence="Present" origin="" isOriginal="false"/>
@@ -18,10 +19,10 @@
 	</Provider>
 	<Provider id='12'>
 		<Distributions>
-			<Distribution schema="TDWG Level 3" occurrence="Present" origin="" region="VEN" isOriginal="false"/>
-			<Distribution schema="TDWG Level 3" occurrence="Present" origin="" region="GUY" isOriginal="false"/>
+			<Distribution schema="TDWG Level 4" occurrence="Present" origin="" region="VEN-OO" isOriginal="false"/>
+			<Distribution schema="TDWG Level 4" occurrence="Present" origin="" region="GUY-OO" isOriginal="false"/>
 			<Distribution schema="TDWG Level 4" occurrence="Present" origin="" region="FRG-OO" isOriginal="false"/>
-			<Distribution schema="TDWG Level 4" occurrence="Present" origin="" region="SUR" isOriginal="false"/>
+			<Distribution schema="TDWG Level 4" occurrence="Present" origin="" region="VEN-OO" isOriginal="false"/>
 		</Distributions>
 	</Provider>
 	<Provider id='13'>

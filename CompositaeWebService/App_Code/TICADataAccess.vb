@@ -219,7 +219,7 @@ Public Class TICADataAccess
             End If
         Next
 
-        ds = OtherData.GetProviderNameOtherData(pnpk)
+        ds = OtherData.GetProviderNameOtherData(ticaDs.Tables("ProviderName").Rows(0)("PNNameFk"))
         If ds.Tables.Count > 0 Then
             ds.Tables(0).TableName = "ProviderOtherData"
             ticaDS.Merge(ds)

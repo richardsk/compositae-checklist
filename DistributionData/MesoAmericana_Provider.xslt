@@ -28,7 +28,7 @@
 			<Distribution schema="Country">
 				<xsl:attribute name="region"><xsl:value-of select="normalize-space($pRegion)"/></xsl:attribute>
 				<xsl:attribute name="occurrence">Present</xsl:attribute>
-				<xsl:attribute name="origin">Unknown</xsl:attribute>
+				<xsl:attribute name="origin"/>
 				<xsl:attribute name="isOriginal">true</xsl:attribute>
 			</Distribution>
 		</xsl:if>
