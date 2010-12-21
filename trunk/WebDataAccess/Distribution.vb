@@ -630,12 +630,12 @@ Public Class Distribution
                     "OD.data.value('./@region', 'nvarchar(100)') as Region, " + _
                     "OD.data.value('./@Occurrence', 'nvarchar(100)') as Occurrence, " + _
                     "OD.data.value('./@Origin', 'nvarchar(100)') as Origin " + _
-                    " from tblOtherData " + _
-                    " inner join tblflatname cn on cn.flatnamenameufk = recordfk " + _
-                    " inner join tblflatname n on cn.flatnamenameufk = n.flatnameseedname " + _
-                    "cross apply OtherDataXml.nodes('/DataSet/Biostat') as OD(data) " + _
-                    " where n.flatnamenameufk = '" + nameGuid + "' and " + _
-                 "OD.data.exist('/DataSet/Biostat[contains(@Occurrence, ""Present"")]') = 1 "
+                    "from (select OtherDataXml from tblOtherData  " + _
+                    "inner join tblflatname cn on cn.flatnamenameufk = recordfk " + _
+                    "inner join tblflatname n on cn.flatnamenameufk = n.flatnameseedname " + _
+                    "where n.flatnamenameufk = '" + nameGuid + "') ox " + _
+                 "cross apply ox.OtherDataXml.nodes('/DataSet/Biostat') as OD(data) " + _
+                 "where OD.data.exist('/DataSet/Biostat[contains(@Occurrence, ""Present"")]') = 1 "
 
                 cmd.CommandText = Sql
                 Dim da As New SqlDataAdapter(cmd)
@@ -693,10 +693,11 @@ Public Class Distribution
                     "OD.data.value('./@region', 'nvarchar(100)') as Region, " + _
                     "OD.data.value('./@Occurrence', 'nvarchar(100)') as Occurrence, " + _
                     "OD.data.value('./@Origin', 'nvarchar(100)') as Origin " + _
-                    " from tblOtherData " + _
-                    "cross apply OtherDataXml.nodes('/DataSet/Biostat') as OD(data) " + _
-                    "where RecordFk = '" + nameGuid + "' and " + _
-                 "OD.data.exist('/DataSet/Biostat[contains(@Occurrence, ""Present"")]') = 1 "
+                    "from (select OtherDataXml from tblOtherData  " + _
+                    "where RecordFk = '" + nameGuid + "' ) ox " + _
+                 "cross apply ox.OtherDataXml.nodes('/DataSet/Biostat') as OD(data) " + _
+                 "where OD.data.exist('/DataSet/Biostat[contains(@Occurrence, ""Present"")]') = 1 "
+
                 '"OD.data.exist('/DataSet/Biostat[contains(@schema, ""TDWG Level"")]') = 1 "
 
                 cmd.CommandText = sql
