@@ -14,7 +14,7 @@
         <br /> 
         <a href="Default.aspx?Page=About&Tab=Ack">Acknowledgements</a>
         <br />
-        <a href="http://webservices.landcareresearch.co.nz/compositaewebservice/ticachecklistservice.asmx" target="_blank">Web service</a>
+        <a href="http://lcrwebservices.landcareresearch.co.nz/compositaewebservice/ticachecklistservice.asmx" target="_blank">Web service</a>
         <br />
     </td>
     
