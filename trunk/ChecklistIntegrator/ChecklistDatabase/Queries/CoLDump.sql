@@ -13,7 +13,16 @@ select n.namelsid,
 	'', --infraspauthor
 	'Provisionally Accepted', --gsd status
 	'Provisionally Accepted', --sp2000 status
-	'', --dist
+	'"' + (select
+                OD.data.value('./@L1', 'nvarchar(100)') + ', ' +
+                OD.data.value('./@L2', 'nvarchar(100)') + ', ' +
+                OD.data.value('./@L3', 'nvarchar(100)') + ', ' +
+                OD.data.value('./@L4', 'nvarchar(100)') + '; '
+                  -- OD.data.value('./@Occurrence', 'nvarchar(100)') + ', ' +
+                  -- OD.data.value('./@Origin', 'nvarchar(100)') + '; '
+                    from tblOtherData
+                   cross apply OtherDataXml.nodes('/DataSet/Biostat') as OD(data)
+                   where RecordFk = n.nameGuid for xml path('')) + '"', --dist
 	'', --occ status
 	'"Data Providers: ' + dbo.fngetprovidertitles(n.nameguid) + '"',
 	n.nameupdatedby, 
