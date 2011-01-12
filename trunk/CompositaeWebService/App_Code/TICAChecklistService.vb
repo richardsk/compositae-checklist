@@ -5,6 +5,7 @@ Imports System.Xml
 Imports System.Xml.Xsl
 Imports System.Data
 
+
 <WebService(Namespace:="http://www.compositae.org/")> _
 <WebServiceBinding(ConformsTo:=WsiProfiles.BasicProfile1_1)> _
 <Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
@@ -13,95 +14,12 @@ Public Class TICAChecklistService
 
     <WebMethod()> _
     Public Function GetTICANameRecordTCS(ByVal ticaLSID As String) As XmlDocument
-        Dim doc As New XmlDocument
-
-        Try
-            Dim id As String = Utility.GetLSIDObjectVal(ticaLSID)
-
-            Dim ds As DataSet = TICADataAccess.GetNameRecordDs(id)
-            doc.LoadXml(ds.GetXml())
-
-            Dim attr As XmlAttribute = doc.CreateAttribute("exportDate")
-            attr.Value = DateTime.Now.ToString()
-            doc.DocumentElement.Attributes.Append(attr)
-
-            Dim tmp As String = ConfigurationManager.AppSettings.Get("TempDir")
-
-            Dim wr As New XmlTextWriter(tmp + "\name.xml", UTF8Encoding.UTF8)
-            wr.Indentation = 4
-            wr.Formatting = Formatting.Indented
-            doc.WriteContentTo(wr)
-            wr.Close()
-
-            Dim xslfile As String = System.Configuration.ConfigurationManager.AppSettings.Get("TCSXSLTFile")
-            Dim xslLoc As String = AppDomain.CurrentDomain.BaseDirectory + "XSLT\" + xslfile
-            Dim transform As New XslCompiledTransform()
-
-            transform.Load(xslLoc)
-
-            Dim ms As New IO.MemoryStream()
-            Dim writer As New XmlTextWriter(ms, Text.UTF8Encoding.UTF8)
-            transform.Transform(doc, writer)
-
-            ms.Position = 0
-            Dim xml As String = New IO.StreamReader(ms).ReadToEnd()
-
-            doc.LoadXml(xml)
-        Catch cex As ChecklistObjects.ChecklistException
-            ChecklistObjects.ChecklistException.LogError(cex)
-            doc.LoadXml("<Error>" + cex.Message + "</Error>")
-        Catch ex As Exception
-            ChecklistObjects.ChecklistException.LogError(ex)
-            doc.LoadXml("<Error>Error retreiving TICA record</Error>")
-        End Try
-
-        Return doc
+        Return WebDataAccess.DataAccess.GetTICANameRecordTCS(ticaLSID)
     End Function
 
     <WebMethod()> _
     Public Function GetProviderNameTCS(ByVal providerId As Integer, ByVal providerNameId As String) As XmlDocument
-        Dim doc As New XmlDocument
-
-        Try
-
-            Dim ds As DataSet = TICADataAccess.GetProviderNameRecordDs(providerId, providerNameId)
-            doc.LoadXml(ds.GetXml())
-
-            Dim attr As XmlAttribute = doc.CreateAttribute("exportDate")
-            attr.Value = DateTime.Now.ToString()
-            doc.DocumentElement.Attributes.Append(attr)
-
-            Dim tmp As String = ConfigurationManager.AppSettings.Get("TempDir")
-
-            Dim wr As New XmlTextWriter(tmp + "\provname.xml", UTF8Encoding.UTF8)
-            wr.Indentation = 4
-            wr.Formatting = Formatting.Indented
-            doc.WriteContentTo(wr)
-            wr.Close()
-
-            Dim xslfile As String = System.Configuration.ConfigurationManager.AppSettings.Get("ProviderNameXSLTFile")
-            Dim xslLoc As String = AppDomain.CurrentDomain.BaseDirectory + "XSLT\" + xslfile
-            Dim transform As New XslCompiledTransform()
-
-            transform.Load(xslLoc)
-
-            Dim ms As New IO.MemoryStream()
-            Dim writer As New XmlTextWriter(ms, Text.UTF8Encoding.UTF8)
-            transform.Transform(doc, writer)
-
-            ms.Position = 0
-            Dim xml As String = New IO.StreamReader(ms).ReadToEnd()
-
-            doc.LoadXml(xml)
-        Catch cex As ChecklistObjects.ChecklistException
-            ChecklistObjects.ChecklistException.LogError(cex)
-            doc.LoadXml("<Error>" + cex.Message + "</Error>")
-        Catch ex As Exception
-            ChecklistObjects.ChecklistException.LogError(ex)
-            doc.LoadXml("<Error>Error retreiving TICA record</Error>")
-        End Try
-
-        Return doc
+        Return WebDataAccess.DataAccess.GetProviderNameTCS(providerId, providerNameId)
     End Function
 
     <WebMethod()> _
@@ -148,7 +66,7 @@ Public Class TICAChecklistService
         Dim doc As New XmlDocument
 
         Try
-            Dim ds As DataSet = ChecklistDataAccess.NameData.GetNameRelatedIds(Utility.GetLSIDObjectVal(ticaLSID))
+            Dim ds As DataSet = ChecklistDataAccess.NameData.GetNameRelatedIds(WebDataAccess.Utility.GetLSIDObjectVal(ticaLSID))
             ds.DataSetName = "DataSet"
             ds.Tables(0).TableName = "ConcensusName"
             ds.Tables(1).TableName = "ProviderName"
@@ -202,7 +120,7 @@ Public Class TICAChecklistService
         Dim doc As New XmlDocument
 
         Try
-            Dim id As String = Utility.GetLSIDObjectVal(ticaLSID)
+            Dim id As String = WebDataAccess.Utility.GetLSIDObjectVal(ticaLSID)
             Dim ds As DataSet = ChecklistDataAccess.ReferenceData.GetReferenceDs(id)
             ds.DataSetName = "DataSet"
             ds.Tables(0).TableName = "Reference"
@@ -223,33 +141,8 @@ Public Class TICAChecklistService
 
     <WebMethod()> _
     Public Function GetProviders() As XmlDocument
-        Dim doc As New XmlDocument
-
-        Try
-
-            Dim ds As DataSet = TICADataAccess.GetProvidersDs()
-            doc.LoadXml(ds.GetXml())
-
-            Dim xslfile As String = System.Configuration.ConfigurationManager.AppSettings.Get("ProvidersXSLTFile")
-            Dim xslLoc As String = AppDomain.CurrentDomain.BaseDirectory + "XSLT\" + xslfile
-            Dim transform As New XslCompiledTransform()
-
-            transform.Load(xslLoc)
-
-            Dim ms As New IO.MemoryStream()
-            Dim writer As New XmlTextWriter(ms, Text.UTF8Encoding.UTF8)
-            transform.Transform(doc, writer)
-
-            ms.Position = 0
-            Dim xml As String = New IO.StreamReader(ms).ReadToEnd()
-
-            doc.LoadXml(xml)
-        Catch ex As Exception
-            ChecklistObjects.ChecklistException.LogError(ex)
-            doc.LoadXml("<Error>Error retreiving TICA providers</Error>")
-        End Try
-
-        Return doc
+        Return WebDataAccess.DataAccess.GetProviders()
     End Function
+
 
 End Class

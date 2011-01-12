@@ -1,10 +1,14 @@
 Imports Microsoft.VisualBasic
 Imports System.Data
+Imports System.Configuration
+Imports System.Xml
+Imports System.Text
+Imports System.Xml.Xsl
 
 Imports ChecklistDataAccess
 Imports ChecklistObjects
 
-Public Class TICADataAccess
+Public Class DataAccess
 
 #Region "Private functions"
 
@@ -182,11 +186,12 @@ Public Class TICADataAccess
                 ticaDs.Merge(ds)
 
                 ticaDs.Tables("ProviderName").Rows(0)("PRPk") = ds.Tables(0).Rows(0)("PRPk")
-            End If
-            Dim risds As DataSet = ReferenceData.GetProviderRISByReferenceDs(ds.Tables(0).Rows(0)("PRPk"))
-            If risds.Tables.Count > 0 Then
-                risds.Tables(0).TableName = "ProviderReferenceRIS"
-                ticaDs.Merge(risds)
+
+                Dim risds As DataSet = ReferenceData.GetProviderRISByReferenceDs(ds.Tables(0).Rows(0)("PRPk"))
+                If risds.Tables.Count > 0 Then
+                    risds.Tables(0).TableName = "ProviderReferenceRIS"
+                    ticaDs.Merge(risds)
+                End If
             End If
         End If
 
@@ -206,12 +211,12 @@ Public Class TICADataAccess
                         ticaDs.Merge(ds)
 
                         row("PRPk") = ds.Tables(0).Rows(0)("PRPk")
-                    End If
 
-                    Dim risds As DataSet = ReferenceData.GetProviderRISByReferenceDs(ds.Tables(0).Rows(0)("PRPk"))
-                    If risds.Tables.Count > 0 Then
-                        risds.Tables(0).TableName = "ProviderReferenceRIS"
-                        ticaDs.Merge(risds)
+                        Dim risds As DataSet = ReferenceData.GetProviderRISByReferenceDs(ds.Tables(0).Rows(0)("PRPk"))
+                        If risds.Tables.Count > 0 Then
+                            risds.Tables(0).TableName = "ProviderReferenceRIS"
+                            ticaDs.Merge(risds)
+                        End If
                     End If
                 Else
                     row("PRPk") = ref(0)("PRPk")
@@ -222,13 +227,161 @@ Public Class TICADataAccess
         ds = OtherData.GetProviderNameOtherData(ticaDs.Tables("ProviderName").Rows(0)("PNNameFk"))
         If ds.Tables.Count > 0 Then
             ds.Tables(0).TableName = "ProviderOtherData"
-            ticaDS.Merge(ds)
+            ticaDs.Merge(ds)
         End If
 
     End Sub
 
 #End Region
 
+#Region "Xml Records"
+
+    Public Shared Function GetProviderNameTCS(ByVal providerId As Integer, ByVal providerNameId As String) As XmlDocument
+        Dim doc As New XmlDocument
+
+        Try
+
+            Dim ds As DataSet = WebDataAccess.DataAccess.GetProviderNameRecordDs(providerId, providerNameId)
+            doc.LoadXml(ds.GetXml())
+
+            Dim attr As XmlAttribute = doc.CreateAttribute("exportDate")
+            attr.Value = DateTime.Now.ToString()
+            doc.DocumentElement.Attributes.Append(attr)
+
+            Dim tmp As String = ConfigurationManager.AppSettings.Get("TempDir")
+
+            Dim wr As New XmlTextWriter(tmp + "\provname.xml", UTF8Encoding.UTF8)
+            wr.Indentation = 4
+            wr.Formatting = Formatting.Indented
+            doc.WriteContentTo(wr)
+            wr.Close()
+
+            Dim xslfile As String = System.Configuration.ConfigurationManager.AppSettings.Get("ProviderNameXSLTFile")
+            Dim xslLoc As String = AppDomain.CurrentDomain.BaseDirectory + "XSLT\" + xslfile
+            Dim transform As New XslCompiledTransform()
+
+            transform.Load(xslLoc)
+
+            Dim ms As New IO.MemoryStream()
+            Dim writer As New XmlTextWriter(ms, Text.UTF8Encoding.UTF8)
+            transform.Transform(doc, writer)
+
+            ms.Position = 0
+            Dim xml As String = New IO.StreamReader(ms).ReadToEnd()
+
+            doc.LoadXml(xml)
+        Catch cex As ChecklistObjects.ChecklistException
+            ChecklistObjects.ChecklistException.LogError(cex)
+            doc.LoadXml("<Error>" + cex.Message + "</Error>")
+        Catch ex As Exception
+            ChecklistObjects.ChecklistException.LogError(ex)
+            doc.LoadXml("<Error>Error retreiving TICA record</Error>")
+        End Try
+
+        Return doc
+    End Function
+
+    Public Shared Function GetTICAReferenceRecord(ByVal ticaLSID As String) As XmlDocument
+        Dim doc As New XmlDocument
+
+        Try
+            Dim id As String = WebDataAccess.Utility.GetLSIDObjectVal(ticaLSID)
+            Dim ds As DataSet = ChecklistDataAccess.ReferenceData.GetReferenceDs(id)
+            ds.DataSetName = "DataSet"
+            ds.Tables(0).TableName = "Reference"
+
+            Dim risDs As DataSet = ChecklistDataAccess.ReferenceData.GetReferenceRISByReferenceDs(id)
+            risDs.Tables(0).TableName = "RIS"
+
+            ds.Merge(risDs)
+
+            doc.LoadXml(ds.GetXml())
+        Catch ex As Exception
+            ChecklistObjects.ChecklistException.LogError(ex)
+            doc.LoadXml("<Error>Error retreiving TICA record</Error>")
+        End Try
+
+        Return doc
+    End Function
+
+    Public Shared Function GetTICANameRecordTCS(ByVal ticaLSID As String) As XmlDocument
+        Dim doc As New XmlDocument
+
+        Try
+            Dim id As String = Utility.GetLSIDObjectVal(ticaLSID)
+
+            Dim ds As DataSet = WebDataAccess.DataAccess.GetNameRecordDs(id)
+            doc.LoadXml(ds.GetXml())
+
+            Dim attr As XmlAttribute = doc.CreateAttribute("exportDate")
+            attr.Value = DateTime.Now.ToString()
+            doc.DocumentElement.Attributes.Append(attr)
+
+            Dim tmp As String = ConfigurationManager.AppSettings.Get("TempDir")
+
+            Dim wr As New XmlTextWriter(tmp + "\name.xml", UTF8Encoding.UTF8)
+            wr.Indentation = 4
+            wr.Formatting = Formatting.Indented
+            doc.WriteContentTo(wr)
+            wr.Close()
+
+            Dim xslfile As String = System.Configuration.ConfigurationManager.AppSettings.Get("TCSXSLTFile")
+            Dim xslLoc As String = AppDomain.CurrentDomain.BaseDirectory + "XSLT\" + xslfile
+            Dim transform As New XslCompiledTransform()
+
+            transform.Load(xslLoc)
+
+            Dim ms As New IO.MemoryStream()
+            Dim writer As New XmlTextWriter(ms, Text.UTF8Encoding.UTF8)
+            transform.Transform(doc, writer)
+
+            ms.Position = 0
+            Dim xml As String = New IO.StreamReader(ms).ReadToEnd()
+
+            doc.LoadXml(xml)
+        Catch cex As ChecklistObjects.ChecklistException
+            ChecklistObjects.ChecklistException.LogError(cex)
+            doc.LoadXml("<Error>" + cex.Message + "</Error>")
+        Catch ex As Exception
+            ChecklistObjects.ChecklistException.LogError(ex)
+            doc.LoadXml("<Error>" + ex.Message + ":" + ex.StackTrace + ":" + ex.InnerException.Message + "</Error>")
+            'doc.LoadXml("<Error>Error retreiving TICA record</Error>")
+        End Try
+
+        Return doc
+    End Function
+
+    Public Shared Function GetProviders() As XmlDocument
+        Dim doc As New XmlDocument
+
+        Try
+
+            Dim ds As DataSet = WebDataAccess.DataAccess.GetProvidersDs()
+            doc.LoadXml(ds.GetXml())
+
+            Dim xslfile As String = System.Configuration.ConfigurationManager.AppSettings.Get("ProvidersXSLTFile")
+            Dim xslLoc As String = AppDomain.CurrentDomain.BaseDirectory + "XSLT\" + xslfile
+            Dim transform As New XslCompiledTransform()
+
+            transform.Load(xslLoc)
+
+            Dim ms As New IO.MemoryStream()
+            Dim writer As New XmlTextWriter(ms, Text.UTF8Encoding.UTF8)
+            transform.Transform(doc, writer)
+
+            ms.Position = 0
+            Dim xml As String = New IO.StreamReader(ms).ReadToEnd()
+
+            doc.LoadXml(xml)
+        Catch ex As Exception
+            ChecklistObjects.ChecklistException.LogError(ex)
+            doc.LoadXml("<Error>Error retreiving TICA providers</Error>")
+        End Try
+
+        Return doc
+    End Function
+
+#End Region
 
     Public Shared Function GetNameRecordDs(ByVal nameGuid As String) As DataSet
         Dim ticaDS As New DataSet

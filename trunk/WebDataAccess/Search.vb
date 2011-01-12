@@ -183,7 +183,7 @@ Public Class Search
                             level = TDWGGeoLevel.TDWG3
                         End If
 
-                        Dim tgs As List(Of DataAccess.TDWGGeo) = DataAccess.Distribution.Gazetteer.GetGeoRegions(level, setting.SearchText)
+                        Dim tgs As List(Of WebDataAccess.TDWGGeo) = WebDataAccess.Distribution.Gazetteer.GetGeoRegions(level, setting.SearchText)
 
                         Dim where As String = "("
                         For Each tg As TDWGGeo In tgs

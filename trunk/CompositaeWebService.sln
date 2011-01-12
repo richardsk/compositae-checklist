@@ -1,12 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "C:\...\CompositaeWebService\", "CompositaeWebService\", "{AD89C9DA-5DF9-4D92-B926-7D7989FBC390}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "C:\...\CompositaeWebService\", "CompositaeWebService", "{AD89C9DA-5DF9-4D92-B926-7D7989FBC390}"
 	ProjectSection(WebsiteProperties) = preProject
 		SccProjectName = ""
 		SccAuxPath = ""
 		SccLocalPath = ""
 		SccProvider = ""
+		ProjectReferences = "{AACE685C-4CD0-4708-BF8C-C961E091E391}|DataAccess.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/CompositaeWebService"
 		Debug.AspNetCompiler.PhysicalPath = "CompositaeWebService\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\CompositaeWebService\"
@@ -25,6 +26,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "C:\...\CompositaeWebService
 	EndProjectSection
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CompositaeLSID", "CompositaeLSID\CompositaeLSID.vbproj", "{E7EB84D6-85FF-4D11-A584-42F8788FBC26}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WebDataAccess", "WebDataAccess\WebDataAccess.vbproj", "{AACE685C-4CD0-4708-BF8C-C961E091E391}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +59,16 @@ Global
 		{E7EB84D6-85FF-4D11-A584-42F8788FBC26}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E7EB84D6-85FF-4D11-A584-42F8788FBC26}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{E7EB84D6-85FF-4D11-A584-42F8788FBC26}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{AACE685C-4CD0-4708-BF8C-C961E091E391}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{AACE685C-4CD0-4708-BF8C-C961E091E391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AACE685C-4CD0-4708-BF8C-C961E091E391}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AACE685C-4CD0-4708-BF8C-C961E091E391}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{AACE685C-4CD0-4708-BF8C-C961E091E391}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{AACE685C-4CD0-4708-BF8C-C961E091E391}.Release|.NET.ActiveCfg = Release|Any CPU
+		{AACE685C-4CD0-4708-BF8C-C961E091E391}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AACE685C-4CD0-4708-BF8C-C961E091E391}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AACE685C-4CD0-4708-BF8C-C961E091E391}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{AACE685C-4CD0-4708-BF8C-C961E091E391}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
