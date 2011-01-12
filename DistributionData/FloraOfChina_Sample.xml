@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data>
+  <Provinces>
+    <Province>JS</Province>
+    <Province>ZJ</Province>
+    <Province>AN</Province>
+    <Province>FJ</Province>
+    <Province>TW</Province>
+    <Province>GD</Province>
+    <Province>GX</Province>
+    <Province>JX</Province>
+    <Province>HU</Province>
+    <Province>GZ</Province>
+    <Province>SC</Province>
+    <Province>YN</Province>
+    <Province>HB</Province>
+    <Province>SC</Province>
+    <Province>XZ</Province>
+    <Province>HI</Province>
+  </Provinces>
+  <Countries>
+    <Country>IA</Country>
+    <Country>TH</Country>
+    <Country>LA</Country>
+    <Country>VN</Country>
+    <Country>PH</Country>
+    <Country>JA</Country>
+    <Country>KO</Country>
+  </Countries>
+  <Regions>
+    <Region>AU</Region>
+  </Regions>
+  <NativeStatus>N</NativeStatus>
+  <Elevation>450-2300</Elevation>
+</Data>

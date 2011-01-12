@@ -186,7 +186,7 @@ Public Class Report
             End If
 
             If includeDist Then
-                Dim d As New DataAccess.Distribution
+                Dim d As New WebDataAccess.Distribution
                 Dim dist As List(Of TDWGGeo) = d.GetNameDistribution(dr("NameGuid").ToString)
                 If dist.Count > 0 Then
                     Dim distStr As String = "\tab Distribution: "
@@ -285,7 +285,7 @@ Public Class Report
 
 
             If includeDist Then
-                Dim d As New DataAccess.Distribution
+                Dim d As New WebDataAccess.Distribution
                 Dim dist As List(Of TDWGGeo) = d.GetNameDistribution(dr("NameGuid").ToString)
                 If dist.Count > 0 Then
                     Dim distStr As String = ""
