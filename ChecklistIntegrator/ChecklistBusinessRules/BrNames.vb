@@ -547,4 +547,29 @@ Public Class BrNames
 
         Return pc
     End Function
+
+    Public Shared Sub ProcessAutonymNames()
+        Dim ds As DsAutonymIssues = NameData.GetNameAutonymIssues()
+
+        If ds IsNot Nothing Then
+            For Each row As DsAutonymIssues.UnacceptedAutonymsRow In ds.UnacceptedAutonyms
+                'autonym must be the accepted name
+                BrProviderConcepts.InsertUpdateSystemProviderConcept(row.NameGuid.ToString(), row.NameGuid.ToString(), RelationshipType.RelationshipTypePreferred, Nothing)
+            Next
+
+            For Each row As DsAutonymIssues.MissingAutonymsRow In ds.MissingAutonyms
+                'add system autonym name for this name
+                Dim pn As New ProviderName
+                pn.PNNameId = Guid.NewGuid.ToString
+                pn.PNNameFk = row.n
+                pn.PNNameFull = n.NameFull
+                pn.PNNameCanonical = n.NameCanonical
+                pn.PNNameRank = n.NameRank
+                pn.PNNameRankFk = n.NameRankFk
+
+
+                BrProviderNames.InsertUpdateSystemProviderName(n.Id, pn)
+            Next
+        End If
+    End Sub
 End Class

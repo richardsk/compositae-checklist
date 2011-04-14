@@ -517,7 +517,7 @@ Public Class BrProviderNames
     ''' Inserts or updates an existing system ProviderName
     ''' </summary>
     ''' <param name="nameGuid">The Id of the name to insert a system provider name for</param>
-    ''' <param name="existingPN">The existing provider name, if on exists</param>
+    ''' <param name="existingPN">The existing provider name, if one exists</param>
     ''' <remarks></remarks>
     Public Shared Sub InsertUpdateSystemProviderName(ByVal nameGuid As String, ByVal existingPN As ProviderName)
         If existingPN Is Nothing Then existingPN = New ProviderName

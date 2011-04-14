@@ -1,12 +1,13 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "C:\...\CompositaeWebService\", "CompositaeWebService", "{AD89C9DA-5DF9-4D92-B926-7D7989FBC390}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CompositaeWebService", "CompositaeWebService\", "{AD89C9DA-5DF9-4D92-B926-7D7989FBC390}"
 	ProjectSection(WebsiteProperties) = preProject
 		SccProjectName = ""
 		SccAuxPath = ""
 		SccLocalPath = ""
 		SccProvider = ""
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		ProjectReferences = "{AACE685C-4CD0-4708-BF8C-C961E091E391}|DataAccess.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/CompositaeWebService"
 		Debug.AspNetCompiler.PhysicalPath = "CompositaeWebService\"
@@ -28,6 +29,10 @@ EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CompositaeLSID", "CompositaeLSID\CompositaeLSID.vbproj", "{E7EB84D6-85FF-4D11-A584-42F8788FBC26}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WebDataAccess", "WebDataAccess\WebDataAccess.vbproj", "{AACE685C-4CD0-4708-BF8C-C961E091E391}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TestWebService", "TestWebService\TestWebService.vbproj", "{43D3E116-E015-4CEA-88D0-1E092FD7292F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPTDotNet", "..\..\TDWG\IPTDotNet\IPTDotNet.csproj", "{CBDC2699-5A27-4045-8476-204E66EA55C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +74,26 @@ Global
 		{AACE685C-4CD0-4708-BF8C-C961E091E391}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AACE685C-4CD0-4708-BF8C-C961E091E391}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{AACE685C-4CD0-4708-BF8C-C961E091E391}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{43D3E116-E015-4CEA-88D0-1E092FD7292F}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{43D3E116-E015-4CEA-88D0-1E092FD7292F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43D3E116-E015-4CEA-88D0-1E092FD7292F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43D3E116-E015-4CEA-88D0-1E092FD7292F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{43D3E116-E015-4CEA-88D0-1E092FD7292F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{43D3E116-E015-4CEA-88D0-1E092FD7292F}.Release|.NET.ActiveCfg = Release|Any CPU
+		{43D3E116-E015-4CEA-88D0-1E092FD7292F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43D3E116-E015-4CEA-88D0-1E092FD7292F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43D3E116-E015-4CEA-88D0-1E092FD7292F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{43D3E116-E015-4CEA-88D0-1E092FD7292F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{CBDC2699-5A27-4045-8476-204E66EA55C4}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{CBDC2699-5A27-4045-8476-204E66EA55C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBDC2699-5A27-4045-8476-204E66EA55C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBDC2699-5A27-4045-8476-204E66EA55C4}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CBDC2699-5A27-4045-8476-204E66EA55C4}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CBDC2699-5A27-4045-8476-204E66EA55C4}.Release|.NET.ActiveCfg = Release|Any CPU
+		{CBDC2699-5A27-4045-8476-204E66EA55C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBDC2699-5A27-4045-8476-204E66EA55C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBDC2699-5A27-4045-8476-204E66EA55C4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CBDC2699-5A27-4045-8476-204E66EA55C4}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

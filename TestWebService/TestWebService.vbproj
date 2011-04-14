@@ -5,25 +5,18 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{B34693BB-BAB6-4609-BB70-C9B241807837}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>IntegratorImporters</RootNamespace>
-    <AssemblyName>IntegratorImporters</AssemblyName>
-    <MyType>Windows</MyType>
-    <SccProjectName>
-    </SccProjectName>
-    <SccLocalPath>
-    </SccLocalPath>
-    <SccAuxPath>
-    </SccAuxPath>
-    <SccProvider>
-    </SccProvider>
+    <ProjectGuid>{43D3E116-E015-4CEA-88D0-1E092FD7292F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <StartupObject>TestWebService.Module1</StartupObject>
+    <RootNamespace>TestWebService</RootNamespace>
+    <AssemblyName>TestWebService</AssemblyName>
+    <MyType>Console</MyType>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>2.0</OldToolsVersion>
     <UpgradeBackupLocation />
-    <PublishUrl>http://localhost/IntegratorImporters/</PublishUrl>
+    <PublishUrl>http://localhost/TestWebService/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -45,7 +38,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>IntegratorImporters.xml</DocumentationFile>
+    <DocumentationFile>TestWebService.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
@@ -55,16 +48,22 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>IntegratorImporters.xml</DocumentationFile>
+    <DocumentationFile>TestWebService.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LSIDClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CompositaeLSID\Include\LSIDClient.dll</HintPath>
+    </Reference>
+    <Reference Include="LSIDFramework, Version=1.0.3474.27356, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CompositaeLSID\Include\LSIDFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Web.Services" />
-    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Deployment" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -76,10 +75,7 @@
     <Import Include="System.Diagnostics" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseImporter.vb" />
-    <Compile Include="CSVMergeImporter.vb" />
-    <Compile Include="MDBImporter.vb" />
-    <Compile Include="XMLImporter.vb" />
+    <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -117,21 +113,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ChecklistBusinessRules\ChecklistBusinessRules.vbproj">
-      <Project>{38900EDD-1412-426C-8B5F-5A93A74E6031}</Project>
-      <Name>ChecklistBusinessRules</Name>
+    <ProjectReference Include="..\CompositaeLSID\CompositaeLSID.vbproj">
+      <Project>{E7EB84D6-85FF-4D11-A584-42F8788FBC26}</Project>
+      <Name>CompositaeLSID</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ChecklistDataAccess\ChecklistDataAccess.vbproj">
-      <Project>{D36E2162-3509-4256-A438-6DEDDB2D4B2A}</Project>
-      <Name>ChecklistDataAccess</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ChecklistObjects\ChecklistObjects.vbproj">
-      <Project>{96E26526-683E-4891-A472-0478183E0C04}</Project>
-      <Name>ChecklistObjects</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="XML\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

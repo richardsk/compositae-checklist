@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ChecklistIntegrator", "ChecklistIntegrator\ChecklistIntegrator.vbproj", "{C6550CDB-A2CB-4566-A965-508366972D92}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "IntegratorImporters", "IntegratorImporters\IntegratorImporters.vbproj", "{B34693BB-BAB6-4609-BB70-C9B241807837}"
@@ -13,7 +13,7 @@ Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ChecklistBusinessRules", "C
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ChecklistObjects", "ChecklistObjects\ChecklistObjects.vbproj", "{96E26526-683E-4891-A472-0478183E0C04}"
 EndProject
-Project("{4F174C21-8C12-11D0-8340-0000F80270F8}") = "ChecklistDatabase", "ChecklistDatabase\ChecklistDatabase.dbp", "{D99E31D7-6DC0-4D2E-AFD0-36BA6F43509F}"
+Project("{C8D11400-126E-41CD-887F-60BD40844F9E}") = "ChecklistDatabase", "ChecklistDatabase\ChecklistDatabase.dbproj", "{67CBC824-A49E-4E9B-A947-360F3DFE65C3}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ChecklistDataAccess", "ChecklistDataAccess\ChecklistDataAccess.vbproj", "{D36E2162-3509-4256-A438-6DEDDB2D4B2A}"
 EndProject
@@ -47,6 +47,8 @@ Global
 		{96E26526-683E-4891-A472-0478183E0C04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96E26526-683E-4891-A472-0478183E0C04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96E26526-683E-4891-A472-0478183E0C04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67CBC824-A49E-4E9B-A947-360F3DFE65C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D36E2162-3509-4256-A438-6DEDDB2D4B2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D36E2162-3509-4256-A438-6DEDDB2D4B2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D36E2162-3509-4256-A438-6DEDDB2D4B2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
