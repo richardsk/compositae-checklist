@@ -3654,4 +3654,8 @@ Public Class IntegratorForm
         Dim annForm As New ImportAnnotationForm
         annForm.ShowDialog()
     End Sub
+
+    Private Sub ProcessAutonymsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProcessAutonymsToolStripMenuItem.Click
+
+    End Sub
 End Class

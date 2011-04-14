@@ -1010,6 +1010,26 @@ Public Class NameData
         Return ds
     End Function
 
+    Public Shared Function GetNameAutonymIssues() As DsAutonymIssues
+        Dim ds As New DsAutonymIssues
+
+        Using cnn As New SqlConnection(ConnectionString)
+            cnn.Open()
+
+            Using cmd As SqlCommand = cnn.CreateCommand()
+                cmd.CommandText = "sprSelect_AutonymIssues"
+                cmd.CommandType = CommandType.StoredProcedure
+
+                Dim da As New SqlDataAdapter(cmd)
+                da.TableMappings.Add("Table", "UnacceptedAutonyms")
+                da.TableMappings.Add("Table1", "MissingAutonyms")
+
+                da.Fill(ds)
+            End Using
+        End Using
+
+        Return ds
+    End Function
 #End Region
 
 

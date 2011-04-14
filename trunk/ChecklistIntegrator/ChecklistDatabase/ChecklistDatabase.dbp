@@ -1,7 +1,6 @@
 # Microsoft Developer Studio Project File - Database Project
 Begin DataProject = "ChecklistDatabase"
    MSDTVersion = "80"
-   DefDBRef = "SQLOLEDB.IDT-LAPTOP\sql2005.Compositae1"
    Begin Folder = "Change Scripts"
    End
    Begin Folder = "Create Scripts"
@@ -328,11 +327,6 @@ Begin DataProject = "ChecklistDatabase"
       End
    End
    Begin DBRefFolder = "Database References"
-      Begin DBRefNode = "SQLOLEDB.IDT-LAPTOP\sql2005.Compositae1"
-         ConnectStr = "Provider=SQLOLEDB;Data Source=IDT-LAPTOP\sql2005;Integrated Security=SSPI;Initial Catalog=Compositae"
-         Provider = "{7F041D59-D76A-44ED-9AA2-FBF6B0548B80}"
-         Colorizer = 65536
-      End
    End
    Begin Folder = "Queries"
       Script = "CoLDump.sql"

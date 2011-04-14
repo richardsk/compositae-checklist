@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsAutonymIssues" targetNamespace="http://tempuri.org/DsAutonymIssues.xsd" xmlns:mstns="http://tempuri.org/DsAutonymIssues.xsd" xmlns="http://tempuri.org/DsAutonymIssues.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsAutonymIssues" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsAutonymIssues" msprop:Generator_UserDSName="DsAutonymIssues">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="UnacceptedAutonyms" msprop:Generator_TableClassName="UnacceptedAutonymsDataTable" msprop:Generator_TableVarName="tableUnacceptedAutonyms" msprop:Generator_TablePropName="UnacceptedAutonyms" msprop:Generator_RowDeletingName="UnacceptedAutonymsRowDeleting" msprop:Generator_UserTableName="UnacceptedAutonyms" msprop:Generator_RowChangingName="UnacceptedAutonymsRowChanging" msprop:Generator_RowEvHandlerName="UnacceptedAutonymsRowChangeEventHandler" msprop:Generator_RowDeletedName="UnacceptedAutonymsRowDeleted" msprop:Generator_RowEvArgName="UnacceptedAutonymsRowChangeEvent" msprop:Generator_RowChangedName="UnacceptedAutonymsRowChanged" msprop:Generator_RowClassName="UnacceptedAutonymsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NameGuid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnNameGuid" msprop:Generator_ColumnPropNameInRow="NameGuid" msprop:Generator_ColumnPropNameInTable="NameGuidColumn" msprop:Generator_UserColumnName="NameGuid" type="xs:string" minOccurs="0" />
+              <xs:element name="NameFull" msprop:Generator_ColumnVarNameInTable="columnNameFull" msprop:Generator_ColumnPropNameInRow="NameFull" msprop:Generator_ColumnPropNameInTable="NameFullColumn" msprop:Generator_UserColumnName="NameFull" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MissingAutonyms" msprop:Generator_TableClassName="MissingAutonymsDataTable" msprop:Generator_TableVarName="tableMissingAutonyms" msprop:Generator_TablePropName="MissingAutonyms" msprop:Generator_RowDeletingName="MissingAutonymsRowDeleting" msprop:Generator_UserTableName="MissingAutonyms" msprop:Generator_RowChangingName="MissingAutonymsRowChanging" msprop:Generator_RowEvHandlerName="MissingAutonymsRowChangeEventHandler" msprop:Generator_RowDeletedName="MissingAutonymsRowDeleted" msprop:Generator_RowEvArgName="MissingAutonymsRowChangeEvent" msprop:Generator_RowChangedName="MissingAutonymsRowChanged" msprop:Generator_RowClassName="MissingAutonymsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NameGuid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnNameGuid" msprop:Generator_ColumnPropNameInRow="NameGuid" msprop:Generator_ColumnPropNameInTable="NameGuidColumn" msprop:Generator_UserColumnName="NameGuid" type="xs:string" minOccurs="0" />
+              <xs:element name="NameFull" msprop:Generator_ColumnVarNameInTable="columnNameFull" msprop:Generator_ColumnPropNameInRow="NameFull" msprop:Generator_ColumnPropNameInTable="NameFullColumn" msprop:Generator_UserColumnName="NameFull" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
