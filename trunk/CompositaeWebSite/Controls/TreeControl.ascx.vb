@@ -1,3 +1,4 @@
+Imports WebDataAccess
 
 Partial Class TreeControl
     Inherits System.Web.UI.UserControl
@@ -44,7 +45,7 @@ Partial Class TreeControl
 
         Dim strAction As String = Request.QueryString.Get("Action")
         Dim strStateId As String = Request.QueryString.Get("StateId")
-        Dim strNodeId As String = DataAccess.Utility.NameID(Request)
+        Dim strNodeId As String = Utility.NameID(Request)
 
         Dim brWebTaxTree As WebTaxTree = New WebTaxTree
 
@@ -80,7 +81,7 @@ Partial Class TreeControl
             Response.Expires = 0
             xml = brWebTaxTree.TreeXml
             If xml IsNot Nothing Then
-                url = DataAccess.Utility.GetDefaultPageUrl(Request, Nothing) + "&"
+                url = Utility.GetDefaultPageUrl(Request, Nothing) + "&"
                 xml = xml.Replace("TreeForm.aspx?", url)
                 Dim ctrl As New HtmlControls.HtmlGenericControl()
                 ctrl.InnerHtml = xml
@@ -112,7 +113,7 @@ Partial Class TreeControl
         Response.Expires = 0
         xml = brWebTaxTree.TreeXml
         If xml IsNot Nothing Then
-            url = DataAccess.Utility.GetDefaultPageUrl(Request, Nothing) + "&"
+            url = Utility.GetDefaultPageUrl(Request, Nothing) + "&"
             xml = xml.Replace("TreeForm.aspx?", url)
             Dim ctrl As New HtmlControls.HtmlGenericControl()
             ctrl.InnerHtml = xml

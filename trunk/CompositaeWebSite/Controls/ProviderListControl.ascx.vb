@@ -23,7 +23,7 @@ Partial Class Controls_ProviderListControl
             End If
             
         Catch ex As Exception
-            DataAccess.Utility.LogError(ex)
+            WebDataAccess.Utility.LogError(ex)
         End Try
     End Sub
 

@@ -67,7 +67,7 @@ Partial Class Controls_ProviderControl
                 DetailsGrid.Rows(projUrlPos).Cells(1).Text = "<a style='color:black' href='" + DetailsGrid.Rows(projUrlPos).Cells(1).Text + "' target=_blank>" + DetailsGrid.Rows(projUrlPos).Cells(1).Text + "</a>"
             End If
         Catch ex As Exception
-            DataAccess.Utility.LogError(ex)
+            WebDataAccess.Utility.LogError(ex)
         End Try
     End Sub
 End Class

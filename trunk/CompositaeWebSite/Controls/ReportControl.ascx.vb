@@ -34,7 +34,7 @@ Partial Class Controls_ReportControl
 
 
         Catch ex As Exception
-            DataAccess.Utility.LogError(ex)
+            WebDataAccess.Utility.LogError(ex)
         End Try
     End Sub
 
@@ -94,7 +94,7 @@ Partial Class Controls_ReportControl
         End If
 
         If names IsNot Nothing AndAlso names.Tables.Count > 0 AndAlso names.Tables(0).Rows.Count > 0 Then
-            Dim doc As String = DataAccess.Report.GetNamesReport(names, conflictCheck.Checked, IncludeDistCheck.Checked)
+            Dim doc As String = WebDataAccess.Report.GetNamesReport(names, conflictCheck.Checked, IncludeDistCheck.Checked)
 
             Dim fname As String = Guid.NewGuid.ToString + ".rtf"
             IO.File.WriteAllText(IO.Path.Combine(Request.PhysicalApplicationPath, "temp\" + fname), doc)

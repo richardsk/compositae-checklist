@@ -1,5 +1,5 @@
 Imports System.Collections.Generic
-Imports DataAccess
+Imports WebDataAccess
 
 Partial Class HomeControl
     Inherits System.Web.UI.UserControl

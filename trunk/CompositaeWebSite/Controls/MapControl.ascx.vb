@@ -1,3 +1,4 @@
+Imports WebDataAccess
 
 Partial Class Controls_MapControl
     Inherits System.Web.UI.UserControl
@@ -16,7 +17,7 @@ Partial Class Controls_MapControl
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         Try
-            Dim dist As New DataAccess.Distribution
+            Dim dist As New Distribution
             Dim img As New Image
             img.ImageUrl = dist.GetMapUrl()
             img.AlternateText = "Distribution Map Image"

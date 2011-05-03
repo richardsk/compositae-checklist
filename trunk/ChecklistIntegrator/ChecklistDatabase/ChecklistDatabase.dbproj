@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <PostUpgradeAddToSCC>;C:\Development\Compositae\code\ChecklistIntegrator\ChecklistDatabase\ChecklistDatabase.dbproj;C:\Development\Compositae\code\ChecklistIntegrator\ChecklistDatabase\Connections.txt;C:\Development\Compositae\code\ChecklistIntegrator\ChecklistDatabase\Scripts\Post-Deployment\Script.PostDeployment.sql;C:\Development\Compositae\code\ChecklistIntegrator\ChecklistDatabase\Scripts\Pre-Deployment\Script.PreDeployment.sql</PostUpgradeAddToSCC>
+    <PreviousProjectVersion>4.0</PreviousProjectVersion>
+    <UpgradedFromDBP>True</UpgradedFromDBP>
+    <Name>dbpProjectName</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.0</ProjectVersion>
+    <ProjectGuid>{67cbc824-a49e-4e9b-a947-360f3dfe65c3}</ProjectGuid>
+    <DSP>Microsoft.Data.Schema.Sql.Sql100DatabaseSchemaProvider</DSP>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ShowWizard>False</ShowWizard>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <IncludeSchemaNameInFileName>False</IncludeSchemaNameInFileName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchema</DefaultFileStructure>
+    <DeployToDatabaseAddToServerExplorer>True</DeployToDatabaseAddToServerExplorer>
+    <DeployToScript>True</DeployToScript>
+    <CatalogPropertiesFile>Properties\Database.sqlsettings</CatalogPropertiesFile>
+    <LoadSqlClrTypes>True</LoadSqlClrTypes>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>.\sql\release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetConnectionString>
+    </TargetConnectionString>
+    <TargetDatabase>
+    </TargetDatabase>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <SuppressWarnings>
+    </SuppressWarnings>
+    <DeploymentConfigFile>Properties\Database.sqldeployment</DeploymentConfigFile>
+    <SqlCommandVariablesFile>Properties\Database.sqlcmdvars</SqlCommandVariablesFile>
+    <DeployToDatabase>False</DeployToDatabase>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>.\sql\debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetConnectionString>
+    </TargetConnectionString>
+    <TargetDatabase>
+    </TargetDatabase>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <SuppressWarnings>
+    </SuppressWarnings>
+    <DeploymentConfigFile>Properties\Database.sqldeployment</DeploymentConfigFile>
+    <SqlCommandVariablesFile>Properties\Database.sqlcmdvars</SqlCommandVariablesFile>
+    <DeployToDatabase>False</DeployToDatabase>
+  </PropertyGroup>
+  <!--Import the settings-->
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\TeamData\Microsoft.Data.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Pre-Deployment" />
+    <Folder Include="Scripts\Post-Deployment" />
+    <Folder Include="Data Generation Plans" />
+    <Folder Include="Schema Comparisons" />
+  </ItemGroup>
+  <ItemGroup>
+    <PropertiesFile Include="Properties\Database.sqlsettings">
+    </PropertiesFile>
+    <PropertiesFile Include="Properties\Database.sqldeployment">
+    </PropertiesFile>
+    <PropertiesFile Include="Properties\Database.sqlcmdvars">
+    </PropertiesFile>
+    <Build Include="Properties\Database.sqlpermissions">
+      <ModelBuilderType>Permissions</ModelBuilderType>
+    </Build>
+    <PreDeploy Include="Scripts\Pre-Deployment\Script.PreDeployment.sql">
+      <SubType>Code</SubType>
+    </PreDeploy>
+    <PostDeploy Include="Scripts\Post-Deployment\Script.PostDeployment.sql">
+      <SubType>Code</SubType>
+    </PostDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Schema Objects" />
+    <Folder Include="Schema Objects\Schemas" />
+    <Folder Include="Schema Objects\Schemas\dbo" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Defaults" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Functions" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Rules" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\User Defined Data Types" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\User Defined Types CLR" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\User Defined Table Types" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\XML Schema Collections" />
+    <Folder Include="Schema Objects\Schemas\dbo\Service Broker" />
+    <Folder Include="Schema Objects\Schemas\dbo\Service Broker\Queues" />
+    <Folder Include="Schema Objects\Schemas\dbo\Synonyms" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Constraints" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Indexes" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Keys" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Triggers" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Statistics" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views\Indexes" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views\Triggers" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views\Statistics" />
+    <Folder Include="Schema Objects\Database Level Objects" />
+    <Folder Include="Schema Objects\Database Level Objects\Assemblies" />
+    <Folder Include="Schema Objects\Database Level Objects\Database Triggers" />
+    <Folder Include="Schema Objects\Database Level Objects\Security" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Schemas" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Users" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Certificates" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Asymmetric Keys" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Master Keys" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Signatures" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Symmetric Keys" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Database Encryption Keys" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Database Audit Specification" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Roles" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Roles\Application Roles" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Roles\Database Roles" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Broker Priorities" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Contracts" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Event Notifications" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Message Types" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Remote Service Binding" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Routes" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Services" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Full Text Stoplists" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Filegroups" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Files" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Full Text Catalogs" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Partition Functions" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Partition Schemes" />
+    <Folder Include="Change Scripts" />
+    <Folder Include="Create Scripts" />
+    <Folder Include="Create Scripts\Functions" />
+    <Folder Include="Create Scripts\StoredProcs" />
+    <Folder Include="Create Scripts\Views" />
+    <Folder Include="Queries" />
+    <Folder Include="UpdateBuilds" />
+    <Folder Include="UpdateBuilds\v1.1.16" />
+    <Folder Include="UpdateBuilds\v1.1.18" />
+    <Folder Include="UpdateBuilds\v1.1.19" />
+    <Folder Include="UpdateBuilds\v1.1.20" />
+    <Folder Include="UpdateBuilds\v1.1.21" />
+    <Folder Include="UpdateBuilds\v1.1.22" />
+    <Folder Include="UpdateBuilds\v1.1.23" />
+    <Folder Include="Properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <NotInBuild Include="Connections.txt" />
+    <NotInBuild Include="Create Scripts\Functions\FindWord.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnExactAuthorMatch.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnGetAuthorIds.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnGetAuthorString.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnGetCorrectedAuthors.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnGetFullName.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnGetIPNIIds.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnGetNameMatchParent.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnGetPreferredName.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnGetProviderNameParentMatch.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnGetProviderTitles.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnGetReferenceCitation.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnHybridNameMatch.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnIsChildOf.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnLevenshteinDistance.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnLevenshteinDistanceWords.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnLevenshteinPercentage.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnLevenshteinPercentWords.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnMax.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnMin.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnPartialAuthorMatch.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnPartialAuthorTextMatch.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnPartialYearMatch.sql" />
+    <NotInBuild Include="Create Scripts\Functions\fnWordCount.sql" />
+    <NotInBuild Include="Create Scripts\Functions\MIN3.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\p_sprSelect_Name_ToRoot_003.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\p_sprUpdate_FlatName_All_002.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\p_sprUpdate_FlatName_ForDescendents_002.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprCalculateMatchScore.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprDelete_Concept.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprDelete_ConceptRelationship.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprDelete_Name.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprDelete_NameAuthors.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprDelete_OtherDataTransformation.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprDelete_OtherDataType.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprDelete_Provider.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprDelete_ProviderName.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprDelete_ProviderNameAuthors.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprDelete_ProviderNameRecord.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprDelete_ProviderOtherData.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprDelete_ProviderReference.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprDelete_Reference.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprDelete_SystemProviderRIS.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprDelete_Transformation.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprGetClassifications.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprGetNode.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\spriNewTreeState.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsert_ConceptRelationship.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsert_ConceptsIntegrationOrder.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsert_FieldStatus.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsert_Name.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsert_NamesIntegrationOrder.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsert_OtherDataIntegrationOrder.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsert_ProviderConceptChange.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsert_ProviderNameChange.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsert_ProviderReferenceChange.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsert_ProviderRISChange.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsert_Reference.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsert_ReferenceRIS.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsert_ReferencesIntegrationOrder.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsert_ReportError.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsertUpdate_Author.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsertUpdate_FieldStatus.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsertUpdate_NameAuthor.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsertUpdate_OtherData.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsertUpdate_OtherDataTransformation.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsertUpdate_OtherDataType.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsertUpdate_Provider.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsertUpdate_ProviderConcept.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsertUpdate_ProviderConceptRelationship.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsertUpdate_ProviderImport.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsertUpdate_ProviderName.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsertUpdate_ProviderNameAuthor.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsertUpdate_ProviderOtherData.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsertUpdate_ProviderReference.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsertUpdate_ProviderRIS.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsertUpdate_StandardOutput.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsertUpdate_SystemProviderConcept.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsertUpdate_SystemProviderConceptRelationship.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprInsertUpdate_Transformation.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprLogin.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSearch_References.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_AllNamesForUpdate.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_Author.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_AuthorByName.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_Authors.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ChildNames.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ChildrenAtRank.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_Concept.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ConceptMappings.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ConceptRelationship.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ConceptRelationshipMappings.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ConceptRelationshipMatches.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ConflictingConcepts.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ConsensusXslt.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_DataToTransfer.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_DuplicateNameReferences.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_FieldStatus.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_FieldStatus_RecordByKeyAndTableName.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_FieldStatusIdentifiers.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_FieldStatusLevels.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_FuzzyNameSearch.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ImportTypes.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_LSIDFromDeprecated.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_MatchParentName.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_Name.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NameAuthors.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NameChildCount.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NameChildren.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NameConceptRelationships.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NameConcepts.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NameContributors.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NameEditTrail.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NameLSIDs.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NameMappings.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NameMatches.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NameMatchesTest.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NameOtherData.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NameRankSort.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NameRankTCS.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NameRefCitation.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NameRelatedIds.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NamesAtRankWithAncestor.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NamesForUpdate.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NamesInReference.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NamesWithAuthor.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NamesWithAuthors.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NamesWithCanonical.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NamesWithCombAuthors.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NamesWithDiffPrefParent.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NamesWithExactCanonical.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NamesWithMatchParent.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NamesWithParent.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NamesWithParitalAuthors.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NamesWithPartialAuthorsText.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NamesWithPartialCanonical.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NamesWithPartialCombAuthors.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NamesWithPartialYear.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NamesWithProvNameAuthors.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NamesWithRank.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NamesWithRankAndCanonical.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NamesWithRankAndYear.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NamesWithSameBasionym.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NamesWithYear.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NameSynonyms.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NextUnlinkedConceptRelationship.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NextUnlinkedName.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NextUnlinkedOtherData.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NextUnlinkedReference.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NodeToRoot.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_NoNames.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_OtherDataToUpdate.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_OtherDataTransformations.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_OtherDataTypes.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ParentAtRank.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ParentProviderName.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_PCRById.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_Provider.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderConcept.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderConceptById.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderConceptData.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderConceptRecords.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderConceptRelationship.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderConceptRelationshipById.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderConceptRelationships.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderConceptRelationshipsForCR.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderConcetps.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderImports.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderName.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderNameAuthors.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderNameById.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderNameConcepts.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderNameOtherData.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderNameRelatedIds.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderNames.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderOtherDataTypes.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderReference.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderReferenceById.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderReferences.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderRIS.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderRISByReference.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderRISByReferenceGuid.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderRISByReferenceId.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_Providers.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProvidersForName.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProvidersForReference.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_Ranks.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_RankSort.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_RankTCS.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_Reference.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReferenceLSIDs.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReferenceMatches.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReferencesForName.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReferencesWithCitation.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReferencesWithPartialCitation.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_RelationshipTypes.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_Report.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReportAllSubordAndSyn.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReportAllSubords.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReportConflictingAuthors.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReportConflictingData.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReportDiffMatrix.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReportLowMatchScores.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReportMultipleMatches.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReportMultipleParentMatches.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReportNamesList.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReportNoParent.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReportPhantoms.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReportProgress.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_Reports.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReportSimilarNames.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReportStatistics.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReportSubordAndSyn.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReportSubordinates.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReportUnknownParent.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ReportUnlinkedRecords.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_RISByReference.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_RISMappings.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_RISTypes.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_RootKey.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_RunReport.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_SearchableFields.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_SearchNames.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_SearchNames2.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_SearchProviderNames.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_SearchProviderRefs.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_StandardXmlForConsensus.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_SystemProviderConcept.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_SystemProviderConceptRelationship.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_SystemProviderNameForName.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_SystemProviderRefForRef.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_Transformation.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_Transformations.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_UknownTaxaNode.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_UnlinkedConcepts.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_UnlinkedConceptsCount.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_UnlinkedNames.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_UnlinkedNamesCount.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_UnlinkedOtherData.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_UnlinkedOtherDataCount.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_UnlinkedReferences.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_UnlinkedReferencesCount.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_UserProviders.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_Users.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelectRoleKeyByRoleName.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_Author.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_Concept.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_ConceptRelationship.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_Deprecated.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_FieldStatus.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_Name.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_NameAuthor.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_OtherData.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_OtherDataTransformation.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_OtherDataType.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_Provider.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_ProviderConcept.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_ProviderConceptChange.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_ProviderConceptRelationship.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_ProviderConceptRelationshipChange.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_ProviderImport.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_ProviderName.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_ProviderNameAuthor.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_ProviderNameChange.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_ProviderOtherData.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_ProviderReference.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_ProviderReferenceChange.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_ProviderRIS.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_ProviderRISChange.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_Reference.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_ReferenceRIS.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_StandardOutput.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprTransferInsertUpdate_Transformation.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\spruGetTreeState.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_CleanDatabase.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_CleanOtherData.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_Concept.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_ConceptData.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_ConceptLinks.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_ConceptRelationship.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_ConceptRelationshipData.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_ConsensusAuthors.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_LinkedProviderNames.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_LinkedProviderReferences.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_MergedReferenceLinks.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_MergeNameConcepts.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_MoveNameChildren.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_Name.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_NameAuthors.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_NameData.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_NameLinkData.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_NameRank.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_NameRelationData.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_NameRelationships.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_ProviderConceptLinks.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_ProviderConceptRelationship.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_ProviderConceptRelationshipStatus.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_ProviderConceptStatus.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_ProviderNameAuthors.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_ProviderNameConceptLinks.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_ProviderNameLink.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_ProviderNameMatchScore.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_ProviderNameRank.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_ProviderNameRelationships.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_Reference.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_ReferenceData.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_ResetFailedStatus.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_StandardOutputUseForConsensus.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprUpdate_UnlinkProviderConcepts.sql" />
+    <NotInBuild Include="Create Scripts\Views\vwProviderConcept.sql" />
+    <NotInBuild Include="Create Scripts\Views\vwProviderConceptRelationship.sql" />
+    <NotInBuild Include="Create Scripts\Views\vwProviderName.sql" />
+    <NotInBuild Include="Create Scripts\Views\vwProviderOtherData.sql" />
+    <NotInBuild Include="Create Scripts\Views\vwProviderReference.sql" />
+    <NotInBuild Include="Create Scripts\Views\vwProviderRIS.sql" />
+    <NotInBuild Include="Queries\CoLDump.sql" />
+    <NotInBuild Include="Queries\selectKewData.sql" />
+    <NotInBuild Include="UpdateBuilds\v1.1.16\update1.1.16.sql" />
+    <NotInBuild Include="UpdateBuilds\v1.1.18\update1.1.18.sql" />
+    <NotInBuild Include="UpdateBuilds\v1.1.19\update1.1.19.sql" />
+    <NotInBuild Include="UpdateBuilds\v1.1.20\update1.1.20.sql" />
+    <NotInBuild Include="UpdateBuilds\v1.1.21\update1.1.21.sql" />
+    <NotInBuild Include="UpdateBuilds\v1.1.22\update1.1.22.sql" />
+    <NotInBuild Include="UpdateBuilds\v1.1.23\update1.1.23.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <BuildContributorArgument Include="OutDir=$(OutDir)" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Create Scripts\Views\vwDwCTaxon.view.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Create Scripts\Views\vwDwCLiterature.view.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Create Scripts\Views\vwDwCDistribution.view.sql">
+      <SubType>Code</SubType>
+    </Build>
+  </ItemGroup>
+</Project>

@@ -63,7 +63,7 @@ function ConceptPopup(nameGuid, crGuid)
         </td>
     </tr>
     <tr>
-        <td bgcolor="<%DataAccess.Utility.AltBGColor()%>" class="smaller" height="20" valign="top">
+        <td bgcolor="<%WebDataAccess.Utility.AltBGColor()%>" class="smaller" height="20" valign="top">
         </td>
     </tr>
     <tr>

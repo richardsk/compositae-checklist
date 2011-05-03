@@ -1,4 +1,5 @@
 Imports System.Collections.Generic
+Imports WebDataAccess
 
 Partial Class Controls_AdvSearchControl
     Inherits System.Web.UI.UserControl
@@ -18,7 +19,7 @@ Partial Class Controls_AdvSearchControl
         ModeBoth
     End Enum
 
-    Public Fields As List(Of DataAccess.SearchableField)
+    Public Fields As List(Of SearchableField)
     Public Providers As ChecklistObjects.Provider()
 
     Public Overrides Sub Focus()
@@ -38,7 +39,7 @@ Partial Class Controls_AdvSearchControl
         End Set
     End Property
 
-    Public Sub SetSearchField(ByVal ss As DataAccess.SearchSetting)
+    Public Sub SetSearchField(ByVal ss As SearchSetting)
         m_ssID = ss.ID
         m_selectedField = ss.SearchField
         SearchText1.Text = ss.SearchText
@@ -47,8 +48,8 @@ Partial Class Controls_AdvSearchControl
         'UpperText1.Text = ss.SearchUpperText
     End Sub
 
-    Public Function GetSearchField() As DataAccess.SearchSetting
-        Dim s As New DataAccess.SearchSetting
+    Public Function GetSearchField() As SearchSetting
+        Dim s As New SearchSetting
         s.ID = m_ssID
         s.SearchField = Field1.Text
         If s.SearchField = "ProviderName" Then
@@ -71,7 +72,7 @@ Partial Class Controls_AdvSearchControl
 
         m_loading = True
 
-        For Each sf As DataAccess.SearchableField In Fields
+        For Each sf As SearchableField In Fields
             Dim li As New ListItem(sf.FriendlyName, sf.FieldName)
             Field1.Items.Add(li)
             If li.Value = m_selectedField Then
@@ -144,22 +145,22 @@ Partial Class Controls_AdvSearchControl
             SearchText1.Visible = False
             geoCombo.Visible = True
 
-            Dim regions As New List(Of DataAccess.TDWGGeo)
+            Dim regions As New List(Of TDWGGeo)
             If Field1.Text = "TDWGLevel1" Then
-                regions = DataAccess.Distribution.GetTDWGGeoList(DataAccess.TDWGGeoLevel.TDWG1)
+                regions = Distribution.GetTDWGGeoList(TDWGGeoLevel.TDWG1)
             End If
             If Field1.Text = "TDWGLevel2" Then
-                regions = DataAccess.Distribution.GetTDWGGeoList(DataAccess.TDWGGeoLevel.TDWG2)
+                regions = Distribution.GetTDWGGeoList(TDWGGeoLevel.TDWG2)
             End If
             If Field1.Text = "TDWGLevel3" Then
-                regions = DataAccess.Distribution.GetTDWGGeoList(DataAccess.TDWGGeoLevel.TDWG3)
+                regions = Distribution.GetTDWGGeoList(TDWGGeoLevel.TDWG3)
             End If
             If Field1.Text = "TDWGLevel4" Then
-                regions = DataAccess.Distribution.GetTDWGGeoList(DataAccess.TDWGGeoLevel.TDWG4)
+                regions = Distribution.GetTDWGGeoList(TDWGGeoLevel.TDWG4)
             End If
 
             geoCombo.Items.Clear()
-            For Each c As DataAccess.TDWGGeo In regions
+            For Each c As TDWGGeo In regions
                 geoCombo.Items.Add(c.Name)
             Next
 
