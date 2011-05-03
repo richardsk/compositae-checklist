@@ -1,6 +1,8 @@
 Imports System.Collections.Generic
 Imports System.Data
 
+Imports WebDataAccess
+
 Partial Class Controls_AdvNameSearchControl
     Inherits System.Web.UI.UserControl
 
@@ -11,7 +13,7 @@ Partial Class Controls_AdvNameSearchControl
             downloadCsvImage.Visible = False
             downloadCsvLink.Visible = False
 
-            Dim fields As List(Of DataAccess.SearchableField) = DataAccess.Search.ListSearchableFields("tblName")
+            Dim fields As List(Of SearchableField) = Search.ListSearchableFields("tblName")
             Dim providers As ChecklistObjects.Provider() = ChecklistDataAccess.ProviderData.GetProviders()
 
             AdvSearchControl1.Fields = fields
@@ -41,37 +43,37 @@ Partial Class Controls_AdvNameSearchControl
 
             AdvSearchControl1.Focus()
         Catch ex As Exception
-            DataAccess.Utility.LogError(ex)
+            Utility.LogError(ex)
         End Try
 
     End Sub
 
-    Public Function GetSearchFields() As List(Of DataAccess.SearchSetting)
-        Dim ss As New List(Of DataAccess.SearchSetting)
+    Public Function GetSearchFields() As List(Of SearchSetting)
+        Dim ss As New List(Of SearchSetting)
 
         ss.Add(AdvSearchControl1.GetSearchField())
         If AdvSearchControl2.Visible Then
-            Dim sf As DataAccess.SearchSetting = AdvSearchControl2.GetSearchField()
+            Dim sf As SearchSetting = AdvSearchControl2.GetSearchField()
             sf.IsOr = True
             ss.Add(sf)
         End If
         If AdvSearchControl3.Visible Then
-            Dim sf As DataAccess.SearchSetting = AdvSearchControl3.GetSearchField()
+            Dim sf As SearchSetting = AdvSearchControl3.GetSearchField()
             sf.IsAnd = True
             ss.Add(sf)
         End If
         If AdvSearchControl4.Visible Then
-            Dim sf As DataAccess.SearchSetting = AdvSearchControl4.GetSearchField()
+            Dim sf As SearchSetting = AdvSearchControl4.GetSearchField()
             sf.IsOr = True
             ss.Add(sf)
         End If
         If AdvSearchControl5.Visible Then
-            Dim sf As DataAccess.SearchSetting = AdvSearchControl5.GetSearchField()
+            Dim sf As SearchSetting = AdvSearchControl5.GetSearchField()
             sf.IsAnd = True
             ss.Add(sf)
         End If
         If AdvSearchControl6.Visible Then
-            Dim sf As DataAccess.SearchSetting = AdvSearchControl6.GetSearchField()
+            Dim sf As SearchSetting = AdvSearchControl6.GetSearchField()
             sf.IsOr = True
             ss.Add(sf)
         End If
@@ -85,12 +87,12 @@ Partial Class Controls_AdvNameSearchControl
 
     Private Function DoSearch(ByVal pageNumber As Integer) As DataSet
         Try
-            Dim ss As List(Of DataAccess.SearchSetting) = GetSearchFields()
-            Dim sst As New DataAccess.SearchStatusSelection
+            Dim ss As List(Of SearchSetting) = GetSearchFields()
+            Dim sst As New SearchStatusSelection
             sst.IncludeAccepted = chkIncludeAccepted.Checked
             sst.IncludeSynonyms = chkIncludeSynonyms.Checked
             sst.IncludeUnknown = chkIncludeUnknown.Checked
-            Dim ds As DataSet = DataAccess.Search.NameSearch(ss, sst)
+            Dim ds As DataSet = Search.NameSearch(ss, sst)
             DisplayResults(ds, pageNumber)
             ResultsGridView.Visible = True
 
@@ -108,7 +110,7 @@ Partial Class Controls_AdvNameSearchControl
             Return ds
         Catch ex As Exception
             ErrorLabel.Visible = True
-            DataAccess.Utility.LogError(ex)
+            Utility.LogError(ex)
         End Try
         Return Nothing
     End Function
@@ -164,7 +166,7 @@ Partial Class Controls_AdvNameSearchControl
 
             'update rank image and name links
             For Each r As GridViewRow In ResultsGridView.Rows
-                r.Cells(0).Text = "<img src='images\" + DataAccess.Utility.GetImageIndex(r.Cells(0).Text) + "'/>"
+                r.Cells(0).Text = "<img src='images\" + Utility.GetImageIndex(r.Cells(0).Text) + "'/>"
 
                 Dim link As String = "<a style='COLOR: black' href='default.aspx?Page=NameDetails&TabNum=0&NameId=" + r.Cells(3).Text + "'>" + r.Cells(1).Text + "</a>"
                 r.Cells(1).Text = link
@@ -224,7 +226,7 @@ Partial Class Controls_AdvNameSearchControl
         Dim results As DataSet = DoSearch(0)
 
         If results IsNot Nothing AndAlso results.Tables.Count > 0 AndAlso results.Tables(0).Rows.Count > 0 Then
-            Dim doc As String = DataAccess.Report.GetNamesReport(results, False, False)
+            Dim doc As String = Report.GetNamesReport(results, False, False)
 
             Dim fname As String = Guid.NewGuid.ToString + ".rtf"
 
@@ -239,7 +241,7 @@ Partial Class Controls_AdvNameSearchControl
         Dim results As DataSet = DoSearch(0)
 
         If results IsNot Nothing AndAlso results.Tables.Count > 0 AndAlso results.Tables(0).Rows.Count > 0 Then
-            Dim doc As String = DataAccess.Report.GetNamesReportCSV(results, False, True)
+            Dim doc As String = Report.GetNamesReportCSV(results, False, True)
 
             Dim fname As String = Guid.NewGuid.ToString + ".csv"
             IO.File.WriteAllText(IO.Path.Combine(Request.PhysicalApplicationPath, "temp\" + fname), doc)

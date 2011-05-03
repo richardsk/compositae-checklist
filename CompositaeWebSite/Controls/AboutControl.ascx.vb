@@ -23,7 +23,7 @@ Partial Class Controls_AboutControl
             aboutPlaceHolder.Controls.Add(ctrl)
 
         Catch ex As Exception
-            DataAccess.Utility.LogError(ex)
+            WebDataAccess.Utility.LogError(ex)
         End Try
     End Sub
 End Class

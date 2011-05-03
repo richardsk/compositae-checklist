@@ -50,7 +50,7 @@ Partial Class ProviderFieldDetails
 
             DetailsGrid.HeaderStyle.BackColor = System.Drawing.Color.FromName(AltBGColor)
         Catch ex As Exception
-            DataAccess.Utility.LogError(ex)
+            WebDataAccess.Utility.LogError(ex)
         End Try
     End Sub
 End Class

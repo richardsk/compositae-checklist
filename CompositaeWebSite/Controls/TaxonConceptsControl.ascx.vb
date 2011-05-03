@@ -1,5 +1,6 @@
 Imports ChecklistObjects
 Imports ChecklistDataAccess
+Imports WebDataAccess
 
 Imports System.Data
 
@@ -12,7 +13,7 @@ Partial Class Controls_TaxonConceptsControl
 
     Public Sub Display()
 
-        Dim SelName As Name = NameData.GetName(Nothing, DataAccess.Utility.NameID(Request))
+        Dim SelName As Name = NameData.GetName(Nothing, Utility.NameID(Request))
 
         nameLabel.Text = SelName.NameFullFormatted
 
@@ -48,7 +49,7 @@ Partial Class Controls_TaxonConceptsControl
                     'If ds.Tables(0).Rows.Count > 0 Then nameStr = ds.Tables(0).Rows(0)("PCName2").ToString
 
                     Dim prov As String = ""
-                    prov += DataAccess.Utility.GetProvidersHtml(ds, DataAccess.Utility.ProviderDataType.Concepts)
+                    prov += Utility.GetProvidersHtml(ds, Utility.ProviderDataType.Concepts)
 
                     conceptsDt.Rows.Add(New Object() {status, dr("ConceptAccordingTo").ToString, prov})
                 End If

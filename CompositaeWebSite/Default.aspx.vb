@@ -1,5 +1,6 @@
 Imports System.Data
 Imports System.Collections.Generic
+Imports WebDataAccess
 
 Partial Class _Default
     Inherits System.Web.UI.Page
@@ -40,7 +41,7 @@ Partial Class _Default
             DetailsPanel.Controls.Add(ctrl)
             searchPanel.Visible = False
         ElseIf selPage = "NameDetails" Then
-            TreeControl1.SelectedNameId = DataAccess.Utility.NameID(Request)
+            TreeControl1.SelectedNameId = Utility.NameID(Request)
             FeedbackLink.NavigateUrl += "&NameID=" + TreeControl1.SelectedNameId
             Dim ctrl As Control = LoadControl("Controls\NameDetailsControl.ascx")
             DetailsPanel.Controls.Add(ctrl)
@@ -88,10 +89,10 @@ Partial Class _Default
         End If
 
         If searchPanel.Visible Then
-            Dim fields As List(Of DataAccess.SearchableField) = DataAccess.Search.ListSearchableFields("tblName")
+            Dim fields As List(Of SearchableField) = Search.ListSearchableFields("tblName")
             
             searchField.Items.Clear()
-            For Each sf As DataAccess.SearchableField In fields
+            For Each sf As SearchableField In fields
                 Dim li As New ListItem(sf.FriendlyName, sf.FieldName)
                 searchField.Items.Add(li)
             Next
@@ -168,8 +169,8 @@ Partial Class _Default
 
             countryCombo.Items.Clear()
 
-            Dim countries As List(Of DataAccess.TDWGGeo) = DataAccess.Distribution.GetTDWGGeoList(DataAccess.TDWGGeoLevel.TDWG3)
-            For Each c As DataAccess.TDWGGeo In countries
+            Dim countries As List(Of TDWGGeo) = Distribution.GetTDWGGeoList(TDWGGeoLevel.TDWG3)
+            For Each c As TDWGGeo In countries
                 countryCombo.Items.Add(c.Name)
             Next
 
@@ -190,9 +191,9 @@ Partial Class _Default
 
             continentsCombo.Items.Clear()
 
-            Dim continents As List(Of DataAccess.TDWGGeo) = DataAccess.Distribution.GetTDWGGeoList(DataAccess.TDWGGeoLevel.TDWG1)
+            Dim continents As List(Of TDWGGeo) = Distribution.GetTDWGGeoList(TDWGGeoLevel.TDWG1)
 
-            For Each c As DataAccess.TDWGGeo In continents
+            For Each c As TDWGGeo In continents
                 continentsCombo.Items.Add(c.Name)
             Next
 
@@ -213,9 +214,9 @@ Partial Class _Default
 
             regionsCombo.Items.Clear()
 
-            Dim regs As List(Of DataAccess.TDWGGeo) = DataAccess.Distribution.GetTDWGGeoList(DataAccess.TDWGGeoLevel.TDWG2)
+            Dim regs As List(Of TDWGGeo) = Distribution.GetTDWGGeoList(TDWGGeoLevel.TDWG2)
 
-            For Each r As DataAccess.TDWGGeo In regs
+            For Each r As TDWGGeo In regs
                 regionsCombo.Items.Add(r.Name)
             Next
 
@@ -236,9 +237,9 @@ Partial Class _Default
 
             unitsCombo.Items.Clear()
 
-            Dim units As List(Of DataAccess.TDWGGeo) = DataAccess.Distribution.GetTDWGGeoList(DataAccess.TDWGGeoLevel.TDWG4)
+            Dim units As List(Of TDWGGeo) = Distribution.GetTDWGGeoList(TDWGGeoLevel.TDWG4)
 
-            For Each u As DataAccess.TDWGGeo In units
+            For Each u As TDWGGeo In units
                 unitsCombo.Items.Add(u.Name)
             Next
 

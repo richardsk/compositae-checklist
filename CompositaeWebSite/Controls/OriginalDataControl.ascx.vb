@@ -1,6 +1,6 @@
 Imports ChecklistObjects
 Imports ChecklistDataAccess
-Imports DataAccess
+Imports WebDataAccess
 
 Imports System.Data
 
@@ -11,7 +11,7 @@ Partial Class Controls_OriginalDataControl
     Public Sub Display()
         If provDataTable.Rows.Count > 0 Then Return 'already done
 
-        Dim SelName As Name = NameData.GetName(Nothing, DataAccess.Utility.NameID(Request))
+        Dim SelName As Name = NameData.GetName(Nothing, Utility.NameID(Request))
 
         Dim Fields As New Generic.Dictionary(Of String, String)
 
@@ -51,10 +51,10 @@ Partial Class Controls_OriginalDataControl
         'conflicting fields
         Dim provData As DataSet = NameData.GetProviderNameRecords(SelName.Id)
 
-        Dim val As String = DataAccess.Utility.GetProviderFieldData(provData, SelName.NameFull, "PNNameFull")
+        Dim val As String = Utility.GetProviderFieldData(provData, SelName.NameFull, "PNNameFull")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Full_Name, val)
 
-        val = DataAccess.Utility.GetProviderFieldData(provData, SelName.NameAuthors, "PNNameAuthors")
+        val = Utility.GetProviderFieldData(provData, SelName.NameAuthors, "PNNameAuthors")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Name_Authors, val)
 
         Dim ris As ReferenceRIS = ReferenceData.GetReferenceRISByReference(SelName.NameReferenceFk)
@@ -84,7 +84,7 @@ Partial Class Controls_OriginalDataControl
             pubText = SelName.NamePublishedIn
         End If
 
-        val = DataAccess.Utility.GetProviderFieldData(provData, pubText, "PNPublishedIn")
+        val = Utility.GetProviderFieldData(provData, pubText, "PNPublishedIn")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Published, val)
 
 
@@ -131,31 +131,31 @@ Partial Class Controls_OriginalDataControl
             icbnNotes += "nom. inval."
         End If
 
-        val = DataAccess.Utility.GetProviderFieldData(provData, icbnNotes, "PNICBNNotes")
+        val = Utility.GetProviderFieldData(provData, icbnNotes, "PNICBNNotes")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.ICBN_Notes, val)
 
-        val = DataAccess.Utility.GetProviderFieldData(provData, SelName.NameOrthography, "PNOrthography")
+        val = Utility.GetProviderFieldData(provData, SelName.NameOrthography, "PNOrthography")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Name_Orthography, val)
 
-        val = DataAccess.Utility.GetProviderFieldData(provData, SelName.NameBasionym, "PNBasionym")
+        val = Utility.GetProviderFieldData(provData, SelName.NameBasionym, "PNBasionym")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Name_Basionym, val)
 
-        val = DataAccess.Utility.GetProviderFieldData(provData, SelName.NameTypeName, "PNTypeName")
+        val = Utility.GetProviderFieldData(provData, SelName.NameTypeName, "PNTypeName")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Name_Type, val)
 
-        val = DataAccess.Utility.GetProviderFieldData(provData, SelName.NameHomonymOf, "PNHomonymOf")
+        val = Utility.GetProviderFieldData(provData, SelName.NameHomonymOf, "PNHomonymOf")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Homonym_Of, val)
 
-        val = DataAccess.Utility.GetProviderFieldData(provData, SelName.NameBasedOn, "PNBasedOn")
+        val = Utility.GetProviderFieldData(provData, SelName.NameBasedOn, "PNBasedOn")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Based_On, val)
 
-        val = DataAccess.Utility.GetProviderFieldData(provData, SelName.NameConservedAgainst, "PNConservedAgainst")
+        val = Utility.GetProviderFieldData(provData, SelName.NameConservedAgainst, "PNConservedAgainst")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Conserved_Against, val)
 
-        val = DataAccess.Utility.GetProviderFieldData(provData, SelName.NameReplacementFor, "PNReplacementFor")
+        val = Utility.GetProviderFieldData(provData, SelName.NameReplacementFor, "PNReplacementFor")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Replacement_For, val)
 
-        val = DataAccess.Utility.GetProviderFieldData(provData, SelName.NameNotes, "PNNotes")
+        val = Utility.GetProviderFieldData(provData, SelName.NameNotes, "PNNotes")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Notes, val)
 
 

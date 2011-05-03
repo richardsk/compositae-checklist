@@ -1,14 +1,14 @@
 Imports System.Collections.Generic
 Imports System.Data
-Imports DataAccess
+Imports WebDataAccess
 
 Partial Class AdvLitSearchControl
     Inherits System.Web.UI.UserControl
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Try
-            Dim fields As List(Of DataAccess.SearchableField) = DataAccess.Search.ListSearchableFields("tblReferenceRIS")
-            For Each sf As DataAccess.SearchableField In fields
+            Dim fields As List(Of SearchableField) = Search.ListSearchableFields("tblReferenceRIS")
+            For Each sf As SearchableField In fields
                 Field1.Items.Add(New ListItem(sf.FriendlyName, sf.FieldName))
                 FieldOr1.Items.Add(New ListItem(sf.FriendlyName, sf.FieldName))
                 Field2.Items.Add(New ListItem(sf.FriendlyName, sf.FieldName))
@@ -33,10 +33,10 @@ Partial Class AdvLitSearchControl
         End Try
     End Sub
 
-    Public Function GetSearchFields() As List(Of DataAccess.SearchSetting)
-        Dim ss As New List(Of DataAccess.SearchSetting)
+    Public Function GetSearchFields() As List(Of SearchSetting)
+        Dim ss As New List(Of SearchSetting)
 
-        Dim s As New DataAccess.SearchSetting
+        Dim s As New SearchSetting
         s.SearchField = Field1.Text
         s.SearchText = SearchText1.Text
         If UpperText1.Text.Length > 0 Then s.SearchUpperText = UpperText1.Text
@@ -46,7 +46,7 @@ Partial Class AdvLitSearchControl
         ss.Add(s)
 
         If SearchTextOr1.Text.Length > 0 Then
-            s = New DataAccess.SearchSetting
+            s = New SearchSetting
             s.IsOr = True
             s.SearchField = FieldOr1.Text
             s.SearchText = SearchTextOr1.Text
@@ -58,7 +58,7 @@ Partial Class AdvLitSearchControl
         End If
 
         If SearchText2.Text.Length > 0 Then
-            s = New DataAccess.SearchSetting
+            s = New SearchSetting
             s.IsAnd = True
             s.SearchField = Field2.Text
             s.SearchText = SearchText2.Text
@@ -70,7 +70,7 @@ Partial Class AdvLitSearchControl
         End If
 
         If SearchTextOr2.Text.Length > 0 Then
-            s = New DataAccess.SearchSetting
+            s = New SearchSetting
             s.IsOr = True
             s.SearchField = FieldOr2.Text
             s.SearchText = SearchTextOr2.Text
@@ -82,7 +82,7 @@ Partial Class AdvLitSearchControl
         End If
 
         If SearchText3.Text.Length > 0 Then
-            s = New DataAccess.SearchSetting
+            s = New SearchSetting
             s.IsAnd = True
             s.SearchField = Field3.Text
             s.SearchText = SearchText3.Text
@@ -94,7 +94,7 @@ Partial Class AdvLitSearchControl
         End If
 
         If SearchTextOr3.Text.Length > 0 Then
-            s = New DataAccess.SearchSetting
+            s = New SearchSetting
             s.IsOr = True
             s.SearchField = FieldOr3.Text
             s.SearchText = SearchTextOr3.Text
@@ -114,8 +114,8 @@ Partial Class AdvLitSearchControl
 
     Private Sub DoSearch(ByVal pageNumber As Integer)
         Try
-            Dim ss As List(Of DataAccess.SearchSetting) = GetSearchFields()
-            Dim ds As DataSet = DataAccess.Search.AdvancedLiteratureSearch(ss)
+            Dim ss As List(Of SearchSetting) = GetSearchFields()
+            Dim ds As DataSet = Search.AdvancedLiteratureSearch(ss)
             DisplayResults(ds, pageNumber)
             ResultsGridView.Visible = True
         Catch ex As Exception

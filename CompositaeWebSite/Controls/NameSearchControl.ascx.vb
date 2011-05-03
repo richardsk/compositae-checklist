@@ -1,5 +1,6 @@
 Imports System.Collections.Generic
 Imports System.Data
+Imports WebDataAccess
 
 Partial Class Controls_NameSearchControl
     Inherits System.Web.UI.UserControl
@@ -60,18 +61,18 @@ Partial Class Controls_NameSearchControl
     Private Function DoSearch(ByVal pageNumber As Integer, ByVal searchField As String, ByVal searchText As String, ByVal upperText As String) As DataSet
         Dim resds As DataSet = Nothing
         Try
-            Dim ss As New List(Of DataAccess.SearchSetting)
-            Dim s As New DataAccess.SearchSetting
+            Dim ss As New List(Of SearchSetting)
+            Dim s As New SearchSetting
             s.SearchField = "NameFull"
             If searchField IsNot Nothing Then s.SearchField = searchField
             s.SearchText = searchText.Trim
             s.SearchUpperText = upperText
             ss.Add(s)
-            Dim sst As New DataAccess.SearchStatusSelection
-            Dim ds As DataSet = DataAccess.Search.NameSearch(ss, sst)
+            Dim sst As New SearchStatusSelection
+            Dim ds As DataSet = Search.NameSearch(ss, sst)
             DisplayResults(ds, pageNumber)
             If ds.Tables.Count = 0 OrElse ds.Tables(0).Rows.Count = 0 Then
-                Dim varDs As DataSet = DataAccess.Search.NameSearchVariants(searchText)
+                Dim varDs As DataSet = Search.NameSearchVariants(searchText)
                 DisplayDidYouMeanResults(varDs, pageNumber)
                 If varDs.Tables.Count > 0 AndAlso varDs.Tables(0).Rows.Count > 0 Then
                     resds = varDs
@@ -83,7 +84,7 @@ Partial Class Controls_NameSearchControl
             ResultsGridView.Visible = True
         Catch ex As Exception
             ErrorLabel.Visible = True
-            DataAccess.Utility.LogError(ex)
+            Utility.LogError(ex)
         End Try
 
         Return resds
@@ -93,35 +94,35 @@ Partial Class Controls_NameSearchControl
         Dim resds As DataSet = Nothing
         Try
             Dim txt As String = Request.QueryString("continent")
-            Dim level As DataAccess.TDWGGeoLevel = DataAccess.TDWGGeoLevel.TDWG4
-            'Dim tg As New DataAccess.TDWGGeo
+            Dim level As TDWGGeoLevel = TDWGGeoLevel.TDWG4
+            'Dim tg As New TDWGGeo
             If txt IsNot Nothing Then
-                'tg = DataAccess.Distribution.GetTDWGeoByName(DataAccess.TDWGGeoLevel.TDWG1, txt)
-                level = DataAccess.TDWGGeoLevel.TDWG1
+                'tg = Distribution.GetTDWGeoByName(TDWGGeoLevel.TDWG1, txt)
+                level = TDWGGeoLevel.TDWG1
             Else
                 txt = Request.QueryString("region")
                 If txt IsNot Nothing Then
-                    'tg = DataAccess.Distribution.GetTDWGeoByName(DataAccess.TDWGGeoLevel.TDWG2, txt)
-                    level = DataAccess.TDWGGeoLevel.TDWG2
+                    'tg = Distribution.GetTDWGeoByName(TDWGGeoLevel.TDWG2, txt)
+                    level = TDWGGeoLevel.TDWG2
                 Else
                     txt = Request.QueryString("country")
                     If txt IsNot Nothing Then
-                        'tg = DataAccess.Distribution.GetTDWGeoByName(DataAccess.TDWGGeoLevel.TDWG3, txt)
-                        level = DataAccess.TDWGGeoLevel.TDWG3
+                        'tg = Distribution.GetTDWGeoByName(TDWGGeoLevel.TDWG3, txt)
+                        level = TDWGGeoLevel.TDWG3
                     Else
 
                         txt = Request.QueryString("unit")
                         If txt IsNot Nothing Then
-                            'tg = DataAccess.Distribution.GetTDWGeoByName(DataAccess.TDWGGeoLevel.TDWG4, txt)
-                            level = DataAccess.TDWGGeoLevel.TDWG4
+                            'tg = Distribution.GetTDWGeoByName(TDWGGeoLevel.TDWG4, txt)
+                            level = TDWGGeoLevel.TDWG4
                         End If
                     End If
                 End If
             End If
 
             If txt IsNot Nothing Then
-                Dim tgs As List(Of DataAccess.TDWGGeo) = DataAccess.Distribution.Gazetteer.GetGeoRegions(level, txt)
-                Dim ds As DataSet = DataAccess.Search.DistributionSearch(tgs)
+                Dim tgs As List(Of TDWGGeo) = Distribution.Gazetteer.GetGeoRegions(level, txt)
+                Dim ds As DataSet = Search.DistributionSearch(tgs)
 
                 DisplayResults(ds, pageNumber)
                 If ds.Tables.Count > 0 AndAlso ds.Tables(0).Rows.Count > 0 Then
@@ -132,7 +133,7 @@ Partial Class Controls_NameSearchControl
             End If
         Catch ex As Exception
             ErrorLabel.Visible = True
-            DataAccess.Utility.LogError(ex)
+            Utility.LogError(ex)
         End Try
 
         Return resds
@@ -191,7 +192,7 @@ Partial Class Controls_NameSearchControl
 
             'update rank image and name links
             For Each r As GridViewRow In ResultsGridView.Rows
-                r.Cells(0).Text = "<img src='images\" + DataAccess.Utility.GetImageIndex(r.Cells(0).Text) + "'/>"
+                r.Cells(0).Text = "<img src='images\" + Utility.GetImageIndex(r.Cells(0).Text) + "'/>"
 
                 Dim link As String = "<a style='COLOR: black' href='default.aspx?Page=NameDetails&TabNum=0&NameId=" + r.Cells(3).Text + "'>" + r.Cells(1).Text + "</a>"
                 r.Cells(1).Text = link
@@ -214,7 +215,7 @@ Partial Class Controls_NameSearchControl
 
             For Each row As DataRow In ds.Tables(0).Rows
                 html += "<tr><td style='color:green'>" + row("MatchingText").ToString + "</td>"
-                html += "<td>" + DataAccess.Utility.GetNameLinkHtml(Request, row("NameGuid").ToString, row("NameFull").ToString, "0") + "</td></tr>"
+                html += "<td>" + Utility.GetNameLinkHtml(Request, row("NameGuid").ToString, row("NameFull").ToString, "0") + "</td></tr>"
             Next
 
             html += "</table>"
@@ -254,7 +255,7 @@ Partial Class Controls_NameSearchControl
             Dim results As DataSet = DoSearches()
 
             If results IsNot Nothing AndAlso results.Tables.Count > 0 AndAlso results.Tables(0).Rows.Count > 0 Then
-                Dim doc As String = DataAccess.Report.GetNamesReport(results, False, False)
+                Dim doc As String = Report.GetNamesReport(results, False, False)
 
                 Dim fname As String = Guid.NewGuid.ToString + ".rtf"
                 IO.File.WriteAllText(IO.Path.Combine(Request.PhysicalApplicationPath, "temp\" + fname), doc)
@@ -268,7 +269,7 @@ Partial Class Controls_NameSearchControl
 
             End If
         Catch ex As Exception
-            DataAccess.Utility.LogError(ex)
+            Utility.LogError(ex)
         End Try
     End Sub
 
@@ -276,7 +277,7 @@ Partial Class Controls_NameSearchControl
         Dim results As DataSet = DoSearches()
 
         If results IsNot Nothing AndAlso results.Tables.Count > 0 AndAlso results.Tables(0).Rows.Count > 0 Then
-            Dim doc As String = DataAccess.Report.GetNamesReportCSV(results, False, True)
+            Dim doc As String = Report.GetNamesReportCSV(results, False, True)
 
             Dim fname As String = Guid.NewGuid.ToString + ".csv"
             IO.File.WriteAllText(IO.Path.Combine(Request.PhysicalApplicationPath, "temp\" + fname), doc)

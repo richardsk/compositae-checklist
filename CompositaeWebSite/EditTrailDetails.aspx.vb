@@ -1,5 +1,6 @@
 Imports ChecklistDataAccess
 Imports ChecklistObjects
+Imports WebDataAccess
 
 Imports System.Data
 
@@ -17,7 +18,7 @@ Partial Class EditTrailDetails
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         Try
-            Dim id As String = DataAccess.Utility.NameID(Request)
+            Dim id As String = Utility.NameID(Request)
 
             Dim SelName As Name = NameData.GetName(Nothing, id)
 
@@ -57,7 +58,7 @@ Partial Class EditTrailDetails
             EditDetailsGrid.DataBind()
 
         Catch ex As Exception
-            DataAccess.Utility.LogError(ex)
+            Utility.LogError(ex)
         End Try
     End Sub
 End Class

@@ -1,5 +1,6 @@
 Imports System.Collections.Generic
 Imports System.Data
+Imports WebDataAccess
 
 Partial Class Controls_LiteratureSearchControl
     Inherits System.Web.UI.UserControl
@@ -23,18 +24,18 @@ Partial Class Controls_LiteratureSearchControl
 
     Private Sub DoSearch(ByVal pageNumber As Integer)
         Try
-            Dim ss As New List(Of DataAccess.SearchSetting)
-            Dim s As New DataAccess.SearchSetting
+            Dim ss As New List(Of SearchSetting)
+            Dim s As New SearchSetting
             s.SearchField = "ReferenceCitation"
             s.SearchText = SearchText.Text
             If UpperText.Text.Length > 0 AndAlso Request.Form("SearchControl1$cbxRangeSearch") IsNot Nothing Then s.SearchUpperText = UpperText.Text
             ss.Add(s)
-            Dim ds As DataSet = DataAccess.Search.LiteratureSearch(ss)
+            Dim ds As DataSet = Search.LiteratureSearch(ss)
             DisplayResults(ds, pageNumber)
             ResultsGridView.Visible = True
         Catch ex As Exception
             ErrorLabel.Visible = True
-            DataAccess.Utility.LogError(ex)
+            Utility.LogError(ex)
         End Try
     End Sub
 

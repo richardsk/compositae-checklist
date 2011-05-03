@@ -1,24 +1,25 @@
 Imports System.Collections.Generic
 Imports System.Data
+Imports WebDataAccess
 
 Partial Class SimpleNameSearchControl
     Inherits System.Web.UI.UserControl
 
     Private Sub DoSearch(ByVal pageNumber As Integer)
         Try
-            Dim ss As New List(Of DataAccess.SearchSetting)
-            Dim s As New DataAccess.SearchSetting
+            Dim ss As New List(Of SearchSetting)
+            Dim s As New SearchSetting
             s.SearchField = "NameFull"
             s.SearchText = SearchText.Text.Trim
             ss.Add(s)
-            Dim sst As New DataAccess.SearchStatusSelection
+            Dim sst As New SearchStatusSelection
             sst.IncludeUnknown = False
-            Dim ds As DataSet = DataAccess.Search.NameSearch(ss, sst)
+            Dim ds As DataSet = Search.NameSearch(ss, sst)
             ResultsGridView.Visible = True
             DisplayResults(ds, pageNumber)
         Catch ex As Exception
             ErrorLabel.Visible = True
-            DataAccess.Utility.LogError(ex)
+            Utility.LogError(ex)
         End Try
     End Sub
 
@@ -63,7 +64,7 @@ Partial Class SimpleNameSearchControl
 
             'update rank image and name links
             For Each r As GridViewRow In ResultsGridView.Rows
-                r.Cells(0).Text = "<img src='images\" + DataAccess.Utility.GetImageIndex(r.Cells(0).Text) + "'/>"
+                r.Cells(0).Text = "<img src='images\" + Utility.GetImageIndex(r.Cells(0).Text) + "'/>"
 
                 Dim link As String = "<a style='COLOR: black' href='default.aspx?Page=NameDetails&TabNum=0&NameId=" + r.Cells(3).Text + "'>" + r.Cells(1).Text + "</a>"
                 r.Cells(1).Text = link
