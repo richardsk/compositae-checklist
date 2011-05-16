@@ -9,11 +9,11 @@ CREATE VIEW [dbo].[vwDwCTaxon]
 	AS 	
 select c.ConceptLSID as taxonID,
 	NameLSID as scientificNameID,
-	NamePreferredFk as acceptedNameUsageID,
+	'urn:lsid:compositae.org:concepts:' + cast(prcr.ConceptRelationshipConcept2Fk as varchar(20)) as acceptedNameUsageID,
 	NamePreferred as acceptedNameUsage,
-	NameParentFk as parentNameUsageID,
+	'urn:lsid:compositae.org:concepts:' + cast(pcr.ConceptRelationshipConcept2Fk as varchar(20)) as parentNameUsageID,
 	NameParent as parentNameUsage,
-	NameBasionymFk as originalNameUsageID,
+	(select top 1 ConceptLSID from tblconcept where ConceptName1Fk = n.NameBasionymFk) as originalNameUsageID,
 	NameBasionym as originalNameUsage,
 	NameFull as scientificName,
 	NamePublishedIn as namePublishedIn,
@@ -47,6 +47,8 @@ select c.ConceptLSID as taxonID,
 from tblName n
 inner join tblRank r on r.RankPk = n.NameRankFk
 inner join tblConcept c on c.ConceptName1Fk = n.NameGUID
+left join tblConceptRelationship prcr on prcr.ConceptRelationshipConcept1Fk = c.ConceptPk and prcr.ConceptRelationshipRelationshipFk = 15
+left join tblConceptRelationship pcr on pcr.ConceptRelationshipConcept1Fk = c.ConceptPk and pcr.ConceptRelationshipRelationshipFk = 6
 left join tblflatname gn on gn.flatnameseedname = n.NameGUID and gn.flatnamerankname = 'genus'
 left join tblflatname sgn on sgn.flatnameseedname = n.NameGUID and sgn.flatnamerankname = 'subgenus'
 left join tblflatname sn on sn.flatnameseedname = n.NameGUID and sn.flatnamerankname = 'species'
