@@ -225,7 +225,8 @@ Public Class BrProviderConcepts
 
         InsertUpdateSystemProviderConcept(sysPCR.PCRConceptRelationshipFk, sysPc, sysPcTo, sysPCR, name1Fk, pn1, name2Fk, pn2, Nothing, Nothing)
 
-        BrNames.RefreshNameData(name1Fk, True) 'SessionState.CurrentUser.Login)
+        Dim concs As DataSet = BrNames.RefreshNameConcepts(name1Fk)
+        NameData.RefreshNameRelationData(name1Fk, SessionState.CurrentUser.Login)
     End Sub
 
     ''' <summary>

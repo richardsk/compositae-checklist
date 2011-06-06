@@ -477,6 +477,9 @@
     <NotInBuild Include="UpdateBuilds\v1.1.21\update1.1.21.sql" />
     <NotInBuild Include="UpdateBuilds\v1.1.22\update1.1.22.sql" />
     <NotInBuild Include="UpdateBuilds\v1.1.23\update1.1.23.sql" />
+    <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_AutonymIssues.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
   </ItemGroup>
   <ItemGroup>
     <BuildContributorArgument Include="OutDir=$(OutDir)" />
@@ -489,6 +492,9 @@
       <SubType>Code</SubType>
     </Build>
     <Build Include="Create Scripts\Views\vwDwCDistribution.view.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Create Scripts\StoredProcs\sprUpdate_ConceptTopProvider.sql">
       <SubType>Code</SubType>
     </Build>
   </ItemGroup>

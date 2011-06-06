@@ -561,14 +561,11 @@ Public Class BrNames
                 'add system autonym name for this name
                 Dim pn As New ProviderName
                 pn.PNNameId = Guid.NewGuid.ToString
-                pn.PNNameFk = row.n
-                pn.PNNameFull = n.NameFull
-                pn.PNNameCanonical = n.NameCanonical
-                pn.PNNameRank = n.NameRank
-                pn.PNNameRankFk = n.NameRankFk
+                pn.PNNameFk = row.NameGuid.ToString()
+                pn.PNNameCanonical = row
+                pn.PNNameFull = row.NameFull
 
-
-                BrProviderNames.InsertUpdateSystemProviderName(n.Id, pn)
+                BrProviderNames.InsertUpdateSystemProviderName(row.NameGuid.ToString(), pn)
             Next
         End If
     End Sub
