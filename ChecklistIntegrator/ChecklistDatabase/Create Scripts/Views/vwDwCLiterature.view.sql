@@ -9,7 +9,6 @@ CREATE VIEW [dbo].[vwDwCLiterature]
 	AS 
 
 SELECT c.ConceptPk as TaxonID,
-	ReferenceLSID as Identifier,
 	ReferenceCitation as BibliographicCitation,
 	RISTitle as Title,
 	RISAuthors as Creator,
