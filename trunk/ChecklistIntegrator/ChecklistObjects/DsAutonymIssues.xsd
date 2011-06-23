@@ -25,6 +25,8 @@
             <xs:sequence>
               <xs:element name="NameGuid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnNameGuid" msprop:Generator_ColumnPropNameInRow="NameGuid" msprop:Generator_ColumnPropNameInTable="NameGuidColumn" msprop:Generator_UserColumnName="NameGuid" type="xs:string" minOccurs="0" />
               <xs:element name="NameFull" msprop:Generator_ColumnVarNameInTable="columnNameFull" msprop:Generator_ColumnPropNameInRow="NameFull" msprop:Generator_ColumnPropNameInTable="NameFullColumn" msprop:Generator_UserColumnName="NameFull" type="xs:string" minOccurs="0" />
+              <xs:element name="NameCanonical" msprop:Generator_ColumnVarNameInTable="columnNameCanonical" msprop:Generator_ColumnPropNameInRow="NameCanonical" msprop:Generator_ColumnPropNameInTable="NameCanonicalColumn" msprop:Generator_UserColumnName="NameCanonical" type="xs:string" minOccurs="0" />
+              <xs:element name="RankName" msprop:Generator_ColumnVarNameInTable="columnRankName" msprop:Generator_ColumnPropNameInRow="RankName" msprop:Generator_ColumnPropNameInTable="RankNameColumn" msprop:Generator_UserColumnName="RankName" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
