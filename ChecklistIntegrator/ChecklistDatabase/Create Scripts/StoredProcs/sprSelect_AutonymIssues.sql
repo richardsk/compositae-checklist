@@ -24,11 +24,11 @@ as
 					 and n2.NameGUID <> n.NameGUID)
         
 	--find names that have infraspecific child names but no autonym child
-	select distinct n.NameGUID, n.NameFull 
+	select distinct n.NameGUID, n.NameFull, n.NameCanonical
 	from tblName n
 	inner join tblRank tr on tr.RankPk = n.NameRankFk
 	inner join tblName cn on cn.NameParentFk = n.NameGUID
-	left join (select n.nameguid, n.namefull, n.NameParentFk
+	left join (select n.nameguid
 		from tblName n
 		inner join tblRank tr on tr.RankPk = n.NameRankFk
 		where CHARINDEX(n.NameCanonical, n.namefull, charindex(n.NameCanonical, n.namefull) + 1) <> 0

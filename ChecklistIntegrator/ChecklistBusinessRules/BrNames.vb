@@ -561,11 +561,62 @@ Public Class BrNames
                 'add system autonym name for this name
                 Dim pn As New ProviderName
                 pn.PNNameId = Guid.NewGuid.ToString
-                pn.PNNameFk = row.NameGuid.ToString()
-                pn.PNNameCanonical = row
-                pn.PNNameFull = row.NameFull
 
-                BrProviderNames.InsertUpdateSystemProviderName(row.NameGuid.ToString(), pn)
+                'work out canonical and rank
+                ' should be [Genus] [species (canonical)] [rankname] [canonical]
+                pn.PNNameCanonical = row.NameCanonical
+                pn.PNNameRank = "subsp." 'TODO  what should the rank be? row.RankName
+                pn.PNLinkStatus = LinkStatus.Inserted.ToString()
+
+                Dim sysImp As ProviderImport = BrUser.GetSystemProviderImport()
+                pn.PNProviderImportFk = sysImp.IdAsInt
+
+                NameData.InsertUpdateProviderNameRecord(pn, SessionState.CurrentUser.Login)
+
+                Dim pn2 As ProviderName = NameData.GetSystemProviderNameForName(row.NameGuid.ToString())
+                If pn2 Is Nothing Then
+                    'create dummy name
+                    pn2 = New ProviderName
+                    pn2.PNNameFk = row.NameGuid.ToString()
+                    pn2.PNNameId = Guid.NewGuid.ToString
+                    pn2.PNLinkStatus = LinkStatus.Inserted.ToString
+                    pn2.PNProviderImportFk = sysImp.IdAsInt
+                End If
+
+                'insert parent concept to hook the new autonym name to the name in question
+                Dim sysPc As New ProviderConcept
+                sysPc.PCLinkStatus = LinkStatus.Inserted.ToString
+                sysPc.PCProviderImportFk = sysImp.IdAsInt
+                sysPc.PCConceptId = Guid.NewGuid.ToString()
+                sysPc.PCName1Id = pn.PNNameId
+
+                ConceptData.InsertUpdateSystemProviderConcept(Nothing, sysPc, SessionState.CurrentUser.Login)
+
+                Dim sysPcTo As ProviderConcept = ConceptData.GetSystemProviderConcept(sysImp.IdAsInt, row.NameGuid.ToString(), Nothing)
+                If sysPcTo Is Nothing Then
+                    sysPcTo = New ProviderConcept
+                    sysPcTo.PCLinkStatus = LinkStatus.Inserted.ToString
+                    sysPcTo.PCProviderImportFk = sysImp.IdAsInt
+                    sysPcTo.PCConceptId = Guid.NewGuid.ToString()
+                    sysPcTo.PCName1Id = pn2.PNNameId
+
+                    ConceptData.InsertUpdateSystemProviderConcept(Nothing, sysPcTo, SessionState.CurrentUser.Login)
+                End If
+
+                Dim sysPCR As New ProviderConceptRelationship
+                sysPCR.PCRLinkStatus = LinkStatus.Inserted.ToString()
+                sysPCR.PCRProviderImportFk = sysImp.IdAsInt
+                sysPCR.PCRConcept1Id = sysPc.PCConceptId
+                sysPCR.PCRConcept2Id = sysPcTo.PCConceptId
+                sysPCR.PCRRelationshipFk = RelationshipType.RelationshipTypeParent
+
+                ConceptData.InsertUpdateSystemProviderConceptRelationship(Nothing, sysPc.IdAsInt, sysPCR, SessionState.CurrentUser.Login)
+
+                Dim mr As MatchResult = BrProviderNames.MatchAndUpdateProviderName(pn)
+
+                BrNames.RefreshNameData(mr.MatchedId, True)
+                BrNames.RefreshNameData(row.NameGuid.ToString(), True)
+
             Next
         End If
     End Sub
