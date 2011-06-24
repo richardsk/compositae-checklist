@@ -120,6 +120,12 @@
     <Compile Include="AuthorsForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AutonymsForm.Designer.vb">
+      <DependentUpon>AutonymsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AutonymsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ImportAnnotationForm.Designer.vb">
       <DependentUpon>ImportAnnotationForm.vb</DependentUpon>
     </Compile>
@@ -325,6 +331,10 @@
     <EmbeddedResource Include="AuthorsForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>AuthorsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AutonymsForm.resx">
+      <DependentUpon>AutonymsForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ImportAnnotationForm.resx">
       <SubType>Designer</SubType>

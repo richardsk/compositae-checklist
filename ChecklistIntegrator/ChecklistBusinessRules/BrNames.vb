@@ -1,3 +1,5 @@
+Imports System.Collections.Generic
+
 Imports ChecklistDataAccess
 Imports ChecklistObjects
 
@@ -549,75 +551,162 @@ Public Class BrNames
     End Function
 
     Public Shared Sub ProcessAutonymNames()
-        Dim ds As DsAutonymIssues = NameData.GetNameAutonymIssues()
+        Dim msg As String = ""
+        Cancel = False
 
-        If ds IsNot Nothing Then
-            For Each row As DsAutonymIssues.UnacceptedAutonymsRow In ds.UnacceptedAutonyms
-                'autonym must be the accepted name
-                BrProviderConcepts.InsertUpdateSystemProviderConcept(row.NameGuid.ToString(), row.NameGuid.ToString(), RelationshipType.RelationshipTypePreferred, Nothing)
-            Next
+        Try
+            Dim prog As Integer = 0
 
-            For Each row As DsAutonymIssues.MissingAutonymsRow In ds.MissingAutonyms
-                'add system autonym name for this name
-                Dim pn As New ProviderName
-                pn.PNNameId = Guid.NewGuid.ToString
+            Dim ds As DsAutonymIssues = NameData.GetNameAutonymIssues()
 
-                'work out canonical and rank
-                ' should be [Genus] [species (canonical)] [rankname] [canonical]
-                pn.PNNameCanonical = row.NameCanonical
-                pn.PNNameRank = "subsp." 'TODO  what should the rank be? row.RankName
-                pn.PNLinkStatus = LinkStatus.Inserted.ToString()
+            msg = "Starting autonym processing"
 
-                Dim sysImp As ProviderImport = BrUser.GetSystemProviderImport()
-                pn.PNProviderImportFk = sysImp.IdAsInt
+            If ds IsNot Nothing Then
+                Dim total As Integer = ds.MissingAutonyms.Count + ds.UnacceptedAutonyms.Count + ds.NoConceptAutonyms.Count
+                Dim count As Integer = 0
 
-                NameData.InsertUpdateProviderNameRecord(pn, SessionState.CurrentUser.Login)
+                For Each row As DsAutonymIssues.UnacceptedAutonymsRow In ds.UnacceptedAutonyms
+                    If Cancel Then Exit For
 
-                Dim pn2 As ProviderName = NameData.GetSystemProviderNameForName(row.NameGuid.ToString())
-                If pn2 Is Nothing Then
-                    'create dummy name
-                    pn2 = New ProviderName
-                    pn2.PNNameFk = row.NameGuid.ToString()
-                    pn2.PNNameId = Guid.NewGuid.ToString
-                    pn2.PNLinkStatus = LinkStatus.Inserted.ToString
-                    pn2.PNProviderImportFk = sysImp.IdAsInt
-                End If
+                    msg = ""
+                    'autonym must be the accepted name
+                    Try
+                        BrProviderConcepts.InsertUpdateSystemProviderConcept(row.NameGuid.ToString(), row.NameGuid.ToString(), RelationshipType.RelationshipTypePreferred, Nothing)
 
-                'insert parent concept to hook the new autonym name to the name in question
-                Dim sysPc As New ProviderConcept
-                sysPc.PCLinkStatus = LinkStatus.Inserted.ToString
-                sysPc.PCProviderImportFk = sysImp.IdAsInt
-                sysPc.PCConceptId = Guid.NewGuid.ToString()
-                sysPc.PCName1Id = pn.PNNameId
+                    Catch ex As Exception
+                        msg = "ERROR : Failed to set autonym as accepted name : " + row("NameFull").ToString + " : " + ex.Message
+                    End Try
 
-                ConceptData.InsertUpdateSystemProviderConcept(Nothing, sysPc, SessionState.CurrentUser.Login)
+                    count += 1
+                    prog = 100 * count / total
 
-                Dim sysPcTo As ProviderConcept = ConceptData.GetSystemProviderConcept(sysImp.IdAsInt, row.NameGuid.ToString(), Nothing)
-                If sysPcTo Is Nothing Then
-                    sysPcTo = New ProviderConcept
-                    sysPcTo.PCLinkStatus = LinkStatus.Inserted.ToString
-                    sysPcTo.PCProviderImportFk = sysImp.IdAsInt
-                    sysPcTo.PCConceptId = Guid.NewGuid.ToString()
-                    sysPcTo.PCName1Id = pn2.PNNameId
+                    If msg = "" Then msg = "Processed " + count.ToString + " of " + total.ToString + " names."
 
-                    ConceptData.InsertUpdateSystemProviderConcept(Nothing, sysPcTo, SessionState.CurrentUser.Login)
-                End If
+                    If StatusCallback IsNot Nothing Then StatusCallback.Invoke(prog, msg)
+                Next
 
-                Dim sysPCR As New ProviderConceptRelationship
-                sysPCR.PCRLinkStatus = LinkStatus.Inserted.ToString()
-                sysPCR.PCRProviderImportFk = sysImp.IdAsInt
-                sysPCR.PCRConcept1Id = sysPc.PCConceptId
-                sysPCR.PCRConcept2Id = sysPcTo.PCConceptId
-                sysPCR.PCRRelationshipFk = RelationshipType.RelationshipTypeParent
+                For Each row As DsAutonymIssues.NoConceptAutonymsRow In ds.NoConceptAutonyms
+                    If Cancel Then Exit For
 
-                ConceptData.InsertUpdateSystemProviderConceptRelationship(Nothing, sysPc.IdAsInt, sysPCR, SessionState.CurrentUser.Login)
+                    msg = ""
+                    'autonym must point to parent as accepted name
+                    Try
+                        BrProviderConcepts.InsertUpdateSystemProviderConcept(row.NameGuid.ToString(), row.NameParentFk.ToString(), RelationshipType.RelationshipTypePreferred, Nothing)
 
-                Dim mr As MatchResult = BrProviderNames.MatchAndUpdateProviderName(pn)
+                    Catch ex As Exception
+                        msg = "ERROR : Failed to set autonym accepted name to parent : " + row("NameFull").ToString + " : " + ex.Message
+                    End Try
 
-                BrNames.RefreshNameData(mr.MatchedId, True)
-                BrNames.RefreshNameData(row.NameGuid.ToString(), True)
+                    count += 1
+                    prog = 100 * count / total
 
-            Next
-        End If
+                    If msg = "" Then msg = "Processed " + count.ToString + " of " + total.ToString + " names."
+
+                    If StatusCallback IsNot Nothing Then StatusCallback.Invoke(prog, msg)
+                Next
+
+                'reget missing autonyms in case some new ones were added
+                ds = NameData.GetNameAutonymIssues()
+                total = ds.MissingAutonyms.Count + ds.UnacceptedAutonyms.Count + ds.NoConceptAutonyms.Count
+
+                For Each row As DsAutonymIssues.MissingAutonymsRow In ds.MissingAutonyms
+                    'add system autonym name for this name, for each rank where there is a child with that rank
+                    msg = ""
+
+                    If Cancel Then Exit For
+
+                    Try
+
+                        Dim ranks As String() = row.Ranks.Split(",")
+
+                        For Each rankId As String In ranks
+
+                            If Cancel Then Exit For
+
+                            If rankId.Length > 0 Then
+                                Dim rnk As Rank = RankData.RankByPk(CInt(rankId))
+
+                                Dim pn As New ProviderName
+                                pn.PNNameId = Guid.NewGuid.ToString
+
+                                'work out canonical and rank
+                                ' should be [Genus] [species (canonical)] [rankname] [canonical]
+                                pn.PNNameCanonical = row.NameCanonical
+                                pn.PNNameRank = rnk.Name
+                                pn.PNLinkStatus = LinkStatus.Inserted.ToString()
+
+                                Dim sysImp As ProviderImport = BrUser.GetSystemProviderImport()
+                                pn.PNProviderImportFk = sysImp.IdAsInt
+
+                                NameData.InsertUpdateProviderNameRecord(pn, SessionState.CurrentUser.Login)
+
+                                Dim pn2 As ProviderName = NameData.GetSystemProviderNameForName(row.NameGuid.ToString())
+                                If pn2 Is Nothing Then
+                                    'create dummy name
+                                    pn2 = New ProviderName
+                                    pn2.PNNameFk = row.NameGuid.ToString()
+                                    pn2.PNNameId = Guid.NewGuid.ToString
+                                    pn2.PNLinkStatus = LinkStatus.Inserted.ToString
+                                    pn2.PNProviderImportFk = sysImp.IdAsInt
+
+                                    NameData.InsertUpdateProviderNameRecord(pn2, SessionState.CurrentUser.Login)
+                                End If
+
+                                'insert parent concept to hook the new autonym name to the name in question
+                                Dim sysPc As New ProviderConcept
+                                sysPc.PCLinkStatus = LinkStatus.Unmatched.ToString
+                                sysPc.PCProviderImportFk = sysImp.IdAsInt
+                                sysPc.PCConceptId = Guid.NewGuid.ToString()
+                                sysPc.PCName1Id = pn.PNNameId
+
+                                ConceptData.InsertUpdateSystemProviderConcept(Nothing, sysPc, SessionState.CurrentUser.Login)
+
+                                Dim sysPcTo As ProviderConcept = ConceptData.GetSystemProviderConcept(sysImp.IdAsInt, row.NameGuid.ToString(), Nothing)
+                                If sysPcTo Is Nothing Then
+                                    sysPcTo = New ProviderConcept
+                                    sysPcTo.PCLinkStatus = LinkStatus.Unmatched.ToString
+                                    sysPcTo.PCProviderImportFk = sysImp.IdAsInt
+                                    sysPcTo.PCConceptId = Guid.NewGuid.ToString()
+                                    sysPcTo.PCName1Id = pn2.PNNameId
+
+                                    ConceptData.InsertUpdateSystemProviderConcept(Nothing, sysPcTo, SessionState.CurrentUser.Login)
+                                End If
+
+                                Dim sysPCR As New ProviderConceptRelationship
+                                sysPCR.PCRLinkStatus = LinkStatus.Unmatched.ToString()
+                                sysPCR.PCRProviderImportFk = sysImp.IdAsInt
+                                sysPCR.PCRConcept1Id = sysPc.PCConceptId
+                                sysPCR.PCRConcept2Id = sysPcTo.PCConceptId
+                                sysPCR.PCRRelationshipFk = RelationshipType.RelationshipTypeParent
+
+                                sysPCR = ConceptData.InsertUpdateSystemProviderConceptRelationship(Nothing, sysPc.IdAsInt, sysPCR, SessionState.CurrentUser.Login)
+
+                                Dim mr As MatchResult = BrProviderNames.MatchAndUpdateProviderName(pn)
+                                Dim cmr As MatchResult = BrProviderConcepts.MatchAndUpdateProviderConceptRelationship(sysPCR)
+
+                                BrNames.RefreshNameData(mr.MatchedId, True)
+                                BrNames.RefreshNameData(row.NameGuid.ToString(), False)
+
+                            End If
+                        Next
+
+                    Catch ex As Exception
+                        msg = "ERROR : Failed to add missing autonym name : " + row("NameFull").ToString + " : " + ex.Message
+                    End Try
+
+                    count += 1
+                    prog = 100 * count / total
+
+                    If msg = "" Then msg = "Processed " + count.ToString + " of " + total.ToString + " names."
+
+                    If StatusCallback IsNot Nothing Then StatusCallback.Invoke(prog, msg)
+                Next
+            End If
+
+        Catch ex As Exception
+            msg = "ERROR : Process Failed : " + ex.Message
+        End Try
+
+        If StatusCallback IsNot Nothing Then StatusCallback.Invoke(100, msg)
     End Sub
 End Class

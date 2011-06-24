@@ -1022,7 +1022,8 @@ Public Class NameData
 
                 Dim da As New SqlDataAdapter(cmd)
                 da.TableMappings.Add("Table", "UnacceptedAutonyms")
-                da.TableMappings.Add("Table1", "MissingAutonyms")
+                da.TableMappings.Add("Table1", "NoConceptAutonyms")
+                da.TableMappings.Add("Table2", "MissingAutonyms")
 
                 da.Fill(ds)
             End Using

@@ -29,6 +29,8 @@ Partial Public Class DsAutonymIssues
     
     Private tableMissingAutonyms As MissingAutonymsDataTable
     
+    Private tableNoConceptAutonyms As NoConceptAutonymsDataTable
+    
     Private _schemaSerializationMode As Global.System.Data.SchemaSerializationMode = Global.System.Data.SchemaSerializationMode.IncludeSchema
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -64,6 +66,9 @@ Partial Public Class DsAutonymIssues
             If (Not (ds.Tables("MissingAutonyms")) Is Nothing) Then
                 MyBase.Tables.Add(New MissingAutonymsDataTable(ds.Tables("MissingAutonyms")))
             End If
+            If (Not (ds.Tables("NoConceptAutonyms")) Is Nothing) Then
+                MyBase.Tables.Add(New NoConceptAutonymsDataTable(ds.Tables("NoConceptAutonyms")))
+            End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
             Me.Namespace = ds.Namespace
@@ -98,6 +103,16 @@ Partial Public Class DsAutonymIssues
     Public ReadOnly Property MissingAutonyms() As MissingAutonymsDataTable
         Get
             Return Me.tableMissingAutonyms
+        End Get
+    End Property
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+     Global.System.ComponentModel.Browsable(false),  _
+     Global.System.ComponentModel.DesignerSerializationVisibility(Global.System.ComponentModel.DesignerSerializationVisibility.Content)>  _
+    Public ReadOnly Property NoConceptAutonyms() As NoConceptAutonymsDataTable
+        Get
+            Return Me.tableNoConceptAutonyms
         End Get
     End Property
     
@@ -174,6 +189,9 @@ Partial Public Class DsAutonymIssues
             If (Not (ds.Tables("MissingAutonyms")) Is Nothing) Then
                 MyBase.Tables.Add(New MissingAutonymsDataTable(ds.Tables("MissingAutonyms")))
             End If
+            If (Not (ds.Tables("NoConceptAutonyms")) Is Nothing) Then
+                MyBase.Tables.Add(New NoConceptAutonymsDataTable(ds.Tables("NoConceptAutonyms")))
+            End If
             Me.DataSetName = ds.DataSetName
             Me.Prefix = ds.Prefix
             Me.Namespace = ds.Namespace
@@ -218,6 +236,12 @@ Partial Public Class DsAutonymIssues
                 Me.tableMissingAutonyms.InitVars
             End If
         End If
+        Me.tableNoConceptAutonyms = CType(MyBase.Tables("NoConceptAutonyms"),NoConceptAutonymsDataTable)
+        If (initTable = true) Then
+            If (Not (Me.tableNoConceptAutonyms) Is Nothing) Then
+                Me.tableNoConceptAutonyms.InitVars
+            End If
+        End If
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -232,6 +256,8 @@ Partial Public Class DsAutonymIssues
         MyBase.Tables.Add(Me.tableUnacceptedAutonyms)
         Me.tableMissingAutonyms = New MissingAutonymsDataTable()
         MyBase.Tables.Add(Me.tableMissingAutonyms)
+        Me.tableNoConceptAutonyms = New NoConceptAutonymsDataTable()
+        MyBase.Tables.Add(Me.tableNoConceptAutonyms)
     End Sub
     
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -243,6 +269,12 @@ Partial Public Class DsAutonymIssues
     <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Private Function ShouldSerializeMissingAutonyms() As Boolean
+        Return false
+    End Function
+    
+    <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+     Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Private Function ShouldSerializeNoConceptAutonyms() As Boolean
         Return false
     End Function
     
@@ -309,6 +341,9 @@ Partial Public Class DsAutonymIssues
     
     <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
     Public Delegate Sub MissingAutonymsRowChangeEventHandler(ByVal sender As Object, ByVal e As MissingAutonymsRowChangeEvent)
+    
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Delegate Sub NoConceptAutonymsRowChangeEventHandler(ByVal sender As Object, ByVal e As NoConceptAutonymsRowChangeEvent)
     
     '''<summary>
     '''Represents the strongly named DataTable class.
@@ -597,7 +632,7 @@ Partial Public Class DsAutonymIssues
         
         Private columnNameCanonical As Global.System.Data.DataColumn
         
-        Private columnRankName As Global.System.Data.DataColumn
+        Private columnRanks As Global.System.Data.DataColumn
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
@@ -660,9 +695,9 @@ Partial Public Class DsAutonymIssues
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property RankNameColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property RanksColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnRankName
+                Return Me.columnRanks
             End Get
         End Property
         
@@ -703,9 +738,9 @@ Partial Public Class DsAutonymIssues
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddMissingAutonymsRow(ByVal NameGuid As System.Guid, ByVal NameFull As String, ByVal NameCanonical As String, ByVal RankName As String) As MissingAutonymsRow
+        Public Overloads Function AddMissingAutonymsRow(ByVal NameGuid As System.Guid, ByVal NameFull As String, ByVal NameCanonical As String, ByVal Ranks As String) As MissingAutonymsRow
             Dim rowMissingAutonymsRow As MissingAutonymsRow = CType(Me.NewRow,MissingAutonymsRow)
-            Dim columnValuesArray() As Object = New Object() {NameGuid, NameFull, NameCanonical, RankName}
+            Dim columnValuesArray() As Object = New Object() {NameGuid, NameFull, NameCanonical, Ranks}
             rowMissingAutonymsRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowMissingAutonymsRow)
             Return rowMissingAutonymsRow
@@ -737,7 +772,7 @@ Partial Public Class DsAutonymIssues
             Me.columnNameGuid = MyBase.Columns("NameGuid")
             Me.columnNameFull = MyBase.Columns("NameFull")
             Me.columnNameCanonical = MyBase.Columns("NameCanonical")
-            Me.columnRankName = MyBase.Columns("RankName")
+            Me.columnRanks = MyBase.Columns("Ranks")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -749,8 +784,8 @@ Partial Public Class DsAutonymIssues
             MyBase.Columns.Add(Me.columnNameFull)
             Me.columnNameCanonical = New Global.System.Data.DataColumn("NameCanonical", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnNameCanonical)
-            Me.columnRankName = New Global.System.Data.DataColumn("RankName", GetType(String), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnRankName)
+            Me.columnRanks = New Global.System.Data.DataColumn("Ranks", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnRanks)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -837,6 +872,291 @@ Partial Public Class DsAutonymIssues
             Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
             attribute2.Name = "tableTypeName"
             attribute2.FixedValue = "MissingAutonymsDataTable"
+            type.Attributes.Add(attribute2)
+            type.Particle = sequence
+            Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
+            If xs.Contains(dsSchema.TargetNamespace) Then
+                Dim s1 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Dim s2 As Global.System.IO.MemoryStream = New Global.System.IO.MemoryStream()
+                Try 
+                    Dim schema As Global.System.Xml.Schema.XmlSchema = Nothing
+                    dsSchema.Write(s1)
+                    Dim schemas As Global.System.Collections.IEnumerator = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator
+                    Do While schemas.MoveNext
+                        schema = CType(schemas.Current,Global.System.Xml.Schema.XmlSchema)
+                        s2.SetLength(0)
+                        schema.Write(s2)
+                        If (s1.Length = s2.Length) Then
+                            s1.Position = 0
+                            s2.Position = 0
+                            
+                            Do While ((s1.Position <> s1.Length)  _
+                                        AndAlso (s1.ReadByte = s2.ReadByte))
+                                
+                                
+                            Loop
+                            If (s1.Position = s1.Length) Then
+                                Return type
+                            End If
+                        End If
+                        
+                    Loop
+                Finally
+                    If (Not (s1) Is Nothing) Then
+                        s1.Close
+                    End If
+                    If (Not (s2) Is Nothing) Then
+                        s2.Close
+                    End If
+                End Try
+            End If
+            xs.Add(dsSchema)
+            Return type
+        End Function
+    End Class
+    
+    '''<summary>
+    '''Represents the strongly named DataTable class.
+    '''</summary>
+    <Global.System.Serializable(),  _
+     Global.System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")>  _
+    Partial Public Class NoConceptAutonymsDataTable
+        Inherits Global.System.Data.DataTable
+        Implements Global.System.Collections.IEnumerable
+        
+        Private columnNameGuid As Global.System.Data.DataColumn
+        
+        Private columnNameFull As Global.System.Data.DataColumn
+        
+        Private columnNameParentFk As Global.System.Data.DataColumn
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New()
+            MyBase.New
+            Me.TableName = "NoConceptAutonyms"
+            Me.BeginInit
+            Me.InitClass
+            Me.EndInit
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal table As Global.System.Data.DataTable)
+            MyBase.New
+            Me.TableName = table.TableName
+            If (table.CaseSensitive <> table.DataSet.CaseSensitive) Then
+                Me.CaseSensitive = table.CaseSensitive
+            End If
+            If (table.Locale.ToString <> table.DataSet.Locale.ToString) Then
+                Me.Locale = table.Locale
+            End If
+            If (table.Namespace <> table.DataSet.Namespace) Then
+                Me.Namespace = table.Namespace
+            End If
+            Me.Prefix = table.Prefix
+            Me.MinimumCapacity = table.MinimumCapacity
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Sub New(ByVal info As Global.System.Runtime.Serialization.SerializationInfo, ByVal context As Global.System.Runtime.Serialization.StreamingContext)
+            MyBase.New(info, context)
+            Me.InitVars
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NameGuidColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNameGuid
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NameFullColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNameFull
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NameParentFkColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNameParentFk
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
+         Global.System.ComponentModel.Browsable(false)>  _
+        Public ReadOnly Property Count() As Integer
+            Get
+                Return Me.Rows.Count
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Default ReadOnly Property Item(ByVal index As Integer) As NoConceptAutonymsRow
+            Get
+                Return CType(Me.Rows(index),NoConceptAutonymsRow)
+            End Get
+        End Property
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event NoConceptAutonymsRowChanging As NoConceptAutonymsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event NoConceptAutonymsRowChanged As NoConceptAutonymsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event NoConceptAutonymsRowDeleting As NoConceptAutonymsRowChangeEventHandler
+        
+        <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Event NoConceptAutonymsRowDeleted As NoConceptAutonymsRowChangeEventHandler
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Sub AddNoConceptAutonymsRow(ByVal row As NoConceptAutonymsRow)
+            Me.Rows.Add(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overloads Function AddNoConceptAutonymsRow(ByVal NameGuid As System.Guid, ByVal NameFull As String, ByVal NameParentFk As System.Guid) As NoConceptAutonymsRow
+            Dim rowNoConceptAutonymsRow As NoConceptAutonymsRow = CType(Me.NewRow,NoConceptAutonymsRow)
+            Dim columnValuesArray() As Object = New Object() {NameGuid, NameFull, NameParentFk}
+            rowNoConceptAutonymsRow.ItemArray = columnValuesArray
+            Me.Rows.Add(rowNoConceptAutonymsRow)
+            Return rowNoConceptAutonymsRow
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overridable Function GetEnumerator() As Global.System.Collections.IEnumerator Implements Global.System.Collections.IEnumerable.GetEnumerator
+            Return Me.Rows.GetEnumerator
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Overrides Function Clone() As Global.System.Data.DataTable
+            Dim cln As NoConceptAutonymsDataTable = CType(MyBase.Clone,NoConceptAutonymsDataTable)
+            cln.InitVars
+            Return cln
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function CreateInstance() As Global.System.Data.DataTable
+            Return New NoConceptAutonymsDataTable()
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub InitVars()
+            Me.columnNameGuid = MyBase.Columns("NameGuid")
+            Me.columnNameFull = MyBase.Columns("NameFull")
+            Me.columnNameParentFk = MyBase.Columns("NameParentFk")
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Private Sub InitClass()
+            Me.columnNameGuid = New Global.System.Data.DataColumn("NameGuid", GetType(Global.System.Guid), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNameGuid)
+            Me.columnNameFull = New Global.System.Data.DataColumn("NameFull", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNameFull)
+            Me.columnNameParentFk = New Global.System.Data.DataColumn("NameParentFk", GetType(Global.System.Guid), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNameParentFk)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function NewNoConceptAutonymsRow() As NoConceptAutonymsRow
+            Return CType(Me.NewRow,NoConceptAutonymsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function NewRowFromBuilder(ByVal builder As Global.System.Data.DataRowBuilder) As Global.System.Data.DataRow
+            Return New NoConceptAutonymsRow(builder)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Function GetRowType() As Global.System.Type
+            Return GetType(NoConceptAutonymsRow)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanged(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanged(e)
+            If (Not (Me.NoConceptAutonymsRowChangedEvent) Is Nothing) Then
+                RaiseEvent NoConceptAutonymsRowChanged(Me, New NoConceptAutonymsRowChangeEvent(CType(e.Row,NoConceptAutonymsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowChanging(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowChanging(e)
+            If (Not (Me.NoConceptAutonymsRowChangingEvent) Is Nothing) Then
+                RaiseEvent NoConceptAutonymsRowChanging(Me, New NoConceptAutonymsRowChangeEvent(CType(e.Row,NoConceptAutonymsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleted(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleted(e)
+            If (Not (Me.NoConceptAutonymsRowDeletedEvent) Is Nothing) Then
+                RaiseEvent NoConceptAutonymsRowDeleted(Me, New NoConceptAutonymsRowChangeEvent(CType(e.Row,NoConceptAutonymsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Protected Overrides Sub OnRowDeleting(ByVal e As Global.System.Data.DataRowChangeEventArgs)
+            MyBase.OnRowDeleting(e)
+            If (Not (Me.NoConceptAutonymsRowDeletingEvent) Is Nothing) Then
+                RaiseEvent NoConceptAutonymsRowDeleting(Me, New NoConceptAutonymsRowChangeEvent(CType(e.Row,NoConceptAutonymsRow), e.Action))
+            End If
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub RemoveNoConceptAutonymsRow(ByVal row As NoConceptAutonymsRow)
+            Me.Rows.Remove(row)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Shared Function GetTypedTableSchema(ByVal xs As Global.System.Xml.Schema.XmlSchemaSet) As Global.System.Xml.Schema.XmlSchemaComplexType
+            Dim type As Global.System.Xml.Schema.XmlSchemaComplexType = New Global.System.Xml.Schema.XmlSchemaComplexType()
+            Dim sequence As Global.System.Xml.Schema.XmlSchemaSequence = New Global.System.Xml.Schema.XmlSchemaSequence()
+            Dim ds As DsAutonymIssues = New DsAutonymIssues()
+            Dim any1 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any1.Namespace = "http://www.w3.org/2001/XMLSchema"
+            any1.MinOccurs = New Decimal(0)
+            any1.MaxOccurs = Decimal.MaxValue
+            any1.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any1)
+            Dim any2 As Global.System.Xml.Schema.XmlSchemaAny = New Global.System.Xml.Schema.XmlSchemaAny()
+            any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1"
+            any2.MinOccurs = New Decimal(1)
+            any2.ProcessContents = Global.System.Xml.Schema.XmlSchemaContentProcessing.Lax
+            sequence.Items.Add(any2)
+            Dim attribute1 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute1.Name = "namespace"
+            attribute1.FixedValue = ds.Namespace
+            type.Attributes.Add(attribute1)
+            Dim attribute2 As Global.System.Xml.Schema.XmlSchemaAttribute = New Global.System.Xml.Schema.XmlSchemaAttribute()
+            attribute2.Name = "tableTypeName"
+            attribute2.FixedValue = "NoConceptAutonymsDataTable"
             type.Attributes.Add(attribute2)
             type.Particle = sequence
             Dim dsSchema As Global.System.Xml.Schema.XmlSchema = ds.GetSchemaSerializable
@@ -1012,16 +1332,16 @@ Partial Public Class DsAutonymIssues
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property RankName() As String
+        Public Property Ranks() As String
             Get
                 Try 
-                    Return CType(Me(Me.tableMissingAutonyms.RankNameColumn),String)
+                    Return CType(Me(Me.tableMissingAutonyms.RanksColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'RankName' in table 'MissingAutonyms' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Ranks' in table 'MissingAutonyms' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableMissingAutonyms.RankNameColumn) = value
+                Me(Me.tableMissingAutonyms.RanksColumn) = value
             End Set
         End Property
         
@@ -1063,14 +1383,111 @@ Partial Public Class DsAutonymIssues
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsRankNameNull() As Boolean
-            Return Me.IsNull(Me.tableMissingAutonyms.RankNameColumn)
+        Public Function IsRanksNull() As Boolean
+            Return Me.IsNull(Me.tableMissingAutonyms.RanksColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetRankNameNull()
-            Me(Me.tableMissingAutonyms.RankNameColumn) = Global.System.Convert.DBNull
+        Public Sub SetRanksNull()
+            Me(Me.tableMissingAutonyms.RanksColumn) = Global.System.Convert.DBNull
+        End Sub
+    End Class
+    
+    '''<summary>
+    '''Represents strongly named DataRow class.
+    '''</summary>
+    Partial Public Class NoConceptAutonymsRow
+        Inherits Global.System.Data.DataRow
+        
+        Private tableNoConceptAutonyms As NoConceptAutonymsDataTable
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Friend Sub New(ByVal rb As Global.System.Data.DataRowBuilder)
+            MyBase.New(rb)
+            Me.tableNoConceptAutonyms = CType(Me.Table,NoConceptAutonymsDataTable)
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property NameGuid() As System.Guid
+            Get
+                Try 
+                    Return CType(Me(Me.tableNoConceptAutonyms.NameGuidColumn),Global.System.Guid)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'NameGuid' in table 'NoConceptAutonyms' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableNoConceptAutonyms.NameGuidColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property NameFull() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableNoConceptAutonyms.NameFullColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'NameFull' in table 'NoConceptAutonyms' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableNoConceptAutonyms.NameFullColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property NameParentFk() As System.Guid
+            Get
+                Try 
+                    Return CType(Me(Me.tableNoConceptAutonyms.NameParentFkColumn),Global.System.Guid)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'NameParentFk' in table 'NoConceptAutonyms' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableNoConceptAutonyms.NameParentFkColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsNameGuidNull() As Boolean
+            Return Me.IsNull(Me.tableNoConceptAutonyms.NameGuidColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetNameGuidNull()
+            Me(Me.tableNoConceptAutonyms.NameGuidColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsNameFullNull() As Boolean
+            Return Me.IsNull(Me.tableNoConceptAutonyms.NameFullColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetNameFullNull()
+            Me(Me.tableNoConceptAutonyms.NameFullColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsNameParentFkNull() As Boolean
+            Return Me.IsNull(Me.tableNoConceptAutonyms.NameParentFkColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetNameParentFkNull()
+            Me(Me.tableNoConceptAutonyms.NameParentFkColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -1132,6 +1549,42 @@ Partial Public Class DsAutonymIssues
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public ReadOnly Property Row() As MissingAutonymsRow
+            Get
+                Return Me.eventRow
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Action() As Global.System.Data.DataRowAction
+            Get
+                Return Me.eventAction
+            End Get
+        End Property
+    End Class
+    
+    '''<summary>
+    '''Row event argument class
+    '''</summary>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+    Public Class NoConceptAutonymsRowChangeEvent
+        Inherits Global.System.EventArgs
+        
+        Private eventRow As NoConceptAutonymsRow
+        
+        Private eventAction As Global.System.Data.DataRowAction
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub New(ByVal row As NoConceptAutonymsRow, ByVal action As Global.System.Data.DataRowAction)
+            MyBase.New
+            Me.eventRow = row
+            Me.eventAction = action
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Row() As NoConceptAutonymsRow
             Get
                 Return Me.eventRow
             End Get

@@ -3656,12 +3656,7 @@ Public Class IntegratorForm
     End Sub
 
     Private Sub ProcessAutonymsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProcessAutonymsToolStripMenuItem.Click
-        Windows.Forms.Cursor.Current = Cursors.WaitCursor
-        Try
-            BrNames.ProcessAutonymNames()
-        Catch ex As Exception
-            MsgBox("Error processing autonyms: " + ex.Message + " : " + ex.StackTrace)
-        End Try
-        Windows.Forms.Cursor.Current = Cursors.Default
+        Dim aFrom As New AutonymsForm
+        aFrom.ShowDialog()
     End Sub
 End Class

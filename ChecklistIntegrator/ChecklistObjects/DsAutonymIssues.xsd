@@ -26,7 +26,16 @@
               <xs:element name="NameGuid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnNameGuid" msprop:Generator_ColumnPropNameInRow="NameGuid" msprop:Generator_ColumnPropNameInTable="NameGuidColumn" msprop:Generator_UserColumnName="NameGuid" type="xs:string" minOccurs="0" />
               <xs:element name="NameFull" msprop:Generator_ColumnVarNameInTable="columnNameFull" msprop:Generator_ColumnPropNameInRow="NameFull" msprop:Generator_ColumnPropNameInTable="NameFullColumn" msprop:Generator_UserColumnName="NameFull" type="xs:string" minOccurs="0" />
               <xs:element name="NameCanonical" msprop:Generator_ColumnVarNameInTable="columnNameCanonical" msprop:Generator_ColumnPropNameInRow="NameCanonical" msprop:Generator_ColumnPropNameInTable="NameCanonicalColumn" msprop:Generator_UserColumnName="NameCanonical" type="xs:string" minOccurs="0" />
-              <xs:element name="RankName" msprop:Generator_ColumnVarNameInTable="columnRankName" msprop:Generator_ColumnPropNameInRow="RankName" msprop:Generator_ColumnPropNameInTable="RankNameColumn" msprop:Generator_UserColumnName="RankName" type="xs:string" minOccurs="0" />
+              <xs:element name="Ranks" msprop:Generator_ColumnVarNameInTable="columnRanks" msprop:Generator_ColumnPropNameInRow="Ranks" msprop:Generator_ColumnPropNameInTable="RanksColumn" msprop:Generator_UserColumnName="Ranks" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="NoConceptAutonyms" msprop:Generator_TableClassName="NoConceptAutonymsDataTable" msprop:Generator_TableVarName="tableNoConceptAutonyms" msprop:Generator_TablePropName="NoConceptAutonyms" msprop:Generator_RowDeletingName="NoConceptAutonymsRowDeleting" msprop:Generator_UserTableName="NoConceptAutonyms" msprop:Generator_RowChangingName="NoConceptAutonymsRowChanging" msprop:Generator_RowEvHandlerName="NoConceptAutonymsRowChangeEventHandler" msprop:Generator_RowDeletedName="NoConceptAutonymsRowDeleted" msprop:Generator_RowEvArgName="NoConceptAutonymsRowChangeEvent" msprop:Generator_RowChangedName="NoConceptAutonymsRowChanged" msprop:Generator_RowClassName="NoConceptAutonymsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NameGuid" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnNameGuid" msprop:Generator_ColumnPropNameInRow="NameGuid" msprop:Generator_ColumnPropNameInTable="NameGuidColumn" msprop:Generator_UserColumnName="NameGuid" type="xs:string" minOccurs="0" />
+              <xs:element name="NameFull" msprop:Generator_ColumnVarNameInTable="columnNameFull" msprop:Generator_ColumnPropNameInRow="NameFull" msprop:Generator_ColumnPropNameInTable="NameFullColumn" msprop:Generator_UserColumnName="NameFull" type="xs:string" minOccurs="0" />
+              <xs:element name="NameParentFk" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnNameParentFk" msprop:Generator_ColumnPropNameInRow="NameParentFk" msprop:Generator_ColumnPropNameInTable="NameParentFkColumn" msprop:Generator_UserColumnName="NameParentFk" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
