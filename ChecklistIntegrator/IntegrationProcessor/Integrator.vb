@@ -235,6 +235,9 @@ Public Class Integrator
                 'link up the relationships Fks based on first inserted provider name that matches this name
                 'BrNames.RefreshNameData(modifiedNames)
 
+                'check for autonym issues
+                BrNames.ProcessAutonymNames()
+
                 If Type = InterationTypeEnum.All Then curType = InterationTypeEnum.Concepts
             End If
 

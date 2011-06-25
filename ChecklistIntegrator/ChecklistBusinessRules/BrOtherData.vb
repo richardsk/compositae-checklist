@@ -83,7 +83,7 @@ Public Class BrOtherData
     End Function
 
     Public Shared Sub RefreshNameOtherData(ByVal nameGuid As String)
-        Dim ds As DataSet = ChecklistDataAccess.OtherData.GetProviderNameOtherData(nameGuid)
+        Dim ds As DataSet = ChecklistDataAccess.OtherData.GetProviderNameOtherDataToUpdate(nameGuid)
         Dim lastType As String = ""
         For Each row As DataRow In ds.Tables(0).Rows
             If Not row.IsNull("POtherDataType") Then

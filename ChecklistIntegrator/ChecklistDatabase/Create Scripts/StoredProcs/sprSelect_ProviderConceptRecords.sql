@@ -8,10 +8,30 @@ GO
 CREATE Procedure sprSelect_ProviderConceptRecords
 	@conceptPk int
 AS
-
-	select pc.*, pr.PRReferenceFk
-	from vwProviderConcept pc
-	left join vwProviderReference pr on pr.PRReferenceId = pc.PCAccordingToId and pr.ProviderPk = pc.ProviderPk
+	select p.ProviderName,
+		PCName1, 
+		PCAccordingTo, 
+		PCConceptVersion,
+		PCLinkStatus, 
+		PCMatchScore, 
+		PCConceptId, 
+		PCName1Id, 
+		PCAccordingToId, 
+		PCConceptFk, 
+		p.ProviderPk,
+		p.ProviderIsEditor,
+		PCPk, 
+		PCProviderImportFk, 
+		PCCreatedDate, 
+		PCCreatedBy, 
+		PCUpdatedDate, 
+		PCUpdatedBy,
+		pr.PRReferenceFk
+	from tblProviderConcept pc
+	inner join tblProviderImport pim on pim.ProviderImportPk = pc.PCProviderImportFk
+	inner join tblProvider p on p.ProviderPk = pim.ProviderImportProviderFk
+	left join tblProviderReference pr on pr.PRReferenceId = pc.PCAccordingToId 
+	left join tblProviderImport prim on prim.ProviderImportPk = pr.PRProviderImportFk and p.providerpk = prim.ProviderImportProviderFk
 	where PCConceptFk = @conceptPk
 
 GO

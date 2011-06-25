@@ -59,13 +59,13 @@ AS
 	end
 	
 	
-	--all standard output for this name and tpye will point to this record
-	--update so
-	--set OtherDataFk = @otherDataPk
-	--from tblStandardOutput so	
-	--left join vwProviderOtherData pod on pod.POtherDataTextPk = so.POtherDataFk
-	--left join vwProviderName pn on pn.PNNameId = pod.POtherDataRecordId and pod.ProviderPk = pn.ProviderPk
-	--where pn.PNNameFk = @recordFk and so.OtherTypeFk = @otherDataTypeFk
+	--all standard output for this name and type will point to this record
+	update so
+	set OtherDataFk = @otherDataPk
+	from tblStandardOutput so	
+	inner join vwProviderOtherData pod on pod.POtherDataTextPk = so.POtherDataFk
+	inner join vwProviderName pn on pn.PNNameId = pod.POtherDataRecordId and pod.ProviderPk = pn.ProviderPk
+	where pn.PNNameFk = @recordFk and so.OtherTypeFk = @otherDataTypeFk
 	
 	
 	select * from tblOtherData where OtherDataPk = @otherDataPk
