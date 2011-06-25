@@ -99,6 +99,26 @@ Public Class OtherData
         Return ds
     End Function
 
+    Public Shared Function GetProviderNameOtherDataToUpdate(ByVal nameGuid As String) As DataSet
+        Dim ds As New DataSet
+        Using cnn As New SqlConnection(ConnectionString)
+            cnn.Open()
+
+            Using cmd As SqlCommand = cnn.CreateCommand()
+                cmd.CommandText = "sprSelect_ProviderNameOtherDataToUpdate"
+                cmd.CommandType = CommandType.StoredProcedure
+                cmd.Parameters.Add("@nameGuid", SqlDbType.UniqueIdentifier).Value = Utility.GetDBGuid(nameGuid)
+
+                Dim da As New SqlDataAdapter(cmd)
+                da.Fill(ds)
+
+            End Using
+
+            If cnn.State <> ConnectionState.Closed Then cnn.Close()
+        End Using
+        Return ds
+    End Function
+
     Public Shared Function GetTransformations() As DataSet
         Dim ds As New DataSet
         Using cnn As New SqlConnection(ConnectionString)
