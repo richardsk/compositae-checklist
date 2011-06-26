@@ -1658,7 +1658,7 @@ Public Class IntegratorForm
                 If Save(True) Then
                     Windows.Forms.Cursor.Current = Cursors.WaitCursor
 
-                    BrNames.RefreshNameData(CurrentName("NameGuid").ToString, True) 'XXX false here as we have a set of concepts - no need to hit DB again
+                    Dim nds As DataSet = BrNames.RefreshNameData(CurrentName("NameGuid").ToString, True) 'XXX false here as we have a set of concepts - no need to hit DB again
 
                     'If ConceptDetailsTable IsNot Nothing Then
                     '    For Each row As DataRow In ConceptDetailsTable.Rows
@@ -1672,24 +1672,29 @@ Public Class IntegratorForm
                     '    Next
                     'End If
 
+                    Dim nameRow As DataRow = CurrentName
+                    If nds IsNot Nothing Then
+                        nameRow = nds.Tables(0).Rows(0)
+                    End If
+
                     'relationships
-                    NameData.RefreshNameRelationData(CurrentName("NameGuid").ToString, SessionState.CurrentUser.Login)
+                    NameData.RefreshNameRelationData(nameRow("NameGuid").ToString, SessionState.CurrentUser.Login)
 
                     'same basionym consideration
-                    If Not CurrentName.IsNull("NameBasionym") AndAlso CurrentName("NameBasionym").ToString.Length > 0 AndAlso _
-                        Not CurrentName.IsNull("NamePreferred") AndAlso CurrentName("NamePreferred").ToString.Length > 0 Then
+                    If Not nameRow.IsNull("NameBasionym") AndAlso nameRow("NameBasionym").ToString.Length > 0 AndAlso _
+                        Not nameRow.IsNull("NamePreferred") AndAlso nameRow("NamePreferred").ToString.Length > 0 Then
 
                         For Each row As DataRow In ConceptRelRecords.Tables(0).Rows
                             If row("ConceptRelationshipRelationshipFk") = ChecklistObjects.RelationshipType.RelationshipTypePreferred Then
                                 Dim accTofk As String = Nothing
                                 If Not row.IsNull("ConceptAccordingToFk") Then accTofk = row("ConceptAccordingToFk").ToString
-                                BrNames.UpdateNamesWithSameBasionym(CurrentName("NameGuid").ToString, CurrentName("NamePreferredFk").ToString, accTofk)
+                                BrNames.UpdateNamesWithSameBasionym(nameRow("NameGuid").ToString, nameRow("NamePreferredFk").ToString, accTofk)
                                 Exit For
                             End If
                         Next
                     End If
 
-                    RefreshNameScreen(CurrentName("NameGuid").ToString, True)
+                    RefreshNameScreen(nameRow("NameGuid").ToString, True)
 
                     Windows.Forms.Cursor.Current = Cursors.WaitCursor
                 Else

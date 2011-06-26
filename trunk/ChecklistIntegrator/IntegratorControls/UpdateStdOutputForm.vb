@@ -5,7 +5,9 @@ Public Class UpdateStdOutputForm
     Private Message As String = ""
     Private Errors As String = ""
     Private Progress As Integer = 0
-    Private SelProvider As Provider
+
+    Private SelectedProvider As Provider
+    Public InitialProviderId As Integer = -1
 
     Public AutoRun As Boolean = False
 
@@ -15,11 +17,16 @@ Public Class UpdateStdOutputForm
         allP.IdAsInt = -1
         providerCombo.Items.Add(allP)
 
+        Dim selIndex As Integer = 0
         Dim ps As Provider() = ChecklistDataAccess.ProviderData.GetProviders()
         For Each p As Provider In ps
-            providerCombo.Items.Add(p)
+            Dim idx As Integer = providerCombo.Items.Add(p)
+
+            If InitialProviderId <> -1 AndAlso InitialProviderId = p.IdAsInt Then
+                selIndex = idx
+            End If
         Next
-        providerCombo.SelectedIndex = 0
+        providerCombo.SelectedIndex = selIndex
 
         If AutoRun Then
             GoButton.Visible = False
@@ -73,7 +80,7 @@ Public Class UpdateStdOutputForm
 
     Public Sub UpdateData()
         Dim id As Integer = -1
-        If SelProvider IsNot Nothing Then id = SelProvider.IdAsInt
+        If SelectedProvider IsNot Nothing Then id = SelectedProvider.IdAsInt
 
         Dim dt As DataTable = ChecklistDataAccess.OtherData.GetOtherDataForUpdate(id)
 
@@ -98,7 +105,7 @@ Public Class UpdateStdOutputForm
     End Sub
 
     Private Sub providerCombo_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles providerCombo.SelectedIndexChanged
-        If providerCombo.SelectedItem IsNot Nothing Then SelProvider = providerCombo.SelectedItem
+        If providerCombo.SelectedItem IsNot Nothing Then SelectedProvider = providerCombo.SelectedItem
     End Sub
 
     Private Sub closeButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles closeButton.Click
