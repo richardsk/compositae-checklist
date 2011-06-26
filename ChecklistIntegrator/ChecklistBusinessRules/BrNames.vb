@@ -116,11 +116,11 @@ Public Class BrNames
     ''' </summary>
     ''' <param name="nameGuid"></param>
     ''' <remarks></remarks>
-    Public Shared Sub RefreshNameData(ByVal nameGuid As String, ByVal includeConcepts As Boolean)
+    Public Shared Function RefreshNameData(ByVal nameGuid As String, ByVal includeConcepts As Boolean) As DataSet
 
         'get name
         Dim ds As DataSet = NameData.GetNameDs(Nothing, nameGuid)
-        If ds.Tables(0).Rows.Count = 0 Then Return 'has been deprecated
+        If ds.Tables(0).Rows.Count = 0 Then Return Nothing 'has been deprecated
 
         Dim updateName As DataRow = ds.Tables(0).Rows(0)
 
@@ -182,7 +182,10 @@ Public Class BrNames
             NameData.RefreshNameRelationData(nameGuid, SessionState.CurrentUser.Login)
 
         End If
-    End Sub
+
+        ds = NameData.GetNameDs(Nothing, nameGuid)
+        Return ds
+    End Function
 
     Public Shared Sub UpdateConsensusAuthors(ByVal updateName As Name)
 

@@ -7,7 +7,6 @@ Public Class IntegrationProcessForm
     Private Progress As Integer = 0
     Private Message As String = ""
 
-
     Private Sub IntegrationProcessForm_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         If Not CloseButton.Enabled Then
             e.Cancel = True
@@ -80,12 +79,15 @@ Public Class IntegrationProcessForm
 
             'todo - do we need a timer to check the integration process/thread is still running?
             ' at present it relies on a status message when the Integrator is complete
-        End If
+            End If
     End Sub
 
     Private Sub UpdateStdOutputRecords()
         Dim soFm As New IntegratorControls.UpdateStdOutputForm
         soFm.AutoRun = True
+        If IntegProcessor.SelProvider IsNot Nothing Then
+            soFm.InitialProviderId = IntegProcessor.SelProvider.IdAsInt
+        End If
         soFm.ShowDialog()
     End Sub
 

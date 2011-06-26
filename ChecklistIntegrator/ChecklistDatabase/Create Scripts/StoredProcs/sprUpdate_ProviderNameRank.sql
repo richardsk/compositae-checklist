@@ -17,14 +17,19 @@ AS
 	
 	declare  @pnRank nvarchar(100), @curRankFk int
 	
-	select @pnRank = lower(PNNameRank), @curRankFk = PNNameRankFk
+	select @pnRank = rtrim(ltrim(lower(PNNameRank))), @curRankFk = PNNameRankFk
 	from tblProviderName 
 	where PNPk = @providerNamePk
-	
+
 	if (@curRankFk is not null) 
 	begin
 		select @curRankFk
 		return
+	end
+	
+	if (substring(@pnRank, len(@pnrank) - 1, 1) = '.')
+	begin
+		set @pnRank = SUBSTRING(@pnRank, 1, len(@pnRank) - 1)
 	end
 	
 	declare @ranks table(Counter int identity, RankPk int, KnownRanks nvarchar(500))
