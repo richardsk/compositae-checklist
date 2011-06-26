@@ -236,7 +236,7 @@ Public Class Integrator
                 'BrNames.RefreshNameData(modifiedNames)
 
                 'check for autonym issues
-                BrNames.ProcessAutonymNames()
+                BrNames.ProcessAutonymIssues(True, True, True)
 
                 If Type = InterationTypeEnum.All Then curType = InterationTypeEnum.Concepts
             End If
