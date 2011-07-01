@@ -89,6 +89,7 @@ Public Class BrOtherData
             If Not row.IsNull("POtherDataType") Then
                 If row("POtherDataType").ToString <> lastType And Not row.IsNull("OutputTypeFk") Then
                     UpdateConsensusOtherData(nameGuid, CInt(row("OutputTypeFk")), row("OtherDataFk").ToString)
+                    lastType = row("POtherDataType").ToString
                 End If
             End If
         Next

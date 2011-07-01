@@ -500,5 +500,8 @@
     <Build Include="Create Scripts\StoredProcs\sprUpdate_ConceptTopProvider.sql">
       <SubType>Code</SubType>
     </Build>
+    <Build Include="Create Scripts\StoredProcs\sprUpdate_DistributionTable.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
   </ItemGroup>
 </Project>

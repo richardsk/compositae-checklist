@@ -100,7 +100,11 @@ AS
 		@nameBlocking,
 		@nameBlockingFk
 
-	
+		
+	--update flat name
+    INSERT tblFlatName
+    EXEC p_sprSelect_Name_ToRoot_003 @NameGuid
+
 
 GO
 
