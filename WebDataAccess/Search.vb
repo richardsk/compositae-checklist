@@ -132,16 +132,17 @@ Public Class Search
                     " n.namepublishedin, n.nameorthography, " + _
                     " n.namebasionymauthors, n.namecombinationauthors, " + _
                     " n.NamePreferred, " + _
-                    " dbo.fnGetFullName(n.NameGUID, 1,0,1,0,0) as NameFullFormatted, " + _
                     " tblrank.* " + _
                     " from tblName n inner join tblrank on rankpk = n.namerankfk " + _
                     " left join tblname cn on cn.nameparentfk = n.nameguid and cn.namepreferredfk = cn.nameguid " + _
                     " inner join tblProviderName pn on pn.pnnamefk = n.nameguid " + _
                     " inner join tblProviderImport pim on pim.ProviderImportPk = pn.pnproviderimportfk " + _
                     " inner join tblProvider p on p.providerpk = pim.providerimportproviderfk "
+                '" dbo.fnGetFullName(n.NameGUID, 1,0,1,0,0) as NameFullFormatted, " + _
 
                 If hasDist Then
-                    sql = "set arithabort on; " + sql + " inner join tblOtherData o on n.NameGUID = o.RecordFk "
+                    'sql = "set arithabort on; " + sql + " inner join tblOtherData o on n.NameGUID = o.RecordFk "
+                    sql += " inner join tblDistribution d on d.NameGuid = n.NameGuid "
                 End If
 
                 sql += " where ("
@@ -159,20 +160,7 @@ Public Class Search
                         If setting.IsAnd Then sql += ") and ("
                         If setting.IsOr Then sql += " or "
 
-                        'Dim tg As TDWGGeo = Nothing 
-                        'If setting.SearchField = "TDWGLevel1" Then
-                        '    tg = Distribution.GetTDWGeoByName(TDWGGeoLevel.TDWG1, setting.SearchText)
-                        'ElseIf setting.SearchField = "TDWGLevel2" Then
-                        '    tg = Distribution.GetTDWGeoByName(TDWGGeoLevel.TDWG2, setting.SearchText)
-                        'ElseIf setting.SearchField = "TDWGLevel3" Then
-                        '    tg = Distribution.GetTDWGeoByName(TDWGGeoLevel.TDWG3, setting.SearchText)
-                        'ElseIf setting.SearchField = "TDWGLevel4" Then
-                        '    tg = Distribution.GetTDWGeoByName(TDWGGeoLevel.TDWG4, setting.SearchText)
-                        'End If
-
-                        'sql += " (o.OtherDataXml.exist('/DataSet/Biostat[contains(@region, """ + tg.Code + """)]') = 1 " + _
-                        '    " and o.OtherDataXml.exist('/DataSet/Biostat[@Occurrence=""Present""]') = 1) "
-
+                        Dim where As String = "(d.GeoRegion = '" + setting.SearchText + "'"
 
                         Dim level As TDWGGeoLevel = TDWGGeoLevel.TDWG4
                         If setting.SearchField = "TDWGLevel1" Then
@@ -185,19 +173,44 @@ Public Class Search
 
                         Dim tgs As List(Of WebDataAccess.TDWGGeo) = WebDataAccess.Distribution.Gazetteer.GetGeoRegions(level, setting.SearchText)
 
-                        Dim where As String = "("
+
+                'Dim tg As TDWGGeo = Nothing 
+                'If setting.SearchField = "TDWGLevel1" Then
+                '    tg = Distribution.GetTDWGeoByName(TDWGGeoLevel.TDWG1, setting.SearchText)
+                'ElseIf setting.SearchField = "TDWGLevel2" Then
+                '    tg = Distribution.GetTDWGeoByName(TDWGGeoLevel.TDWG2, setting.SearchText)
+                'ElseIf setting.SearchField = "TDWGLevel3" Then
+                '    tg = Distribution.GetTDWGeoByName(TDWGGeoLevel.TDWG3, setting.SearchText)
+                'ElseIf setting.SearchField = "TDWGLevel4" Then
+                '    tg = Distribution.GetTDWGeoByName(TDWGGeoLevel.TDWG4, setting.SearchText)
+                'End If
+
+                'sql += " (o.OtherDataXml.exist('/DataSet/Biostat[contains(@region, """ + tg.Code + """)]') = 1 " + _
+                '    " and o.OtherDataXml.exist('/DataSet/Biostat[@Occurrence=""Present""]') = 1) "
+
                         For Each tg As TDWGGeo In tgs
-                            If where.Length > 1 Then where += " or "
+                            If tg.Level = TDWGGeoLevel.TDWG1 Then where += " or d.GeoRegion = '" + tg.Code + "'"
+                            If tg.Level = TDWGGeoLevel.TDWG2 Then where += " or d.GeoRegion = '" + tg.Code + "'"
+                            If tg.Level = TDWGGeoLevel.TDWG3 Then where += " or d.GeoRegion = '" + tg.Code + "'"
+                            If tg.Level = TDWGGeoLevel.TDWG4 Then where += " or d.GeoRegion = '" + tg.Code + "'"
 
-                            Dim lvl As String = ""
-                            If tg.Level = TDWGGeoLevel.TDWG1 Then lvl = "@L1"
-                            If tg.Level = TDWGGeoLevel.TDWG2 Then lvl = "@L2"
-                            If tg.Level = TDWGGeoLevel.TDWG3 Then lvl = "@L3"
-                            If tg.Level = TDWGGeoLevel.TDWG4 Then lvl = "@L4"
-
-                            where += " o.OtherDataXml.exist('/DataSet/Biostat[contains(" + lvl + ", """ + tg.Code + """)]') = 1 "
                         Next
-                        where += ") and o.OtherDataXml.exist('/DataSet/Biostat[@Occurrence=""Present""]') = 1 "
+
+                        where += ") and d.Occurrence like 'Present%' "
+
+                        'For Each tg As TDWGGeo In tgs
+                        'If where.Length > 1 Then where += " or "
+
+                        'Dim lvl As String = ""
+                        'If tg.Level = TDWGGeoLevel.TDWG1 Then lvl = "@L1"
+                        'If tg.Level = TDWGGeoLevel.TDWG2 Then lvl = "@L2"
+                        'If tg.Level = TDWGGeoLevel.TDWG3 Then lvl = "@L3"
+                        'If tg.Level = TDWGGeoLevel.TDWG4 Then lvl = "@L4"
+
+                        'where += " o.OtherDataXml.exist('/DataSet/Biostat[contains(" + lvl + ", """ + tg.Code + """)]') = 1 "
+                        'Next
+
+                        'where += ") and o.OtherDataXml.exist('/DataSet/Biostat[@Occurrence=""Present""]') = 1 "
 
                         sql += where
                     Else
@@ -428,28 +441,34 @@ Public Class Search
                     " tblrank.* " + _
                     " from tblName n inner join tblrank on rankpk = n.namerankfk " + _
                     " left join tblname cn on cn.nameparentfk = n.nameguid and cn.namepreferredfk = cn.nameguid " + _
-                    " inner join tblOtherData on n.NameGUID = RecordFk where "
+                    " inner join tblDistribution d on d.NameGuid = n.NameGuid where "
+                    '" inner join tblOtherData on n.NameGUID = RecordFk where "
 
-   
                 Dim where As String = "("
                 For Each tg As TDWGGeo In searchAreas
                     If where.Length > 1 Then where += " or "
 
-                    Dim lvl As String = ""
-                    If tg.Level = TDWGGeoLevel.TDWG1 Then lvl = "@L1"
-                    If tg.Level = TDWGGeoLevel.TDWG2 Then lvl = "@L2"
-                    If tg.Level = TDWGGeoLevel.TDWG3 Then lvl = "@L3"
-                    If tg.Level = TDWGGeoLevel.TDWG4 Then lvl = "@L4"
+                    If tg.Level = TDWGGeoLevel.TDWG1 Then where += "d.GeoRegion = '" + tg.Code + "'"
+                    If tg.Level = TDWGGeoLevel.TDWG2 Then where += "d.GeoRegion = '" + tg.Code + "'"
+                    If tg.Level = TDWGGeoLevel.TDWG3 Then where += "d.GeoRegion = '" + tg.Code + "'"
+                    If tg.Level = TDWGGeoLevel.TDWG4 Then where += "d.GeoRegion = '" + tg.Code + "'"
 
-                    where += " OtherDataXml.exist('/DataSet/Biostat[contains(" + lvl + ", """ + tg.Code + """)]') = 1 "
+                    'Dim lvl As String = ""
+                    'If tg.Level = TDWGGeoLevel.TDWG1 Then lvl = "@L1"
+                    'If tg.Level = TDWGGeoLevel.TDWG2 Then lvl = "@L2"
+                    'If tg.Level = TDWGGeoLevel.TDWG3 Then lvl = "@L3"
+                    'If tg.Level = TDWGGeoLevel.TDWG4 Then lvl = "@L4"
 
-                    If lvl = "@L2" And tg.Code.Contains(",") Then
-                        'add code up to ,
-                        where += " or OtherDataXml.exist('/DataSet/Biostat[" + lvl + "=""" + tg.Code.Substring(0, tg.Code.IndexOf(",")) + """]') = 1 "
-                    End If
+                    'where += " OtherDataXml.exist('/DataSet/Biostat[contains(" + lvl + ", """ + tg.Code + """)]') = 1 "
+
+                    'If lvl = "@L2" And tg.Code.Contains(",") Then
+                    '    'add code up to ,
+                    '    where += " or OtherDataXml.exist('/DataSet/Biostat[" + lvl + "=""" + tg.Code.Substring(0, tg.Code.IndexOf(",")) + """]') = 1 "
+                    'End If
                 Next
 
-                where += ") and OtherDataXml.exist('/DataSet/Biostat[@Occurrence=""Present""]') = 1 "
+                'where += ") and OtherDataXml.exist('/DataSet/Biostat[@Occurrence=""Present""]') = 1 "
+                where += ") and d.Occurrence like 'Present%' "
 
                 sql += where
                 sql += " order by RankSort, n.NameFull"

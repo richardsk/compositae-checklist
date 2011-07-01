@@ -67,7 +67,23 @@ AS
 	inner join vwProviderName pn on pn.PNNameId = pod.POtherDataRecordId and pod.ProviderPk = pn.ProviderPk
 	where pn.PNNameFk = @recordFk and so.OtherTypeFk = @otherDataTypeFk
 	
+	--update distribution table
+	set arithabort on
+	delete 	tblDistribution where nameguid = @recordFk
+
+	insert tblDistribution
+	select distinct recordFk, 
+		OD.data.value('./@L1', 'nvarchar(100)') as L1,
+		OD.data.value('./@L2', 'nvarchar(100)') as L2,
+		OD.data.value('./@L3', 'nvarchar(100)') as L3,
+		OD.data.value('./@L4', 'nvarchar(100)') as L4,
+		OD.data.value('./@region', 'nvarchar(100)') as Region, 
+		OD.data.value('./@Occurrence', 'nvarchar(100)') as Occurrence
+	from tblOtherData 
+	cross apply OtherDataXml.nodes('/DataSet/Biostat') as OD(data) 
+	where RecordFk = @recordFk
 	
+
 	select * from tblOtherData where OtherDataPk = @otherDataPk
 
 GO

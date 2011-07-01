@@ -101,6 +101,10 @@ AS
 	update tblName
 	set NameFull = dbo.fnGetFullName(NameGuid, 0, 0, 1, 0, 0)
 	where NameGuid = @nameGuid
+	
+	--update flat name
+    INSERT tblFlatName
+    EXEC p_sprSelect_Name_ToRoot_003 @NameGuid
 
 GO
 
