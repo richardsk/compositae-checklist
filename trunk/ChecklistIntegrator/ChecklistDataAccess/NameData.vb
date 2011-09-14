@@ -1019,11 +1019,17 @@ Public Class NameData
             Using cmd As SqlCommand = cnn.CreateCommand()
                 cmd.CommandText = "sprSelect_AutonymIssues"
                 cmd.CommandType = CommandType.StoredProcedure
+                'cmd.Parameters.Add("@missingOnly", SqlDbType.Bit).Value = missingOnly
 
                 Dim da As New SqlDataAdapter(cmd)
+
+                'If Not missingOnly Then
                 da.TableMappings.Add("Table", "UnacceptedAutonyms")
                 da.TableMappings.Add("Table1", "NoConceptAutonyms")
                 da.TableMappings.Add("Table2", "MissingAutonyms")
+                'Else
+                'da.TableMappings.Add("Table", "MissingAutonyms")
+                'End If
 
                 da.Fill(ds)
             End Using

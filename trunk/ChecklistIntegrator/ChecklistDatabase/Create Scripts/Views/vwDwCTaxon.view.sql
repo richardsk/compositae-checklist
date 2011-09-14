@@ -39,7 +39,8 @@ select c.ConceptLSID as taxonID,
 	gn.flatnamecanonical as genus,
 	sgn.flatnamecanonical as subgenus,
 	sn.flatnamecanonical as specificEpithet,
-	isn.flatnamecanonical as infraspecificEpithet,
+	--isn.flatnamecanonical as infraspecificEpithet,
+	case when r.ranksort > 4200 then n.namecanonical else '' end as infraspecificEpithet,
 	r.RankName as TaxonRank,
 	n.NameRank as VerbatimTaxonRank,
 	n.NameAuthors as ScientificNameAuthorship,
@@ -49,7 +50,7 @@ select c.ConceptLSID as taxonID,
 	case when n.nameillegitimate = 1 then 'nom. illeg.; ' else '' end +
 	case when n.namenomnotes is null then '' else n.namenomnotes end
 	as NomenclaturalStatus,
-	n.NameNotes as TaxonRemarks,
+	cast(n.NameNotes as nvarchar(4000)) as TaxonRemarks,
 	n.NameUpdatedDate as Modified,
 	'en' as Language,
 	'All proprietary rights to the intellectual property in the Data remain with the Provider as its sole property. All proprietary rights to the intellectual property in the Combined Data remain with the Global Compositae Checklist project, The International Compositae Alliance and all Providers as their sole property.' as Rights,
@@ -67,5 +68,5 @@ left join tblConceptRelationship pcr on pcr.ConceptRelationshipConcept1Fk = c.Co
 left join tblflatname gn on gn.flatnameseedname = n.NameGUID and gn.flatnamerankname = 'genus'
 left join tblflatname sgn on sgn.flatnameseedname = n.NameGUID and sgn.flatnamerankname = 'subgenus'
 left join tblflatname sn on sn.flatnameseedname = n.NameGUID and sn.flatnamerankname = 'species'
-left join tblflatname isn on isn.flatnameseedname = n.NameGUID and isn.flatnamerankname in 
-	('biovar','cultivar','forma','forma specialis','graft hybrid','hybrid formula','intergen hybrid','intragen hybrid','phagovar','pathovar','serovar','ß','subforma','subspecies','subvariety','variety','α','γ','δ','tax. infrasp.','nothosubspecies','nothovariety','lus','e','proles','[infrasp.unranked]','convar','race','pars.','nm.','mut.')
+--left join tblflatname isn on isn.flatnameseedname = n.NameGUID and isn.flatnamerankname in 
+--	('biovar','cultivar','forma','forma specialis','graft hybrid','hybrid formula','intergen hybrid','intragen hybrid','phagovar','pathovar','serovar','ß','subforma','subspecies','subvariety','variety','α','γ','δ','tax. infrasp.','nothosubspecies','nothovariety','lus','e','proles','[infrasp.unranked]','convar','race','pars.','nm.','mut.')

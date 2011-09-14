@@ -634,6 +634,10 @@ Partial Public Class DsAutonymIssues
         
         Private columnRanks As Global.System.Data.DataColumn
         
+        Private columnNameBasionymAuthors As Global.System.Data.DataColumn
+        
+        Private columnNameCombinationAuthors As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -702,6 +706,22 @@ Partial Public Class DsAutonymIssues
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NameBasionymAuthorsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNameBasionymAuthors
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property NameCombinationAuthorsColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnNameCombinationAuthors
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -738,9 +758,9 @@ Partial Public Class DsAutonymIssues
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddMissingAutonymsRow(ByVal NameGuid As System.Guid, ByVal NameFull As String, ByVal NameCanonical As String, ByVal Ranks As String) As MissingAutonymsRow
+        Public Overloads Function AddMissingAutonymsRow(ByVal NameGuid As System.Guid, ByVal NameFull As String, ByVal NameCanonical As String, ByVal Ranks As String, ByVal NameBasionymAuthors As String, ByVal NameCombinationAuthors As String) As MissingAutonymsRow
             Dim rowMissingAutonymsRow As MissingAutonymsRow = CType(Me.NewRow,MissingAutonymsRow)
-            Dim columnValuesArray() As Object = New Object() {NameGuid, NameFull, NameCanonical, Ranks}
+            Dim columnValuesArray() As Object = New Object() {NameGuid, NameFull, NameCanonical, Ranks, NameBasionymAuthors, NameCombinationAuthors}
             rowMissingAutonymsRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowMissingAutonymsRow)
             Return rowMissingAutonymsRow
@@ -773,6 +793,8 @@ Partial Public Class DsAutonymIssues
             Me.columnNameFull = MyBase.Columns("NameFull")
             Me.columnNameCanonical = MyBase.Columns("NameCanonical")
             Me.columnRanks = MyBase.Columns("Ranks")
+            Me.columnNameBasionymAuthors = MyBase.Columns("NameBasionymAuthors")
+            Me.columnNameCombinationAuthors = MyBase.Columns("NameCombinationAuthors")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -786,6 +808,10 @@ Partial Public Class DsAutonymIssues
             MyBase.Columns.Add(Me.columnNameCanonical)
             Me.columnRanks = New Global.System.Data.DataColumn("Ranks", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnRanks)
+            Me.columnNameBasionymAuthors = New Global.System.Data.DataColumn("NameBasionymAuthors", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNameBasionymAuthors)
+            Me.columnNameCombinationAuthors = New Global.System.Data.DataColumn("NameCombinationAuthors", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnNameCombinationAuthors)
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1347,6 +1373,37 @@ Partial Public Class DsAutonymIssues
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property NameBasionymAuthors() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableMissingAutonyms.NameBasionymAuthorsColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'NameBasionymAuthors' in table 'MissingAutonyms' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableMissingAutonyms.NameBasionymAuthorsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property NameCombinationAuthors() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableMissingAutonyms.NameCombinationAuthorsColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'NameCombinationAuthors' in table 'MissingAutonyms' is DBNul"& _ 
+                            "l.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableMissingAutonyms.NameCombinationAuthorsColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsNameGuidNull() As Boolean
             Return Me.IsNull(Me.tableMissingAutonyms.NameGuidColumn)
         End Function
@@ -1391,6 +1448,30 @@ Partial Public Class DsAutonymIssues
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetRanksNull()
             Me(Me.tableMissingAutonyms.RanksColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsNameBasionymAuthorsNull() As Boolean
+            Return Me.IsNull(Me.tableMissingAutonyms.NameBasionymAuthorsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetNameBasionymAuthorsNull()
+            Me(Me.tableMissingAutonyms.NameBasionymAuthorsColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsNameCombinationAuthorsNull() As Boolean
+            Return Me.IsNull(Me.tableMissingAutonyms.NameCombinationAuthorsColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetNameCombinationAuthorsNull()
+            Me(Me.tableMissingAutonyms.NameCombinationAuthorsColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
