@@ -598,6 +598,8 @@ Public Class BrNames
                                     ' should be [Genus] [species (canonical)] [rankname] [canonical]
                                     pn.PNNameCanonical = row.NameCanonical
                                     pn.PNNameRank = rnk.Name
+                                    If Not row.IsNameBasionymAuthorsNull Then pn.PNBasionymAuthors = row.NameBasionymAuthors
+                                    If Not row.IsNameCombinationAuthorsNull Then pn.PNCombinationAuthors = row.NameCombinationAuthors
                                     pn.PNLinkStatus = LinkStatus.Inserted.ToString()
 
                                     Dim sysImp As ProviderImport = BrUser.GetSystemProviderImport()
