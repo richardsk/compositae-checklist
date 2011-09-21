@@ -155,32 +155,36 @@ Public Class BrProviderConcepts
         Dim cr As ConceptRelationship
         If pcr.PCRConceptRelationshipFk Is Nothing Then 'new concept rel
             cr = ConceptData.InsertConceptRelationshipFromProviderConceptRelationship(pcr.IdAsInt, SessionState.CurrentUser.Login)
-            pcr.PCRConceptRelationshipFk = cr.Id
-            ConceptData.InsertUpdateProviderConceptRelationship(Nothing, pcr, SessionState.CurrentUser.Login)
+            If cr IsNot Nothing Then
+                pcr.PCRConceptRelationshipFk = cr.Id
+                ConceptData.InsertUpdateProviderConceptRelationship(Nothing, pcr, SessionState.CurrentUser.Login)
+            End If
         Else
             cr = ConceptData.GetConceptRelationship(pcr.PCRConceptRelationshipFk)
         End If
 
-        'deprecate old concept relationship??
-        If existingCRGuid IsNot Nothing AndAlso existingCRGuid.Length > 0 Then
-            Dim oldCr As ConceptRelationship = ConceptData.GetConceptRelationship(existingCRGuid)
-            ConceptData.DeleteConceptRelationship(oldCr.ConceptRelationshipLSID, cr.ConceptRelationshipLSID, SessionState.CurrentUser.Login)
-        End If
+        If cr IsNot Nothing Then
+            'deprecate old concept relationship??
+            If existingCRGuid IsNot Nothing AndAlso existingCRGuid.Length > 0 Then
+                Dim oldCr As ConceptRelationship = ConceptData.GetConceptRelationship(existingCRGuid)
+                ConceptData.DeleteConceptRelationship(oldCr.ConceptRelationshipLSID, cr.ConceptRelationshipLSID, SessionState.CurrentUser.Login)
+            End If
 
-        If pc.PCConceptFk = -1 Then 'new concept
-            pc.PCConceptFk = cr.ConceptRelationshipConcept1Fk
-            ConceptData.InsertUpdateSystemProviderConcept(Nothing, pc, SessionState.CurrentUser.Login)
-        End If
+            If pc.PCConceptFk = -1 Then 'new concept
+                pc.PCConceptFk = cr.ConceptRelationshipConcept1Fk
+                ConceptData.InsertUpdateSystemProviderConcept(Nothing, pc, SessionState.CurrentUser.Login)
+            End If
 
-        If pcTo.PCConceptFk = -1 Then 'new concept
-            pcTo.PCConceptFk = cr.ConceptRelationshipConcept2Fk
-            ConceptData.InsertUpdateSystemProviderConcept(Nothing, pcTo, SessionState.CurrentUser.Login)
-        End If
+            If pcTo.PCConceptFk = -1 Then 'new concept
+                pcTo.PCConceptFk = cr.ConceptRelationshipConcept2Fk
+                ConceptData.InsertUpdateSystemProviderConcept(Nothing, pcTo, SessionState.CurrentUser.Login)
+            End If
 
-        BrConcepts.RefreshConceptData(pc.PCConceptFk) ', SessionState.CurrentUser.Login)
-        BrConcepts.RefreshConceptData(pcTo.PCConceptFk) ', SessionState.CurrentUser.Login)
-        BrConcepts.RefreshConceptRelationshipData(cr.Id)
-        BrNames.RefreshNameData(name1Fk, False) ' SessionState.CurrentUser.Login)
+            BrConcepts.RefreshConceptData(pc.PCConceptFk) ', SessionState.CurrentUser.Login)
+            BrConcepts.RefreshConceptData(pcTo.PCConceptFk) ', SessionState.CurrentUser.Login)
+            BrConcepts.RefreshConceptRelationshipData(cr.Id)
+            BrNames.RefreshNameData(name1Fk, False) ' SessionState.CurrentUser.Login)
+        End If
     End Sub
 
     ''' <summary>
