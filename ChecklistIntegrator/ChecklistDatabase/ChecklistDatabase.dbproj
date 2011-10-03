@@ -483,6 +483,9 @@
     <NotInBuild Include="Create Scripts\StoredProcs\sprSelect_ProviderNameOtherDataToUpdate.sql">
       <SubType>NotInBuild</SubType>
     </NotInBuild>
+    <NotInBuild Include="Create Scripts\Functions\fnGetPreferredNameReason.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
   </ItemGroup>
   <ItemGroup>
     <BuildContributorArgument Include="OutDir=$(OutDir)" />

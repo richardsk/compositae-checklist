@@ -15,7 +15,7 @@ Partial Class Controls_ConsensusControl
 
 
     Public Sub Display()
-        Dim SelName As Name = NameData.GetName(Nothing, Utility.NameID(Request))
+        Dim SelName As Name = NameData.GetName(Nothing, WebDataAccess.Utility.NameID(Request))
 
         'map
         Dim d As New Distribution
@@ -37,7 +37,7 @@ Partial Class Controls_ConsensusControl
         Dim validation As New Generic.Dictionary(Of String, String)
 
         Fields.Add(Global.Resources.Resource.Name, SelName.NameFullFormatted)
-        validation.Add(Global.Resources.Resource.Name, Utility.GetValidationImage(pn, "PNNameFull"))
+        validation.Add(Global.Resources.Resource.Name, WebDataAccess.Utility.GetValidationImage(pn, "PNNameFull"))
 
         Dim ris As ReferenceRIS = ReferenceData.GetReferenceRISByReference(SelName.NameReferenceFk)
         Dim pubText As String = ""
@@ -74,10 +74,10 @@ Partial Class Controls_ConsensusControl
         If pubText IsNot Nothing AndAlso pubText.Length > 0 Then
             If std Then
                 Fields.Add(Global.Resources.Resource.Published, pubText)
-                validation.Add(Global.Resources.Resource.Published, Utility.GetValidationImage(pn, "PNPublishedIn"))
+                validation.Add(Global.Resources.Resource.Published, WebDataAccess.Utility.GetValidationImage(pn, "PNPublishedIn"))
             Else
                 Fields.Add(Global.Resources.Resource.PublishedNonStandard, pubText)
-                validation.Add(Global.Resources.Resource.PublishedNonStandard, Utility.GetValidationImage(pn, "PNPublishedIn"))
+                validation.Add(Global.Resources.Resource.PublishedNonStandard, WebDataAccess.Utility.GetValidationImage(pn, "PNPublishedIn"))
             End If
         End If
 
@@ -86,15 +86,15 @@ Partial Class Controls_ConsensusControl
             '          If concepts.Tables.Count > 0 Then
             'For Each row As DataRow In concepts.Tables(0).Rows
             'If row("ConceptRelationshipRelationship").ToString = "has preferred name" Then
-            'Dim lnk As String = Utility.GetLiteratureLinkHtml(row("ConceptAccordingToFk").ToString, Global.Resources.Resource.Concept_According_To) ' row("ConceptAccordingTo").ToString)
-            Dim lnk As String = "<a style='color:Black' href='" + Utility.GetDefaultPageUrl(Request, "2") + "&nameId=" + SelName.Id + "'>" + Global.Resources.Resource.Concept_According_To + "</a>"
+            'Dim lnk As String = WebDataAccess.Utility.GetLiteratureLinkHtml(row("ConceptAccordingToFk").ToString, Global.Resources.Resource.Concept_According_To) ' row("ConceptAccordingTo").ToString)
+            Dim lnk As String = "<a style='color:Black' href='" + WebDataAccess.Utility.GetDefaultPageUrl(Request, "2") + "&nameId=" + SelName.Id + "'>" + Global.Resources.Resource.Concept_According_To + "</a>"
             Fields.Add(Global.Resources.Resource.Status, "<span style='color:green'>ACCEPTED </span>(" + lnk + ")")
             'Exit For
             'End If
             '    Next
             'End If
         ElseIf SelName.NamePreferredFk IsNot Nothing Then
-            Fields.Add(Global.Resources.Resource.Status, "<span style='color:Red'>SYNONYM</span> of " + Utility.GetNameLinkHtml(Request, SelName.NamePreferredFk, SelName.NamePreferredFormatted, "0"))
+            Fields.Add(Global.Resources.Resource.Status, "<span style='color:Red'>SYNONYM</span> of " + WebDataAccess.Utility.GetNameLinkHtml(Request, SelName.NamePreferredFk, SelName.NamePreferredFormatted, "0"))
         Else
             Fields.Add(Global.Resources.Resource.Status, "[No Concept]")
         End If
@@ -130,12 +130,12 @@ Partial Class Controls_ConsensusControl
 
         If SelName.NameOrthography IsNot Nothing AndAlso SelName.NameOrthography.Length > 0 Then
             Fields.Add(Global.Resources.Resource.Name_Orthography, SelName.NameOrthography)
-            validation.Add(Global.Resources.Resource.Name_Orthography, Utility.GetValidationImage(pn, "PNOrthography"))
+            validation.Add(Global.Resources.Resource.Name_Orthography, WebDataAccess.Utility.GetValidationImage(pn, "PNOrthography"))
         End If
 
         If SelName.NameBasionym IsNot Nothing AndAlso SelName.NameBasionym.Length > 0 Then
-            Fields.Add(Global.Resources.Resource.Name_Basionym, Utility.GetNameLinkHtml(Request, SelName.NameBasionymFk, SelName.NameBasionymFormatted, "0"))
-            validation.Add(Global.Resources.Resource.Name_Basionym, Utility.GetValidationImage(pn, "PNBasionym"))
+            Fields.Add(Global.Resources.Resource.Name_Basionym, WebDataAccess.Utility.GetNameLinkHtml(Request, SelName.NameBasionymFk, SelName.NameBasionymFormatted, "0"))
+            validation.Add(Global.Resources.Resource.Name_Basionym, WebDataAccess.Utility.GetValidationImage(pn, "PNBasionym"))
         End If
 
         If SelName.Id = SelName.NamePreferredFk Then
@@ -153,7 +153,7 @@ Partial Class Controls_ConsensusControl
                 '    Exit For
                 'End If
                 If sn.Id <> SelName.Id And sn.Id <> SelName.NameBasionymFk Then
-                    Dim txt As String = Utility.GetNameLinkHtml(Request, sn.Id, sn.NameFullFormatted, "0")
+                    Dim txt As String = WebDataAccess.Utility.GetNameLinkHtml(Request, sn.Id, sn.NameFullFormatted, "0")
                     If tmp = 1 Then
                         Fields.Add(Global.Resources.Resource.Synonyms, txt)
                     Else
@@ -165,41 +165,41 @@ Partial Class Controls_ConsensusControl
         End If
 
         If SelName.NameTypeName IsNot Nothing AndAlso SelName.NameTypeName.Length > 0 Then
-            Fields.Add(Global.Resources.Resource.Name_Type, Utility.GetNameLinkHtml(Request, SelName.NameTypeNameFk, SelName.NameTypeNameFormatted, "0"))
-            validation.Add(Global.Resources.Resource.Name_Type, Utility.GetValidationImage(pn, "PNTypeName"))
+            Fields.Add(Global.Resources.Resource.Name_Type, WebDataAccess.Utility.GetNameLinkHtml(Request, SelName.NameTypeNameFk, SelName.NameTypeNameFormatted, "0"))
+            validation.Add(Global.Resources.Resource.Name_Type, WebDataAccess.Utility.GetValidationImage(pn, "PNTypeName"))
         End If
 
         If SelName.NameHomonymOf IsNot Nothing AndAlso SelName.NameHomonymOf.Length > 0 Then
             If SelName.NameHomonymOfFk IsNot Nothing Then
-                Fields.Add(Global.Resources.Resource.Homonym_Of, Utility.GetNameLinkHtml(Request, SelName.NameHomonymOfFk, SelName.NameHomonymOfFormatted, "0"))
+                Fields.Add(Global.Resources.Resource.Homonym_Of, WebDataAccess.Utility.GetNameLinkHtml(Request, SelName.NameHomonymOfFk, SelName.NameHomonymOfFormatted, "0"))
             Else
                 Fields.Add(Global.Resources.Resource.Homonym_Of, SelName.NameHomonymOf)
             End If
-            validation.Add(Global.Resources.Resource.Homonym_Of, Utility.GetValidationImage(pn, "PNHomonymOf"))
+            validation.Add(Global.Resources.Resource.Homonym_Of, WebDataAccess.Utility.GetValidationImage(pn, "PNHomonymOf"))
         End If
 
         If SelName.NameBasedOn IsNot Nothing AndAlso SelName.NameBasedOn.Length > 0 Then
-            Fields.Add(Global.Resources.Resource.Based_On, Utility.GetNameLinkHtml(Request, SelName.NameBasedOnFk, SelName.NameBasedOnFormatted, "0"))
-            validation.Add(Global.Resources.Resource.Based_On, Utility.GetValidationImage(pn, "PNBasedOn"))
+            Fields.Add(Global.Resources.Resource.Based_On, WebDataAccess.Utility.GetNameLinkHtml(Request, SelName.NameBasedOnFk, SelName.NameBasedOnFormatted, "0"))
+            validation.Add(Global.Resources.Resource.Based_On, WebDataAccess.Utility.GetValidationImage(pn, "PNBasedOn"))
         End If
 
         If SelName.NameConservedAgainst IsNot Nothing AndAlso SelName.NameConservedAgainst.Length > 0 Then
-            Fields.Add(Global.Resources.Resource.Conserved_Against, Utility.GetNameLinkHtml(Request, SelName.NameConservedAgainstFk, SelName.NameConservedAgainstFormatted, "0"))
-            validation.Add(Global.Resources.Resource.Conserved_Against, Utility.GetValidationImage(pn, "PNConservedAgainst"))
+            Fields.Add(Global.Resources.Resource.Conserved_Against, WebDataAccess.Utility.GetNameLinkHtml(Request, SelName.NameConservedAgainstFk, SelName.NameConservedAgainstFormatted, "0"))
+            validation.Add(Global.Resources.Resource.Conserved_Against, WebDataAccess.Utility.GetValidationImage(pn, "PNConservedAgainst"))
         End If
 
         If SelName.NameReplacementFor IsNot Nothing AndAlso SelName.NameReplacementFor.Length > 0 Then
-            Fields.Add(Global.Resources.Resource.Replacement_For, Utility.GetNameLinkHtml(Request, SelName.NameReplacementForFk, SelName.NameReplacementForFormatted, "0"))
-            validation.Add(Global.Resources.Resource.Replacement_For, Utility.GetValidationImage(pn, "PNReplacementFor"))
+            Fields.Add(Global.Resources.Resource.Replacement_For, WebDataAccess.Utility.GetNameLinkHtml(Request, SelName.NameReplacementForFk, SelName.NameReplacementForFormatted, "0"))
+            validation.Add(Global.Resources.Resource.Replacement_For, WebDataAccess.Utility.GetValidationImage(pn, "PNReplacementFor"))
         End If
 
         If ris IsNot Nothing And pubText <> fullRef And fullRef.Length > 0 Then
-            Fields.Add(Global.Resources.Resource.Full_Ref, Utility.GetLiteratureLinkHtml(SelName.NameReferenceFk, fullRef))
+            Fields.Add(Global.Resources.Resource.Full_Ref, WebDataAccess.Utility.GetLiteratureLinkHtml(SelName.NameReferenceFk, fullRef))
         End If
 
         If SelName.NameNotes IsNot Nothing AndAlso SelName.NameNotes.Length > 0 Then
             Fields.Add(Global.Resources.Resource.Notes, SelName.NameNotes)
-            validation.Add(Global.Resources.Resource.Notes, Utility.GetValidationImage(pn, "PNNotes"))
+            validation.Add(Global.Resources.Resource.Notes, WebDataAccess.Utility.GetValidationImage(pn, "PNNotes"))
         End If
 
         FieldsTable.Rows.Clear()
@@ -250,7 +250,7 @@ Partial Class Controls_ConsensusControl
         lsidLabel.Text = SelName.NameLSID
 
         Dim provData As DataSet = NameData.GetProviderNameRecords(SelName.Id)
-        dataProvLabel.Text = Utility.GetProvidersHtml(provData, Utility.ProviderDataType.Names)
+        dataProvLabel.Text = WebDataAccess.Utility.GetProvidersHtml(provData, WebDataAccess.Utility.ProviderDataType.Names)
 
         Dim contrData As DataSet = NameData.GetNameContributors(SelName.Id)
         Dim contrHtml As String = ""

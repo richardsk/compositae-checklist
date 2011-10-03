@@ -140,7 +140,7 @@ Public Class BrProviderConcepts
             pc.PCProviderImportFk = sysImp.IdAsInt
         End If
 
-        If pcTo.PCProviderImportFk = -1 Then
+        If pcTo IsNot Nothing AndAlso pcTo.PCProviderImportFk = -1 Then
             pcTo.PCProviderImportFk = sysImp.IdAsInt
         End If
 
@@ -149,7 +149,7 @@ Public Class BrProviderConcepts
         If pr IsNot Nothing Then ReferenceData.InsertUpdateProviderReferenceRecord(pr, SessionState.CurrentUser.Login)
 
         ConceptData.InsertUpdateSystemProviderConcept(Nothing, pc, SessionState.CurrentUser.Login)
-        ConceptData.InsertUpdateSystemProviderConcept(Nothing, pcTo, SessionState.CurrentUser.Login)
+        If pcTo IsNot Nothing Then ConceptData.InsertUpdateSystemProviderConcept(Nothing, pcTo, SessionState.CurrentUser.Login)
         pcr = ConceptData.InsertUpdateSystemProviderConceptRelationship(Nothing, pc.IdAsInt, pcr, SessionState.CurrentUser.Login)
 
         Dim cr As ConceptRelationship
@@ -175,13 +175,13 @@ Public Class BrProviderConcepts
                 ConceptData.InsertUpdateSystemProviderConcept(Nothing, pc, SessionState.CurrentUser.Login)
             End If
 
-            If pcTo.PCConceptFk = -1 Then 'new concept
+            If pcTo IsNot Nothing AndAlso pcTo.PCConceptFk = -1 Then 'new concept
                 pcTo.PCConceptFk = cr.ConceptRelationshipConcept2Fk
                 ConceptData.InsertUpdateSystemProviderConcept(Nothing, pcTo, SessionState.CurrentUser.Login)
             End If
 
             BrConcepts.RefreshConceptData(pc.PCConceptFk) ', SessionState.CurrentUser.Login)
-            BrConcepts.RefreshConceptData(pcTo.PCConceptFk) ', SessionState.CurrentUser.Login)
+            If pcTo IsNot Nothing AndAlso pcTo.PCConceptFk <> -1 Then BrConcepts.RefreshConceptData(pcTo.PCConceptFk) ', SessionState.CurrentUser.Login)
             BrConcepts.RefreshConceptRelationshipData(cr.Id)
             BrNames.RefreshNameData(name1Fk, False) ' SessionState.CurrentUser.Login)
         End If
@@ -209,21 +209,27 @@ Public Class BrProviderConcepts
             sysPc.PCConceptId = Guid.NewGuid.ToString()
         End If
 
-        Dim sysPcTo As ProviderConcept = ConceptData.GetSystemProviderConcept(sysImp.IdAsInt, name2Fk, accToFk)
-        If sysPcTo Is Nothing Then
-            sysPcTo = New ProviderConcept
-            sysPcTo.PCLinkStatus = LinkStatus.Inserted.ToString
-            sysPcTo.PCProviderImportFk = sysImp.IdAsInt
-            sysPcTo.PCConceptId = Guid.NewGuid.ToString()
+        Dim sysPcTo As ProviderConcept = Nothing
+        If name2Fk <> "" Then
+            sysPcTo = ConceptData.GetSystemProviderConcept(sysImp.IdAsInt, name2Fk, accToFk)
+            If sysPcTo Is Nothing Then
+                sysPcTo = New ProviderConcept
+                sysPcTo.PCLinkStatus = LinkStatus.Inserted.ToString
+                sysPcTo.PCProviderImportFk = sysImp.IdAsInt
+                sysPcTo.PCConceptId = Guid.NewGuid.ToString()
+            End If
         End If
 
-        Dim sysPCR As ProviderConceptRelationship = ConceptData.GetSystemProviderConceptRelationship(sysImp.IdAsInt, sysPc.PCConceptId, sysPcTo.PCConceptId, relTypeFk)
+        Dim toId As String = ""
+        If sysPcTo IsNot Nothing Then toId = sysPcTo.PCConceptId
+
+        Dim sysPCR As ProviderConceptRelationship = ConceptData.GetSystemProviderConceptRelationship(sysImp.IdAsInt, sysPc.PCConceptId, toId, relTypeFk)
         If sysPCR Is Nothing Then
             sysPCR = New ProviderConceptRelationship
             sysPCR.PCRLinkStatus = LinkStatus.Inserted.ToString()
             sysPCR.PCRProviderImportFk = sysImp.IdAsInt
             sysPCR.PCRConcept1Id = sysPc.PCConceptId
-            sysPCR.PCRConcept2Id = sysPcTo.PCConceptId
+            sysPCR.PCRConcept2Id = toId
             sysPCR.PCRRelationshipFk = relTypeFk
         End If
 

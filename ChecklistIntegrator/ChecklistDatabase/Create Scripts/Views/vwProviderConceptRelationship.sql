@@ -39,7 +39,7 @@ CREATE View dbo.vwProviderConceptRelationship AS
 	inner join tblProviderImport pim on pim.ProviderImportPk = pcr.PCRProviderImportFk
 	inner join tblProvider p on p.ProviderPk = pim.ProviderImportProviderFk 
 	inner join vwProviderConcept pc1 on pc1.PCConceptId = pcr.PCRConcept1Id and pc1.ProviderPk = p.ProviderPk
-	inner join vwProviderConcept pc2 on pc2.PCConceptId = pcr.PCRConcept2Id and pc2.ProviderPk = p.ProviderPk
+	left join vwProviderConcept pc2 on pc2.PCConceptId = pcr.PCRConcept2Id and pc2.ProviderPk = p.ProviderPk
 
 
 GO

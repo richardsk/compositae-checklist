@@ -1,7 +1,7 @@
 Imports System.Xml
 Imports System.Data
 
-Imports DataAccess
+Imports WebDataAccess
 
 Partial Class Controls_TreeControl2
     Inherits System.Web.UI.UserControl

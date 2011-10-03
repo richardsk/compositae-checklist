@@ -21,14 +21,14 @@ AS
 	from  tblConcept c
 	inner join vwProviderConcept pc on pc.PCConceptFk = c.ConceptPk
 	inner join vwProviderConceptRelationship pcr on pcr.PCPk = pc.PCPk
-	inner join vwProviderConcept pc2 on pc2.PCConceptId = pcr.PCRConcept2Id and pc2.ProviderPk = pcr.ProviderPk
+	left join vwProviderConcept pc2 on pc2.PCConceptId = pcr.PCRConcept2Id and pc2.ProviderPk = pcr.ProviderPk
 	where c.ConceptName1Fk = @nameGuid 
 	union
 	select distinct PCRPk
 	from  tblConcept c
 	inner join vwProviderConcept pc on pc.PCConceptFk = c.ConceptPk
 	inner join vwProviderConceptRelationship pcr on pcr.PCRConcept2Id = pc.PCConceptId and pcr.ProviderPk = pc.ProviderPk
-	inner join vwProviderConcept pc2 on pc2.PCPk = pcr.PCPK 
+	left join vwProviderConcept pc2 on pc2.PCPk = pcr.PCPK 
 	where c.ConceptName1Fk = @nameGuid 
 	
 	declare @conceptPk int, @conceptToPk int, @pos int, @count int, @crid uniqueidentifier

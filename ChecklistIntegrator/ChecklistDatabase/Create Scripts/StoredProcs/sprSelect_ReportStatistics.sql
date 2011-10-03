@@ -302,7 +302,7 @@ AS
 		from tblname n
 		inner join tblconcept c1 on c1.conceptname1fk = n.nameguid
 		inner join tblconceptrelationship on conceptrelationshipconcept1fk = c1.conceptpk
-		inner join tblconcept c2 on c2.conceptpk = conceptrelationshipconcept2fk 
+		left join tblconcept c2 on c2.conceptpk = conceptrelationshipconcept2fk 
 		where conceptrelationshiprelationship = 'is child of' 
 			and c2.conceptname1fk <> nameparentfk
 			and n.namerankfk = @rankid 
@@ -311,7 +311,7 @@ AS
 		from tblname n
 		inner join tblconcept c1 on c1.conceptname1fk = n.nameguid
 		inner join tblconceptrelationship on conceptrelationshipconcept1fk = c1.conceptpk
-		inner join tblconcept c2 on c2.conceptpk = conceptrelationshipconcept2fk 
+		left join tblconcept c2 on c2.conceptpk = conceptrelationshipconcept2fk 
 		where conceptrelationshiprelationship = 'has preferred name' 
 			and c2.conceptname1fk <> namepreferredfk
 			and n.namerankfk = @rankid 

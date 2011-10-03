@@ -13,7 +13,7 @@ Partial Class Controls_TaxonConceptsControl
 
     Public Sub Display()
 
-        Dim SelName As Name = NameData.GetName(Nothing, Utility.NameID(Request))
+        Dim SelName As Name = NameData.GetName(Nothing, WebDataAccess.Utility.NameID(Request))
 
         nameLabel.Text = SelName.NameFullFormatted
 
@@ -49,7 +49,7 @@ Partial Class Controls_TaxonConceptsControl
                     'If ds.Tables(0).Rows.Count > 0 Then nameStr = ds.Tables(0).Rows(0)("PCName2").ToString
 
                     Dim prov As String = ""
-                    prov += Utility.GetProvidersHtml(ds, Utility.ProviderDataType.Concepts)
+                    prov += WebDataAccess.Utility.GetProvidersHtml(ds, WebDataAccess.Utility.ProviderDataType.Concepts)
 
                     conceptsDt.Rows.Add(New Object() {status, dr("ConceptAccordingTo").ToString, prov})
                 End If

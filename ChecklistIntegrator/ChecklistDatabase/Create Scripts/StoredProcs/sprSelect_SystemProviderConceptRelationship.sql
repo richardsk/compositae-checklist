@@ -16,7 +16,7 @@ AS
 	from vwProviderConceptRelationship pcr 
 	where pcr.PCRProviderImportFk = @sysProvImportFk and 
 		pcr.PCRConcept1Id = @concept1Id and
-		pcr.PCRConcept2Id = @concept2Id and
+		isnull(pcr.PCRConcept2Id,'') = isnull(@concept2Id,'') and
 		pcr.PCRRelationshipFk = @relTypeFk
 		
 

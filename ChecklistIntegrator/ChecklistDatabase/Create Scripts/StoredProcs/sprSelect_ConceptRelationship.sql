@@ -26,7 +26,7 @@ AS
 		cr.ConceptRelationshipLSID
 	from tblConceptRelationship cr
 	inner join tblConcept c on c.ConceptPk = cr.ConceptRelationshipConcept1Fk
-	inner join tblConcept cto on cto.ConceptPk = cr.ConceptRelationshipConcept2Fk
+	left join tblConcept cto on cto.ConceptPk = cr.ConceptRelationshipConcept2Fk
 	where ConceptRelationshipGuid = @conceptRelGuid
 
 GO

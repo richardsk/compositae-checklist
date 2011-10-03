@@ -864,7 +864,7 @@ Public Class ConceptData
             cmd.Parameters.Add("@PCRConceptRelationshipFk", SqlDbType.UniqueIdentifier).Value = Utility.GetDBGuid(pcr.PCRConceptRelationshipFk)
             cmd.Parameters.Add("@PCRId", SqlDbType.NVarChar).Value = Utility.GetDBString(pcr.PCRId)
             cmd.Parameters.Add("@PCRConcept1Id", SqlDbType.NVarChar).Value = Utility.GetDBString(pcr.PCRConcept1Id)
-            cmd.Parameters.Add("@PCRConcept2Id", SqlDbType.NVarChar).Value = Utility.GetDBString(pcr.PCRConcept2Id)
+            cmd.Parameters.Add("@PCRConcept2Id", SqlDbType.NVarChar).Value = Utility.GetDBStringNonEmpty(pcr.PCRConcept2Id)
             cmd.Parameters.Add("@PCRRelationship", SqlDbType.NVarChar).Value = Utility.GetDBString(pcr.PCRRelationship)
             cmd.Parameters.Add("@PCRRelationshipId", SqlDbType.NVarChar).Value = Utility.GetDBString(pcr.PCRRelationshipId)
             cmd.Parameters.Add("@PCRRelationshipFk", SqlDbType.Int).Value = Utility.GetDBInt(pcr.PCRRelationshipFk)
@@ -898,7 +898,7 @@ Public Class ConceptData
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.Parameters.Add("@sysProvImportFk", SqlDbType.Int).Value = importFk
                 cmd.Parameters.Add("@concept1Id", SqlDbType.NVarChar).Value = Utility.GetDBString(concept1Id)
-                cmd.Parameters.Add("@concept2Id", SqlDbType.NVarChar).Value = Utility.GetDBString(concept2Id)
+                cmd.Parameters.Add("@concept2Id", SqlDbType.NVarChar).Value = Utility.GetDBStringNonEmpty(concept2Id)
                 cmd.Parameters.Add("@relTypeFk", SqlDbType.Int).Value = relTypeFk
 
                 Dim da As New SqlDataAdapter(cmd)

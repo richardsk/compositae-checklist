@@ -29,7 +29,7 @@ Partial Class Controls_NameDetailsControl
 
         menuTable.Rows(0).Cells(_selectedTab).BorderWidth = New Unit(2)
         'menuTable.Rows(0).Cells(_selectedTab).ForeColor = Drawing.Color.Black
-        menuTable.Rows(0).Cells(_selectedTab).Text = "<a style='color:black;text-decoration:none' href='" + Utility.GetDefaultPageUrl(Request, _selectedTab.ToString) + "&nameId=" + nameId + "'>" + TabText(_selectedTab) + "</a>"
+        menuTable.Rows(0).Cells(_selectedTab).Text = "<a style='color:black;text-decoration:none' href='" + WebDataAccess.Utility.GetDefaultPageUrl(Request, _selectedTab.ToString) + "&nameId=" + nameId + "'>" + TabText(_selectedTab) + "</a>"
         menuTable.Rows(0).Cells(_selectedTab).Font.Bold = True
 
     End Sub
@@ -50,7 +50,7 @@ Partial Class Controls_NameDetailsControl
         Dim Parents As DataSet
         Dim ParentString As String = ""
 
-        Dim selName As ChecklistObjects.Name = ChecklistDataAccess.NameData.GetName(Nothing, Utility.NameID(Request))
+        Dim selName As ChecklistObjects.Name = ChecklistDataAccess.NameData.GetName(Nothing, WebDataAccess.Utility.NameID(Request))
 
         If selName IsNot Nothing Then
             Parents = ChecklistDataAccess.TreeData.GetNodeToRoot(1, selName.Id, 0)
@@ -64,7 +64,7 @@ Partial Class Controls_NameDetailsControl
                             ParentString &= " <b>" & rnk & "</b>:&nbsp<I>"
                             Dim nameText As String = Node2RootRow("NameCanonical").ToString.Trim
                             If Node2RootRow("TaxonRankSort") >= 4200 Then nameText = Node2RootRow("NameFull").ToString.Trim
-                            ParentString &= Utility.GetNameLinkHtml(Request, Node2RootRow("NameGuid"), nameText, TabNum)
+                            ParentString &= WebDataAccess.Utility.GetNameLinkHtml(Request, Node2RootRow("NameGuid"), nameText, TabNum)
                             ParentString &= "</i>"
                         End If
                     End If
@@ -80,13 +80,13 @@ Partial Class Controls_NameDetailsControl
         NameHierarchyLabel.Text = ""
         NameHierarchyLabel.Text = GetParentText()
 
-        Dim nameId As String = Utility.NameID(Request)
+        Dim nameId As String = WebDataAccess.Utility.NameID(Request)
 
-        menuTable.Rows(0).Cells(0).Text = "<a style='color:black;text-decoration:none' href='" + Utility.GetDefaultPageUrl(Request, "0") + "&nameId=" + nameId + "'>" + TabText(0) + "</a>"
-        menuTable.Rows(0).Cells(1).Text = "<a style='color:black;text-decoration:none' href='" + Utility.GetDefaultPageUrl(Request, "1") + "&nameId=" + nameId + "'>" + TabText(1) + "</a>"
-        menuTable.Rows(0).Cells(2).Text = "<a style='color:black;text-decoration:none' href='" + Utility.GetDefaultPageUrl(Request, "2") + "&nameId=" + nameId + "'>" + TabText(2) + "</a>"
-        menuTable.Rows(0).Cells(3).Text = "<a style='color:black;text-decoration:none' href='" + Utility.GetDefaultPageUrl(Request, "3") + "&nameId=" + nameId + "'>" + TabText(3) + "</a>"
-        menuTable.Rows(0).Cells(4).Text = "<a style='color:black;text-decoration:none' href='" + Utility.GetDefaultPageUrl(Request, "4") + "&nameId=" + nameId + "'>" + TabText(4) + "</a>"
+        menuTable.Rows(0).Cells(0).Text = "<a style='color:black;text-decoration:none' href='" + WebDataAccess.Utility.GetDefaultPageUrl(Request, "0") + "&nameId=" + nameId + "'>" + TabText(0) + "</a>"
+        menuTable.Rows(0).Cells(1).Text = "<a style='color:black;text-decoration:none' href='" + WebDataAccess.Utility.GetDefaultPageUrl(Request, "1") + "&nameId=" + nameId + "'>" + TabText(1) + "</a>"
+        menuTable.Rows(0).Cells(2).Text = "<a style='color:black;text-decoration:none' href='" + WebDataAccess.Utility.GetDefaultPageUrl(Request, "2") + "&nameId=" + nameId + "'>" + TabText(2) + "</a>"
+        menuTable.Rows(0).Cells(3).Text = "<a style='color:black;text-decoration:none' href='" + WebDataAccess.Utility.GetDefaultPageUrl(Request, "3") + "&nameId=" + nameId + "'>" + TabText(3) + "</a>"
+        menuTable.Rows(0).Cells(4).Text = "<a style='color:black;text-decoration:none' href='" + WebDataAccess.Utility.GetDefaultPageUrl(Request, "4") + "&nameId=" + nameId + "'>" + TabText(4) + "</a>"
 
         'If Not Page.IsPostBack Then
         DisplayCurrentTab()
