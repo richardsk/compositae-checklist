@@ -22,7 +22,7 @@ AS
 	select distinct c.conceptname1fk
 	from tblconcept c
 	inner join tblconceptrelationship cr on cr.conceptrelationshipconcept2fk = c.conceptpk
-	inner join tblconcept c2 on c2.conceptpk = cr.conceptrelationshipconcept1fk
+	left join tblconcept c2 on c2.conceptpk = cr.conceptrelationshipconcept1fk
 	inner join @names n on n.nameguid = c.conceptname1fk
 	where c.conceptname1fk <> c2.conceptname1fk 
 	
@@ -30,7 +30,7 @@ AS
 	select distinct c.conceptname1fk
 	from tblconcept c
 	inner join tblconceptrelationship cr on cr.conceptrelationshipconcept1fk = c.conceptpk
-	inner join tblconcept c2 on c2.conceptpk = cr.conceptrelationshipconcept2fk
+	left join tblconcept c2 on c2.conceptpk = cr.conceptrelationshipconcept2fk
 	inner join @names n on n.nameguid = c.conceptname1fk
 	where c.conceptname1fk <> c2.conceptname1fk 
 		

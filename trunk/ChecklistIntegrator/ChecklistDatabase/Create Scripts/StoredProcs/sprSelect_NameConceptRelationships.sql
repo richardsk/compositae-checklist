@@ -29,7 +29,7 @@ AS
 			cr.ConceptRelationshipLSID
 		from tblConceptRelationship cr
 		inner join tblConcept c on c.ConceptPk = cr.ConceptRelationshipConcept1Fk
-		inner join tblConcept cto on cto.ConceptPk = cr.ConceptRelationshipConcept2Fk
+		left join tblConcept cto on cto.ConceptPk = cr.ConceptRelationshipConcept2Fk
 		where c.ConceptName1Fk = @nameGuid
 		union		
 		select distinct cast(cr.ConceptRelationshipGuid as varchar(38)) as ConceptRelationshipGuid, 
@@ -49,7 +49,7 @@ AS
 			cr.ConceptRelationshipLSID
 		from tblConceptRelationship cr
 		inner join tblConcept c on c.ConceptPk = cr.ConceptRelationshipConcept1Fk
-		inner join tblConcept cto on cto.ConceptPk = cr.ConceptRelationshipConcept2Fk
+		left join tblConcept cto on cto.ConceptPk = cr.ConceptRelationshipConcept2Fk
 		where cto.ConceptName1Fk = @nameGuid
 		order by cr.ConceptRelationshipRelationshipFk
 	end
@@ -72,7 +72,7 @@ AS
 			cr.ConceptRelationshipLSID
 		from tblConceptRelationship cr
 		inner join tblConcept c on c.ConceptPk = cr.ConceptRelationshipConcept1Fk
-		inner join tblConcept cto on cto.ConceptPk = cr.ConceptRelationshipConcept2Fk
+		left join tblConcept cto on cto.ConceptPk = cr.ConceptRelationshipConcept2Fk
 		where c.ConceptName1Fk = @nameGuid		
 		order by cr.ConceptRelationshipRelationshipFk, cto.ConceptName1
 	end

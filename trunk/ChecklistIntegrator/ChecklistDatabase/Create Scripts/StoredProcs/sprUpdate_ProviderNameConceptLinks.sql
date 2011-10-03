@@ -22,7 +22,7 @@ AS
 	from  tblConcept c
 	inner join vwProviderConcept pc on pc.PCConceptFk = c.ConceptPk
 	inner join vwProviderConceptRelationship pcr on pcr.pcpk = pc.pcpk
-	inner join vwProviderConcept pc2 on pc2.PCConceptId = pcr.PCRConcept2Id and pc2.ProviderPk = pcr.ProviderPk
+	left join vwProviderConcept pc2 on pc2.PCConceptId = pcr.PCRConcept2Id and pc2.ProviderPk = pcr.ProviderPk
 	inner join vwProviderName pn on pn.PNNameId = pc2.PCName1Id and pn.ProviderPk = pc2.ProviderPk
 	where pn.PNPk = @PNPk
 	

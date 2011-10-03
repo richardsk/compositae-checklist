@@ -76,7 +76,7 @@ AS
 	from vwProviderConceptRelationship pcr 
 	inner join vwProviderConcept vpc on vpc.PCConceptId = pcr.PCRConcept2Id and vpc.ProviderPk = pcr.ProviderPk
 	inner join vwProviderName pn on pn.PNNameId = vpc.PCName1Id and pn.ProviderPk = vpc.ProviderPk
-	inner join vwProviderConcept pc2 on pc2.PCConceptId = pcr.PCRConcept1Id and pc2.ProviderPk = pcr.ProviderPk 
+	left join vwProviderConcept pc2 on pc2.PCConceptId = pcr.PCRConcept1Id and pc2.ProviderPk = pcr.ProviderPk 
 	where PNPk = @pnpk
 
 GO

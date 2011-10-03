@@ -42,8 +42,8 @@ AS
 			cr.ConceptRelationshipLSID
 		from tblConceptRelationship cr
 		inner join tblConcept c1 on c1.ConceptPk = cr.ConceptRelationshipConcept1Fk
-		inner join tblConcept c2 on c2.ConceptPk = cr.ConceptRelationshipConcept2Fk
-		where c1.ConceptName1Fk = @name1Fk and c2.ConceptName1Fk = @name2Fk 
+		left join tblConcept c2 on c2.ConceptPk = cr.ConceptRelationshipConcept2Fk
+		where c1.ConceptName1Fk = @name1Fk and isnull(cast(c2.ConceptName1Fk as varchar(38)),'') = cast(@name2Fk as varchar(38))
 				and ConceptRelationshipRelationshipFk = @relFk and 
 				((@accToFk is null and c1.ConceptAccordingToFk is null) or (c1.ConceptAccordingToFk = @accToFk))
 	end

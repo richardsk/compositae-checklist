@@ -9,7 +9,7 @@ CREATE Procedure dbo.sprInsert_ConceptRelationship
 	@PCRPk int,
 	@user nvarchar(50),
 	@conceptRelGuid uniqueidentifier output
-AS
+AS 
 	--inserts a ConceptRelationship if an equivalent doesnt already exist
 	-- inserts Concepts for the relationship if they dont exist
 	-- if the PCR was already pointing at a consensus CR then it may need to be unlinked
@@ -53,7 +53,8 @@ AS
 	where pc.PCConceptId = @concept1Id and pc.ProviderPk = @providerPk
 		
 	--only insert if names have been inserted
-	if (@name1Fk is not null and @name2Fk is not null)
+	-- or name 2 is null, for non-parent rels (eg pref name pointing to 'nothing')
+	if (@name1Fk is not null and (@name2Fk is not null or @relationshipFk <> 6))
 	begin
 		
 		declare @tmpId uniqueidentifier
@@ -83,7 +84,7 @@ AS
 			set @pcLinkStatus = 'Inserted'
 		end
 		
-		if (@conceptToPk is null)
+		if (@conceptToPk is null and @name2Fk is not null)
 		begin
 			insert tblConcept
 			select null,
@@ -113,7 +114,7 @@ AS
 			
 		select top 1 @conceptRelGuid = ConceptRelationshipGuid 
 		from tblConceptRelationship 
-		where ConceptRelationshipConcept1Fk = @conceptPk and ConceptRelationshipConcept2Fk = @conceptToPk
+		where ConceptRelationshipConcept1Fk = @conceptPk and isnull(ConceptRelationshipConcept2Fk,0) = isnull(@conceptToPk,0)
 			and ConceptRelationshipRelationshipFk = @relationshipFk
 		
 		if (@conceptRelGuid is null)

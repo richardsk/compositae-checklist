@@ -9,7 +9,7 @@ Partial Class Controls_OtherDataControl
 
     Public Sub Display()
 
-        Dim SelName As Name = NameData.GetName(Nothing, Utility.NameID(Request))
+        Dim SelName As Name = NameData.GetName(Nothing, WebDataAccess.Utility.NameID(Request))
         Dim tab As String = Request.QueryString("TabNum")
 
         Dim OtherDataDs As DataSet = OtherData.GetNameOtherData(SelName.Id)

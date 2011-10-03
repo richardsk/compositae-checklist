@@ -11,7 +11,7 @@ Partial Class Controls_OriginalDataControl
     Public Sub Display()
         If provDataTable.Rows.Count > 0 Then Return 'already done
 
-        Dim SelName As Name = NameData.GetName(Nothing, Utility.NameID(Request))
+        Dim SelName As Name = NameData.GetName(Nothing, WebDataAccess.Utility.NameID(Request))
 
         Dim Fields As New Generic.Dictionary(Of String, String)
 
@@ -51,10 +51,10 @@ Partial Class Controls_OriginalDataControl
         'conflicting fields
         Dim provData As DataSet = NameData.GetProviderNameRecords(SelName.Id)
 
-        Dim val As String = Utility.GetProviderFieldData(provData, SelName.NameFull, "PNNameFull")
+        Dim val As String = WebDataAccess.Utility.GetProviderFieldData(provData, SelName.NameFull, "PNNameFull")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Full_Name, val)
 
-        val = Utility.GetProviderFieldData(provData, SelName.NameAuthors, "PNNameAuthors")
+        val = WebDataAccess.Utility.GetProviderFieldData(provData, SelName.NameAuthors, "PNNameAuthors")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Name_Authors, val)
 
         Dim ris As ReferenceRIS = ReferenceData.GetReferenceRISByReference(SelName.NameReferenceFk)
@@ -84,7 +84,7 @@ Partial Class Controls_OriginalDataControl
             pubText = SelName.NamePublishedIn
         End If
 
-        val = Utility.GetProviderFieldData(provData, pubText, "PNPublishedIn")
+        val = WebDataAccess.Utility.GetProviderFieldData(provData, pubText, "PNPublishedIn")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Published, val)
 
 
@@ -94,19 +94,19 @@ Partial Class Controls_OriginalDataControl
         '    If concepts.Tables.Count > 0 Then
         '        For Each dr As DataRow In concepts.Tables(0).Rows
         '            If dr("ConceptRelationshipRelationship").ToString = "has preferred name" Then
-        '                Dim lnk As String = Utility.GetLiteratureLinkHtml(dr("ConceptAccordingToFk").ToString, dr("ConceptAccordingTo").ToString)
+        '                Dim lnk As String = WebDataAccess.Utility.GetLiteratureLinkHtml(dr("ConceptAccordingToFk").ToString, dr("ConceptAccordingTo").ToString)
         '                status = "<span style='color:Green'>ACCEPTED</span> (" + lnk + ")"
         '                Exit For
         '            End If
         '        Next
         '    End If
         'ElseIf SelName.NamePreferredFk IsNot Nothing Then
-        '    status = "<span style='color:Red'>SYNONYM of </span>" + Utility.GetNameLinkHtml(Request, SelName.NamePreferredFk, SelName.NamePreferred, "0")
+        '    status = "<span style='color:Red'>SYNONYM of </span>" + WebDataAccess.Utility.GetNameLinkHtml(Request, SelName.NamePreferredFk, SelName.NamePreferred, "0")
         'Else
         '    status = Global.Resources.Resource.Unknown
         'End If
 
-        'val = Utility.GetProviderFieldData(provData, status, "PNNamePreferred")
+        'val = WebDataAccess.Utility.GetProviderFieldData(provData, status, "PNNamePreferred")
         'If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Status, val)
 
         Dim icbnNotes As String = ""
@@ -131,31 +131,31 @@ Partial Class Controls_OriginalDataControl
             icbnNotes += "nom. inval."
         End If
 
-        val = Utility.GetProviderFieldData(provData, icbnNotes, "PNICBNNotes")
+        val = WebDataAccess.Utility.GetProviderFieldData(provData, icbnNotes, "PNICBNNotes")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.ICBN_Notes, val)
 
-        val = Utility.GetProviderFieldData(provData, SelName.NameOrthography, "PNOrthography")
+        val = WebDataAccess.Utility.GetProviderFieldData(provData, SelName.NameOrthography, "PNOrthography")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Name_Orthography, val)
 
-        val = Utility.GetProviderFieldData(provData, SelName.NameBasionym, "PNBasionym")
+        val = WebDataAccess.Utility.GetProviderFieldData(provData, SelName.NameBasionym, "PNBasionym")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Name_Basionym, val)
 
-        val = Utility.GetProviderFieldData(provData, SelName.NameTypeName, "PNTypeName")
+        val = WebDataAccess.Utility.GetProviderFieldData(provData, SelName.NameTypeName, "PNTypeName")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Name_Type, val)
 
-        val = Utility.GetProviderFieldData(provData, SelName.NameHomonymOf, "PNHomonymOf")
+        val = WebDataAccess.Utility.GetProviderFieldData(provData, SelName.NameHomonymOf, "PNHomonymOf")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Homonym_Of, val)
 
-        val = Utility.GetProviderFieldData(provData, SelName.NameBasedOn, "PNBasedOn")
+        val = WebDataAccess.Utility.GetProviderFieldData(provData, SelName.NameBasedOn, "PNBasedOn")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Based_On, val)
 
-        val = Utility.GetProviderFieldData(provData, SelName.NameConservedAgainst, "PNConservedAgainst")
+        val = WebDataAccess.Utility.GetProviderFieldData(provData, SelName.NameConservedAgainst, "PNConservedAgainst")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Conserved_Against, val)
 
-        val = Utility.GetProviderFieldData(provData, SelName.NameReplacementFor, "PNReplacementFor")
+        val = WebDataAccess.Utility.GetProviderFieldData(provData, SelName.NameReplacementFor, "PNReplacementFor")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Replacement_For, val)
 
-        val = Utility.GetProviderFieldData(provData, SelName.NameNotes, "PNNotes")
+        val = WebDataAccess.Utility.GetProviderFieldData(provData, SelName.NameNotes, "PNNotes")
         If val.Length > 0 Then Fields.Add(Global.Resources.Resource.Notes, val)
 
 

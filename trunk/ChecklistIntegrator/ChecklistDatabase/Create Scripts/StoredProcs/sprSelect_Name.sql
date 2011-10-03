@@ -18,6 +18,7 @@ AS
 		NameParent,
 		cast(NamePreferredFk as varchar(38)) as NamePreferredFk,
 		NamePreferred,
+		dbo.fngetpreferrednamereason(NameGuid) as NamePreferredReason,
 		dbo.fnGetFullName(NamePreferredFk, 1,0,1,0,0) as NamePreferredFormatted,
 		NameCanonical, 
 		NameAuthors, 
