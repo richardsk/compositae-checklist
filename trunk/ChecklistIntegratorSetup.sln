@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ChecklistIntegratorSetup", "ChecklistIntegratorSetup.vdproj", "{A654AEBE-A45E-46A1-B1D1-B29F275FC0D7}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ChecklistIntegratorSetup", "ChecklistIntegratorSetup.vdproj", "{E603DFC5-0A80-41D6-8771-CF77335F76E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Default = Release|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A654AEBE-A45E-46A1-B1D1-B29F275FC0D7}.Debug|Default.ActiveCfg = Debug
-		{A654AEBE-A45E-46A1-B1D1-B29F275FC0D7}.Debug|Default.Build.0 = Debug
-		{A654AEBE-A45E-46A1-B1D1-B29F275FC0D7}.Release|Default.ActiveCfg = Release
-		{A654AEBE-A45E-46A1-B1D1-B29F275FC0D7}.Release|Default.Build.0 = Release
+		{E603DFC5-0A80-41D6-8771-CF77335F76E9}.Debug|Default.ActiveCfg = Debug
+		{E603DFC5-0A80-41D6-8771-CF77335F76E9}.Debug|Default.Build.0 = Debug
+		{E603DFC5-0A80-41D6-8771-CF77335F76E9}.Release|Default.ActiveCfg = Release
+		{E603DFC5-0A80-41D6-8771-CF77335F76E9}.Release|Default.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
