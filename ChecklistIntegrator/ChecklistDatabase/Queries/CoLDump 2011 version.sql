@@ -22,6 +22,7 @@ select top 100 n.namelsid as AcceptedTaxonID,
 	'' as GSDTaxonGUI, --GSDTaxonGUI
 	'' as GSDNameGUI --GSDNameGUI
 from tblname n
+inner join tblFlatName cfn on cfn.FlatNameSeedName = n.NameGUID and cfn.FlatNameCanonical = 'Compositae'
 left join tblFlatName fn on fn.FlatNameSeedName = n.NameGUID and 
 		fn.FlatNameTaxonRankFk in (101,121,122,29,21,104,33,22,34,100,110)
 where NameRankFk = 24 and NamePreferredFk = NameGUID
@@ -45,6 +46,7 @@ select n.namelsid as AcceptedTaxonID,
 from tblname n
 inner join tblRank tr on tr.RankPk = n.NameRankFk
 inner join tblName pn on pn.NameGUID = n.NameParentFk
+inner join tblFlatName cfn on cfn.FlatNameSeedName = n.NameGUID and cfn.FlatNameCanonical = 'Compositae'
 where RankSort > 4200 and n.NamePreferredFk = n.NameGUID
 	
 --synonyms table
@@ -68,6 +70,7 @@ from tblName n
 inner join tblName pn on pn.NameGUID = n.NamePreferredFk
 inner join tblName parn on parn.NameGUID = n.nameparentfk
 inner join tblRank tr on tr.RankPk = n.NameRankFk
+inner join tblFlatName cfn on cfn.FlatNameSeedName = n.NameGUID and cfn.FlatNameCanonical = 'Compositae'
 left join tblFlatName fn on fn.FlatNameSeedName = n.NameGUID and 
 		fn.FlatNameTaxonRankFk in (101,121,122,29,21,104,33,22,34,100,110)
 where tr.RankSort >= 4200 and n.NamePreferredFk <> n.NameGUID
@@ -96,6 +99,7 @@ select n.NameLSID as AcceptedTaxonID,
 from tblName n
 inner join tblOtherData o on o.RecordFk = n.NameGUID
 inner join tblrank tr on tr.rankpk = n.namerankfk
+inner join tblFlatName cfn on cfn.FlatNameSeedName = n.NameGUID and cfn.FlatNameCanonical = 'Compositae'
 where tr.RankSort >= 4200
 
 --source database table
