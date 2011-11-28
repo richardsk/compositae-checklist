@@ -19,10 +19,14 @@ begin
 	declare @allPrefNames nvarchar(4000)
 	declare @prefFk uniqueidentifier, @hasSys bit, @prefProv int, @prefPrefFk uniqueidentifier, @done bit
 	declare @recs table(pnpk int, providerpk int, rank int, AccTo int, isPref bit, prefNameFk uniqueidentifier, isEditor bit)
-	declare @isEd bit
+	declare @isEd bit, @basId uniqueidentifier
 
 	set @allPrefNames = ' ' + cast(@nameguid as varchar(38))
 	
+	
+	-- also check all names related to the same basionym
+	select @basId = NameBasionymFk from tblName where NameGuid = @nameGuid
+
 	set @done = 0
 	set @reason = 'Unknown'
 
@@ -42,7 +46,7 @@ begin
 		left join vwProviderName p2 on p2.PNNameId = pcr.PCName2Id 
 				and (p2.ProviderPk = pcr.ProviderPk or p2.provideriseditor = 1)
 		left join vwProviderReference pr on pr.PRReferenceId = pcr.PCAccordingToId and pr.ProviderPk = pcr.ProviderPk
-		where NameGUID = @nameGuid
+		where NameGUID = @nameGuid or NameBasionymFk = @basId
 			
 		--check most preferred provider details
 		select top 1 @prefProv = ProviderPk from @recs order by rank 
@@ -131,9 +135,6 @@ begin
 		end
 	end
 	
-	--check all names related to the same basionym
-	-- get the highest ranking preferred name (ranking from provider table)
-	-- of the set
 	
 	return @reason
 end
