@@ -104,20 +104,19 @@ Public Class BaseImporter
                             If PercentComplete > 99 Then PercentComplete = 99 ' cant be greater than 99 until DONE
 
                             Dim cnn As SqlClient.SqlConnection
-                            Dim trans As SqlClient.SqlTransaction
                             Try
                                 cnn = New SqlClient.SqlConnection(Configuration.ConfigurationManager.ConnectionStrings("compositae").ConnectionString)
                                 cnn.Open()
-                                trans = cnn.BeginTransaction()
 
-                                'insert new record
-                                InsertUpdateRecord(trans, row)
+                                Using sc As New System.Transactions.TransactionScope
+                                    'insert new record
+                                    InsertUpdateRecord(row)
 
-                                trans.Commit()
+                                    sc.Complete()
+                                End Using
 
                                 PostStatusMessage(PercentComplete, "")
                             Catch ex As Exception
-                                If Not trans Is Nothing Then trans.Rollback()
                                 Dim msg As String = "ERROR importing record at position : " + recordPosition.ToString() + " : " + ex.Message
                                 PostStatusMessage(PercentComplete, msg)
                                 ChecklistException.LogError(ex)
@@ -183,7 +182,7 @@ Public Class BaseImporter
 
     End Sub
 
-    Private Sub InsertUpdateRecord(ByVal trans As SqlClient.SqlTransaction, ByVal row As DataRow)
+    Private Sub InsertUpdateRecord(ByVal row As DataRow)
         If row.Table.TableName = "tblProviderName" Then
             Dim pn As New ProviderName(row, -1, False)
 
@@ -230,10 +229,10 @@ Public Class BaseImporter
             End If
 
             'update name
-            ChecklistDataAccess.NameData.InsertUpdateProviderNameRecord(trans, updatePN, SessionState.CurrentUser.Login)
+            ChecklistDataAccess.NameData.InsertUpdateProviderNameRecord(updatePN, SessionState.CurrentUser.Login)
 
             'set rank so integration order can be done in rank top down order
-            updatePN.PNNameRankFk = NameData.LinkProviderNameRank(trans, updatePN.IdAsInt, SessionState.CurrentUser.Login)
+            updatePN.PNNameRankFk = NameData.LinkProviderNameRank(Nothing, updatePN.IdAsInt, SessionState.CurrentUser.Login)
         End If
 
         If row.Table.TableName = "tblProviderConcept" Then
@@ -253,7 +252,7 @@ Public Class BaseImporter
             updateC.PCProviderImportFk = ProvImport.IdAsInt
 
             'update concept
-            ConceptData.InsertUpdateProviderConcept(trans, updateC, SessionState.CurrentUser.Login)
+            ConceptData.InsertUpdateProviderConcept(Nothing, updateC, SessionState.CurrentUser.Login)
 
         End If
 
@@ -279,10 +278,10 @@ Public Class BaseImporter
             updateCR.PCRProviderImportFk = ProvImport.IdAsInt
 
             'update concept
-            ConceptData.InsertUpdateProviderConceptRelationship(trans, updateCR, SessionState.CurrentUser.Login)
+            ConceptData.InsertUpdateProviderConceptRelationship(Nothing, updateCR, SessionState.CurrentUser.Login)
 
             'link relationship type for when we integrate names (need to know the parent concept linkage to integarte a name)
-            updateCR.PCRRelationshipFk = NameData.LinkProviderConceptRelationship(trans, updateCR.IdAsInt, SessionState.CurrentUser.Login)
+            updateCR.PCRRelationshipFk = NameData.LinkProviderConceptRelationship(Nothing, updateCR.IdAsInt, SessionState.CurrentUser.Login)
         End If
 
         If row.Table.TableName = "tblProviderReference" Then
@@ -301,7 +300,7 @@ Public Class BaseImporter
             End If
             updateRef.PRProviderImportFk = ProvImport.IdAsInt
 
-            ChecklistDataAccess.ReferenceData.InsertProviderReferenceRecord(trans, updateRef, SessionState.CurrentUser.Login)
+            ChecklistDataAccess.ReferenceData.InsertProviderReferenceRecord(Nothing, updateRef, SessionState.CurrentUser.Login)
         End If
 
         If row.Table.TableName = "tblProviderRIS" Then
@@ -316,14 +315,14 @@ Public Class BaseImporter
                 updateRis = r
             End If
 
-            ChecklistDataAccess.ReferenceData.InsertUpdateProviderRISRecord(trans, row("PRISId").ToString, updateRis, SessionState.CurrentUser.Login)
+            ChecklistDataAccess.ReferenceData.InsertUpdateProviderRISRecord(Nothing, row("PRISId").ToString, updateRis, SessionState.CurrentUser.Login)
         End If
 
         If row.Table.TableName = "tblProviderOtherData" Then
             'delete existing record
-            OtherData.DeleteProviderOtherData(trans, Provider.IdAsInt, row("POtherDataRecordId").ToString)
+            OtherData.DeleteProviderOtherData(Nothing, Provider.IdAsInt, row("POtherDataRecordId").ToString)
             'insert update
-            OtherData.InsertUpdateProviderOtherData(trans, ProvImport.IdAsInt, row, SessionState.CurrentUser.Login)
+            OtherData.InsertUpdateProviderOtherData(Nothing, ProvImport.IdAsInt, row, SessionState.CurrentUser.Login)
         End If
 
     End Sub
