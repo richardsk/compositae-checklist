@@ -334,7 +334,7 @@ Public Class BrNames
                         RefreshNameLinkData(row("NameGuid"))
                     Catch ex As Exception
                         ChecklistException.LogError(ex)
-                        If StatusCallback IsNot Nothing Then StatusCallback.Invoke(perc, "ERROR : Failed to update name " + row("NameFull").ToString + " (" + row("NameGuid").ToString + ")")
+                        If StatusCallback IsNot Nothing Then StatusCallback.Invoke(perc, "ERROR : Failed to update name " + row("NameGuid").ToString)
                     End Try
 
                     If perc > 99 Then perc = 99
