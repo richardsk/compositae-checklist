@@ -36,13 +36,16 @@ begin
 		insert @recs
 		select pn.pnpk, p.providerpk, p.ProviderPreferredConceptRanking, pr.prpk, pcr.PCRIsPreferredConcept, p2.PNNameFk, pcr.ProviderIsEditor
 		from tblName
-		inner join vwProviderName pn on PNNameFk = NameGUID
+		inner join tblProviderName pn on PNNameFk = NameGUID
+		inner join tblProviderImport pim on pim.ProviderImportPk = pn.PNProviderImportFk
 		inner join vwProviderConceptRelationship pcr on pcr.PCName1Id = pn.PNNameId 
-				and (pcr.ProviderPk = pn.ProviderPk or pcr.provideriseditor = 1)
+				and (pcr.ProviderPk = pim.ProviderImportProviderFk or pcr.provideriseditor = 1)
 				and pcr.PCRRelationshipFk = 15 
 		inner join tblProvider p on p.ProviderPk = pcr.ProviderPk
-		left join vwProviderName p2 on p2.PNNameId = pcr.PCName2Id 
-				and (p2.ProviderPk = pcr.ProviderPk or p2.provideriseditor = 1)
+		left join tblProviderName p2 on p2.PNNameId = pcr.PCName2Id 
+		left join tblProviderImport pim2 on pim2.ProviderImportPk = p2.PNProviderImportFk
+		left join tblProvider pr2 on pr2.ProviderPk = pim2.ProviderImportPk
+				and (pim2.ProviderImportProviderFk = pcr.ProviderPk or pr2.provideriseditor = 1)
 		left join vwProviderReference pr on pr.PRReferenceId = pcr.PCAccordingToId and pr.ProviderPk = pcr.ProviderPk
 		where NameGUID = @nameGuid or NameBasionymFk = @basId
 			
