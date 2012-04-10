@@ -9,7 +9,7 @@ CREATE Procedure dbo.sprSelect_ProviderNameOtherDataToUpdate
 	@nameGuid uniqueidentifier
 AS
 
-	select od.*, pn.PNNameFk 
+	select distinct od.OtherDataFk, POtherDataType, OutputTypeFk, pn.PNNameFk 
 	from vwProviderOtherData od
 	inner join vwProviderName pn on pn.PNNameId = od.POtherDataRecordId and pn.ProviderPk = od.ProviderPk
 	left join tblStandardOutput so on so.POtherDataFk = od.POtherDataTextPk

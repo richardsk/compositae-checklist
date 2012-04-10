@@ -29,6 +29,17 @@ Public Class ProviderConcept
         Next
     End Sub
 
+    Public Overloads Function Equals(pc As ProviderConcept) As Boolean
+        Dim same As Boolean = False
+
+        same = (PCConceptId = pc.PCConceptId AndAlso
+            PCName1 = pc.PCName1 AndAlso
+            PCAccordingTo = pc.PCAccordingTo AndAlso
+            PCConceptVersion = pc.PCConceptVersion)
+
+        Return same
+    End Function
+
     ''' <summary>
     ''' Update fields from a newly imported Provider Concept (so doesnt have Fks populated)
     ''' </summary>
