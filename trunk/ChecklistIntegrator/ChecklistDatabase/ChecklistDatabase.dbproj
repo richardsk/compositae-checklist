@@ -59,6 +59,43 @@
     <Folder Include="Scripts\Post-Deployment" />
     <Folder Include="Data Generation Plans" />
     <Folder Include="Schema Comparisons" />
+    <Folder Include="UpdateBuilds\v1.1.29" />
+    <Folder Include="UpdateBuilds\v1.1.28" />
+    <Folder Include="UpdateBuilds\v1.1.28\.svn" />
+    <Folder Include="UpdateBuilds\v1.1.28\.svn\prop-base" />
+    <Folder Include="UpdateBuilds\v1.1.28\.svn\props" />
+    <Folder Include="UpdateBuilds\v1.1.28\.svn\text-base" />
+    <Folder Include="UpdateBuilds\v1.1.28\.svn\tmp" />
+    <Folder Include="UpdateBuilds\v1.1.28\.svn\tmp\prop-base" />
+    <Folder Include="UpdateBuilds\v1.1.28\.svn\tmp\props" />
+    <Folder Include="UpdateBuilds\v1.1.28\.svn\tmp\text-base" />
+    <Folder Include="UpdateBuilds\v1.1.27" />
+    <Folder Include="UpdateBuilds\v1.1.27\.svn" />
+    <Folder Include="UpdateBuilds\v1.1.27\.svn\prop-base" />
+    <Folder Include="UpdateBuilds\v1.1.27\.svn\props" />
+    <Folder Include="UpdateBuilds\v1.1.27\.svn\text-base" />
+    <Folder Include="UpdateBuilds\v1.1.27\.svn\tmp" />
+    <Folder Include="UpdateBuilds\v1.1.27\.svn\tmp\prop-base" />
+    <Folder Include="UpdateBuilds\v1.1.27\.svn\tmp\props" />
+    <Folder Include="UpdateBuilds\v1.1.27\.svn\tmp\text-base" />
+    <Folder Include="UpdateBuilds\v1.1.26" />
+    <Folder Include="UpdateBuilds\v1.1.26\.svn" />
+    <Folder Include="UpdateBuilds\v1.1.26\.svn\prop-base" />
+    <Folder Include="UpdateBuilds\v1.1.26\.svn\props" />
+    <Folder Include="UpdateBuilds\v1.1.26\.svn\text-base" />
+    <Folder Include="UpdateBuilds\v1.1.26\.svn\tmp" />
+    <Folder Include="UpdateBuilds\v1.1.26\.svn\tmp\prop-base" />
+    <Folder Include="UpdateBuilds\v1.1.26\.svn\tmp\props" />
+    <Folder Include="UpdateBuilds\v1.1.26\.svn\tmp\text-base" />
+    <Folder Include="UpdateBuilds\v1.1.24" />
+    <Folder Include="UpdateBuilds\v1.1.24\.svn" />
+    <Folder Include="UpdateBuilds\v1.1.24\.svn\prop-base" />
+    <Folder Include="UpdateBuilds\v1.1.24\.svn\props" />
+    <Folder Include="UpdateBuilds\v1.1.24\.svn\text-base" />
+    <Folder Include="UpdateBuilds\v1.1.24\.svn\tmp" />
+    <Folder Include="UpdateBuilds\v1.1.24\.svn\tmp\prop-base" />
+    <Folder Include="UpdateBuilds\v1.1.24\.svn\tmp\props" />
+    <Folder Include="UpdateBuilds\v1.1.24\.svn\tmp\text-base" />
   </ItemGroup>
   <ItemGroup>
     <PropertiesFile Include="Properties\Database.sqlsettings">
@@ -484,6 +521,60 @@
       <SubType>NotInBuild</SubType>
     </NotInBuild>
     <NotInBuild Include="Create Scripts\Functions\fnGetPreferredNameReason.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="UpdateBuilds\v1.1.28\.svn\text-base\Update1.1.28.sql.svn-base">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="UpdateBuilds\v1.1.28\.svn\all-wcprops">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="UpdateBuilds\v1.1.28\.svn\entries">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="UpdateBuilds\v1.1.28\Update1.1.28.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="UpdateBuilds\v1.1.27\.svn\prop-base\update1.1.27.sql.svn-base">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="UpdateBuilds\v1.1.27\.svn\text-base\update1.1.27.sql.svn-base">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="UpdateBuilds\v1.1.27\.svn\all-wcprops">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="UpdateBuilds\v1.1.27\.svn\entries">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="UpdateBuilds\v1.1.27\update1.1.27.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="UpdateBuilds\v1.1.26\.svn\text-base\update1.1.26.sql.svn-base">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="UpdateBuilds\v1.1.26\.svn\all-wcprops">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="UpdateBuilds\v1.1.26\.svn\entries">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="UpdateBuilds\v1.1.26\update1.1.26.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="UpdateBuilds\v1.1.24\.svn\text-base\update1.1.24.sql.svn-base">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="UpdateBuilds\v1.1.24\.svn\all-wcprops">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="UpdateBuilds\v1.1.24\.svn\entries">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="UpdateBuilds\v1.1.24\update1.1.24.sql">
+      <SubType>NotInBuild</SubType>
+    </NotInBuild>
+    <NotInBuild Include="UpdateBuilds\v1.1.29\Update1.1.29.sql">
       <SubType>NotInBuild</SubType>
     </NotInBuild>
   </ItemGroup>

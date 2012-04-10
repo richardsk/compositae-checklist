@@ -103,12 +103,12 @@ Public Class BaseImporter
                             PercentComplete = 10 + (recordPosition / recordCount * 90) '10 percent was done in loading
                             If PercentComplete > 99 Then PercentComplete = 99 ' cant be greater than 99 until DONE
 
-                            Dim cnn As SqlClient.SqlConnection
+                            'Dim cnn As SqlClient.SqlConnection
                             Try
-                                cnn = New SqlClient.SqlConnection(Configuration.ConfigurationManager.ConnectionStrings("compositae").ConnectionString)
-                                cnn.Open()
+                                'cnn = New SqlClient.SqlConnection(Configuration.ConfigurationManager.ConnectionStrings("compositae").ConnectionString)
+                                'cnn.Open()
 
-                                Using sc As New System.Transactions.TransactionScope
+                                Using sc As New System.Transactions.TransactionScope(Transactions.TransactionScopeOption.Required, New TimeSpan(10, 0, 0))
                                     'insert new record
                                     InsertUpdateRecord(row)
 
@@ -121,7 +121,7 @@ Public Class BaseImporter
                                 PostStatusMessage(PercentComplete, msg)
                                 ChecklistException.LogError(ex)
                             Finally
-                                If Not cnn Is Nothing Then cnn.Close()
+                                'If Not cnn Is Nothing Then cnn.Close()
                             End Try
                         End If
                     Next
@@ -187,24 +187,26 @@ Public Class BaseImporter
             Dim pn As New ProviderName(row, -1, False)
 
             'get existing record?
-            Dim updatePN As ProviderName
+            Dim updatePN As ProviderName = Nothing
             If row.Table.Columns.Contains("PNNameId") Then updatePN = NameData.GetProviderName(Provider.IdAsInt, row("PNNameId").ToString)
             If updatePN IsNot Nothing AndAlso updatePN.PNNameFk IsNot Nothing Then
-                updatePN.UpdateFieldsFromProviderName(pn)
-                Dim oldId As String = updatePN.PNNameFk
-                'we need to refresh the name that thie provider name was connected to (for those cases
-                'where the prov name will now connect to a different consensus name
-                'BUT only if there is more than one PN attached to this name (non editor name)
-                Dim sysName As ProviderName = NameData.GetSystemProviderNameForName(oldId)
-                Dim pns As DataSet = NameData.GetProviderNameRecords(oldId)
-                If pns.Tables.Count > 0 AndAlso _
-                    (pns.Tables(0).Rows.Count > 2 Or (pns.Tables(0).Rows.Count = 2 And sysName Is Nothing)) Then
+                If Not updatePN.Equals(pn) Then
+                    updatePN.UpdateFieldsFromProviderName(pn)
+                    Dim oldId As String = updatePN.PNNameFk
+                    'we need to refresh the name that thie provider name was connected to (for those cases
+                    'where the prov name will now connect to a different consensus name
+                    'BUT only if there is more than one PN attached to this name (non editor name)
+                    Dim sysName As ProviderName = NameData.GetSystemProviderNameForName(oldId)
+                    Dim pns As DataSet = NameData.GetProviderNameRecords(oldId)
+                    If pns.Tables.Count > 0 AndAlso _
+                        (pns.Tables(0).Rows.Count > 2 Or (pns.Tables(0).Rows.Count = 2 And sysName Is Nothing)) Then
 
-                    updatePN.PNLinkStatus = LinkStatus.Unmatched.ToString 'reset so it will be relinked
-                    updatePN.PNNameFk = Nothing
+                        updatePN.PNLinkStatus = LinkStatus.Unmatched.ToString 'reset so it will be relinked
+                        updatePN.PNNameFk = Nothing
+                    End If
+
+                    BrNames.RefreshNameData(oldId, True)
                 End If
-
-                BrNames.RefreshNameData(oldId, True)
             Else
                 updatePN = pn
                 updatePN.PNLinkStatus = LinkStatus.Unmatched.ToString
@@ -251,8 +253,10 @@ Public Class BaseImporter
             End If
             updateC.PCProviderImportFk = ProvImport.IdAsInt
 
-            'update concept
-            ConceptData.InsertUpdateProviderConcept(Nothing, updateC, SessionState.CurrentUser.Login)
+            If updateC Is Nothing OrElse Not updateC.Equals(pc) Then
+                'update concept
+                ConceptData.InsertUpdateProviderConcept(Nothing, updateC, SessionState.CurrentUser.Login)
+            End If
 
         End If
 

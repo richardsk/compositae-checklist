@@ -64,9 +64,48 @@ Public Class ProviderName
     Public Sub New()
     End Sub
 
+    Public Overloads Function Equals(pn As ProviderName) As Boolean
+        Dim same As Boolean = False
+
+        same = (PNNameId = pn.PNNameId AndAlso
+            PNNameFull = pn.PNNameFull AndAlso
+            PNNameRank = pn.PNNameRank AndAlso
+            PNNameCanonical = pn.PNNameCanonical AndAlso
+            PNNameAuthors = pn.PNNameAuthors AndAlso
+            PNBasionymAuthors = pn.PNBasionymAuthors AndAlso
+            PNCombinationAuthors = pn.PNCombinationAuthors AndAlso
+            PNPublishedIn = pn.PNPublishedIn AndAlso
+            PNYear = pn.PNYear AndAlso
+            PNMicroReference = pn.PNMicroReference AndAlso
+            PNTypeVoucher = pn.PNTypeVoucher AndAlso
+            PNTypeName = pn.PNTypeName AndAlso
+            PNOrthography = pn.PNOrthography AndAlso
+            PNBasionym = pn.PNBasionym AndAlso
+            PNBasedOn = pn.PNBasedOn AndAlso
+            PNConservedAgainst = pn.PNConservedAgainst AndAlso
+            PNHomonymOf = pn.PNHomonymOf AndAlso
+            PNReplacementFor = pn.PNReplacementFor AndAlso
+            PNBlocking = pn.PNBlocking AndAlso
+            PNInCitation.CompareTo(pn.PNInCitation) = 0 AndAlso
+            PNInvalid.CompareTo(pn.PNInvalid) = 0 AndAlso
+            PNIllegitimate.CompareTo(pn.PNIllegitimate) = 0 AndAlso
+            PNMisapplied.CompareTo(pn.PNMisapplied) = 0 AndAlso
+            PNProParte.CompareTo(pn.PNProParte) = 0 AndAlso
+            PNGeographyText = pn.PNGeographyText AndAlso
+            PNGeographyCodes = pn.PNGeographyCodes AndAlso
+            PNClimate = pn.PNClimate AndAlso
+            PNLifeform = pn.PNLifeform AndAlso
+            PNIUCN = pn.PNIUCN AndAlso
+            PNNotes = pn.PNNotes AndAlso
+            PNStatusNotes = pn.PNStatusNotes AndAlso
+            PNNonNotes = pn.PNNonNotes AndAlso
+            PNQualityStatement = pn.PNQualityStatement)
+
+        Return same
+    End Function
+
     Public Sub New(ByVal row As DataRow, ByVal recId As String, ByVal allowBlank As Boolean)
         MyBase.New(row, recId)
-
         
         ProviderIsEditor = GetRowBool(row, "ProviderIsEditor")
         If ProviderIsEditor.IsNull Then ProviderIsEditor = False
@@ -224,7 +263,7 @@ Public Class ProviderName
         If Not pn.PNInvalid.IsNull Then PNInvalid = pn.PNInvalid
         If Not pn.PNIllegitimate.IsNull Then PNIllegitimate = pn.PNIllegitimate
         If Not pn.PNMisapplied.IsNull Then PNMisapplied = pn.PNMisapplied
-        If Not pn.PNProParte.IsNull Then PNProParte = pn.PNMisapplied
+        If Not pn.PNProParte.IsNull Then PNProParte = pn.PNProParte
         If Not pn.PNGeographyText Is Nothing Then PNGeographyText = pn.PNGeographyText
         If Not pn.PNGeographyCodes Is Nothing Then PNGeographyCodes = pn.PNGeographyCodes
         If Not pn.PNClimate Is Nothing Then PNClimate = pn.PNClimate
