@@ -142,12 +142,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C37C1E03CAC2BB882BC3DEFD63C6DF7B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_39D3ACEDECDA4A90B2C256375EE8C046"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -191,6 +185,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_F9D58F5D1AEDBA82450F559F3BF27E22"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_C37C1E03CAC2BB882BC3DEFD63C6DF7B"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -270,7 +270,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:2.0.50727    "
+                "FrameworkVersion" = "8:2.0.50727     "
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=9832"
                 }
@@ -669,7 +669,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Checklist"
         "ProductCode" = "8:{FF9EB8C8-CC8B-4D47-99AF-6B4DD547CD77}"
-        "PackageCode" = "8:{3713C51E-7A87-42D2-BB5E-9832217B30C1}"
+        "PackageCode" = "8:{B2134C6F-F970-4ACE-9FEF-2C5A0C1AACA5}"
         "UpgradeCode" = "8:{6EC94D7B-5D4D-4921-9CD1-00D882A47CFB}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
