@@ -108,12 +108,12 @@ Public Class BaseImporter
                                 'cnn = New SqlClient.SqlConnection(Configuration.ConfigurationManager.ConnectionStrings("compositae").ConnectionString)
                                 'cnn.Open()
 
-                                Using sc As New System.Transactions.TransactionScope(Transactions.TransactionScopeOption.Required, New TimeSpan(10, 0, 0))
-                                    'insert new record
-                                    InsertUpdateRecord(row)
+                                'Using sc As New System.Transactions.TransactionScope(Transactions.TransactionScopeOption.Required, New TimeSpan(10, 0, 0))
+                                'insert new record
+                                InsertUpdateRecord(row)
 
-                                    sc.Complete()
-                                End Using
+                                'sc.Complete()
+                                'End Using
 
                                 PostStatusMessage(PercentComplete, "")
                             Catch ex As Exception
