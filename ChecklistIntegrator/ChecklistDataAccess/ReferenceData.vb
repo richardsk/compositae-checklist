@@ -487,11 +487,20 @@ Public Class ReferenceData
     End Sub
 
     Public Shared Sub InsertProviderReferenceRecord(ByVal trans As SqlTransaction, ByVal providerRef As ProviderReference, ByVal user As String)
-        Using cmd As SqlCommand = trans.Connection.CreateCommand
+        Dim cnn As New SqlConnection(ConnectionString)
+
+        If trans IsNot Nothing Then
+            cnn = trans.Connection
+        Else
+            cnn.Open()
+        End If
+
+        Using cmd As SqlCommand = cnn.CreateCommand
             cmd.Transaction = trans
             InsertProviderReferenceRecord(cmd, providerRef, user)
         End Using
 
+        If trans Is Nothing Then cnn.Close()
     End Sub
 
     Public Shared Function GetUnlinkedProviderReferencesDs(ByVal providerPk As Integer) As DataSet
