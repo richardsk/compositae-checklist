@@ -10,7 +10,7 @@ Public Class ChecklistException
     End Sub
 
     Public Shared Sub LogMessage(ByVal msg As String)
-        Diagnostics.EventLog.WriteEntry("Checklist Integrator", msg)
+        Diagnostics.EventLog.WriteEntry("Application", msg)
     End Sub
 
     Public Shared Sub LogError(ByVal e As Exception)
@@ -19,7 +19,7 @@ Public Class ChecklistException
         msg += e.Message
         msg += " : " + e.StackTrace
         If msg.Length > 32000 Then msg = msg.Substring(0, 32000)
-        Diagnostics.EventLog.WriteEntry("Checklist Integrator", msg, EventLogEntryType.Error)
+        Diagnostics.EventLog.WriteEntry("Application", msg, EventLogEntryType.Error)
     End Sub
 
     Public Sub LogError()

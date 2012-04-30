@@ -49,6 +49,7 @@
     <DocumentationFile>ChecklistIntegrator.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -64,11 +65,12 @@
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="C1.Win.C1FlexGrid.2, Version=2.5.20053.230, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Program Files\ComponentOne Studio.NET 2.0\bin\C1.Win.C1FlexGrid.2.dll</HintPath>
+    <Reference Include="C1.Win.C1FlexGrid.2">
+      <HintPath>..\Include\C1.Win.C1FlexGrid.2.dll</HintPath>
     </Reference>
-    <Reference Include="C1.Win.C1TrueDBGrid.2, Version=2.0.20062.60510, Culture=neutral, PublicKeyToken=75ae3fb0e2b1e0da, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1TrueDBGrid.2">
+      <HintPath>..\Include\C1.Win.C1TrueDBGrid.2.dll</HintPath>
+    </Reference>
     <Reference Include="SandDock, Version=1.0.6.1, Culture=neutral, PublicKeyToken=75b7ec17dd7c14c3">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Include\SandDock.dll</HintPath>
