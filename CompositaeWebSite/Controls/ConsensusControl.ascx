@@ -8,15 +8,15 @@
             method: "GET",
             timeout: 200000,
             success: function (mapUrl) {
-                if (mapUrl == '') {
+                if (mapUrl == '""' || mapUrl == '') {
                     $('#ctl03_ConsensusControl1_distMapImage').hide();
                     $('#ctl03_ConsensusControl1_mapLabel').hide();
                     $('#loadingSpan').hide();
                 }
                 else {
-                    $('#ctl03_ConsensusControl1_distMapImage').attr('src', mapUrl);
+                    $('#ctl03_ConsensusControl1_distMapImage').attr('src', mapUrl.substring(1, mpaUrl.length-1));
                     $('#loadingSpan').hide();
-                    mapUrl = mapUrl.substring(0, mapUrl.length - 3); // 'change to big image size                     
+                    mapUrl = mapUrl.substring(1, mapUrl.length - 4); // 'change to big image size                     
                     $('#ctl03_ConsensusControl1_mapLink').attr('href', mapUrl + "1000");
                 }
             }
