@@ -15,8 +15,38 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_0292F036C1074E5883B5F89F0803DB01"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_02C3AA3C8AEC4FEABAB6D13C2AE4BD46"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_17A29B0461174F6C948F5D23AF8AB6BB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2710DA05CBBB47498D62923FAFD26CCD"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_2F726B4DD5D1C86CDDBB40E534DC0AAB"
         "OwnerKey" = "8:_39D3ACEDECDA4A90B2C256375EE8C046"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_391FF12EAF9B4AE5AC8F8167402502AE"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -35,6 +65,18 @@
         {
         "MsmKey" = "8:_3A5A6E03CD04C28013D4E75B7729823D"
         "OwnerKey" = "8:_39D3ACEDECDA4A90B2C256375EE8C046"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_424731E628ED400BAC5505D989DFD9DD"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4E5C078CBE3642BAB7BF32955AB9D3A9"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -69,6 +111,30 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_555BBD162CFC44D488B87A6E5278AECB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_62C332C3A3C54CC89FFFE1E77F5DB51A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_82AD28BEAD98489893DC424EB4F78D73"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_832DC884329B4637895B038E0C04E1BE"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_83510AF829A226909D141A73BE208587"
         "OwnerKey" = "8:_39D3ACEDECDA4A90B2C256375EE8C046"
         "MsmSig" = "8:_UNDEFINED"
@@ -93,14 +159,68 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_83B08C6F258D41A6BF54406D9C8030EB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9D8DF5AB2295434BAEE64339AE42A08A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A6683978781B406B848E0584342B613F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A79FE340203A4CE59ECB2CE2D61D99CE"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AC1A02B07C6A4323AC722A60C87892FA"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_B6685D17FBD35287F0D34E5640BAF5B7"
         "OwnerKey" = "8:_3A00FCA0C72CE7C61AC6528638CB9F09"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_BC79AE53E29443999B77833F24BBEEF3"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C1ABF6292DBA4BCF8CD9DA3B0D0033CD"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_C37C1E03CAC2BB882BC3DEFD63C6DF7B"
         "OwnerKey" = "8:_39D3ACEDECDA4A90B2C256375EE8C046"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_DA4F12FB91D847ECA78D19D88A7D3099"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F290568A047F41FD94E162042C8A5DE4"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -137,12 +257,6 @@
         {
         "MsmKey" = "8:_F9D58F5D1AEDBA82450F559F3BF27E22"
         "OwnerKey" = "8:_83510AF829A226909D141A73BE208587"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C37C1E03CAC2BB882BC3DEFD63C6DF7B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -191,6 +305,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_F9D58F5D1AEDBA82450F559F3BF27E22"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_C37C1E03CAC2BB882BC3DEFD63C6DF7B"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -270,7 +390,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:2.0.50727      "
+                "FrameworkVersion" = "8:2.0.50727       "
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=9832"
                 }
@@ -278,6 +398,86 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0292F036C1074E5883B5F89F0803DB01"
+            {
+            "SourcePath" = "8:ChecklistIntegrator\\ChecklistIntegrator\\Reports\\ConflictingReport.xslt"
+            "TargetName" = "8:ConflictingReport.xslt"
+            "Tag" = "8:"
+            "Folder" = "8:_880B744E01284F57A2CA7BD38772AEA0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_02C3AA3C8AEC4FEABAB6D13C2AE4BD46"
+            {
+            "SourcePath" = "8:ChecklistIntegrator\\ChecklistIntegrator\\Reports\\NoParentReport.xslt"
+            "TargetName" = "8:NoParentReport.xslt"
+            "Tag" = "8:"
+            "Folder" = "8:_880B744E01284F57A2CA7BD38772AEA0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_17A29B0461174F6C948F5D23AF8AB6BB"
+            {
+            "SourcePath" = "8:ChecklistIntegrator\\IntegratorImporters\\XML\\TCSToCompositae.xslt"
+            "TargetName" = "8:TCSToCompositae.xslt"
+            "Tag" = "8:"
+            "Folder" = "8:_43998F53D6FB4E6C969BBD96210EDA8B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2710DA05CBBB47498D62923FAFD26CCD"
+            {
+            "SourcePath" = "8:ChecklistIntegrator\\ChecklistIntegrator\\Reports\\MultipleReport.xslt"
+            "TargetName" = "8:MultipleReport.xslt"
+            "Tag" = "8:"
+            "Folder" = "8:_880B744E01284F57A2CA7BD38772AEA0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2F726B4DD5D1C86CDDBB40E534DC0AAB"
             {
             "AssemblyRegister" = "3:1"
@@ -309,11 +509,31 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_391FF12EAF9B4AE5AC8F8167402502AE"
+            {
+            "SourcePath" = "8:ChecklistIntegrator\\ChecklistIntegrator\\Reports\\LowMatchReport.xslt"
+            "TargetName" = "8:LowMatchReport.xslt"
+            "Tag" = "8:"
+            "Folder" = "8:_880B744E01284F57A2CA7BD38772AEA0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_39D3ACEDECDA4A90B2C256375EE8C046"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ChecklistIntegrator, Version=1.1.29.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:ChecklistIntegrator, Version=1.1.29.0, Culture=neutral, processorArchitecture=x86"
                 "ScatterAssemblies"
                 {
                     "_39D3ACEDECDA4A90B2C256375EE8C046"
@@ -402,6 +622,46 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_424731E628ED400BAC5505D989DFD9DD"
+            {
+            "SourcePath" = "8:ChecklistIntegrator\\IntegratorImporters\\XML\\TestImportRefsWithXSLT.xml"
+            "TargetName" = "8:TestImportRefsWithXSLT.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_43998F53D6FB4E6C969BBD96210EDA8B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4E5C078CBE3642BAB7BF32955AB9D3A9"
+            {
+            "SourcePath" = "8:ChecklistIntegrator\\ChecklistIntegrator\\Reports\\UnknownParentReport.xslt"
+            "TargetName" = "8:UnknownParentReport.xslt"
+            "Tag" = "8:"
+            "Folder" = "8:_880B744E01284F57A2CA7BD38772AEA0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4E5D149B56F82EB4D2C4A21BCD1910D8"
             {
             "AssemblyRegister" = "3:1"
@@ -431,6 +691,86 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_555BBD162CFC44D488B87A6E5278AECB"
+            {
+            "SourcePath" = "8:ChecklistIntegrator\\IntegratorImporters\\XML\\TestImportNames.xml"
+            "TargetName" = "8:TestImportNames.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_43998F53D6FB4E6C969BBD96210EDA8B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_62C332C3A3C54CC89FFFE1E77F5DB51A"
+            {
+            "SourcePath" = "8:ChecklistIntegrator\\ChecklistIntegrator\\Reports\\PhantomNamesReport.xslt"
+            "TargetName" = "8:PhantomNamesReport.xslt"
+            "Tag" = "8:"
+            "Folder" = "8:_880B744E01284F57A2CA7BD38772AEA0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_82AD28BEAD98489893DC424EB4F78D73"
+            {
+            "SourcePath" = "8:ChecklistIntegrator\\ChecklistIntegrator\\Reports\\UnlinkedReport.xslt"
+            "TargetName" = "8:UnlinkedReport.xslt"
+            "Tag" = "8:"
+            "Folder" = "8:_880B744E01284F57A2CA7BD38772AEA0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_832DC884329B4637895B038E0C04E1BE"
+            {
+            "SourcePath" = "8:ChecklistIntegrator\\IntegratorImporters\\XML\\XMLImportNames.xsd"
+            "TargetName" = "8:XMLImportNames.xsd"
+            "Tag" = "8:"
+            "Folder" = "8:_43998F53D6FB4E6C969BBD96210EDA8B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_83510AF829A226909D141A73BE208587"
@@ -464,6 +804,106 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_83B08C6F258D41A6BF54406D9C8030EB"
+            {
+            "SourcePath" = "8:ChecklistIntegrator\\ChecklistIntegrator\\Reports\\ProgressReport.xslt"
+            "TargetName" = "8:ProgressReport.xslt"
+            "Tag" = "8:"
+            "Folder" = "8:_880B744E01284F57A2CA7BD38772AEA0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9D8DF5AB2295434BAEE64339AE42A08A"
+            {
+            "SourcePath" = "8:ChecklistIntegrator\\IntegratorImporters\\XML\\XMLImportNames.xml"
+            "TargetName" = "8:XMLImportNames.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_43998F53D6FB4E6C969BBD96210EDA8B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A6683978781B406B848E0584342B613F"
+            {
+            "SourcePath" = "8:ChecklistIntegrator\\ChecklistIntegrator\\Reports\\ConflictingAuthorsReport.xslt"
+            "TargetName" = "8:ConflictingAuthorsReport.xslt"
+            "Tag" = "8:"
+            "Folder" = "8:_880B744E01284F57A2CA7BD38772AEA0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A79FE340203A4CE59ECB2CE2D61D99CE"
+            {
+            "SourcePath" = "8:ChecklistIntegrator\\ChecklistIntegrator\\bin\\Release\\ChecklistIntegrator.exe.config"
+            "TargetName" = "8:ChecklistIntegrator.exe.config"
+            "Tag" = "8:"
+            "Folder" = "8:_EF53CDF87A5D47BBA68F9F621BB2E8A7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AC1A02B07C6A4323AC722A60C87892FA"
+            {
+            "SourcePath" = "8:ChecklistIntegrator\\IntegratorImporters\\XML\\TestImportNamesWithXSLT.xml"
+            "TargetName" = "8:TestImportNamesWithXSLT.xml"
+            "Tag" = "8:"
+            "Folder" = "8:_43998F53D6FB4E6C969BBD96210EDA8B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B6685D17FBD35287F0D34E5640BAF5B7"
             {
             "AssemblyRegister" = "3:1"
@@ -495,6 +935,46 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BC79AE53E29443999B77833F24BBEEF3"
+            {
+            "SourcePath" = "8:ChecklistIntegrator\\IntegratorImporters\\XML\\TestImportNames.xslt"
+            "TargetName" = "8:TestImportNames.xslt"
+            "Tag" = "8:"
+            "Folder" = "8:_43998F53D6FB4E6C969BBD96210EDA8B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C1ABF6292DBA4BCF8CD9DA3B0D0033CD"
+            {
+            "SourcePath" = "8:ChecklistIntegrator\\IntegratorImporters\\XML\\TestImportRefs.xslt"
+            "TargetName" = "8:TestImportRefs.xslt"
+            "Tag" = "8:"
+            "Folder" = "8:_43998F53D6FB4E6C969BBD96210EDA8B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C37C1E03CAC2BB882BC3DEFD63C6DF7B"
             {
             "AssemblyRegister" = "3:1"
@@ -524,6 +1004,46 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DA4F12FB91D847ECA78D19D88A7D3099"
+            {
+            "SourcePath" = "8:ChecklistIntegrator\\ChecklistIntegrator\\Reports\\SimilarNamesReport.xslt"
+            "TargetName" = "8:SimilarNamesReport.xslt"
+            "Tag" = "8:"
+            "Folder" = "8:_880B744E01284F57A2CA7BD38772AEA0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F290568A047F41FD94E162042C8A5DE4"
+            {
+            "SourcePath" = "8:ChecklistIntegrator\\IntegratorImporters\\XML\\TestImport.xslt"
+            "TargetName" = "8:TestImport.xslt"
+            "Tag" = "8:"
+            "Folder" = "8:_43998F53D6FB4E6C969BBD96210EDA8B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F9D58F5D1AEDBA82450F559F3BF27E22"
@@ -609,7 +1129,7 @@
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_2BAA9E3BC972418CA307CEC5B3C2C9B2"
                     {
                     "Name" = "8:Import"
-                    "AlwaysCreate" = "11:FALSE"
+                    "AlwaysCreate" = "11:TRUE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
                     "Property" = "8:_8692D8B807EC473BAB548618269892B1"
@@ -620,7 +1140,7 @@
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_43998F53D6FB4E6C969BBD96210EDA8B"
                     {
                     "Name" = "8:Xml"
-                    "AlwaysCreate" = "11:FALSE"
+                    "AlwaysCreate" = "11:TRUE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
                     "Property" = "8:_2094DF647C36482C842A36754BF17D1F"
@@ -631,7 +1151,7 @@
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_880B744E01284F57A2CA7BD38772AEA0"
                     {
                     "Name" = "8:Reports"
-                    "AlwaysCreate" = "11:FALSE"
+                    "AlwaysCreate" = "11:TRUE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
                     "Property" = "8:_69137C07984C4235A134B5C22E7098D5"
@@ -669,7 +1189,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Checklist"
         "ProductCode" = "8:{FF9EB8C8-CC8B-4D47-99AF-6B4DD547CD77}"
-        "PackageCode" = "8:{487DA1AE-CAEE-4FF6-B899-DFC6B058EC7F}"
+        "PackageCode" = "8:{F9CE4CE5-B253-4485-824E-9341476F1442}"
         "UpgradeCode" = "8:{6EC94D7B-5D4D-4921-9CD1-00D882A47CFB}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

@@ -4,6 +4,7 @@ Imports System.Web.Services.Protocols
 Imports System.Xml
 Imports System.Xml.Xsl
 Imports System.Data
+Imports System.Collections.Generic
 
 
 <WebService(Namespace:="http://www.compositae.org/")> _

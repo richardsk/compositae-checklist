@@ -41,8 +41,9 @@ Partial Class _Default
             DetailsPanel.Controls.Add(ctrl)
             searchPanel.Visible = False
         ElseIf selPage = "NameDetails" Then
-            TreeControl1.SelectedNameId = Utility.NameID(Request)
-            FeedbackLink.NavigateUrl += "&NameID=" + TreeControl1.SelectedNameId
+            Dim nameId As String = Utility.NameID(Request)
+            TreeControl1.SelectedNameId = nameId
+            FeedbackLink.NavigateUrl += "&NameID=" + nameId
             Dim ctrl As Control = LoadControl("Controls\NameDetailsControl.ascx")
             DetailsPanel.Controls.Add(ctrl)
         ElseIf selPage = "LitSearch" Then

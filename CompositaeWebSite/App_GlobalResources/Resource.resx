@@ -145,10 +145,10 @@
     <value>Did you mean:</value>
   </data>
   <data name="Feedback_Done" xml:space="preserve">
-    <value>&lt;strong&gt;Thank you for your feedback.&lt;/strong&gt;</value>
+    <value>&lt;strong&gt;Thank you for your feedback.&lt;/strong&gt;  The Global Compositae Checklist Editor is currently on maternity leave, your feedback will be addressed when she returns.</value>
   </data>
   <data name="Feedback_Email_Confirm" xml:space="preserve">
-    <value>Thank you for your feedback.  We will review your comments and update the database and website.</value>
+    <value>Thank you for your feedback.  The Global Compositae Checklist Editor is currently on maternity leave, your feedback will be addressed when she returns.  We will review your comments and update the database and website.</value>
   </data>
   <data name="Feedback_Email_Error" xml:space="preserve">
     <value>The email addresses you entered do not match.</value>

@@ -625,19 +625,26 @@ Public Class Distribution
 
             Using cmd As New SqlCommand
                 cmd.Connection = cnn
+                cmd.CommandTimeout = 5000
 
-                Dim sql As String = "set arithabort on; select distinct OD.data.value('./@schema', 'nvarchar(100)') as [Schema], " + _
-                    "OD.data.value('./@region', 'nvarchar(100)') as Region, " + _
-                    "OD.data.value('./@Occurrence', 'nvarchar(100)') as Occurrence, " + _
-                    "OD.data.value('./@Origin', 'nvarchar(100)') as Origin " + _
-                    "from (select OtherDataXml from tblOtherData  " + _
-                    "inner join tblflatname cn on cn.flatnamenameufk = recordfk " + _
+                'Dim sql As String = "set arithabort on; select distinct OD.data.value('./@schema', 'nvarchar(100)') as [Schema], " + _
+                '    "OD.data.value('./@region', 'nvarchar(100)') as Region, " + _
+                '    "OD.data.value('./@Occurrence', 'nvarchar(100)') as Occurrence, " + _
+                '    "OD.data.value('./@Origin', 'nvarchar(100)') as Origin " + _
+                '    "from (select OtherDataXml from tblOtherData  " + _
+                '    "inner join tblflatname cn on cn.flatnamenameufk = recordfk " + _
+                '    "inner join tblflatname n on cn.flatnamenameufk = n.flatnameseedname " + _
+                '    "where n.flatnamenameufk = '" + nameGuid + "'" + _
+                '    "and OtherDataXml.exist('/DataSet/Biostat[contains(@Occurrence, ""Present"")]') = 1 ) ox " + _
+                ' "cross apply ox.OtherDataXml.nodes('/DataSet/Biostat') as OD(data) "
+
+                Dim sql As String = "select distinct d.georegion as Region, d.Occurrence, d.Origin " + _
+                    "from tblflatname cn " + _
+                    "inner join tbldistribution d on cn.flatnamenameufk = d.nameguid " + _
                     "inner join tblflatname n on cn.flatnamenameufk = n.flatnameseedname " + _
-                    "where n.flatnamenameufk = '" + nameGuid + "') ox " + _
-                 "cross apply ox.OtherDataXml.nodes('/DataSet/Biostat') as OD(data) " + _
-                 "where OD.data.exist('/DataSet/Biostat[contains(@Occurrence, ""Present"")]') = 1 "
+                    "where n.flatnamenameufk = '" + nameGuid + "'"
 
-                cmd.CommandText = Sql
+                cmd.CommandText = sql
                 Dim da As New SqlDataAdapter(cmd)
                 da.Fill(ds)
 

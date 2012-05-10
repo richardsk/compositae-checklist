@@ -12,8 +12,10 @@
 <head runat="server">
     <title>Global Compositae Checklist</title>
     <link href="Includes/style.css" type="text/css" rel="stylesheet"/>
+    <script src="Includes/jquery-1.6.2.min.js" type="text/javascript" />
 
 <script type="text/javascript">
+
     function getHeight()
     {
             var myWidth = 0, myHeight = 0;
@@ -40,11 +42,11 @@
         
     }
 
-    function KeyDownHandler(e, btn)
-    {
+    function KeyDownHandler(e, btn) {
+        alert('here');
         if(!e) e=window.event;
         var key = e.keyCode ? e.keyCode : e.which;
-    
+        
         // process only the Enter key
         if (key == 13)
         {

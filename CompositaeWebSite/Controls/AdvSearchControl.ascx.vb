@@ -67,8 +67,8 @@ Partial Class Controls_AdvSearchControl
     End Function
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        SearchText1.Attributes.Add("onkeypress", "javascript:return KeyDownHandler(event, ctl03_SearchButton);")
-        'UpperText1.Attributes.Add("onkeypress", "javascript:return KeyDownHandler(event, ctl03_SearchButton);")
+        SearchText1.Attributes.Add("onkeypress", "javascript:if (event.keyCode == 13) { event.cancel=true; event.returnValue=false; $('#ctl03_SearchButton').click();}")
+        'UpperText1.Attributes.Add("onkeypress", "javascript:if (event.keyCode == 13) { event.cancel=true; event.returnValue=false; $('#ctl03_SearchButton').click();}")
 
         m_loading = True
 
