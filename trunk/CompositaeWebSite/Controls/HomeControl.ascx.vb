@@ -12,7 +12,7 @@ Partial Class HomeControl
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         SearchText.Focus()
-        SearchText.Attributes.Add("onkeypress", "javascript:return KeyDownHandler(event, ctl03_SearchButton);")
+        SearchText.Attributes.Add("onkeypress", "javascript:if (event.keyCode == 13) { event.cancel=true; event.returnValue=false; $('#ctl03_SearchButton').click();}") 'KeyDownHandler(event, $('#ctl03_SearchButton'));")
 
         Dim continents As List(Of TDWGGeo) = Distribution.GetTDWGGeoList(TDWGGeoLevel.TDWG1)
         continentsCombo.DataSource = continents

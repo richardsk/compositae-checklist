@@ -9,7 +9,7 @@ Partial Class Controls_LiteratureSearchControl
         Dim f As NameValueCollection = Request.Form
         'If f("SearchControl1$cbxRangeCheck") = "on" Then
 
-        SearchText.Attributes.Add("onkeypress", "javascript:return KeyDownHandler(event, ctl03_SearchButton);")
+        SearchText.Attributes.Add("onkeypress", "javascript:if (event.keyCode == 13) { event.cancel=true; event.returnValue=false; $('#ctl03_SearchButton').click();}")
 
     End Sub
 

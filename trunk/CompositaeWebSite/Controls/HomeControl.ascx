@@ -65,7 +65,7 @@
     <tr>
         <td style="height: 30px;" valign="top">
             <asp:TextBox ID="SearchText" runat="server" Columns="35" MaxLength="100" meta:resourcekey="SearchTextResource1"></asp:TextBox><asp:Button
-                ID="SearchButton" runat="server" Text="Search" meta:resourcekey="SearchButtonResource2" />
+                 ID="SearchButton" runat="server" Text="Search" meta:resourcekey="SearchButtonResource2" />
             <br />
             <asp:HyperLink ID="moreSearching2" runat="server" CssClass="smaller" ForeColor="Black" meta:resourcekey="searchNamesLinkResource1"
                 NavigateUrl="~/Default.aspx?Page=AdvNameSearch" Text="Advanced search"></asp:HyperLink></td>

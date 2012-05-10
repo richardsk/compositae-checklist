@@ -236,7 +236,7 @@ Public Class Report
     Public Shared Function GenerateCSVReport(ByVal ds As DataSet, ByVal showConflicts As Boolean, ByVal includeDist As Boolean) As String
         Dim doc As New StringBuilder
 
-        Dim sep As String = Chr(9)
+        Dim sep As String = "," 'Chr(9)
 
         doc.Append("NeedsUpdating" + sep + "NameGuid" + sep + "NameFull" + sep + "NameRank" + sep + "NameBasionymAuthors" + sep + "NameCombinationAuthors" + sep + "NameYear" + sep + "NameParent" + sep + "NamePreferred" + sep + "NamePublishedIn" + sep + "NameInvalid" + sep + "NameIllegitimate" + sep + "NameMisapplied" + sep + "NameOrthography" + sep + "NameDistribution")
         doc.Append(Environment.NewLine)
@@ -244,43 +244,43 @@ Public Class Report
         For Each dr As DataRow In ds.Tables(0).Rows
             doc.Append(sep) 'needs updating col
 
-            doc.Append(dr("NameGuid").ToString)
+            doc.Append("""" + dr("NameGuid").ToString.Replace("""", """""") + """")
             doc.Append(sep)
 
-            doc.Append(dr("NameFull").ToString) '.Replace(",", ";"))
+            doc.Append("""" + dr("NameFull").ToString.Replace("""", """""") + """") '.Replace(",", ";"))
             doc.Append(sep)
 
-            doc.Append(dr("RankName").ToString)
+            doc.Append("""" + dr("RankName").ToString.Replace("""", """""") + """")
             doc.Append(sep)
 
-            doc.Append(dr("NameBasionymAuthors").ToString) '.Replace(",", ";"))
+            doc.Append("""" + dr("NameBasionymAuthors").ToString.Replace("""", """""") + """") '.Replace(",", ";"))
             doc.Append(sep)
 
-            doc.Append(dr("NameCombinationAuthors").ToString) '.Replace(",", ";"))
+            doc.Append("""" + dr("NameCombinationAuthors").ToString.Replace("""", """""") + """") '.Replace(",", ";"))
             doc.Append(sep)
 
-            doc.Append(dr("NameYear").ToString) '.Replace(",", ";"))
+            doc.Append("""" + dr("NameYear").ToString.Replace("""", """""") + """") '.Replace(",", ";"))
             doc.Append(sep)
 
-            doc.Append(dr("NameParent").ToString) '.Replace(",", ";"))
+            doc.Append("""" + dr("NameParent").ToString.Replace("""", """""") + """") '.Replace(",", ";"))
             doc.Append(sep)
 
-            doc.Append(dr("NamePreferred").ToString) '.Replace(",", ";"))
+            doc.Append("""" + dr("NamePreferred").ToString.Replace("""", """""") + """") '.Replace(",", ";"))
             doc.Append(sep)
 
-            doc.Append(dr("NamePublishedIn").ToString) '.Replace(",", ";"))
+            doc.Append("""" + dr("NamePublishedIn").ToString.Replace("""", """""") + """") '.Replace(",", ";"))
             doc.Append(sep)
 
-            doc.Append(dr("NameInvalid").ToString)
+            doc.Append("""" + dr("NameInvalid").ToString.Replace("""", """""") + """")
             doc.Append(sep)
 
-            doc.Append(dr("NameIllegitimate").ToString)
+            doc.Append("""" + dr("NameIllegitimate").ToString.Replace("""", """""") + """")
             doc.Append(sep)
 
-            doc.Append(dr("NameMisapplied").ToString)
+            doc.Append("""" + dr("NameMisapplied").ToString.Replace("""", """""") + """")
             doc.Append(sep)
 
-            doc.Append(dr("NameOrthography").ToString) '.Replace(",", ";"))
+            doc.Append("""" + dr("NameOrthography").ToString.Replace("""", """""") + """") '.Replace(",", ";"))
             doc.Append(sep)
 
 
@@ -299,7 +299,7 @@ Public Class Report
                     distStr = distStr.Trim(" ")
                     distStr = distStr.Trim(";")
 
-                    doc.Append(distStr)
+                    doc.Append("""" + distStr.Replace("""", """""") + """")
 
                 End If
             End If

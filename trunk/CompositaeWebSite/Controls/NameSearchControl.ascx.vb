@@ -199,6 +199,8 @@ Partial Class Controls_NameSearchControl
 
                 If r.Cells(2).Text.StartsWith("Accepted") Then
                     r.Cells(2).Text = "<span style='color:green'>" + r.Cells(2).Text + "</span>"
+                ElseIf r.Cells(2).Text.StartsWith("Unknown") Then
+                    r.Cells(2).Text = "<span>" + r.Cells(2).Text + "</span>"
                 ElseIf Not r.Cells(2).Text.StartsWith("[No Concept]") Then
                     link = "<span style='color:red'>Synonym</span> of <a style='COLOR: black' href='default.aspx?Page=NameDetails&TabNum=0&NameId=" + r.Cells(4).Text + "'>"
                     r.Cells(2).Text = link + r.Cells(2).Text + "</a>"

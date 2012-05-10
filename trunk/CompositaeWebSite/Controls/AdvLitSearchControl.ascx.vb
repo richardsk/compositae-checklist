@@ -17,16 +17,16 @@ Partial Class AdvLitSearchControl
                 FieldOr3.Items.Add(New ListItem(sf.FriendlyName, sf.FieldName))
             Next
 
-            SearchText1.Attributes.Add("onkeypress", "javascript:return KeyDownHandler(event, ctl03_SearchButton);")
-            SearchText2.Attributes.Add("onkeypress", "javascript:return KeyDownHandler(event, ctl03_SearchButton);")
-            SearchText3.Attributes.Add("onkeypress", "javascript:return KeyDownHandler(event, ctl03_SearchButton);")
-            SearchTextOr1.Attributes.Add("onkeypress", "javascript:return KeyDownHandler(event, ctl03_SearchButton);")
-            SearchTextOr2.Attributes.Add("onkeypress", "javascript:return KeyDownHandler(event, ctl03_SearchButton);")
-            SearchTextOr3.Attributes.Add("onkeypress", "javascript:return KeyDownHandler(event, ctl03_SearchButton);")
+            SearchText1.Attributes.Add("onkeypress", "javascript:if (event.keyCode == 13) { event.cancel=true; event.returnValue=false; $('#ctl03_SearchButton').click();}")
+            SearchText2.Attributes.Add("onkeypress", "javascript:if (event.keyCode == 13) { event.cancel=true; event.returnValue=false; $('#ctl03_SearchButton').click();}")
+            SearchText3.Attributes.Add("onkeypress", "javascript:if (event.keyCode == 13) { event.cancel=true; event.returnValue=false; $('#ctl03_SearchButton').click();}")
+            SearchTextOr1.Attributes.Add("onkeypress", "javascript:if (event.keyCode == 13) { event.cancel=true; event.returnValue=false; $('#ctl03_SearchButton').click();}")
+            SearchTextOr2.Attributes.Add("onkeypress", "javascript:if (event.keyCode == 13) { event.cancel=true; event.returnValue=false; $('#ctl03_SearchButton').click();}")
+            SearchTextOr3.Attributes.Add("onkeypress", "javascript:if (event.keyCode == 13) { event.cancel=true; event.returnValue=false; $('#ctl03_SearchButton').click();}")
 
-            UpperText1.Attributes.Add("onkeypress", "javascript:return KeyDownHandler(event, ctl03_SearchButton);")
-            UpperText2.Attributes.Add("onkeypress", "javascript:return KeyDownHandler(event, ctl03_SearchButton);")
-            UpperText3.Attributes.Add("onkeypress", "javascript:return KeyDownHandler(event, ctl03_SearchButton);")
+            UpperText1.Attributes.Add("onkeypress", "javascript:if (event.keyCode == 13) { event.cancel=true; event.returnValue=false; $('#ctl03_SearchButton').click();}")
+            UpperText2.Attributes.Add("onkeypress", "javascript:if (event.keyCode == 13) { event.cancel=true; event.returnValue=false; $('#ctl03_SearchButton').click();}")
+            UpperText3.Attributes.Add("onkeypress", "javascript:if (event.keyCode == 13) { event.cancel=true; event.returnValue=false; $('#ctl03_SearchButton').click();}")
 
         Catch ex As Exception
             Utility.LogError(ex)
