@@ -14,9 +14,9 @@
                     $('#loadingSpan').hide();
                 }
                 else {
-                    $('#ctl03_ConsensusControl1_distMapImage').attr('src', mapUrl.substring(1, mpaUrl.length-1));
+                    $('#ctl03_ConsensusControl1_distMapImage').attr('src', mapUrl);                     
                     $('#loadingSpan').hide();
-                    mapUrl = mapUrl.substring(1, mapUrl.length - 4); // 'change to big image size                     
+                    mapUrl = mapUrl.substring(0, mapUrl.length - 3); // 'change to big image size                     
                     $('#ctl03_ConsensusControl1_mapLink').attr('href', mapUrl + "1000");
                 }
             }
@@ -36,8 +36,10 @@
             <asp:HyperLink ID="mapLink" runat="server" Target="_blank">
                 <span id="loadingSpan">Loading...</span>
                 <asp:Image ID="distMapImage" runat="server" meta:resourcekey="distMapImageResource1" 
-                    Width="340px" />
-            </asp:HyperLink>
+                    Width="400px" />
+            </asp:HyperLink><br />
+            <img src="Images/turquoise.jpg" alt="Blue" /> Present (unknown origin) <img src="Images/green.jpg" alt="Green" /> Indigenous <img src="Images/red.jpg" alt="Red" /> Exotic 
+                <img src="Images/orange.jpg" alt="Orange" /> Endemic
         </td>
     </tr>
 </table>
