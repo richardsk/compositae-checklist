@@ -146,7 +146,7 @@ pageTracker._trackPageview();
             </asp:Table>
             
             <span style="font-size:smaller">
-                Use of this data allowable with&nbsp;
+                Use of these data allowable with&nbsp;
                 <a href="Default.aspx?Page=About&Tab=Cite">due attribution</a>.
                 
             </span>
