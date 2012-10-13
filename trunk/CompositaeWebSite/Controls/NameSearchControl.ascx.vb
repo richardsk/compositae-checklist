@@ -238,11 +238,33 @@ Partial Class Controls_NameSearchControl
     'End Sub
 
     Protected Sub ResultsGridView_PageIndexChanging(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewPageEventArgs) Handles ResultsGridView.PageIndexChanging
-        Dim txt As String = Request.QueryString("searchText")
-        Dim field As String = Request.QueryString("searchField")
-        Dim upTxt As String = ""
-        'If SearchUpperText.Text.Length > 0 AndAlso Request.Form("SearchControl1$cbxRangeSearch") = "on" Then upTxt = SearchUpperText.Text
-        DoSearch(e.NewPageIndex, field, txt, upTxt)
+        Dim ds As New DataSet
+
+        If Request.QueryString("searchText") IsNot Nothing Then
+            Dim txt As String = Request.QueryString("searchText")
+            Dim field As String = Request.QueryString("searchField")
+            'SearchText.Text = txt
+            ds = DoSearch(e.NewPageIndex, field, txt, Nothing)
+        ElseIf Request.QueryString("country") IsNot Nothing Then
+            ds = DoDistSearch(e.NewPageIndex)
+        ElseIf Request.QueryString("continent") IsNot Nothing Then
+            ds = DoDistSearch(e.NewPageIndex)
+        ElseIf Request.QueryString("region") IsNot Nothing Then
+            ds = DoDistSearch(e.NewPageIndex)
+        ElseIf Request.QueryString("unit") IsNot Nothing Then
+            ds = DoDistSearch(e.NewPageIndex)
+        End If
+
+        If ds IsNot Nothing AndAlso ds.Tables.Count > 0 AndAlso ds.Tables(0).Rows.Count > 0 Then
+            reportImage.Visible = True
+            downloadLink.Visible = True
+            downloadCsvImage.Visible = True
+            downloadCsvLink.Visible = True
+            'reportLink.NavigateUrl = Request.RawUrl
+            'If Request.QueryString("download") Is Nothing Then
+            '    reportLink.NavigateUrl += "&download=true"
+            'End If
+        End If
     End Sub
 
     'Protected Sub ClearButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles ClearButton.Click
