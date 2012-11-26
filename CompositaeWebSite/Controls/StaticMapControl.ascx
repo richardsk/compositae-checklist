@@ -9,14 +9,14 @@
    </tr>
    <tr>
        <td>    
-        <img alt="" src="images/static_map.jpg"/>
+        <img alt="" src="images/static_map.jpg" width="650px"/>
        </td>
    </tr>
    
    <tr>
        <td style="padding-left:20px">    
        <br />
-        <img alt="" src="images/data_providers.gif"/>
+        <img alt="" src="images/data_providers.jpg" width="650px"/>
        </td>
    </tr>
    

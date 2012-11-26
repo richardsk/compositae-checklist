@@ -36,7 +36,7 @@ Public Class TICAChecklistService
                     "</NewLSID></DeprecatedTICALSID>")
             End If
         Catch ex As Exception
-            ChecklistObjects.ChecklistException.LogError(ex)
+            WebDataAccess.Utility.LogError(ex)
             doc.LoadXml("<Error>Error resolving deprecated LSID</Error>")
         End Try
 
@@ -55,7 +55,7 @@ Public Class TICAChecklistService
             ds.Tables(0).TableName = "Name"
             doc.LoadXml(ds.GetXml())
         Catch ex As Exception
-            ChecklistObjects.ChecklistException.LogError(ex)
+            WebDataAccess.Utility.LogError(ex)
             doc.LoadXml("<Error>Error retreiving TICA LSIDs</Error>")
         End Try
 
@@ -73,7 +73,7 @@ Public Class TICAChecklistService
             ds.Tables(1).TableName = "ProviderName"
             doc.LoadXml(ds.GetXml())
         Catch ex As Exception
-            ChecklistObjects.ChecklistException.LogError(ex)
+            WebDataAccess.Utility.LogError(ex)
             doc.LoadXml("<Error>Error retreiving TICA records</Error>")
         End Try
 
@@ -91,7 +91,7 @@ Public Class TICAChecklistService
             ds.Tables(1).TableName = "ProviderName"
             doc.LoadXml(ds.GetXml())
         Catch ex As Exception
-            ChecklistObjects.ChecklistException.LogError(ex)
+            WebDataAccess.Utility.LogError(ex)
             doc.LoadXml("<Error>Error retreiving TICA records</Error>")
         End Try
 
@@ -109,7 +109,7 @@ Public Class TICAChecklistService
             ds.Tables(0).TableName = "Reference"
             doc.LoadXml(ds.GetXml())
         Catch ex As Exception
-            ChecklistObjects.ChecklistException.LogError(ex)
+            WebDataAccess.Utility.LogError(ex)
             doc.LoadXml("<Error>Error retreiving TICA LSIDs</Error>")
         End Try
 
@@ -133,7 +133,7 @@ Public Class TICAChecklistService
 
             doc.LoadXml(ds.GetXml())
         Catch ex As Exception
-            ChecklistObjects.ChecklistException.LogError(ex)
+            WebDataAccess.Utility.LogError(ex)
             doc.LoadXml("<Error>Error retreiving TICA record</Error>")
         End Try
 

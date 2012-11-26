@@ -103,6 +103,8 @@ AS
 	where NameGuid = @nameGuid
 	
 	--update flat name
+	delete tblFlatName where FlatNameSeedName = @nameGuid
+
     INSERT tblFlatName
     EXEC p_sprSelect_Name_ToRoot_003 @NameGuid
 
