@@ -403,15 +403,16 @@ Public Class Utility
     End Function
 
     Public Shared Sub LogError(ByVal ex As Exception)
-        Try
-            Dim msg As String = ex.Message + " : " + ex.StackTrace
-            Diagnostics.EventLog.WriteEntry("CompositaeWebStie", msg)
-        Catch e As Exception
-        End Try
+        'Try
+        '    Dim msg As String = ex.Message + " : " + ex.StackTrace
+        '    Diagnostics.EventLog.WriteEntry("CompositaeWebStie", msg)
+        'Catch e As Exception
+        'End Try
         Try
             Dim lmsg As String = ex.Message + " : " + ex.StackTrace
             'Dim f As String = HttpContext.Current.Request.PhysicalApplicationPath + "\log.txt"
-            Dim f As String = HttpContext.Current.Request.ApplicationPath + "\temp\log.txt"
+            'Dim f As String = HttpContext.Current.Request.ApplicationPath + "\temp\log.txt"
+            Dim f As String = ConfigurationManager.AppSettings.Get("LogFile")
             IO.File.WriteAllText(f, lmsg)
         Catch e As Exception
         End Try

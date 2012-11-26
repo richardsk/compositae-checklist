@@ -14,12 +14,15 @@ Public Class ChecklistException
     End Sub
 
     Public Shared Sub LogError(ByVal e As Exception)
-        Dim msg As String = ""
-        If e.Data.Contains("CustomMessage") Then msg = e.Data.Item("CustomMessage").ToString + " : "
-        msg += e.Message
-        msg += " : " + e.StackTrace
-        If msg.Length > 32000 Then msg = msg.Substring(0, 32000)
-        Diagnostics.EventLog.WriteEntry("Application", msg, EventLogEntryType.Error)
+        Try
+            Dim msg As String = ""
+            If e.Data.Contains("CustomMessage") Then msg = e.Data.Item("CustomMessage").ToString + " : "
+            msg += e.Message
+            msg += " : " + e.StackTrace
+            If msg.Length > 32000 Then msg = msg.Substring(0, 32000)
+            Diagnostics.EventLog.WriteEntry("Application", msg, EventLogEntryType.Error)
+        Catch ex As Exception
+        End Try
     End Sub
 
     Public Sub LogError()

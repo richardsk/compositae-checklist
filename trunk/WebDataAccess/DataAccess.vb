@@ -271,10 +271,10 @@ Public Class DataAccess
 
             doc.LoadXml(xml)
         Catch cex As ChecklistObjects.ChecklistException
-            ChecklistObjects.ChecklistException.LogError(cex)
+            Utility.LogError(cex)
             doc.LoadXml("<Error>" + cex.Message + "</Error>")
         Catch ex As Exception
-            ChecklistObjects.ChecklistException.LogError(ex)
+            Utility.LogError(ex)
             doc.LoadXml("<Error>Error retreiving TICA record</Error>")
         End Try
 
@@ -297,7 +297,7 @@ Public Class DataAccess
 
             doc.LoadXml(ds.GetXml())
         Catch ex As Exception
-            ChecklistObjects.ChecklistException.LogError(ex)
+            Utility.LogError(ex)
             doc.LoadXml("<Error>Error retreiving TICA record</Error>")
         End Try
 
@@ -340,10 +340,10 @@ Public Class DataAccess
 
             doc.LoadXml(xml)
         Catch cex As ChecklistObjects.ChecklistException
-            ChecklistObjects.ChecklistException.LogError(cex)
+            Utility.LogError(cex)
             doc.LoadXml("<Error>" + cex.Message + "</Error>")
         Catch ex As Exception
-            ChecklistObjects.ChecklistException.LogError(ex)
+            Utility.LogError(ex)
             doc.LoadXml("<Error>" + ex.Message + ":" + ex.StackTrace + ":" + ex.InnerException.Message + "</Error>")
             'doc.LoadXml("<Error>Error retreiving TICA record</Error>")
         End Try
@@ -374,7 +374,7 @@ Public Class DataAccess
 
             doc.LoadXml(xml)
         Catch ex As Exception
-            ChecklistObjects.ChecklistException.LogError(ex)
+            Utility.LogError(ex)
             doc.LoadXml("<Error>Error retreiving TICA providers</Error>")
         End Try
 
