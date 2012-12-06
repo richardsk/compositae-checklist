@@ -10,7 +10,7 @@ CREATE Procedure sprSelect_DataToTransfer
 AS
 
 	declare @dt datetime
-	if (@fromDate is null) set @dt = '1/1/2000'
+	if (@fromDate is null) set @dt = '2000-01-01'
 	else set @dt = @fromDate
 
 	select * from tblAuthors where UpdatedDate >= @dt or AddedDate >= @dt
