@@ -36,16 +36,24 @@ begin
 		
 		--get all prov records
 		insert @recs
-		select pn.pnpk, p.providerpk, p.ProviderPreferredConceptRanking, pr.prpk, pcr.PCRIsPreferredConcept, p2.PNNameFk, pcr.provideriseditor
+		select pn.pnpk, p.providerpk, p.ProviderPreferredConceptRanking, pr.prpk, pcr.PCRIsPreferredConcept, pn2.PNNameFk, p.provideriseditor
 		from tblName
-		inner join vwProviderName pn on PNNameFk = NameGUID
-		inner join vwProviderConceptRelationship pcr on pcr.PCName1Id = pn.PNNameId 
-				and (pcr.ProviderPk = pn.ProviderPk or pcr.provideriseditor = 1)
+		inner join tblProviderName pn on PNNameFk = NameGUID
+		inner join tblProviderImport pnpi on pnpi.ProviderImportPk = pn.PNProviderImportFk
+		inner join tblProviderConcept pc on pc.PCName1Id = pn.PNNameId
+		inner join tblProviderConceptRelationship pcr on pcr.PCRConcept1Id = pc.PCConceptId
 				and pcr.PCRRelationshipFk = 15 
-		inner join tblProvider p on p.ProviderPk = pcr.ProviderPk
-		left join vwProviderName p2 on p2.PNNameId = pcr.PCName2Id 
-				and (p2.ProviderPk = pcr.ProviderPk or p2.provideriseditor = 1)
-		left join vwProviderReference pr on pr.PRReferenceId = pcr.PCAccordingToId and pr.ProviderPk = pcr.ProviderPk
+		inner join tblProviderImport pcrpi on pcrpi.ProviderImportPk = pcr.PCRProviderImportFk		
+		inner join tblProvider p on p.ProviderPk = pcrpi.ProviderImportProviderFk
+				and (pcrpi.ProviderImportProviderFk = pnpi.ProviderImportProviderFk or p.provideriseditor = 1)
+		inner join tblProviderConcept pc2 on pc2.PCConceptId = pcr.PCRConcept2Id
+		left join tblProviderName pn2 on pn2.PNNameId = pc2.PCName1Id
+		left join tblProviderImport pnpi2 on pnpi2.ProviderImportPk = pn2.PNProviderImportFk
+		left join tblProvider p2 on p2.ProviderPk = pnpi2.ProviderImportProviderFk
+				and (p2.ProviderPk = pcrpi.ProviderImportProviderFk or p2.provideriseditor = 1)
+		left join tblProviderReference pr on pr.PRReferenceId = pc.PCAccordingToId 
+		left join tblProviderImport pri on pri.ProviderImportPk = pr.PRProviderImportFK
+		left join tblProvider prp on prp.ProviderPk = pri.ProviderImportProviderFk and prp.ProviderPk = pcrpi.ProviderImportProviderFk
 		where NameGUID = @nameGuid or NameBasionymFk = @basId
 			
 		--check most preferred provider details
