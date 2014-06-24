@@ -1,0 +1,78 @@
+﻿    <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Style/styles.css" />
+    <link rel="stylesheet" type="text/css" href="Style/aciTree.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="Style/demo.css" media="all"/>
+    <script src="Scripts/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="Scripts/jquery.aciTree.dom.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.aciPlugin.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.aciTree.min.js"></script>
+    <script type="text/javascript">
+        function getTree() {
+            $.ajax({
+                url: 'http://localhost:57397/api/tree',
+                method: 'GET',
+                success: function (tree) {
+                    $('#namesTree').html(tree);
+                },
+                error: function (a, b, c) {
+                    alert(b);
+                }
+            });
+        }
+
+        
+        $(function() {
+
+            // listen for the events
+            $('#tree').on('acitree', function (event, api, item, eventName, options) {
+                
+                var log = $('.log div');
+                log.prepend('<p>' + eventName + ' [tree]</p>');                
+                if (eventName == 'selected'){
+                    // do something when a item is selected
+                    var itemData = api.itemData(item);
+                    alert('You just selected the item with the ID: ' + api.getId(item) + '\n' +
+                        'also the custom property [my-url] equals: ' + itemData['my-url']);
+                }
+            });
+
+            // init the tree
+            treeApi = $('#tree').aciTree({
+                autoInit: false,
+                ajax: {
+                    url: 'sample.json' // 'http://localhost:57397/api/tree'
+                },
+                selectable: true
+            }).aciTree('api');
+
+            treeApi.init({
+                success: function() {alert('success'); },
+                fail: function (e) {
+                    alert('Failed to init the treeview control !' + e);
+                }
+            });
+        });
+    </script>
+</head>
+<body class="thinBorder">
+    <article class="tabHeader">Browse Names</article>
+    <!--<div id="namesTree" >
+
+    </div>-->
+    
+    <div id="tree" class="aciTree">
+        <div>            
+            <br/>
+            Sample tree
+        </div>
+    </div>
+    
+            <div class="log">Tree Log... <a class="clear_log" style="font-size:10px" href="#" title="Clear the LOG" target="_blank">clear log</a>
+                <div></div></div>
+
+</body>
+</html>
+    
