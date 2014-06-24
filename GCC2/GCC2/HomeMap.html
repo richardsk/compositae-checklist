@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Style/styles.css" />
+    <script src="Scripts/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function getMapUrl() {
+            $.ajax({
+                url: 'http://localhost:57397/api/map',
+                method: 'GET',
+                success: function (mapUrl) {
+                    $('#homeMapImage').attr('src', mapUrl);
+                },
+                error: function (a, b, c) {
+                    alert(a);
+                }
+            });
+        }
+    </script>
+</head>
+<body class="thinBorder" onload="getMapUrl()">    
+    <article class="tabHeader">Search By Disribution</article>
+    <div id="homeMap">
+        <img id="homeMapImage" src="images/loading.gif" />
+    </div>
+</body>
+</html>

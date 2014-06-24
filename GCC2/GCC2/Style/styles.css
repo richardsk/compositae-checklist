@@ -1,0 +1,96 @@
+﻿body {
+}
+
+header {
+    vertical-align:top;
+    background-color:#dbbc57;
+    padding:10px;
+    color:white;
+    column-count:2;
+    height:100px;
+}
+
+    header .title {
+        text-align:left;
+        float:left;
+    }
+
+    header .headerLinks, .headerLinks a {
+        vertical-align:top;
+        color:white;
+        text-align:right;
+        width:100%;
+        font-family: Arial;
+    }
+
+#siteTitle {
+    color: white;
+    font-family: Arial;
+    font-size: 22pt;
+    vertical-align: top;
+    width:190px;
+    text-decoration:none;
+}
+
+section {
+    padding:0px;
+    margin:0px;
+}
+
+.tabHeader {
+    font-family: Arial;
+    color:white;
+    background-color:#dbbc57;
+    padding:3px;
+    margin:0px;
+}
+
+.thinBorder {
+    padding:0px;
+    margin:1px;
+    border-color:gray;
+    border-width:1px;
+    border-style:solid;
+}
+
+.bodyText {
+    font-family: Arial;
+    font-size:small;
+    padding:3px;
+}
+
+iframe {    
+    padding:0px;
+    margin:0px;
+    border:none;
+}
+
+#contentFrame {
+    width: 35%;
+    height:700px;
+    float:left;
+}
+
+#browseNamesFrame {
+    float:left;
+    width:20%;
+    height:500px;
+}
+
+#namesTree {
+    height:450px;
+}
+
+#homeSearchNames {
+    margin-top:75px;
+}
+
+#mapFrame {
+    float:left;
+    width:45%;
+    height:450px;
+}
+
+#homeMap {
+    text-align:center;
+}
