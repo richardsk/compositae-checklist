@@ -60,13 +60,11 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ChecklistDataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CompositaeWebSite\Include\ChecklistDataAccess.dll</HintPath>
+    <Reference Include="ChecklistDataAccess">
+      <HintPath>..\Include\ChecklistDataAccess.dll</HintPath>
     </Reference>
-    <Reference Include="ChecklistObjects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CompositaeWebSite\Include\ChecklistObjects.dll</HintPath>
+    <Reference Include="ChecklistObjects">
+      <HintPath>..\Include\ChecklistObjects.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
