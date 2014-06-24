@@ -19,6 +19,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -61,17 +63,20 @@
     <Content Include="Default.html" />
     <Content Include="Home.html" />
     <Content Include="HomeMap.html" />
-    <Content Include="images\loading.gif" />
-    <Content Include="images\logo small.jpg" />
+    <Content Include="image\loading.gif" />
+    <Content Include="image\logo small.jpg" />
     <Content Include="MainContent.html" />
     <Content Include="NameSearch.html" />
     <Content Include="packages.config" />
+    <Content Include="sample.txt" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
     <Content Include="Scripts\jquery.aciPlugin.min.js" />
     <Content Include="Scripts\jquery.aciTree.dom.js" />
     <Content Include="Scripts\jquery.aciTree.min.js" />
+    <Content Include="Style\aciTree.css" />
+    <Content Include="Style\demo.css" />
     <Content Include="Style\styles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -101,7 +106,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>13331</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:51327/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
@@ -113,6 +118,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
