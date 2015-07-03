@@ -9,7 +9,7 @@ Partial Class _Default
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
             'language
         'set culture to lang of requesting browser
-        If Request.UserLanguages.Length > 0 Then
+        If Request.UserLanguages IsNot Nothing AndAlso Request.UserLanguages.Length > 0 Then
             Threading.Thread.CurrentThread.CurrentUICulture = New System.Globalization.CultureInfo(Request.UserLanguages(0))
             '= New System.Globalization.CultureInfo("fr-FR")
         End If

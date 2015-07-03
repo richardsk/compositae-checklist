@@ -205,6 +205,22 @@ Public Class DaTrees
         SqlComDeleteTreeState.Connection.Close()
     End Sub
 
+    Public Sub ClearTaxTreeData()
+        'clear all temp taxt tree data asynchronously
+        Threading.ThreadPool.QueueUserWorkItem(New Threading.WaitCallback(AddressOf ClearTaxTreeTable))
+    End Sub
+
+    Private Sub ClearTaxTreeTable(stateInfo As Object)
+        Using cnn As New SqlClient.SqlConnection(ConnectionString + ";asynchronous processing=true")
+            cnn.Open()
+
+            Using cmd As SqlClient.SqlCommand = cnn.CreateCommand()
+                cmd.CommandTimeout = 6000
+                cmd.CommandText = "delete tblTreeState"
+                cmd.ExecuteNonQuery()
+            End Using
+        End Using
+    End Sub
 #End Region
 
 #Region "Tree"
@@ -235,7 +251,7 @@ Public Class DaTrees
         SqlComSelect_NodeToRoot.Parameters("@StartNodeKey").Value = New Guid(NodeKey)
         SqlComSelect_NodeToRoot.Parameters("@intClassificationKey").Value = ClassificationKey
         SqlComSelect_NodeToRoot.Parameters("@intRoleKey").Value = DBNull.Value 'for permissions
-        
+
         SqlDaNodeToRoot.Fill(ds)
         Return ds
     End Function

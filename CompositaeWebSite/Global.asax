@@ -5,6 +5,13 @@
     Sub Application_Start(ByVal sender As Object, ByVal e As EventArgs)
         ' Code that runs on application startup
         
+        Try
+            Dim da As New WebDataAccess.DaTrees
+            da.DaInitialise(ConfigurationManager.AppSettings.Get("ConnectionString"))
+            da.ClearTaxTreeData()
+        Catch ex As Exception
+            'log
+        End Try
     End Sub
     
     Sub Application_End(ByVal sender As Object, ByVal e As EventArgs)
