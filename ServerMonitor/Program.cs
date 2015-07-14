@@ -4,6 +4,8 @@ using System.Net;
 using System.Net.Mail;
 using log4net;
 
+[assembly: log4net.Config.XmlConfigurator(Watch = true)]
+
 namespace ServerMonitor
 {
     class Program
@@ -13,6 +15,8 @@ namespace ServerMonitor
         static void Main(string[] args)
         {
             bool ok = false;
+            
+            log.Info("Checking GCC is online.");
 
             try
             {
@@ -53,6 +57,10 @@ namespace ServerMonitor
                 {
                     log.Error("Failed to send warning email for GCC server inactivity", ex);
                 }
+            }
+            else
+            {
+                log.Info("GCC online check passed.");
             }
         }
     }
